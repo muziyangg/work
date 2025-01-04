@@ -7,11 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-<<<<<<< HEAD
-        <lastBuildDate>Sun, 05 Jan 2025 06:58:05 +0800</lastBuildDate><atom:link href="http://localhost:8636/page/index.xml" rel="self" type="application/rss+xml" /><item>
-=======
         <lastBuildDate>Sun, 05 Jan 2025 06:58:05 +0800</lastBuildDate><atom:link href="https://muziyangg.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
->>>>>>> ddbc9eb48fca960b9d3aa94fcfc2f3ee678c16de
         <title>归档</title>
         <link>https://muziyangg.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
