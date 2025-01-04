@@ -2,18 +2,321 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 木子洋的博客</title>
-        <link>https://muziyangg.github.io/post/</link>
+        <link>http://localhost:8636/post/</link>
         <description>Recent content in Posts on 木子洋的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-        <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://muziyangg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8636/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>测试传输接口</title>
+        <link>http://localhost:8636/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</link>
+        <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:8636/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</guid>
+        <description>&lt;img src="http://localhost:8636/img/title.jpg" alt="Featured image of post 测试传输接口" /&gt;&lt;blockquote&gt;
+&lt;p&gt;通过接口测试仪器是否能传输到系统。&lt;/p&gt;
+&lt;p&gt;如果日志中无传输日志则说明无传输，排查硬件问题。&lt;/p&gt;
+&lt;p&gt;有传输的话则可根据传输日志解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;普通测试&#34;&gt;普通测试
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MIFYHR(mi)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s mi=$g(mi) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(mi,104)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Port=&amp;#34;|TCP|&amp;#34;_$li(^dbo.BTMIMachineParameterD(mi),10)  //端口号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//控制字符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&amp;#34;&amp;#34;,kk=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s SB=$C(11),EB=$C(28),CR=$c(13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s MSH=&amp;#34;MSH|^~\&amp;amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(mi,102)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $$Start^MI.MIF000(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	f  d Main i $$Stop^MI.MIF000(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	c Port
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ErrHandler
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    h 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s iError=+$g(iError)+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i iError&amp;gt;100 s ret=$$Stop^MI.MIF000(mi)  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    d Trace^MI.MIF000(mi,$tr($ZERROR,&amp;#34;^&amp;#34;,&amp;#34;--&amp;#34;)_&amp;#34;.错误代码:&amp;#34;_$ECODE,&amp;#34;Runtime Error&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Main   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	SET $ZTRAP=&amp;#34;ErrHandler&amp;#34; S iERR=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s record=$$Read^MI.MIF000(mi,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,2) i &amp;#39;$l(record) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	;s record=$tr(record,&amp;#34;*&amp;#34;,&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d Trace^MI.MIF000(mi,record,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s (sample,epis,surname,result,date,time,QC)=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//R0123□□□□□□□□□□□□□0101010005v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s epis=$TR($E(record,4,18),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s code=$E(record,19,20)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s res=$TR($E(record,25,28),&amp;#34;0&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s result=code_$c(92)_res_$c(44)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;要回复ack版&#34;&gt;要回复ACK版
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;94
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MIFFUS3000HL7(mi)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s mi=$g(mi) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(mi,104)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Port=&amp;#34;|TCP|&amp;#34;_$li(^dbo.BTMIMachineParameterD(mi),10)  //端口号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//控制字符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&amp;#34;&amp;#34;,kk=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s SB=$C(11),EB=$C(28),CR=$c(13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s MSH=&amp;#34;MSH|^~\&amp;amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(mi,102)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $$Start^MI.MIF000(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	f  d Main i $$Stop^MI.MIF000(mi) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	c Port
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ErrHandler
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    h 10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s iError=+$g(iError)+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i iError&amp;gt;100 s ret=$$Stop^MI.MIF000(mi)  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    d Trace^MI.MIF000(mi,$tr($ZERROR,&amp;#34;^&amp;#34;,&amp;#34;--&amp;#34;)_&amp;#34;.错误代码:&amp;#34;_$ECODE,&amp;#34;Runtime Error&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Main   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  SET $ZTRAP=&amp;#34;ErrHandler&amp;#34; S iERR=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s record=$$Read(mi,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,2) i &amp;#39;$l(record) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ;s record=$tr(record,&amp;#34;*&amp;#34;,&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  d Trace^MI.MIF000(mi,record,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ;d ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s (sample,epis,surname,result,date,time,QC)=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  //R0123□□□□□□□□□□□□□0101010005v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s epis=$TR($E(record,4,18),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s code=$E(record,19,20)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s res=$TR($E(record,25,28),&amp;#34;0&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s result=code_$c(92)_res_$c(44)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      /// Creator：      Huhm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// CreatDate：    20150528
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Description:   从通讯端口读取数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Table：        无
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Input：        仪器ID,开始符,结束符,是否保存所有数据,是否显示控制字符,超时时间值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Output：       无
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Return：       0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     /// Others：      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Read(mi,StartChar,EndChar,AllData,ControlChar,TimeOut) n (mi,StartChar,EndChar,AllData,ControlChar,TimeOut)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s StartChar=$g(StartChar),EndChar=$g(EndChar),AllData=$g(AllData),ControlChar=$g(ControlChar),TimeOut=$g(TimeOut)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s (Line,Flag)=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i &amp;#39;$l(mi) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s:&amp;#39;TimeOut TimeOut=10 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s:&amp;#39;$l(StartChar) Flag=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    SET $ZTRAP=&amp;#34;ErrRead&amp;#34;,$ECODE=&amp;#34;&amp;#34;  //捕获错误开始 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    //循环读取一直读到字符包含结束字符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Result=&amp;#34;&amp;#34; f  r *x:TimeOut q:(&amp;#34;,&amp;#34;_EndChar_&amp;#34;,&amp;#34;)[(&amp;#34;,&amp;#34;_$c(x)_&amp;#34;,&amp;#34;)  q:x=-1  i x d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .d ACKE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .//记录数据到globle
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .i $l($g(mi)),AllData=&amp;#34;Y&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i &amp;#39;Line s Line=$o(^TMPMACHDATA(mi,99,&amp;#34;&amp;#34;),-1)+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..s ^TMPMACHDATA(mi,99,Line)=$g(^TMPMACHDATA(mi,99,Line))_$c(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .//读的字符没包含开始字符就退出，不累积到要的数据里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .i &amp;#39;Flag,(&amp;#34;,&amp;#34;_StartChar_&amp;#34;,&amp;#34;)[(&amp;#34;,&amp;#34;_$c(x)_&amp;#34;,&amp;#34;) s Flag=1 q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .//是否要0-32的不可见字符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .i ControlChar=&amp;#34;Y&amp;#34;,x&amp;lt;32 q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .//累积数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .i Flag s Result=Result_$c(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q Result 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ACK	    ; send &amp;#39;ack&amp;#39; to instrument
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ack=$c(6)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   w ack,*-3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   d Trace^MI.MIF000(mi,&amp;#34;ACK&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ACKE	    ; send &amp;#39;ack&amp;#39; to instrument
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ack=$c(6)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   w ack,*-3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ;d Trace^MI.MIF000(mi,&amp;#34;ACK&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ErrRead
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Error=$ze
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Max=200
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Date=$zd(+$h,3),Time=$zt($p($h,&amp;#34;,&amp;#34;,2))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Num=$o(^TMPMACHDATA(+mi,98,&amp;#34;&amp;#34;),-1)+1,^TMPMACHDATA(+mi,98,Num)=Date_&amp;#34; &amp;#34;_Time_&amp;#34; : Read : &amp;#34;_Error
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    f j=Num-Max:-1 q:&amp;#39;$d(^TMPMACHDATA(+mi,98,j))  k ^TMPMACHDATA(+mi,98,j)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    h 3     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q &amp;#34;&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>优利特1680</title>
-        <link>https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</link>
+        <link>http://localhost:8636/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</link>
         <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</guid>
-        <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 优利特1680" /&gt;&lt;h3 id=&#34;接口代码&#34;&gt;接口代码
+        <guid>http://localhost:8636/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</guid>
+        <description>&lt;img src="http://localhost:8636/img/title.jpg" alt="Featured image of post 优利特1680" /&gt;&lt;h3 id=&#34;接口代码&#34;&gt;接口代码
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -848,10 +1151,10 @@
 尿常规：UC^^1&lt;br&gt;
 尿沉渣：UD^^1&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp.png&#34;
+&lt;p&gt;​&lt;img src=&#34;http://localhost:8636/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp.png&#34;
 	width=&#34;1146&#34;
 	height=&#34;763&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu2146508421897986130.png 480w, https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu16604622548984740524.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu2146508421897986130.png 480w, http://localhost:8636/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu16604622548984740524.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;QQ图片20241230192601&#34;
@@ -867,15 +1170,15 @@
         </item>
         <item>
         <title>贝克曼AU680</title>
-        <link>https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/</link>
+        <link>http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/</link>
         <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/</guid>
-        <description>&lt;img src="https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1.jpg" alt="Featured image of post 贝克曼AU680" /&gt;&lt;h3 id=&#34;仪器配置图片&#34;&gt;仪器配置图片
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1.jpg&#34;
+        <guid>http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/</guid>
+        <description>&lt;img src="http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1.jpg" alt="Featured image of post 贝克曼AU680" /&gt;&lt;h3 id=&#34;仪器配置图片&#34;&gt;仪器配置图片
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1_hu825109378695537854.jpg 480w, https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1_hu939255299756401212.jpg 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1_hu825109378695537854.jpg 480w, http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1_hu939255299756401212.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1.jpg&#34;
@@ -886,10 +1189,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2_hu11468938077479986347.jpg 480w, https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2_hu2395551503715638539.jpg 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2_hu11468938077479986347.jpg 480w, http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2_hu2395551503715638539.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;2.jpg&#34;
@@ -900,10 +1203,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3_hu6536210009016751753.jpg 480w, https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3_hu2161811926938498693.jpg 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3_hu6536210009016751753.jpg 480w, http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3_hu2161811926938498693.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;3.jpg&#34;
@@ -914,10 +1217,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4_hu4151784547684057634.jpg 480w, https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4_hu1363727661488524656.jpg 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4_hu4151784547684057634.jpg 480w, http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4_hu1363727661488524656.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1.jpg&#34;
@@ -928,10 +1231,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5_hu606822165268058651.jpg 480w, https://muziyangg.github.io/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5_hu6525428247539157339.jpg 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5_hu606822165268058651.jpg 480w, http://localhost:8636/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5_hu6525428247539157339.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1.jpg&#34;
@@ -1351,11 +1654,11 @@
         </item>
         <item>
         <title>批量取消审核</title>
-        <link>https://muziyangg.github.io/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/</link>
+        <link>http://localhost:8636/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/</link>
         <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/</guid>
-        <description>&lt;img src="https://muziyangg.github.io/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/title.jpg" alt="Featured image of post 批量取消审核" /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+        <guid>http://localhost:8636/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/</guid>
+        <description>&lt;img src="http://localhost:8636/p/%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E5%AE%A1%E6%A0%B820241230/title.jpg" alt="Featured image of post 批量取消审核" /&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -1557,16 +1860,16 @@
         </item>
         <item>
         <title>功能对应路径</title>
-        <link>https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/</link>
+        <link>http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/</link>
         <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/</guid>
-        <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 功能对应路径" /&gt;&lt;h3 id=&#34;span-id20241227020427-f5wk055-styledisplay-nonespan结果异常改变打印颜色&#34;&gt;&lt;span id=&#34;20241227020427-f5wk055&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;结果异常改变打印颜色
+        <guid>http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/</guid>
+        <description>&lt;img src="http://localhost:8636/img/title.jpg" alt="Featured image of post 功能对应路径" /&gt;&lt;h3 id=&#34;span-id20241227020427-f5wk055-styledisplay-nonespan结果异常改变打印颜色&#34;&gt;&lt;span id=&#34;20241227020427-f5wk055&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;结果异常改变打印颜色
 &lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrint&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef_hu14896349270752277860.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef_hu4467294845223473833.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef_hu14896349270752277860.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182228977-20241227020427-8nbvjef_hu4467294845223473833.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230327182228977&#34;
@@ -1584,10 +1887,10 @@
 &lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrintBase&lt;/p&gt;
 &lt;h3 id=&#34;span-id20241227020427-frc116r-styledisplay-nonespanlis-设置默认打印机&#34;&gt;&lt;span id=&#34;20241227020427-frc116r&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;lis 设置默认打印机
 &lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrintBarCode&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f_hu12616264997515271675.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f_hu748453216037999054.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f_hu12616264997515271675.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327182804383-20241227020427-nwmvf2f_hu748453216037999054.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230327182804383&#34;
@@ -1606,10 +1909,10 @@
 &lt;h3 id=&#34;span-id20241227020427-vuh2u1t-styledisplay-nonespan模板设计器增加可用元素&#34;&gt;&lt;span id=&#34;20241227020427-vuh2u1t&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;模板设计器增加可用元素
 &lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrint // 添加可用参数&lt;/p&gt;
 &lt;p&gt;HIS.DHCReportPrintBase //更新 global&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;967&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz_hu555462332196578238.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz_hu10789201947123338436.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz_hu555462332196578238.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327183933549-20241227020427-o4w4piz_hu10789201947123338436.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230327183933549&#34;
@@ -1620,10 +1923,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1048&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k_hu3126960205190299767.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k_hu18231802806557016917.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k_hu3126960205190299767.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230327184227688-20241227020427-e6nw26k_hu18231802806557016917.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230327184227688&#34;
@@ -1634,10 +1937,10 @@
 		data-flex-basis=&#34;439px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb.png&#34;
 	width=&#34;662&#34;
 	height=&#34;443&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb_hu4364385479512978683.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb_hu16006857938645273295.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb_hu4364385479512978683.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/3-20241227020427-c4syjbb_hu16006857938645273295.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
@@ -1648,10 +1951,10 @@
 		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms.png&#34;
 	width=&#34;661&#34;
 	height=&#34;321&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms_hu1216922434800001679.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms_hu9376454586731483872.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms_hu1216922434800001679.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/4-20241227020427-tuhuhms_hu9376454586731483872.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
@@ -1662,10 +1965,10 @@
 		data-flex-basis=&#34;494px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq.png&#34;
 	width=&#34;1210&#34;
 	height=&#34;413&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq_hu13228626274780305124.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq_hu970016731748434130.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq_hu13228626274780305124.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/5-20241227020427-4uk29jq_hu970016731748434130.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
@@ -1676,10 +1979,10 @@
 		data-flex-basis=&#34;703px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n.png&#34;
 	width=&#34;923&#34;
 	height=&#34;267&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n_hu1533049524991749348.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n_hu14076069669989234658.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n_hu1533049524991749348.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/6-20241227020427-zqts20n_hu14076069669989234658.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;img&#34;
@@ -1696,10 +1999,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;span-id20241227020427-enmnzq3-styledisplay-nonespan保存标本登记存储过程&#34;&gt;&lt;span id=&#34;20241227020427-enmnzq3&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;保存标本登记存储过程
 &lt;/h3&gt;&lt;p&gt;LISSP.DHCRPVisitNumber&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq.png&#34;
 	width=&#34;1344&#34;
 	height=&#34;636&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq_hu11647974170674348922.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq_hu8187985405686261792.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq_hu11647974170674348922.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150638703-20241227020427-mc4vzyq_hu8187985405686261792.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230404150638703&#34;
@@ -1710,10 +2013,10 @@
 		data-flex-basis=&#34;507px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05.png&#34;
 	width=&#34;1773&#34;
 	height=&#34;769&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05_hu11143929282659275071.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05_hu1499347535235489958.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05_hu11143929282659275071.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230404150541132-20241227020427-4tkqw05_hu1499347535235489958.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230404150541132&#34;
@@ -1730,10 +2033,10 @@
 &lt;h3 id=&#34;span-id20241227020427-3lhoibe-styledisplay-nonespan自动任务lis-和-his-信息同步拒收&#34;&gt;&lt;span id=&#34;20241227020427-3lhoibe&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;自动任务（lis 和 his 信息同步，拒收）
 &lt;/h3&gt;&lt;p&gt;TASK.LisRealTimeInterface&lt;/p&gt;
 &lt;p&gt;w ##Class(TASK.LISRealTimeTask).Do()&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1.png&#34;
 	width=&#34;818&#34;
 	height=&#34;293&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1_hu8589657678364938732.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1_hu2389455924243423735.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1_hu8589657678364938732.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181656503-20241227020427-9jed0n1_hu2389455924243423735.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230406181656503&#34;
@@ -1744,10 +2047,10 @@
 		data-flex-basis=&#34;670px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz_hu8250824716598709352.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz_hu991827977858166945.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz_hu8250824716598709352.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230406181615270-20241227020427-g78dghz_hu991827977858166945.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230406181615270&#34;
@@ -1763,10 +2066,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;span-id20241227020427-anud49u-styledisplay-nonespan同步-his-数据&#34;&gt;&lt;span id=&#34;20241227020427-anud49u&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;同步 his 数据
 &lt;/h3&gt;&lt;p&gt;LIS.Util.SyncData&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk.png&#34;
 	width=&#34;1005&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk_hu14121603966899380015.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk_hu10182678737283147644.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk_hu14121603966899380015.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230528003652878-20241227020427-l3a64jk_hu10182678737283147644.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230528003652878&#34;
@@ -1884,10 +2187,10 @@ i retVal&amp;rsquo;= 1 Quit&lt;/p&gt;
 &lt;/h3&gt;&lt;p&gt;d ##Class(MI.Common.MachineControl).StartAll()&lt;/p&gt;
 &lt;h3 id=&#34;span-id20241227020427-o9bw0gv-styledisplay-nonespan主动上传方法&#34;&gt;&lt;span id=&#34;20241227020427-o9bw0gv&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;主动上传方法
 &lt;/h3&gt;&lt;p&gt;复查 LIS.Common.DHCVisitNumber&amp;ndash;CreateUploadRecordMTHD&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q.png&#34;
 	width=&#34;1654&#34;
 	height=&#34;570&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q_hu13022274747875068502.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q_hu6164574142997516693.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q_hu13022274747875068502.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091326128-20241227020427-88v831q_hu6164574142997516693.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230714091326128&#34;
@@ -1899,10 +2202,10 @@ i retVal&amp;rsquo;= 1 Quit&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;拒收 LISSP.DHCRPVisitNumber&amp;ndash;RejectVisitNumber&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q.png&#34;
 	width=&#34;1608&#34;
 	height=&#34;618&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q_hu17468342331427977469.png 480w, https://muziyangg.github.io/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q_hu6222099734146316693.png 1024w&#34;
+	srcset=&#34;http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q_hu17468342331427977469.png 480w, http://localhost:8636/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84/assets/image-20230714091528326-20241227020427-8e8u63q_hu6222099734146316693.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230714091528326&#34;
@@ -1970,11 +2273,11 @@ LISSP.BLL.DealMsgQueue		普通审核调用&lt;/p&gt;
         </item>
         <item>
         <title>国家传染病接口</title>
-        <link>https://muziyangg.github.io/p/%E5%9B%BD%E5%AE%B6%E4%BC%A0%E6%9F%93%E7%97%85%E6%8E%A5%E5%8F%A3-20250104010204/</link>
+        <link>http://localhost:8636/p/%E5%9B%BD%E5%AE%B6%E4%BC%A0%E6%9F%93%E7%97%85%E6%8E%A5%E5%8F%A3-20250104010204/</link>
         <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E5%9B%BD%E5%AE%B6%E4%BC%A0%E6%9F%93%E7%97%85%E6%8E%A5%E5%8F%A3-20250104010204/</guid>
-        <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 国家传染病接口" /&gt;&lt;h3 id=&#34;2024年12月17日113747将patid作为患者唯一id&#34;&gt;2024年12月17日11:37:47	将patid作为患者唯一id
+        <guid>http://localhost:8636/p/%E5%9B%BD%E5%AE%B6%E4%BC%A0%E6%9F%93%E7%97%85%E6%8E%A5%E5%8F%A3-20250104010204/</guid>
+        <description>&lt;img src="http://localhost:8636/img/title.jpg" alt="Featured image of post 国家传染病接口" /&gt;&lt;h3 id=&#34;2024年12月17日113747将patid作为患者唯一id&#34;&gt;2024年12月17日11:37:47	将patid作为患者唯一id
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
