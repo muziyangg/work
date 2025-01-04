@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="仪器接口记录">
+<title>贝克曼AU680</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680%E6%8E%A5%E5%8F%A3/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="贝克曼AU680">
+<meta property='og:description' content="仪器接口记录">
+<meta property='og:url' content='http://localhost:1313/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680%E6%8E%A5%E5%8F%A3/'>
+<meta property='og:site_name' content='木子洋的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2024-01-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-01-02T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/img/title.jpg' />
+<meta name="twitter:title" content="贝克曼AU680">
+<meta name="twitter:description" content="仪器接口记录"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/img/title.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/touxiang_hu10227603329451708851.jpg" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">木子洋的博客</a></h1>
+            <h2 class="site-description">To be or not to be.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muziyangg'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="http://localhost:1313/en/" >English</option>
+                                
+                                    <option value="http://localhost:1313/" selected>中文</option>
+                                
+                                    <option value="http://localhost:1313/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#仪器配置图片">仪器配置图片</a></li>
+        <li><a href="#仪器接口程序">仪器接口程序</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680%E6%8E%A5%E5%8F%A3/">
+                
+                    <img src="/img/title.jpg" loading="lazy" alt="Featured image of post 贝克曼AU680" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680%E6%8E%A5%E5%8F%A3/">贝克曼AU680</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            仪器接口记录
+        </h3>
+        
+    </div>
+
+        
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2024-01-02</time>
+                </div>
+            
+
+            
+            
+                        最后修改:
+                        <time class="article-time--updated" datetime="2024-01-02 00:00:00 &#43;0000 UTC" title="2024-01-02 00:00:00 &#43;0000 UTC">
+                            2024-01-02
+                        </time>
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="仪器配置图片">仪器配置图片
+</h3><p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1-20250101225649-ie39g4u.jpg"
+	width="1280"
+	height="960"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1-20250101225649-ie39g4u_hu825109378695537854.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/1-20250101225649-ie39g4u_hu939255299756401212.jpg 1024w"
+	loading="lazy"
+	
+		alt="1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>​</p>
+<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2-20250101225649-9eaadf4.jpg"
+	width="1280"
+	height="960"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2-20250101225649-9eaadf4_hu11468938077479986347.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/2-20250101225649-9eaadf4_hu2395551503715638539.jpg 1024w"
+	loading="lazy"
+	
+		alt="2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>​</p>
+<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3-20250101225649-5tgyzzj.jpg"
+	width="1280"
+	height="960"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3-20250101225649-5tgyzzj_hu6536210009016751753.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/3-20250101225649-5tgyzzj_hu2161811926938498693.jpg 1024w"
+	loading="lazy"
+	
+		alt="3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>​</p>
+<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4-20250101225649-nblfe2w.jpg"
+	width="1280"
+	height="960"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4-20250101225649-nblfe2w_hu4151784547684057634.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/4-20250101225649-nblfe2w_hu1363727661488524656.jpg 1024w"
+	loading="lazy"
+	
+		alt="4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>​</p>
+<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5-20250101225649-6g07x9y.jpg"
+	width="1280"
+	height="960"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5-20250101225649-6g07x9y_hu606822165268058651.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680/assets/5-20250101225649-6g07x9y_hu6525428247539157339.jpg 1024w"
+	loading="lazy"
+	
+		alt="5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>​</p>
+<h3 id="仪器接口程序">仪器接口程序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">///</span> <span class="err">名称</span><span class="p">:</span> <span class="n">MI</span><span class="o">.</span><span class="n">MIFAU680</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">描述</span><span class="p">:</span> <span class="n">AU</span> <span class="mi">680</span><span class="err">仪器接口</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">通讯方式：双向</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">编写者</span><span class="p">:</span><span class="n">liuzf</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">编写日期</span><span class="p">:</span> <span class="mi">20150827</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> 
+</span></span><span class="line"><span class="cl"><span class="n">MIFAU680</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">mi</span><span class="o">=$</span><span class="n">g</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="s1">&#39;$l(mi) q</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACHDATA1</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span><span class="o">=</span><span class="n">mi</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ItemDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">12</span><span class="p">)</span> <span class="o">//</span><span class="err">项目分隔符</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ResultDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">13</span><span class="p">)</span> <span class="o">//</span><span class="err">结果分隔符</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">AntDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">14</span><span class="p">)</span> <span class="o">//</span><span class="err">抗生素分隔符</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">SenDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">15</span><span class="p">)</span> <span class="o">//</span><span class="err">药敏结果分隔符</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">Port</span><span class="o">=</span><span class="s2">&#34;|TCP|&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">17</span><span class="p">)</span>  <span class="o">//</span><span class="err">端口号</span>
+</span></span><span class="line"><span class="cl">  <span class="o">//</span><span class="err">控制字符</span>
+</span></span><span class="line"><span class="cl">  <span class="n">SET</span> <span class="o">$</span><span class="n">ZTRAP</span><span class="o">=</span><span class="s2">&#34;ErrHandler&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">stx</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">etx</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">ack</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span><span class="n">nak</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span><span class="n">etb</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">23</span><span class="p">),</span><span class="n">end</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACHDATA1</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">=</span><span class="n">mi</span>
+</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="o">$$</span><span class="n">Start</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f</span>  <span class="n">d</span> <span class="n">Main</span> <span class="n">i</span> <span class="o">$$</span><span class="n">Stop</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACH10</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="o">=$</span><span class="n">h</span>
+</span></span><span class="line"><span class="cl">  <span class="n">c</span> <span class="n">Port</span>
+</span></span><span class="line"><span class="cl">  <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Main</span> 
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">record</span><span class="o">=$$</span><span class="n">Read</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">stx</span><span class="p">,</span><span class="n">etb_</span><span class="s2">&#34;,&#34;</span><span class="n">_etx</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="s1">&#39;$l(record)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">d</span> <span class="n">ACK</span>                                              
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="err">上传项目</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span> <span class="mi">00002803</span> <span class="mi">0169</span>    <span class="mi">1003007</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span> <span class="mi">00000201</span> <span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010001815</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">D</span> <span class="mi">00000107</span> <span class="n">E207</span>           <span class="n">E0970137</span><span class="o">.</span><span class="mi">1</span><span class="n">r</span> <span class="mf">098002.39</span><span class="n">r</span> <span class="mf">0990105.3</span><span class="n">r</span> <span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span> <span class="mi">003001</span> <span class="mi">0173</span>             <span class="mi">1002947</span>    <span class="n">E001002003004015</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">000201</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010001815</span><span class="err">□□□□</span><span class="n">E027</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">001101</span><span class="err">□</span><span class="mi">0001</span><span class="err">□□□□□□□□□□</span><span class="mi">1000000028</span><span class="err">□□□□</span><span class="n">E097098</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">000801</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010009152</span><span class="err">□□□□</span><span class="n">E0270</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">001101</span><span class="err">□</span><span class="mi">0001</span><span class="err">□□□□□□□□□□</span><span class="mi">1000000028</span><span class="err">□□□□</span><span class="n">E097098</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">D</span><span class="err">□</span><span class="mi">000508</span><span class="err">□</span><span class="mi">0048</span><span class="err">□□□□□□□□□□□□</span><span class="n">A0139941</span><span class="err">□□□□</span><span class="n">E018009</span><span class="o">.</span><span class="mi">56</span><span class="n">r</span><span class="err">□</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span><span class="err">□</span><span class="mi">00000801</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010009152</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span> <span class="mi">0000105</span> <span class="mi">0007</span>    <span class="n">A0060359</span>    <span class="n">E002010013014015016045049054058092097098099</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">texttype</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;RH&#34;</span> <span class="n">d</span>  <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">39</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">41</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">39</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">RackNo</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">Pos</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">d</span> <span class="n">ReRequest</span>
+</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;R &#34;</span> <span class="n">d</span>  <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">39</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">41</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">RackNo</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">Pos</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.///</span><span class="err">标本核收</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">s</span> <span class="n">retVal</span><span class="o">=$$</span><span class="n">ReceiveLabno</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">RackNo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">i</span> <span class="n">retVal</span><span class="s1">&#39;=1 Quit</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">d</span> <span class="n">SendTestItem</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="err">采集结果</span> 
+</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;D &#34;</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;d &#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DQ&#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DH&#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;dH&#34;</span><span class="p">)</span> <span class="n">d</span>  <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">block</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">temstr</span><span class="o">=</span><span class="n">record</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">f</span> <span class="n">temi</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">temstr</span><span class="p">,</span><span class="n">etb</span><span class="p">)</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">record</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="n">temstr</span><span class="p">,</span><span class="n">etb</span><span class="p">,</span><span class="n">temi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">s</span> <span class="n">record</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="s1">&#39;$l(record) q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..///</span><span class="n">D</span> <span class="mi">00000101</span> <span class="n">E003</span>                        <span class="n">E15</span>    <span class="mf">288.5</span>  
+</span></span><span class="line"><span class="cl"> <span class="o">..///</span><span class="n">D</span> <span class="mi">00003007</span> <span class="mi">0153</span>    <span class="mi">1003005</span>    <span class="n">E0010007</span><span class="o">.</span><span class="mi">1</span><span class="n">r</span> <span class="mf">0020016.8</span><span class="n">r</span> <span class="mf">0030135.1</span><span class="n">r</span> <span class="mf">0040017.6</span><span class="n">r</span> <span class="mf">015006.21</span><span class="n">r</span> <span class="s2">&#34; </span>
+</span></span><span class="line"><span class="cl"> <span class="o">..//</span> <span class="n">D</span><span class="err">□</span><span class="mi">00</span><span class="err">□□□□</span><span class="mi">02</span><span class="err">□</span><span class="n">P002</span><span class="err">□□□□□□□□□□</span><span class="n">E030007032</span><span class="err">□□□□</span><span class="n">E0600053</span><span class="o">.</span><span class="mi">4</span><span class="n">r</span><span class="err">□</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..//</span> <span class="n">D</span><span class="err">□</span><span class="mi">00000608</span><span class="err">□</span><span class="mi">0063</span><span class="err">□□□□□□□□□□</span><span class="n">A010017861</span><span class="err">□□□□</span><span class="n">E019002</span><span class="o">.</span><span class="mi">17</span><span class="n">r</span><span class="err">□</span><span class="mf">020004.29</span><span class="n">r</span><span class="err">□</span><span class="mf">022001.15</span><span class="n">r</span><span class="err">□</span><span class="mf">023001.97</span><span class="n">r</span><span class="err">□</span><span class="mf">024001.40</span><span class="n">r</span><span class="err">□</span><span class="mf">025000.95</span><span class="n">r</span><span class="err">□</span><span class="mf">0320068.4</span><span class="n">r</span><span class="err">□</span><span class="mf">033405.67</span><span class="n">r</span><span class="err">□</span><span class="mf">043001.01</span><span class="n">r</span><span class="err">□</span><span class="mf">044002.05</span><span class="n">r</span><span class="err">□</span><span class="mf">045002.36</span><span class="n">r</span><span class="err">□</span><span class="mf">092001.18</span><span class="n">r</span><span class="err">□</span><span class="mf">095001.17</span><span class="n">r</span><span class="err">□</span><span class="mi">097000135</span><span class="n">r</span><span class="err">□</span><span class="mf">0980006.9</span><span class="n">r</span><span class="err">□</span><span class="mi">099000103</span><span class="n">r</span><span class="err">□</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">res</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">surname</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">I</span> <span class="s1">&#39;$L(epis) D</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">S</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..//</span><span class="err">流水号转条码号</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">,</span><span class="n">epis</span><span class="s1">&#39;[&#34;E&#34;  d</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">WorkGroupMachienDR</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">i</span> <span class="s1">&#39;$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd(+$h,8),WorkGroupMachienDR,&#34; &#34;_epis)) q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">ReportDR</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberReportI</span><span class="p">(</span><span class="s2">&#34;IndexEpisodeNo&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">zd</span><span class="p">(</span><span class="o">+$</span><span class="n">h</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="n">WorkGroupMachienDR</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="n">_epis</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">VisitNumberDR</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberReportD</span><span class="p">(</span><span class="n">ReportDR</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberD</span><span class="p">(</span><span class="n">VisitNumberDR</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DQ&#34;</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">27</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;Q&#34;</span><span class="n">_epis</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">45</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=</span><span class="s2">&#34;QC&#34;</span><span class="n">_QC</span><span class="p">,</span><span class="n">epis</span><span class="o">=</span><span class="n">QC</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">_epis</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">res</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">f</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="n">s</span> <span class="n">rec</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">13</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="n">rec</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">code</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">resx</span><span class="o">=+$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">),</span><span class="n">flag</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">S</span><span class="p">:</span><span class="n">resx</span><span class="err">?</span><span class="mi">1</span><span class="s2">&#34;.&#34;</span><span class="o">.</span><span class="n">N</span> <span class="n">resx</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="n">_resx</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">resx</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="s2">&#34;GM&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">i</span> <span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;-.&#34;</span> <span class="n">s</span> <span class="n">resx</span><span class="o">=</span><span class="s2">&#34;-0.&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">resx</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">result</span><span class="o">=</span><span class="n">result_code_ResultDeli_resx_ItemDeli</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">epis</span><span class="p">),</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="n">d</span> <span class="o">//</span><span class="n">block</span><span class="o">=</span><span class="s2">&#34;E&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">d</span> <span class="n">Save</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">surname</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">LOAD</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="n">k</span> <span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">))</span> <span class="n">k</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">d</span> <span class="n">loadlist</span><span class="o">^</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">sx</span><span class="p">,</span><span class="n">line</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">sx</span><span class="o">=^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL1&#34;</span><span class="p">,</span><span class="n">sx</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="n">sx</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">send</span><span class="o">=^</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">data</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_send_data</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">line</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">line</span><span class="p">)</span><span class="o">=</span><span class="n">data</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>     
+</span></span><span class="line"><span class="cl"> <span class="p">;</span> <span class="n">send</span> <span class="s1">&#39;ack&#39;</span> <span class="n">to</span> <span class="n">instrument</span>
+</span></span><span class="line"><span class="cl"><span class="n">ACK</span>  
+</span></span><span class="line"><span class="cl">  <span class="n">h</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ack</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">w</span> <span class="n">ack</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">q</span>  
+</span></span><span class="line"><span class="cl"> <span class="p">;</span> <span class="n">send</span> <span class="n">string</span> <span class="n">to</span> <span class="n">instrument</span>
+</span></span><span class="line"><span class="cl"><span class="n">SAVE</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="p">;</span> <span class="n">Create</span> <span class="n">LoadList</span> <span class="n">Records</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="n">samno</span><span class="p">,</span><span class="nb">str</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">epis</span><span class="o">=^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;EPISODE&#34;</span><span class="p">),</span><span class="n">epis</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="o">$</span><span class="n">p</span><span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">samno</span><span class="o">=+^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;SAMPLE&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">dumy</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">blockno</span><span class="o">=</span><span class="s2">&#34;E&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">sex</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">age</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">month</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">pat</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">patinfo</span><span class="o">=</span><span class="n">sex_age_month_pat</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">test</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">z</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;TEST&#34;</span><span class="p">,</span><span class="n">z</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">z</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">s</span> <span class="n">test</span><span class="o">=</span><span class="n">test_z</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="n">epis_dummy_blockno_patinfo_test</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFCL900&#34;</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="n">samno</span><span class="p">)</span><span class="o">=</span><span class="nb">str</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>     
+</span></span><span class="line"><span class="cl"><span class="n">SEND</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="nb">str</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">x</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">x</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="nb">str</span><span class="o">=^</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">;;</span><span class="n">f</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">d</span> <span class="n">q</span><span class="p">:</span><span class="n">ok</span>
+</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE00&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">k</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">d</span> <span class="n">SendTestItem</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIFAU680</span>
+</span></span><span class="line"><span class="cl"><span class="n">SendTestItem</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;$$SearchTestItem^MI.MIFAU680(&#34;</span><span class="n">A010017297</span><span class="s2">&#34;)&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=$$</span><span class="n">SearchTestItem</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;002010013014015016045049054058092097098099&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E008005009&#34;</span>  <span class="o">//</span><span class="n">ItemChannel</span>
+</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S 001101 0002          1000000030    E005008009&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">r</span> <span class="o">*</span><span class="n">a</span><span class="p">:</span><span class="mi">5</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">s</span><span class="p">(</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">ack</span><span class="p">:</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">nak</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ReRequest</span> 
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SH&#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
+</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">r</span> <span class="o">*</span><span class="n">a</span><span class="p">:</span><span class="mi">5</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">s</span><span class="p">(</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">ack</span><span class="p">:</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">nak</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">stx</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span> <span class="n">i</span> <span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">stx</span> <span class="n">w</span> <span class="n">etx</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">etx</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">q</span>   
+</span></span><span class="line"><span class="cl"><span class="n">SearchTestItem</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">tcx</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">d</span> <span class="n">ScanOne</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFTESTCODE&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">))</span> <span class="n">f</span> <span class="n">N</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span> <span class="n">s</span> <span class="n">tc</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFTESTCODE&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">=</span><span class="mi">2</span> <span class="n">D</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="n">_tc</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span> <span class="n">D</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="n">tc</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">4</span> <span class="n">D</span>
+</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">s</span> <span class="n">tcx</span><span class="o">=</span><span class="n">tcx_tc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span> <span class="n">tcx</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl"><span class="n">ErrHandler</span>
+</span></span><span class="line"><span class="cl">  <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">TR</span><span class="p">(</span><span class="o">$</span><span class="n">ZERROR</span><span class="p">,</span><span class="s2">&#34;^&#34;</span><span class="p">,</span><span class="s2">&#34;--&#34;</span><span class="p">)</span><span class="n">_</span><span class="s2">&#34;.错误代码:&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">ECODE</span><span class="p">,</span><span class="s2">&#34;Runtime Error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">h</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Q</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="n">GetTestItem</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">mi</span><span class="o">=$</span><span class="n">G</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="n">tcs</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">F</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">tc</span><span class="o">=$</span><span class="n">O</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">     <span class="n">Q</span><span class="p">:</span><span class="s1">&#39;$L(tc)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">data</span><span class="o">=$</span><span class="n">G</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">flag</span><span class="o">=$</span><span class="n">P</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">,3)</span>
+</span></span><span class="line"><span class="cl">     <span class="n">Continue</span><span class="p">:</span><span class="n">flag</span><span class="s1">&#39;=&#34;Y&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">chl</span><span class="o">=$</span><span class="n">P</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">,1)</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">     <span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">chl</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="n">S</span> <span class="n">chl</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">chl</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">chl</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">tcs</span><span class="o">=</span><span class="n">tcs_chl</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Q</span> <span class="n">tcs</span>  
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文文字在未特别注明下默认使用 CC BY-NC-SA 4.0 许可协议。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://muziyang.us.kg"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 muziyang
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e8ca71fc7ab8b07e10ce14c430a5786f3c22d43162aff696a84f42af50fff336.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

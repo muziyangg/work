@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on 木子洋的博客</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Recent content in Categories on 木子洋的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>muziyang</copyright>
+        <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>仪器接口</title>
+        <link>http://localhost:1313/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>贝克曼</title>
+        <link>http://localhost:1313/categories/%E8%B4%9D%E5%85%8B%E6%9B%BC/</link>
+        <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E8%B4%9D%E5%85%8B%E6%9B%BC/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>功能接口</title>
+        <link>http://localhost:1313/categories/%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%8F%A3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>方法类集合</title>
+        <link>http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/</link>
+        <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>第三方接口</title>
+        <link>http://localhost:1313/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%A5%E5%8F%A3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>http://localhost:1313/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/test/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
