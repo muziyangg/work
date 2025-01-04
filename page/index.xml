@@ -2,29 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on 木子洋的博客</title>
-        <link>http://localhost:8636/page/</link>
+        <link>https://muziyangg.github.io/page/</link>
         <description>Recent content in Pages on 木子洋的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-<<<<<<< HEAD
-        <lastBuildDate>Sun, 05 Jan 2025 05:21:07 +0800</lastBuildDate><atom:link href="http://localhost:8636/page/index.xml" rel="self" type="application/rss+xml" /><item>
-=======
         <lastBuildDate>Sun, 05 Jan 2025 06:58:05 +0800</lastBuildDate><atom:link href="https://muziyangg.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
->>>>>>> 83afa9c61964b670c31e513a3d2be0d846b24c6e
         <title>归档</title>
-        <link>http://localhost:8636/archives/</link>
+        <link>https://muziyangg.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:8636/archives/</guid>
+        <guid>https://muziyangg.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:8636/links/</link>
+        <link>https://muziyangg.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:8636/links/</guid>
+        <guid>https://muziyangg.github.io/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -56,19 +52,19 @@
         </item>
         <item>
         <title>关于</title>
-        <link>http://localhost:8636/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://muziyangg.github.io/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:8636/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://muziyangg.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>搜索</title>
-        <link>http://localhost:8636/search/</link>
+        <link>https://muziyangg.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:8636/search/</guid>
+        <guid>https://muziyangg.github.io/search/</guid>
         <description></description>
         </item>
         
