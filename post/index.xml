@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-        <lastBuildDate>Sat, 11 Jan 2025 19:25:20 +0800</lastBuildDate><atom:link href="https://muziyangg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 11 Jan 2025 22:37:18 +0800</lastBuildDate><atom:link href="https://muziyangg.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>双向接口程序整合</title>
         <link>https://muziyangg.github.io/p/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F20250111192412/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
@@ -2525,20 +2525,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F20250111192412/assets/image-20250110221403-iayciez.png&#34;
-	width=&#34;740&#34;
-	height=&#34;1840&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F20250111192412/assets/image-20250110221403-iayciez_hu3509597128151044921.png 480w, https://muziyangg.github.io/p/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F20250111192412/assets/image-20250110221403-iayciez_hu18446048148615067043.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;40&#34;
-		data-flex-basis=&#34;96px&#34;
-	
-&gt;​&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/muziyangg/blog-image/raw/main/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88/assets/8-%E8%A1%80%E7%BB%86%E8%83%9E%EF%BC%88%E8%BF%88%E7%91%9E7500%EF%BC%89%EF%BC%89H-046-011151-00-7.0%20labXpert%20%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%AD%E6%96%87%EF%BC%89-20250111191655-19w4noo.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;8-血细胞（迈瑞7500））H-046-011151-00-7.0 labXpert 通信协议（中文）-20250111191655-19w4noo.pdf&lt;/a&gt;​
+&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/muziyangg/blog-image/raw/main/%E5%B7%A5%E4%BD%9C%E7%9B%B8%E5%85%B3/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88/assets/image-20250111002720-fzqnjdw.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;image-20250111002720-fzqnjdw.png (722×1627)&lt;/a&gt;​&lt;/p&gt;
 &lt;h4 id=&#34;回传多行-obx&#34;&gt;回传多行 OBX
 &lt;/h4&gt;&lt;h5 id=&#34;示例接口迈瑞-bc7500&#34;&gt;示例接口(迈瑞 BC7500)
 &lt;/h5&gt;&lt;blockquote&gt;
