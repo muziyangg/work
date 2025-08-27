@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>仪器接口 on 木子洋</title>
-        <link>https://muziyangg.github.io/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/</link>
+        <link>https://muziyangg.github.io/work/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/</link>
         <description>Recent content in 仪器接口 on 木子洋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>muziyang</copyright><atom:link href="https://muziyangg.github.io/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>muziyang</copyright><atom:link href="https://muziyangg.github.io/work/categories/%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>双向接口程序整合</title>
-        <link>https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/</link>
+        <link>https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/</link>
         <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/</guid>
+        <guid>https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/</guid>
         <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 双向接口程序整合" /&gt;&lt;h2 id=&#34;上机请求双向&#34;&gt;上机请求双向
 &lt;/h2&gt;&lt;h3 id=&#34;hl7-协议接口双向&#34;&gt;HL7 协议接口双向
 &lt;/h3&gt;&lt;h4 id=&#34;回传多行-dsp&#34;&gt;回传多行 DSP
@@ -1048,10 +1048,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;Q&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;阴性(&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_orgRes_&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;)&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44.png&#34;
 	width=&#34;739&#34;
 	height=&#34;2110&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44_hu_6dc426e318beae44.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44_hu_12e82eccffdfd945.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44_hu_6dc426e318beae44.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110220839-bac5x44_hu_12e82eccffdfd945.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -2522,10 +2522,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez.png&#34;
 	width=&#34;740&#34;
 	height=&#34;1840&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez_hu_f060053a5bfcd25f.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez_hu_42661246be2313bc.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez_hu_f060053a5bfcd25f.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110221403-iayciez_hu_42661246be2313bc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -3959,10 +3959,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;assets/8-%e8%a1%80%e7%bb%86%e8%83%9e%ef%bc%88%e8%bf%88%e7%91%9e7500%ef%bc%89%ef%bc%89H-046-011151-00-7.0%20labXpert%20%e9%80%9a%e4%bf%a1%e5%8d%8f%e8%ae%ae%ef%bc%88%e4%b8%ad%e6%96%87%ef%bc%89-20250111212208-ghft7fx.pdf&#34; &gt;8-血细胞（迈瑞7500））H-046-011151-00-7.0 labXpert 通信协议（中文）.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw.png&#34;
+&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw.png&#34;
 	width=&#34;722&#34;
 	height=&#34;1627&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw_hu_692a2af968a321e9.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw_hu_37ba8e8aa61e109f.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw_hu_692a2af968a321e9.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111002720-fzqnjdw_hu_37ba8e8aa61e109f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -4754,10 +4754,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q.png&#34;
 	width=&#34;784&#34;
 	height=&#34;192&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q_hu_2f34ce67a3700519.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q_hu_3f4a00ee8f464669.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q_hu_2f34ce67a3700519.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110224136-youpa8q_hu_3f4a00ee8f464669.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -5272,10 +5272,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q Rtnstr
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1.png&#34;
 	width=&#34;1206&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1_hu_a64a5d5b88786628.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1_hu_5283fae88e212d3.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1_hu_a64a5d5b88786628.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250111003210-lknq7r1_hu_5283fae88e212d3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -6414,10 +6414,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn.png&#34;
 	width=&#34;964&#34;
 	height=&#34;754&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn_hu_5c1240445ba0fe61.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn_hu_fddcd052b501ece7.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn_hu_5c1240445ba0fe61.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231540-2sl4pxn_hu_fddcd052b501ece7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -6428,10 +6428,10 @@
 		data-flex-basis=&#34;306px&#34;
 	
 &gt;​&lt;/p&gt;
-&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua.png&#34;
+&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua.png&#34;
 	width=&#34;814&#34;
 	height=&#34;833&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua_hu_c41ba47104b4caf9.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua_hu_7f25a3da1f1b02d.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua_hu_c41ba47104b4caf9.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110231815-rg5llua_hu_7f25a3da1f1b02d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -6442,10 +6442,10 @@
 		data-flex-basis=&#34;234px&#34;
 	
 &gt;​&lt;/p&gt;
-&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du.png&#34;
+&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du.png&#34;
 	width=&#34;1034&#34;
 	height=&#34;1058&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du_hu_85544e8f2fde4238.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du_hu_ee40ecb35d5c95bb.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du_hu_85544e8f2fde4238.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233605-g55e7du_hu_ee40ecb35d5c95bb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -7114,10 +7114,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	Q
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y.png&#34;
+&lt;/div&gt;&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y.png&#34;
 	width=&#34;710&#34;
 	height=&#34;665&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y_hu_12c536a0f47a4c56.png 480w, https://muziyangg.github.io/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y_hu_45edc6bc02b7a0c0.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y_hu_12c536a0f47a4c56.png 480w, https://muziyangg.github.io/work/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250112000712/assets/image-20250110233658-ylcmi5y_hu_45edc6bc02b7a0c0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image&#34;
@@ -11064,10 +11064,10 @@
         </item>
         <item>
         <title>测试传输接口</title>
-        <link>https://muziyangg.github.io/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</link>
+        <link>https://muziyangg.github.io/work/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</guid>
+        <guid>https://muziyangg.github.io/work/p/%E6%B5%8B%E8%AF%95%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-20250105062905/</guid>
         <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 测试传输接口" /&gt;&lt;blockquote&gt;
 &lt;p&gt;通过接口测试仪器是否能传输到系统。&lt;/p&gt;
 &lt;p&gt;如果日志中无传输日志则说明无传输，排查硬件问题。&lt;/p&gt;
@@ -11366,10 +11366,10 @@
         </item>
         <item>
         <title>优利特1680</title>
-        <link>https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</link>
+        <link>https://muziyangg.github.io/work/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</link>
         <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</guid>
+        <guid>https://muziyangg.github.io/work/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/</guid>
         <description>&lt;img src="https://muziyangg.github.io/img/title.jpg" alt="Featured image of post 优利特1680" /&gt;&lt;h3 id=&#34;接口代码&#34;&gt;接口代码
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -12204,10 +12204,10 @@
 &lt;p&gt;上传通道号&lt;br&gt;
 尿常规：UC^^1&lt;br&gt;
 尿沉渣：UD^^1&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp.png&#34;
+&lt;p&gt;​&lt;img src=&#34;https://muziyangg.github.io/work/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp.png&#34;
 	width=&#34;1146&#34;
 	height=&#34;763&#34;
-	srcset=&#34;https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu_ad9b78e6b9b25471.png 480w, https://muziyangg.github.io/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu_b248f8684a347b6c.png 1024w&#34;
+	srcset=&#34;https://muziyangg.github.io/work/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu_ad9b78e6b9b25471.png 480w, https://muziyangg.github.io/work/p/%E4%BC%98%E5%88%A9%E7%89%B91680-20250104212004/assets/QQ%E5%9B%BE%E7%89%8720241230192601-20250104212320-7ebwgtp_hu_b248f8684a347b6c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;QQ图片20241230192601&#34;
