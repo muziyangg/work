@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>方法类集合 on 木子洋</title>
-        <link>https://muziyangg.github.io/work/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/</link>
+        <link>https://muziyangg.github.io/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/</link>
         <description>Recent content in 方法类集合 on 木子洋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>muziyang</copyright><atom:link href="https://muziyangg.github.io/work/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>muziyang</copyright><atom:link href="https://muziyangg.github.io/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
