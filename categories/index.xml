@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-        <lastBuildDate>Fri, 29 Aug 2025 15:43:57 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 Aug 2025 15:49:56 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>2.仪器接口记录</title>
         <link>https://work.717170.xyz/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
@@ -16,11 +16,35 @@
         <description></description>
         </item>
         <item>
-        <title>个人接口程序</title>
-        <link>https://work.717170.xyz/categories/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</link>
+        <title>贝克曼仪器</title>
+        <link>https://work.717170.xyz/categories/%E8%B4%9D%E5%85%8B%E6%9B%BC%E4%BB%AA%E5%99%A8/</link>
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://work.717170.xyz/categories/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</guid>
+        <guid>https://work.717170.xyz/categories/%E8%B4%9D%E5%85%8B%E6%9B%BC%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>迪尔仪器</title>
+        <link>https://work.717170.xyz/categories/%E8%BF%AA%E5%B0%94%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E8%BF%AA%E5%B0%94%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>乐昌人民医院</title>
+        <link>https://work.717170.xyz/categories/%E4%B9%90%E6%98%8C%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%B9%90%E6%98%8C%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>临时连接接口</title>
+        <link>https://work.717170.xyz/categories/%E4%B8%B4%E6%97%B6%E8%BF%9E%E6%8E%A5%E6%8E%A5%E5%8F%A3/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%B8%B4%E6%97%B6%E8%BF%9E%E6%8E%A5%E6%8E%A5%E5%8F%A3/</guid>
         <description></description>
         </item>
         <item>
@@ -29,6 +53,94 @@
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
         
         <guid>https://work.717170.xyz/categories/%E7%BD%97%E6%B0%8F%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>迈克仪器</title>
+        <link>https://work.717170.xyz/categories/%E8%BF%88%E5%85%8B%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E8%BF%88%E5%85%8B%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>麦科田仪器</title>
+        <link>https://work.717170.xyz/categories/%E9%BA%A6%E7%A7%91%E7%94%B0%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E9%BA%A6%E7%A7%91%E7%94%B0%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>美桥仪器</title>
+        <link>https://work.717170.xyz/categories/%E7%BE%8E%E6%A1%A5%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E7%BE%8E%E6%A1%A5%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>三亚人民医院</title>
+        <link>https://work.717170.xyz/categories/%E4%B8%89%E4%BA%9A%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%B8%89%E4%BA%9A%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>厦门翔安思明院区</title>
+        <link>https://work.717170.xyz/categories/%E5%8E%A6%E9%97%A8%E7%BF%94%E5%AE%89%E6%80%9D%E6%98%8E%E9%99%A2%E5%8C%BA/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E5%8E%A6%E9%97%A8%E7%BF%94%E5%AE%89%E6%80%9D%E6%98%8E%E9%99%A2%E5%8C%BA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>万泰仪器</title>
+        <link>https://work.717170.xyz/categories/%E4%B8%87%E6%B3%B0%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%B8%87%E6%B3%B0%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>项目上线统计接口程序</title>
+        <link>https://work.717170.xyz/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E7%BB%9F%E8%AE%A1%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E7%BB%9F%E8%AE%A1%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>新产业仪器</title>
+        <link>https://work.717170.xyz/categories/%E6%96%B0%E4%BA%A7%E4%B8%9A%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E6%96%B0%E4%BA%A7%E4%B8%9A%E4%BB%AA%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>仪器处理记录</title>
+        <link>https://work.717170.xyz/categories/%E4%BB%AA%E5%99%A8%E5%A4%84%E7%90%86%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%BB%AA%E5%99%A8%E5%A4%84%E7%90%86%E8%AE%B0%E5%BD%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>长沙县人民医院</title>
+        <link>https://work.717170.xyz/categories/%E9%95%BF%E6%B2%99%E5%8E%BF%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E9%95%BF%E6%B2%99%E5%8E%BF%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>中元仪器</title>
+        <link>https://work.717170.xyz/categories/%E4%B8%AD%E5%85%83%E4%BB%AA%E5%99%A8/</link>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/categories/%E4%B8%AD%E5%85%83%E4%BB%AA%E5%99%A8/</guid>
         <description></description>
         </item>
         <item>

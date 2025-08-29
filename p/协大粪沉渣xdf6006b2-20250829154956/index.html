@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200d\n接口说明 仪器厂商 协大粪沉渣XDF6006B2\n仪器型号 协大粪沉渣XDF6006B2\n通讯方式 单向|双向|☑主动上传\n仪器类型 临检粪常规 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口|网口|☑监听文件|数据库|其他 连接方式：HL7协议|ASTM协议|☑txt文件上传|数据库|其他 仪器接口说明 仪器通过txt文件上传信息，上传数据为00000000八个0，如果做那个组合套则配置第几位为1，具体配置根据仪器配置第几位来。相应的项目配置通道号则配置为数字几。比如第7位为隐血试验，则配置隐血项目的上传通道号为7.通过GetLabnoInfo方法获取上传内容。 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 结果格式\n">
+<title>协大粪沉渣XDF6006B2</title>
+
+<link rel='canonical' href='https://work.717170.xyz/p/%E5%8D%8F%E5%A4%A7%E7%B2%AA%E6%B2%89%E6%B8%A3xdf6006b2-20250829154956/'>
+
+<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="协大粪沉渣XDF6006B2">
+<meta property='og:description' content="\u200d\n接口说明 仪器厂商 协大粪沉渣XDF6006B2\n仪器型号 协大粪沉渣XDF6006B2\n通讯方式 单向|双向|☑主动上传\n仪器类型 临检粪常规 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口|网口|☑监听文件|数据库|其他 连接方式：HL7协议|ASTM协议|☑txt文件上传|数据库|其他 仪器接口说明 仪器通过txt文件上传信息，上传数据为00000000八个0，如果做那个组合套则配置第几位为1，具体配置根据仪器配置第几位来。相应的项目配置通道号则配置为数字几。比如第7位为隐血试验，则配置隐血项目的上传通道号为7.通过GetLabnoInfo方法获取上传内容。 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 结果格式\n">
+<meta property='og:url' content='https://work.717170.xyz/p/%E5%8D%8F%E5%A4%A7%E7%B2%AA%E6%B2%89%E6%B8%A3xdf6006b2-20250829154956/'>
+<meta property='og:site_name' content='木子洋'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-08-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-29T15:49:56&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/img/title.jpg' />
+<meta name="twitter:title" content="协大粪沉渣XDF6006B2">
+<meta name="twitter:description" content="\u200d\n接口说明 仪器厂商 协大粪沉渣XDF6006B2\n仪器型号 协大粪沉渣XDF6006B2\n通讯方式 单向|双向|☑主动上传\n仪器类型 临检粪常规 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口|网口|☑监听文件|数据库|其他 连接方式：HL7协议|ASTM协议|☑txt文件上传|数据库|其他 仪器接口说明 仪器通过txt文件上传信息，上传数据为00000000八个0，如果做那个组合套则配置第几位为1，具体配置根据仪器配置第几位来。相应的项目配置通道号则配置为数字几。比如第7位为隐血试验，则配置隐血项目的上传通道号为7.通过GetLabnoInfo方法获取上传内容。 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 结果格式\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://work.717170.xyz/img/title.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/touxiang_hu_3261c9b36eb249a9.jpg" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">木子洋</a></h1>
+            <h2 class="site-description">To be or not to be.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muziyangg'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/muziyangg'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1756364241553" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1459" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M739.76 462H484.2a22.22 22.22 0 0 0-22.2 22.21v55.56A22.24 22.24 0 0 0 484.19 562h155.57A22.22 22.22 0 0 1 662 584.22v11.11A66.67 66.67 0 0 1 595.31 662H384.19A22.22 22.22 0 0 1 362 639.79V428.68A66.67 66.67 0 0 1 428.64 362h311.07a22.21 22.21 0 0 0 22.22-22.2v-55.56A22.22 22.22 0 0 0 739.79 262h-311.1A166.67 166.67 0 0 0 262 428.68v311.1A22.22 22.22 0 0 0 284.22 762H612a150 150 0 0 0 150-150V484.23A22.23 22.23 0 0 0 739.77 462z m0 0" fill="#231815" p-id="1460"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#接口说明">接口说明</a></li>
+      </ol>
+    </li>
+    <li><a href="#仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong></a></li>
+    <li><a href="#仪器接口说明">仪器接口说明</a></li>
+    <li><a href="#串口盒子配置">串口盒子配置</a></li>
+    <li><a href="#数据格式"><strong>数据格式</strong></a></li>
+    <li><a href="#项目通道号"><strong>项目通道号</strong></a></li>
+    <li><a href="#修改记录">修改记录</a></li>
+    <li><a href="#仪器接口程序">仪器接口程序</a>
+      <ol>
+        <li><a href="#监听配置">监听配置</a></li>
+        <li><a href="#接口程序">接口程序</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%8D%8F%E5%A4%A7%E7%B2%AA%E6%B2%89%E6%B8%A3xdf6006b2-20250829154956/">
+                
+                    <img src="/img/title.jpg" loading="lazy" alt="Featured image of post 协大粪沉渣XDF6006B2" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/" >
+                2.仪器接口记录
+            </a>
+        
+            <a href="/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E7%BB%9F%E8%AE%A1%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/" >
+                项目上线统计接口程序
+            </a>
+        
+            <a href="/categories/%E9%95%BF%E6%B2%99%E5%8E%BF%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2/" >
+                长沙县人民医院
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%8D%8F%E5%A4%A7%E7%B2%AA%E6%B2%89%E6%B8%A3xdf6006b2-20250829154956/">协大粪沉渣XDF6006B2</a>
+        </h2>
+    
+        
+    </div>
+
+        
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2025-08-29</time>
+                </div>
+            
+
+            
+            
+                        最后更新于
+                        <time class="article-time--updated" datetime="2025-08-29 15:49:56 &#43;0000 UTC" title="2025-08-29 15:49:56 &#43;0000 UTC">
+                            2025-08-29 15:49:56
+                        </time>
+			
+			
+			
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+					<time class="article-words">
+						11491字
+					</time>
+				</div>
+			
+			
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 23 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+</header>
+
+
+
+    <section class="article-content">
+    
+    
+    <p>‍</p>
+<h3 id="接口说明">接口说明
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">仪器厂商</th>
+          <th style="text-align: left">协大粪沉渣XDF6006B2<br /></th>
+          <th style="text-align: left">仪器型号</th>
+          <th style="text-align: left">协大粪沉渣XDF6006B2<br /></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">通讯方式</td>
+          <td style="text-align: left">单向|双向|☑主动上传<br /></td>
+          <td style="text-align: left">仪器类型</td>
+          <td style="text-align: left">临检粪常规</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">医院名称</td>
+          <td style="text-align: left"><br /></td>
+          <td style="text-align: left">程序名称</td>
+          <td style="text-align: left"><br /></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">终端服务器地址</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">终端服务器端口号</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
+</h2><ol>
+<li>接口类型：串口|网口|☑监听文件|数据库|其他</li>
+<li>连接方式：HL7协议|ASTM协议|☑txt文件上传|数据库|其他</li>
+</ol>
+<h2 id="仪器接口说明">仪器接口说明
+</h2><ul>
+<li>仪器通过txt文件上传信息，上传数据为<code>00000000</code>八个0，如果做那个组合套则配置第几位为1，具体配置根据仪器配置第几位来。相应的项目配置通道号则配置为数字几。比如第7位为隐血试验，则配置隐血项目的上传通道号为7.通过<code>GetLabnoInfo</code>方法获取上传内容。</li>
+</ul>
+<h2 id="串口盒子配置">串口盒子配置
+</h2><ul>
+<li><strong>波特率：</strong> 9600</li>
+<li><strong>数据位：8</strong></li>
+<li><strong>停止位：</strong> 1</li>
+<li><strong>校验位：</strong> N</li>
+</ul>
+<h2 id="数据格式"><strong>数据格式</strong>
+</h2><p>结果格式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;?xml□version=&#34;1.0&#34;□encoding=&#34;UTF-8&#34;□?&gt;[13][10][13][10]&lt;BODY&gt;[13][10][13][10]&lt;A&gt;[13][10][13][10]&lt;row□name=&#34;样本号&#34;&gt;2408150003&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;审核者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;条形码&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/A&gt;[13][10][13][10]&lt;B&gt;[13][10][13][10]&lt;row□name=&#34;样本号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;病历号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;姓名&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;性别&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;年龄&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;床号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;科室&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;送检者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;送检日期&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;检测日期&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;审核者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/B&gt;[13][10][13][10]&lt;C&gt;[13][10][13][10]&lt;row□name=&#34;白细胞&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;酮体&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;亚硝酸盐&#34;&gt;+&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;尿胆原&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;胆红素&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;蛋白质&#34;&gt;+1&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;葡萄糖&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;尿比重&#34;&gt;1.030&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;隐血&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;酸碱度&#34;&gt;7&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;维生素C&#34;&gt;-&lt;/row&gt;[13][10][13][10]&lt;/C&gt;[13][10][13][10]&lt;D&gt;[13][10][13][10]&lt;row□name=&#34;红细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;白细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;结晶&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;上皮细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;管型&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;红细胞异常率&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;真菌&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;脓细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;浊度&#34;&gt;清亮&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;颜色&#34;&gt;□黄色&lt;/row&gt;[13][10][13][10]&lt;/D&gt;[13][10][13][10]&lt;E&gt;[13][10][13][10]&lt;row□name=&#34;检验者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/E&gt;[13][10][13][10]&lt;F&gt;[13][10][13][10]&lt;row□name=&#34;红细胞异常率&#34;&gt;CellCurve.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;干化学图片&#34;&gt;chemc.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;浊度图片&#34;&gt;turbidness.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片1&#34;&gt;a.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片2&#34;&gt;b.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片3&#34;&gt;c.jpg&lt;/row&gt;[13][10][13][10][13][10][13][10]&lt;/F&gt;[13][10][13][10]&lt;/BODY&gt;[13][10][13][10]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="项目通道号"><strong>项目通道号</strong>
+</h2><h2 id="修改记录">修改记录
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>序号</th>
+          <th>日期</th>
+          <th>操作人</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>2025-01-26 10:32:55<br /></td>
+          <td>杨浩然</td>
+          <td><br /></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="仪器接口程序">仪器接口程序
+</h2><h3 id="监听配置">监听配置
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[{&#34;MachID&#34;:&#34;#RowID&#34;,&#34;Type&#34;:&#34;Drect&#34;,&#34;UpTime&#34;:&#34;3000&#34;,&#34;Address&#34;:&#34;D:\\output\\&#34;,&#34;UpCDF&#34;:&#34;&#34;,&#34;UpREF&#34;:&#34;&#34;,&#34;DealProcess&#34;:&#34;MI.MIFXDF6006B&#34;,&#34;Para&#34;:&#34;.xml&#34;,&#34;PreDealClass&#34;:&#34;PreDeal.DealDemoMAll,PreDeal&#34;,&#34;UPPreDealClass&#34;:&#34;PreDeal.DealDemoMAll,PreDeal&#34;,&#34;UpPara&#34;:&#34;D:\\input\\&#34;,&#34;ExcludeFile&#34;:&#34;&#34;}]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="接口程序">接口程序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/*</span>
+</span></span><span class="line"><span class="cl">	<span class="err">上传通道，原始数据为八个</span><span class="mi">0</span>	<span class="mi">00000000</span>
+</span></span><span class="line"><span class="cl">	<span class="err">配置组合套为第几位变为</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="err">例如：</span><span class="mi">4</span>		<span class="mi">00010000</span>
+</span></span><span class="line"><span class="cl"><span class="o">*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="p">[{</span><span class="s2">&#34;MachID&#34;</span><span class="p">:</span><span class="s2">&#34;#RowID&#34;</span><span class="p">,</span><span class="s2">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;Drect&#34;</span><span class="p">,</span><span class="s2">&#34;UpTime&#34;</span><span class="p">:</span><span class="s2">&#34;3000&#34;</span><span class="p">,</span><span class="s2">&#34;Address&#34;</span><span class="p">:</span><span class="s2">&#34;D:</span><span class="se">\\</span><span class="s2">output</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;UpCDF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;UpREF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;DealProcess&#34;</span><span class="p">:</span><span class="s2">&#34;MI.MIFXDF6006B&#34;</span><span class="p">,</span><span class="s2">&#34;Para&#34;</span><span class="p">:</span><span class="s2">&#34;.xml&#34;</span><span class="p">,</span><span class="s2">&#34;PreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;PreDeal.DealDemoMAll,PreDeal&#34;</span><span class="p">,</span><span class="s2">&#34;UPPreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;PreDeal.DealDemoMAll,PreDeal&#34;</span><span class="p">,</span><span class="s2">&#34;UpPara&#34;</span><span class="p">:</span><span class="s2">&#34;D:</span><span class="se">\\</span><span class="s2">input</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;ExcludeFile&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Class</span> <span class="n">MI</span><span class="o">.</span><span class="n">MIFXDF6006B</span> <span class="n">Extends</span> <span class="o">%</span><span class="n">RegisteredObject</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="p">[{</span><span class="s2">&#34;MachID&#34;</span><span class="p">:</span><span class="s2">&#34;#RowID&#34;</span><span class="p">,</span><span class="s2">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;DataBase&#34;</span><span class="p">,</span><span class="s2">&#34;UpTime&#34;</span><span class="p">:</span><span class="s2">&#34;2000&#34;</span><span class="p">,</span><span class="s2">&#34;Address&#34;</span><span class="p">:</span><span class="s2">&#34;DSN=SF8XData&#34;</span><span class="p">,</span><span class="s2">&#34;UpCDF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;UpREF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;DealProcess&#34;</span><span class="p">:</span><span class="s2">&#34;MI.MIFSF8200&#34;</span><span class="p">,</span><span class="s2">&#34;Para&#34;</span><span class="p">:</span><span class="s2">&#34;SELECT * FROM Result WHERE format(报告日期,&#39;yyyy-mm-dd&#39;) = format(DATE(),&#39;yyyy-mm-dd&#39;)#Result_id#&#34;</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="p">[{</span><span class="s2">&#34;MachID&#34;</span><span class="p">:</span><span class="s2">&#34;#RowID&#34;</span><span class="p">,</span><span class="s2">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;Drect&#34;</span><span class="p">,</span><span class="s2">&#34;UpTime&#34;</span><span class="p">:</span><span class="s2">&#34;3000&#34;</span><span class="p">,</span><span class="s2">&#34;Address&#34;</span><span class="p">:</span><span class="s2">&#34;D:</span><span class="se">\\</span><span class="s2">LISDATA</span><span class="se">\\</span><span class="s2">DATA</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;UpCDF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;UpREF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;DealProcess&#34;</span><span class="p">:</span><span class="s2">&#34;MI.MIFXDN9003C&#34;</span><span class="p">,</span><span class="s2">&#34;Para&#34;</span><span class="p">:</span><span class="s2">&#34;.txt&#34;</span><span class="p">,</span><span class="s2">&#34;PreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;PreDeal.DealDemoMAll,PreDeal&#34;</span><span class="p">,</span><span class="s2">&#34;UPPreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="p">[{</span><span class="s2">&#34;MachID&#34;</span><span class="p">:</span><span class="s2">&#34;#RowID&#34;</span><span class="p">,</span><span class="s2">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;Drect&#34;</span><span class="p">,</span><span class="s2">&#34;UpTime&#34;</span><span class="p">:</span><span class="s2">&#34;3000&#34;</span><span class="p">,</span><span class="s2">&#34;Address&#34;</span><span class="p">:</span><span class="s2">&#34;D:</span><span class="se">\\</span><span class="s2">output</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;UpCDF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;UpREF&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;DealProcess&#34;</span><span class="p">:</span><span class="s2">&#34;MI.MIFXDF6006B&#34;</span><span class="p">,</span><span class="s2">&#34;Para&#34;</span><span class="p">:</span><span class="s2">&#34;.xml&#34;</span><span class="p">,</span><span class="s2">&#34;PreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;PreDeal.DealDemoMAll,PreDeal&#34;</span><span class="p">,</span><span class="s2">&#34;UPPreDealClass&#34;</span><span class="p">:</span><span class="s2">&#34;PreDeal.DealDemoMAll,PreDeal&#34;</span><span class="p">,</span><span class="s2">&#34;UpPara&#34;</span><span class="p">:</span><span class="s2">&#34;D:</span><span class="se">\\</span><span class="s2">input</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;ExcludeFile&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">分隔符</span><span class="p">:</span><span class="o">~</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">mi</span><span class="p">:</span><span class="err">仪器主键</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">record</span><span class="p">:</span><span class="err">一个数据行合并提交用</span><span class="c1">#enter#分割多行数据</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">epis</span><span class="p">:</span><span class="err">流水号，前处理提取出了的画</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">fileNameOrColName</span><span class="p">:</span><span class="err">读文件的是文件全名，数据库的是数据库查询的列名用</span><span class="o">~</span><span class="err">分割</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">d</span> <span class="c1">##class(MI.MIFXDN9003C).fileMTHD(&#34;12&#34;,&#34;&lt;?xml□version=&#34;1.0&#34;□encoding=&#34;UTF-8&#34;□?&gt;[13][10]&lt;BODY&gt;[13][10]&lt;A&gt;[13][10]&lt;row□name=&#34;样本号&#34;&gt;$---hd/sn---$&lt;/row&gt;[13][10]&lt;row□name=&#34;审核者&#34;&gt;$---hd/checker---$&lt;/row&gt;[13][10]&lt;row□name=&#34;条形码&#34;&gt;$---hd/barcode---$&lt;/row&gt;[13][10]&lt;/A&gt;[13][10]pt;&lt;B&gt;[13][10]pt;&lt;row□name=&#34;样本号&#34;&gt;$---pt/r0---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;病历号&#34;&gt;$---pt/r1---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;姓名&#34;&gt;$---pt/r2---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;性别&#34;&gt;$---pt/r3---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;年龄&#34;&gt;$---pt/r4---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;床号&#34;&gt;$---pt/r5---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;科室&#34;&gt;$---pt/r6---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;送检者&#34;&gt;$---pt/r7---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;检验者&#34;&gt;$---pt/r8---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;送检日期&#34;&gt;$---pt/r9---$&lt;/row&gt;[13][10]pt;&lt;row□name=&#34;检测日期&#34;&gt;$---pt/r10---$&lt;/row&gt;[13][10]pt;&lt;/B&gt;[13][10]&lt;C&gt;[13][10]ch;&lt;row□name=&#34;白细胞&#34;&gt;$---ch/r0---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;酮体&#34;&gt;$---ch/r1---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;亚硝酸盐&#34;&gt;$---ch/r2---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;尿胆原&#34;&gt;$---ch/r3---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;胆红素&#34;&gt;$---ch/r4---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;蛋白质&#34;&gt;$---ch/r5---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;葡萄糖&#34;&gt;$---ch/r6---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;尿比重&#34;&gt;$---ch/r7---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;隐血&#34;&gt;$---ch/r8---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;酸碱度&#34;&gt;$---ch/r9---$&lt;/row&gt;[13][10]ch;&lt;row□name=&#34;维生素C&#34;&gt;$---ch/r10---$&lt;/row&gt;[13][10]&lt;/C&gt;[13][10]mc;&lt;D&gt;[13][10]mc;&lt;row□name=&#34;红细胞&#34;&gt;$---mc/r0---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;白细胞&#34;&gt;$---mc/r1---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;结晶&#34;&gt;$---mc/r2---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;上皮细胞&#34;&gt;$---mc/r3---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;管型&#34;&gt;$---mc/r4---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;红细胞异常率&#34;&gt;$---mc/r5---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;孢子&#34;&gt;$---mc/r6---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;脓细胞&#34;&gt;$---mc/r7---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;浊度&#34;&gt;$---tur/r0---$&lt;/row&gt;[13][10]mc;&lt;row□name=&#34;颜色&#34;&gt;$---tur/r1---$&lt;/row&gt;[13][10]mc;&lt;/D&gt;[13][10][13][10]hd;&lt;E&gt;[13][10]hd;&lt;row□name=&#34;检验者&#34;&gt;$---hd/r0---$&lt;/row&gt;[13][10]hd;&lt;/E&gt;[13][10]&lt;F&gt;[13][10]&lt;row&gt;@---6---@&lt;/row&gt;[13][10]&lt;/F&gt;[13][10]&lt;/BODY&gt;[13][10]&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="n">d</span> <span class="c1">##class(MI.MIFXDN9003C).fileMTHD(&#34;12&#34;,&#34;&lt;?xml□version=&#34;1.0&#34;□encoding=&#34;UTF-8&#34;□?&gt;[13][10][13][10]&lt;BODY&gt;[13][10][13][10]&lt;A&gt;[13][10][13][10]&lt;row□name=&#34;样本号&#34;&gt;2408150003&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;审核者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;条形码&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/A&gt;[13][10][13][10]&lt;B&gt;[13][10][13][10]&lt;row□name=&#34;样本号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;病历号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;姓名&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;性别&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;年龄&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;床号&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;科室&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;送检者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;送检日期&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;检测日期&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;审核者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/B&gt;[13][10][13][10]&lt;C&gt;[13][10][13][10]&lt;row□name=&#34;白细胞&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;酮体&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;亚硝酸盐&#34;&gt;+&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;尿胆原&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;胆红素&#34;&gt;+3&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;蛋白质&#34;&gt;+1&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;葡萄糖&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;尿比重&#34;&gt;1.030&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;隐血&#34;&gt;+2&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;酸碱度&#34;&gt;7&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;维生素C&#34;&gt;-&lt;/row&gt;[13][10][13][10]&lt;/C&gt;[13][10][13][10]&lt;D&gt;[13][10][13][10]&lt;row□name=&#34;红细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;白细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;结晶&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;上皮细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;管型&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;红细胞异常率&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;真菌&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;脓细胞&#34;&gt;0&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;浊度&#34;&gt;清亮&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;颜色&#34;&gt;□黄色&lt;/row&gt;[13][10][13][10]&lt;/D&gt;[13][10][13][10]&lt;E&gt;[13][10][13][10]&lt;row□name=&#34;检验者&#34;&gt;&lt;/row&gt;[13][10][13][10]&lt;/E&gt;[13][10][13][10]&lt;F&gt;[13][10][13][10]&lt;row□name=&#34;红细胞异常率&#34;&gt;CellCurve.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;干化学图片&#34;&gt;chemc.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;浊度图片&#34;&gt;turbidness.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片1&#34;&gt;a.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片2&#34;&gt;b.jpg&lt;/row&gt;[13][10][13][10]&lt;row□name=&#34;镜检图片3&#34;&gt;c.jpg&lt;/row&gt;[13][10][13][10][13][10][13][10]&lt;/F&gt;[13][10][13][10]&lt;/BODY&gt;[13][10][13][10]&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ClassMethod</span> <span class="n">fileMTHD</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span> <span class="n">record</span> <span class="n">As</span> <span class="o">%</span><span class="ne">String</span><span class="p">(</span><span class="n">MAXLEN</span><span class="o">=</span><span class="mi">99999999</span><span class="p">),</span> <span class="n">epis</span><span class="p">,</span> <span class="n">fileNameOrColName</span><span class="p">,</span> <span class="n">P4</span><span class="p">,</span> <span class="n">P5</span><span class="p">,</span> <span class="n">P6</span><span class="p">,</span> <span class="n">P7</span><span class="p">,</span> <span class="n">P8</span><span class="p">,</span> <span class="n">P9</span><span class="p">,</span> <span class="n">P10</span><span class="p">,</span> <span class="n">P11</span><span class="p">,</span> <span class="n">P12</span><span class="p">,</span> <span class="n">P13</span><span class="p">,</span> <span class="n">Sessions</span><span class="p">,</span> <span class="n">Output</span> <span class="n">RowCount</span> <span class="n">As</span> <span class="o">%</span><span class="ne">String</span><span class="p">)</span> <span class="n">As</span> <span class="o">%</span><span class="ne">String</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">mi</span><span class="o">=$</span><span class="n">g</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="s1">&#39;$d(^dbo.BTMIMachineParameterD(mi)) q</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="s1">&#39;$l(record) q</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="n">record</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;□&#34;</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">fileNameOrColName</span><span class="p">,</span><span class="s2">&#34;fileNameOrColName&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">Deli</span><span class="o">=</span><span class="s2">&#34;~&#34;</span> <span class="o">//</span><span class="err">结果分隔符</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">RDdli</span><span class="o">=</span><span class="s2">&#34;,&#34;</span> <span class="o">//</span><span class="err">通道号分隔符</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">ItemDeli</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span> <span class="o">//</span><span class="err">项目分隔符</span><span class="mi">92</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">ResultDeli</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">44</span><span class="p">)</span> <span class="o">//</span><span class="err">结果分隔符</span><span class="mi">44</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="p">(</span><span class="n">VisitNumber</span><span class="p">,</span><span class="n">Epis</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">imgFlag</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">ret</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">k</span> <span class="o">^</span><span class="n">LISMachine</span><span class="p">(</span><span class="s2">&#34;Data&#34;</span><span class="p">,</span><span class="n">mi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="o">//</span><span class="err">单项目</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;[13][10]&#34;</span><span class="p">)</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">s</span> <span class="n">rec</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;[13][10]&#34;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">i</span> <span class="s1">&#39;$l(rec) q</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="p">;</span><span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">rec</span><span class="p">,</span><span class="s2">&#34;rec&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">s</span> <span class="n">type</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="o">$</span><span class="n">p</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="s2">&#34;&lt;&#34;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">i</span> <span class="n">type</span><span class="o">=</span><span class="s2">&#34;row&#34;</span> <span class="n">d</span> <span class="n">rowInfo</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">i</span> <span class="n">rec</span><span class="o">=</span><span class="s2">&#34;&lt;F&gt;&#34;</span> <span class="n">s</span> <span class="n">imgFlag</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">i</span> <span class="n">imgFlag</span><span class="o">=</span><span class="mi">1</span> <span class="n">d</span> <span class="n">imgInfo</span>
+</span></span><span class="line"><span class="cl">	<span class="o">.</span><span class="n">i</span> <span class="n">rec</span><span class="o">=</span><span class="s2">&#34;&lt;/F&gt;&#34;</span> <span class="n">s</span> <span class="n">imgFlag</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">VisitNumber</span><span class="p">)</span> <span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="n">VisitNumber</span>
+</span></span><span class="line"><span class="cl">	<span class="n">e</span>  <span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="n">Epis</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">LISMachine</span><span class="p">(</span><span class="s2">&#34;Data&#34;</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;image&#34;</span><span class="p">))</span> <span class="n">d</span> <span class="n">imgInfo</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">ret</span><span class="p">,</span><span class="s2">&#34;image&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis_</span><span class="s2">&#34;$$&#34;</span><span class="n">_result</span><span class="p">,</span><span class="s2">&#34;Result&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">epis</span><span class="p">),</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="n">d</span> <span class="c1">##Class(MI.Common.MIFBase).Save(mi, epis, result, date, time, QC)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">q</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rowInfo</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">code</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="o">$</span><span class="n">p</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="s2">&#34;name=&#34;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&#34;&gt;&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span> <span class="n">code</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="s2">&#34;&#34;&#34;&#34;,&#34;&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s res=$p($p(rec,&#34;&gt;&#34;,2),&#34;&lt;&#34;,1)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	i code=&#34;条形码&#34;,$l(res) s VisitNumber=res
+</span></span></span><span class="line"><span class="cl"><span class="s2">	i code=&#34;样本号&#34;,$l(res) s Epis=res
+</span></span></span><span class="line"><span class="cl"><span class="s2">	i code=&#34;白细胞&#34; s res=$tr(res,&#34;~&#34;,&#34;-&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	i code=&#34;红细胞&#34; s res=$tr(res,&#34;~&#34;,&#34;-&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	i imgFlag=1 s ^LISMachine(&#34;Data&#34;,mi,&#34;image&#34;,code)=res
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s result=result_code_ItemDeli_res_ResultDeli
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">imgInfo
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">	// ^LISMachine(&#34;Data&#34;,mi,&#34;image&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s imageClassStr=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s imagePath=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">	// D:\LISDATA\DATA\output.xml
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s imageRootPath=$replace(fileNameOrColName,$p(fileNameOrColName,&#34;</span><span class="se">\&#34;</span><span class="s2">,*),&#34;&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s code=&#34;&#34; f  s code=$o(^LISMachine(&#34;Data&#34;,mi,&#34;image&#34;,code)) q:code=&#34;&#34;  d
+</span></span></span><span class="line"><span class="cl"><span class="s2">	.s res=$g(^LISMachine(&#34;Data&#34;,mi,&#34;image&#34;,code))
+</span></span></span><span class="line"><span class="cl"><span class="s2">	.s imageClass=$p(res,&#34;.&#34;,1)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	.s imageClassStr=imageClassStr_imageClass_&#34;,&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">	.s res=imageRootPath_res
+</span></span></span><span class="line"><span class="cl"><span class="s2">	.s imagePath=imagePath_res_&#34;,&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q:&#39;$l(imageClassStr)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ret=&#34;getimage#&#34;_epis_&#34;#&#34;_imageClassStr_&#34;#&#34;_imagePath
+</span></span></span><span class="line"><span class="cl"><span class="s2">	q
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod SaveImageMTHD(mi, epis, ImageClass, FileName, FullName, SaveImageRetName, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">	//通过OtherPara配置取图的在这里通过epis和ImageClass的图片名字提取出流水号和图片类别
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s mi=$g(mi)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s epis=$g(epis)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ImageClass=$g(ImageClass)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s FileName=$g(FileName)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s FullName=$g(FullName)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s SaveImageRetName=$g(SaveImageRetName)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i &#39;$d(^dbo.BTMIMachineParameterD(mi)) q &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    d ##Class(MI.Common.MIFBase).Trace(mi,epis_&#34;:&#34;_ImageClass_&#34;:&#34;_FileName,&#34;H&lt;--M&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s (ReceiveDate, ImageOrder, Caption, DisplayRatio, Height, Width, Sequence)=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //加上当前时间，防止浏览器缓存
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s FileName=FileName_&#34;?&#34;_$p($h,&#34;,&#34;,2)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //OtherPara用^分隔第四位指定SaveImageRetName的话在这里改FileName为新名称。同时让方法返回新图片名字
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s NewFileName=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i SaveImageRetName=&#34;SaveImageRetName&#34; d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .//图片新名字
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s NewFileName=epis_&#34;-&#34;_ImageClass_&#34;-&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .//路径新名字
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s NewPathName=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s SPLen=$l(FileName,&#34;/&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .f ii=1:1:SPLen d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..i ii&lt;SPLen d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ...s NewPathName=NewPathName_$p(FileName,&#34;/&#34;,ii)_&#34;/&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..i ii=SPLen d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ...s NewFileName=NewFileName_$p(FileName,&#34;/&#34;,ii)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s NewPathName=NewPathName_NewFileName
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s FileName=NewPathName
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //最后返回NewFileName
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ret=##Class(MI.Common.MachineResult).SaveImage(ReceiveDate, epis, ImageClass, ImageOrder, FileName, mi, Caption, DisplayRatio, Height, Width, Sequence)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //返回值控制图片名称模式
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i SaveImageRetName=&#34;SaveImageRetName&#34; d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s ret=NewFileName
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q ret
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">// w ##class(MI.XN9000).GetFtpMTHD(&#34;7&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod GetFtpMTHD(mi, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">	//文件服务模式必须改的地方，老的FTP模式这么改了也没问题，所以建议都这样
+</span></span></span><span class="line"><span class="cl"><span class="s2">	s mi=$g(mi)
+</span></span></span><span class="line"><span class="cl"><span class="s2">	q ##Class(MI.Common.MIFBase).GetMiFtpPath(mi)
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Creator：      查询患者信息，监听配置上传前处理类后会定时调用这个query查询数据进行上传操作
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// CreatDate：    20140919
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Description:： 
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Table：    
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Input：        mi：仪器主键
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Output：       仪器信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Return：       仪器信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Others：   
+</span></span></span><span class="line"><span class="cl"><span class="s2">Query QryLabInfo(mi As %String, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %Query(ROWSPEC = &#34;labno,labnoInfo,patInfo&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// Query的执行方法
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// d ##class(%ResultSet).RunQuery(&#34;MI.MIFXDF6006B&#34;,&#34;QryLabInfo&#34;,&#34;13&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod QryLabInfoExecute(ByRef qHandle As %Binary, mi As %String, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %Status
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set repid=$i(^CacheTemp)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ind=1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s mi=$g(mi),flag=$g(flag)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i &#39;$d(^dbo.BTMIMachineParameterD(mi)) q &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s LabnoList=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s VisitNumberDR=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s AddDate=$tr($zd(+$h,3),&#34;-&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ;s AddDate=$zd($p($h,&#34;,&#34;,1)-1,8) f  s AddDate=$o(^dbo.RPMachineUploadI(&#34;IndexSendStatus&#34;,mi,##Class(LIS.Util.Common).IndexData(&#34;C&#34;),AddDate)) q:AddDate=&#34;&#34;  d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s AddTime=&#34;&#34; f  s AddTime=$o(^dbo.RPMachineUploadI(&#34;IndexSendStatus&#34;,mi,##Class(LIS.Util.Common).IndexData(&#34;C&#34;),AddDate,AddTime)) q:AddTime=&#34;&#34;  d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s MiUploadDR=$o(^dbo.RPMachineUploadI(&#34;IndexSendStatus&#34;,mi,##Class(LIS.Util.Common).IndexData(&#34;C&#34;),AddDate,AddTime,&#34;&#34;))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .;b ;MiUploadDR
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s labno=$lg(^dbo.RPMachineUploadD(MiUploadDR),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .;s EpisNo=$$getEpis^MI.MIF000(labno,mi)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .;i &#39;$l(EpisNo) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i &#39;$l(labno) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .;b ;12
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i $l(labno) S VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,labno,&#34;&#34;))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .;b ;VisitNumberDR
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i &#39;$l(VisitNumberDR) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i &#39;$d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR)) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .//得到通道号
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s chl=$lg($g(^dbo.RPMachineUploadD(MiUploadDR)),7) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s patInfo=..GetPatInfo(mi,labno)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s PatName=$p(patInfo,&#34;,&#34;,10)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .//测试类型0：文本，1：数据库
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s TestType=&#34;0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i TestType=&#34;0&#34; d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..//文本双向上传开始******************************************************
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..//控制输出文本的内容
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..s txtInfo=..GetLabnoInfo(mi,labno)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..b ;txtInfo
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..s filename=&#34;L&#34;_$e($zd($p($h,&#34;,&#34;,1),8),3,8)_&#34;_&#34;_labno_&#34;.txt&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..s Data=##class(MI.Common.MIFBase).DemoMOutFileInfo(filename,txtInfo,labno,0,&#34;&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..d Trace^MI.MIF000(mi,txtInfo,&#34;上传信息&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..b ;13
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..d OutputRow
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ..//文本双向上传结束******************************************************
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set qHandle=$lb(0,repid,0)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Quit $$$OK
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">OutputRow
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ColFields=&#34;labno,labnoInfo,patInfo&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ^CacheTemp(repid,ind)=##Class(LIS.Util.Common).TransListNull(Data,ColFields)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ind=ind+1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    quit
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod QryLabInfoClose(ByRef qHandle As %Binary) As %Status [ PlaceAfter = QryLabInfoExecute ]
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set repid=$LIST(qHandle,2)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Kill ^CacheTemp(repid)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Quit $$$OK
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod QryLabInfoFetch(ByRef qHandle As %Binary, ByRef Row As </span><span class="si">%Li</span><span class="s2">st, ByRef AtEnd As %Integer = 0) As %Status [ PlaceAfter = QryLabInfoExecute ]
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set AtEnd=$LIST(qHandle,1)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set repid=$LIST(qHandle,2)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ind=$LIST(qHandle,3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Set ind=$o(^CacheTemp(repid,ind))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    If ind=&#34;&#34; { 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Set AtEnd=1
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Set Row=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Else      { 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Set Row=^CacheTemp(repid,ind)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s qHandle=$lb(AtEnd,repid,ind)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Quit $$$OK
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// w ##Class(MI.MIFLISMonitorTest).GetLabnoInfo(6,1001367)
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod GetLabnoInfo(mi, labno) As %String
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s mi=$g(mi),labno=$g(labno)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i &#39;$d(^dbo.BTMIMachineParameterD(mi)) q &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //获取项目通道号
+</span></span></span><span class="line"><span class="cl"><span class="s2">    d ScanOne^MI.MIF000(mi,labno)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s tcx=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s OutPutStr=&#34;00000000&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s chl=&#34;&#34; f  s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,mi,labno,chl)) q:chl=&#34;&#34;  d
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .i +chl&gt;$l(OutPutStr) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    .s $e(OutPutStr,chl)=1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q OutPutStr
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// w ##Class(MI.MIFLISMonitorTest).GetPatInfo(6,1001367)
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod GetPatInfo(mi, labno) As %String
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s labno = $g(labno),mi=$g(mi)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(labno)=0 q &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s VisitNumberDR = $o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i &#39;$l(VisitNumberDR) q &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    //标本信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RPVisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s LocationDR=$lg(RPVisitNumberData,22),Location=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(LocationDR) s Location=$lg($g(^dbo.BTLocationD(LocationDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s DoctorDR=$lg(RPVisitNumberData,23),Doctor=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(DoctorDR) s Doctor=$lg($g(^dbo.BTDoctorD(DoctorDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ReceiveDate=$lg(RPVisitNumberData,66)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ReceiveTime=$lg(RPVisitNumberData,67)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ReceiveUserDR=$lg(RPVisitNumberData,68),ReceiveUser=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(ReceiveUserDR) s ReceiveUser=$lg($g(^dbo.SYSUserD(ReceiveUserDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RegNo=$lg(RPVisitNumberData,3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s SurName=$lg(RPVisitNumberData,13)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s GivenName=$lg(RPVisitNumberData,14)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i SurName=GivenName s PatName=SurName
+</span></span></span><span class="line"><span class="cl"><span class="s2">    e  s PatName=SurName_GivenName  
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s SpeciesDR=$lg(RPVisitNumberData,15),Species=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(SpeciesDR) s Species=$lg($g(^dbo.BTSpeciesD(SpeciesDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s AdmTypeDR=$lg(RPVisitNumberData,4),AdmType=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(AdmTypeDR) s AdmType=$lg($g(^dbo.BTAdmissionTypeD(AdmTypeDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s BedNo=$lg(RPVisitNumberData,27)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Age=$lg(RPVisitNumberData,18)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s AgeUnitDR=$lg(RPVisitNumberData,19),AgeUnit=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(AgeUnitDR) s AgeUnit=$lg($g(^dbo.BTAgeUnitD(AgeUnitDR)),3)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s CollectDate=$lg(RPVisitNumberData,51)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s CollectTime=$lg(RPVisitNumberData,52)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Diagnose=$lg(RPVisitNumberData,28)
+</span></span></span><span class="line"><span class="cl"><span class="s2">  
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Sampleda=$zd($p($h,&#34;,&#34;,1),3)_&#34; &#34;_$zt($p($h,&#34;,&#34;,2))
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Instrument = &#34;XN&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(mi) s Instrument=$lg(^dbo.BTMIMachineParameterD(mi),22)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Sampleno=labno   //检测号
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Sampletype=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Feetype=&#34;&#34; ;费别
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Srcdepno=Location  ;送检科室
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Srcdocno=Doctor   ;送检医生
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Userno=ReceiveUser ;检验医生(录入者)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Patno=RegNo ;登记号 &#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s BarCode=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Patna=PatName   ;病人姓名
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Sex=1  ;性别
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i Species=&#34;男&#34; s Sex=&#34;1&#34;     ;1:男 ，2 女
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i Species =&#34;女&#34; s Sex=&#34;2&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Pattype=AdmType   ;病人类型
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Bedno = BedNo    ;床号
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Patage=Age  ;年龄
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Ageunit=&#34;&#34;   ;年龄单位
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Reqno=labno  ;申请号 = 检验号
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Reqda=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(ReceiveDate) s Reqda=$e(ReceiveDate,1,4)_&#34;-&#34;_$e(ReceiveDate,5,6)_&#34;-&#34;_$e(ReceiveDate,7,8)_&#34; &#34;_$zt(ReceiveTime,2) ;送检日期 = 接收时间
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Reportda=&#34;&#34;   ;报告日期  = 初审(保存结果)时间
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Printflag=&#34;&#34;  ;打印标志
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Resultflag=&#34;&#34;  ;结果标志
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Errflag=&#34;&#34;  ;错误标志
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Diagnose = Diagnose   ;诊断
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Description=&#34;&#34;  ;备注
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Reserve=&#34;&#34;  ;保留字段
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Patnamn=&#34;&#34;   ;姓名拼音码
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i $l(CollectDate) s Getda=$e(CollectDate,1,4)_&#34;-&#34;_$e(CollectDate,5,6)_&#34;-&#34;_$e(CollectDate,7,8)_&#34; &#34;_$zt(CollectTime,2) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">    e  s Getda=Reqda ;接收时间/采样日期
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s Wardno=&#34;&#34;  ;病区
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RetString=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RetString=Sampleda_&#34;,&#34;_Instrument_&#34;,&#34;_Sampleno_&#34;,&#34;_Sampletype_&#34;,&#34;_Feetype_&#34;,&#34;_Srcdepno_&#34;,&#34;_Srcdocno_&#34;,&#34;_Userno_&#34;,&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RetString=RetString_Patno_&#34;,&#34;_Patna_&#34;,&#34;_Sex_&#34;,&#34;_Pattype_&#34;,&#34;_Bedno_&#34;,&#34;_Patage_&#34;,&#34;_Ageunit_&#34;,&#34;_Reqno_&#34;,&#34;_Reqda_&#34;,&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RetString=RetString_Reportda_&#34;,&#34;_Printflag_&#34;,&#34;_Resultflag_&#34;,&#34;_Errflag_&#34;,&#34;_Diagnose_&#34;,&#34;_Description_&#34;,&#34;_Reserve_&#34;,&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s RetString=RetString_Patnamn_&#34;,&#34;_Getda_&#34;,&#34;_Wardno_&#34;,&#34;_BarCode
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q RetString
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">/// 监听做上传操作后调用改方法设置标本上传表状态
+</span></span></span><span class="line"><span class="cl"><span class="s2">ClassMethod SaveSDFMTHD(mi, labno, epis, filename, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s mi=$g(mi),labno=$g(labno),epis = $g(epis),filename=$g(filename)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    i &#39;$d(^dbo.BTMIMachineParameterD(mi)) q
+</span></span></span><span class="line"><span class="cl"><span class="s2">    s ret=##Class(MI.MachineUpload).SetSendFlag(mi,labno,&#34;S&#34;,filename)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    q
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    <section>
+        页面浏览量<span id="busuanzi_value_page_pv">Loading</span>
+    </section>
+</footer>
+
+
+    
+</article>
+
+<div class="post-password">
+	
+</div>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%87%E6%B3%B0wan200-20250829154956/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="万泰WAN200 20250829154956" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">万泰WAN200</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BA%9A%E8%BE%89%E9%BE%99tenflyphoenix-20250829154956/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="亚辉龙TenflyPhoenix 20250829154956" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">亚辉龙TenflyPhoenix</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BA%9A%E8%BE%89%E9%BE%99iflash3000-20250829154956/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="亚辉龙iFlash3000 20250829154956" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">亚辉龙iFlash3000</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%8F%E5%A4%A7%E5%B0%BF%E6%B5%81%E6%B0%B4%E7%BA%BFxdn9003c-20250829154956/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="协大尿流水线XDN9003C 20250829154956" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">协大尿流水线XDN9003C</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BE%AE%E7%94%9F%E7%89%A9%E8%B4%A8%E8%B0%B1%E4%BB%AA%E4%B8%AD%E5%85%83%E6%B1%87%E5%90%89exs2000-20250829154956/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="微生物质谱仪中元汇吉EXS2000 20250829154956" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">微生物质谱仪中元汇吉EXS2000</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline.717170.xyz"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 muziyang
+    </section>
+    
+    <section class="powerby">
+        
+            网站总访客数：<span id='busuanzi_value_site_uv'>Loading</span><br/>网站总访问量：<span id='busuanzi_value_site_pv'>Loading</span> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+    </body>
+</html>
