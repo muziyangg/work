@@ -2,16 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://work.717170.xyz/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-08-29T16:31:58+00:00</lastmod>
-  </url><url>
     <loc>https://work.717170.xyz/categories/</loc>
     <lastmod>2025-08-29T16:31:58+00:00</lastmod>
   </url><url>
     <loc>https://work.717170.xyz/post/</loc>
-    <lastmod>2025-08-29T16:31:58+00:00</lastmod>
-  </url><url>
-    <loc>https://work.717170.xyz/categories/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2025-08-29T16:31:58+00:00</lastmod>
   </url><url>
     <loc>https://work.717170.xyz/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250829163158/</loc>
@@ -35,16 +29,16 @@
     <loc>https://work.717170.xyz/</loc>
     <lastmod>2025-01-06T02:28:39+08:00</lastmod>
   </url><url>
-    <loc>https://work.717170.xyz/tags/</loc>
+    <loc>https://work.717170.xyz/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-08-29T17:20:17+08:00</lastmod>
   </url><url>
-    <loc>https://work.717170.xyz/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8E%A5%E5%8F%A3/</loc>
-    <lastmod>2025-01-06T02:28:39+08:00</lastmod>
+    <loc>https://work.717170.xyz/tags/</loc>
   </url><url>
     <loc>https://work.717170.xyz/categories/%E6%96%B9%E6%B3%95%E7%B1%BB%E9%9B%86%E5%90%88/</loc>
     <lastmod>2025-01-06T02:28:39+08:00</lastmod>
   </url><url>
-    <loc>https://work.717170.xyz/categories/%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%8F%A3/</loc>
-    <lastmod>2025-01-06T02:28:39+08:00</lastmod>
+    <loc>https://work.717170.xyz/categories/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2025-08-29T17:20:17+08:00</lastmod>
   </url><url>
     <loc>https://work.717170.xyz/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2025-08-28T11:00:10+08:00</lastmod>
