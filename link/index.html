@@ -380,62 +380,80 @@
         }
 
         h1 {
-            font-size: 1.8rem;  
+            font-size: 2.4rem;  
             margin-bottom: 15px;
-            font-weight: normal;  
+            font-weight: normal;
         }
 
         .page-description {
-            font-size: 1rem;
-            color: #666;  
+            font-size: 1.2rem;  
+            color: #666;
             max-width: 800px;
             margin: 0 auto 30px;
         }
 
          
         .search-container {
-            max-width: 600px;
+            max-width: 700px;  
             margin: 0 auto 20px;
             position: relative;
         }
 
         .search-box {
             width: 100%;
-            padding: 8px 12px 8px 36px;  
-            font-size: 1rem;
-            border: 1px solid #ddd;  
-            border-radius: 0;  
-            box-shadow: none;  
+            padding: 14px 24px 14px 56px;  
+            font-size: 1.1rem;  
+            border: 1px solid #ddd;
+            border-radius: 50px;  
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);  
+            transition: all 0.3s ease;  
+        }
+
+        .search-box::placeholder {
+            font-size: 1.1rem;  
+            color: #999;
         }
 
         .search-box:focus {
-            outline: auto;  
-            box-shadow: none;  
-            transform: none;  
+            outline: none;
+            border-color: #b3d1ff;  
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.15);  
+            transform: translateY(-1px);  
         }
 
         .search-icon {
             position: absolute;
-            left: 12px;
+            left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #666;
-            font-size: 1rem;
+            color: #888;
+            font-size: 1.3rem;  
+            transition: color 0.3s ease;
+        }
+
+        .search-container:focus-within .search-icon {
+            color: #3498db;  
         }
 
         .search-count {
             text-align: center;
-            margin: 15px 0;
+            margin: 15px 0 25px;  
             color: #666;
-            font-size: 1rem;
+            font-size: 1.1rem;  
         }
 
          
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);		 
             gap: 25px;
             margin-top: 30px;
+        }
+
+        .link-card-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .link-card {
@@ -448,6 +466,11 @@
             opacity: 1;
             transform: translateY(0);
             animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .link-card-wrapper:hover .link-card {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
         @keyframes fadeIn {
@@ -465,32 +488,27 @@
             display: none;
         }
 
-        .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-        }
-
         .link-content {
             padding: 20px;
             flex: 1;
         }
 
         .link-title {
-            font-size: 1.4rem;
+            font-size: 1.6rem;  
             margin-bottom: 10px;
             color: #2c3e50;
-            font-weight: 600;  
+            font-weight: 600;
         }
 
         .link-description {
             color: #7f8c8d;
             margin-bottom: 15px;
-            font-size: 0.95rem;
+            font-size: 1.05rem;  
         }
 
         .link-url {
             color: #3498db;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             display: block;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -498,8 +516,8 @@
         }
 
         .link-image {
-            width: 100px;
-            min-width: 100px;
+            width: 120px;  
+            min-width: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -509,7 +527,7 @@
 
         .link-image img {
             max-width: 100%;
-            max-height: 60px;
+            max-height: 70px;  
             object-fit: contain;
         }
 
@@ -531,10 +549,12 @@
         .no-results h3 {
             color: #2c3e50;
             margin-bottom: 10px;
+            font-size: 1.4rem;  
         }
 
         .no-results p {
             color: #7f8c8d;
+            font-size: 1.1rem;  
         }
 
         .highlight {
@@ -561,6 +581,14 @@
                 width: 100%;
                 min-width: 100%;
                 padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .search-box {
+                padding: 12px 20px 12px 50px;
             }
         }
     </style>
@@ -593,21 +621,21 @@
         const linksData = [
             
             {
-                title: "GitHub", 
+                title: "GitHub",
                 description: "GitHub is the world\u0027s largest software development platform.",
                 website: "https:\/\/github.com",
                 image: "https:\/\/github.githubassets.com\/images\/modules\/logos_page\/GitHub-Mark.png"
             },
             
             {
-                title: "TypeScript", 
+                title: "TypeScript",
                 description: "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
                 website: "https:\/\/www.typescriptlang.org",
                 image: "ts-logo-128.jpg"
             },
             
             {
-                title: "Hugo", 
+                title: "Hugo",
                 description: "Hugo官方网站",
                 website: "https:\/\/gohugo.io\/",
                 image: "https:\/\/ts1.cn.mm.bing.net\/th?id=ODLS.9abb96c1-7b9c-4759-9a59-b15a4adec175\u0026w=32\u0026h=32\u0026qlt=90\u0026pcl=fffffa\u0026o=6\u0026pid=1.2"
@@ -635,8 +663,16 @@
             }
             
             links.forEach(link => {
-                const article = document.createElement('div');
-                article.className = 'link-card';
+                
+                const linkWrapper = document.createElement('a');
+                linkWrapper.href = link.website;
+                linkWrapper.target = "_blank";
+                linkWrapper.rel = "noopener";
+                linkWrapper.className = "link-card-wrapper";
+                
+                
+                const card = document.createElement('div');
+                card.className = 'link-card';
                 
                 
                 const highlightText = (text, term) => {
@@ -648,18 +684,21 @@
                 
                 const imgSrc = link.image || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
                 
-                article.innerHTML = `
+                card.innerHTML = `
                     <div class="link-content">
                         <h2 class="link-title">${highlightText(link.title, searchTerm)}</h2>
                         <p class="link-description">${highlightText(link.description, searchTerm)}</p>
-                        <a href="${link.website}" target="_blank" rel="noopener" class="link-url">${highlightText(link.website, searchTerm)}</a>
+                        <span class="link-url">${highlightText(link.website, searchTerm)}</span>
                     </div>
                     <div class="link-image">
                         <img src="${imgSrc}" alt="${link.title}" loading="lazy">
                     </div>
                 `;
                 
-                linksContainer.appendChild(article);
+                
+                linkWrapper.appendChild(card);
+                
+                linksContainer.appendChild(linkWrapper);
             });
             
             
@@ -691,6 +730,7 @@
     </script>
 </body>
 </html>
+
     
 
     
