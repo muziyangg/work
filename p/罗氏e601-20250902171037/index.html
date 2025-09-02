@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="接口说明 仪器厂商 罗氏E601\n仪器型号 罗氏E601\n通讯方式 双向\n仪器类型 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口☑|网口|监听文件|数据库|其他 连接方式：HL7协议|ASTM协议☑|监听文件|数据库|其他 仪器接口说明 增加稀释倍数上传 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 项目通道号 修改记录 序号 日期 操作人 说明 1 2025-04-29 10:57:07\n杨浩然 仪器接口程序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 /// 名称: MI.MIFCOBASE601 /// 描述: Cobas 6000 仪器接口 New Mode /// 通讯方式：双向 /// 编写者:liuzf /// 编写日期: 20150827 /// MIFCOBASE601(MachID) //仪器结果 s MachID=$g(MachID) S ^TMPMACH10(MachID,104)=$H i &#39;$l(MachID) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(MachID),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21),etb=$c(23) //s stx=&#34;[&#34;,etx=&#34;]&#34; s AllRecord=&#34;&#34; S ^TMPMACH10(MachID,102)=$H i $$Start^MI.MIF000(MachID) q f d Main i $$Stop^MI.MIF000(MachID) q c Port q Main SET $ZTRAP=&#34;ERR&#34; r *R:10 e d q .d ORDER i $c(R)=-1 w nak,*-3 i $c(R)&#39;=enq q d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H&lt;--M&#34;) d ACK f r *R:10 q:$c(R)=eot q:R=-1 d .i $c(R)&#39;=stx q .s record=$$Read^MI.MIF000(MachID,&#34;&#34;,lf) q:&#39;$l(record) .d Trace^MI.MIF000(MachID,record,&#34;H&lt;--M&#34;) .d ACK .s record=$e(record,1,$l(record)-1) .i $l(record,etb)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etb,1) .i $l(record,etx)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etx,1) .d Result d Trace^MI.MIF000(MachID,$s($c(R)=eot:&#34;EOT&#34;,1:R),&#34;H&lt;--M&#34;) d ORDER q Last\t; file result if exist d Trace^MI.MIF000(MachID,epis_&#34;$$&#34;_result,&#34;Result&#34;) i $l(epis),$l(result) d Save^MI.MIF000(MachID,epis,result,date,time,QC) s (epis,result,date,time,QC)=&#34;&#34; q Result //s num=$o(^TMP(mi,&#34;&#34;),-1)+1 //s ^TMP(mi,num)=AllRecord s headstr=&#34;&#34; f k=1:1:$l(AllRecord,cr) d .s record=$p(AllRecord,cr,k) .i $e(record,1)=&#34;H&#34; d q ..s (sample,epis,surname,rec,res,result,date,time,QC)=&#34;&#34; ..s headstr=&#34;1&#34;_record .i $e(record,1)=&#34;Q&#34; d q ..;Q|1|^^ 55163517^0^5066^1^^S1^SC||ALL||||||||A ..S sampleID=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,3) ..S sampleInfo=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,4,9) ..S labno=$TR(sampleID,&#34; *&#34;) ..s rack=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,5),&#34; &#34;) ..s pos=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,6),&#34; &#34;) ..;s retVal=$$ReceiveLabno^MI.MIF000(MachID,labno,rack_pos) ..;i retVal&#39;=1 Quit ..i $l(labno) S ^TMP($zn,$j,&#34;ENQ&#34;,labno)=sampleID_$C(2)_sampleInfo_$c(2)_rack_$c(2)_pos // .i $e(record,1)=&#34;O&#34; d q ..;-------双向取条码号--- ..s epis=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;) ..i &#39;$l(epis) s epis=$tr($p($p(record,&#34;|&#34;,4),&#34;^&#34;,1),&#34; &#34;) . ; result record .i $e(record,1)=&#34;R&#34; d q ..;R|1|^^^50/1/not|3.38|ng/ml||N||F|||||E11 ..;R|2|^^^64//not|2.00|IU/L||LL||F|||||E22 ..s code=$p($p($p(record,&#34;|&#34;,3),&#34;^&#34;,4),&#34;/&#34;,1) ..s res=$p(record,&#34;|&#34;,4) ..i res[&#34;^&#34; s res=$p(res,&#34;^&#34;,2) ..s res=$tr(res,&#34; &#34;) ..s Flag=$p(record,&#34;|&#34;,7) ..i Flag=&#34;LL&#34; s res=&#34;&lt;&#34;_res ..i Flag=&#34;HH&#34; s res=&#34;&gt;&#34;_res ..i $l(code),$l(res) s result=result_code_ResultDeli_res_ItemDeli .; last record .i $e(record,1)=&#34;L&#34; d Last i $l(AllRecord) s AllRecord=$p(AllRecord,cr,$l(AllRecord,cr)) q ORDER ;ORDER LIST ^TMP($zn,$j,&#34;ENQ&#34;,epis i &#39;$d(^TMP($zn)) q i &#39;$d(^TMP($zn,$j)) q s labno=&#34;&#34; f s labno=$o(^TMP($zn,$j,&#34;ENQ&#34;,labno)) q:labno=&#34;&#34; d .s requestData=^(labno) .s sampleID=$P(requestData,$C(2),1) .s sampleInfo=$P(requestData,$C(2),2) .s $p(headstr,&#34;|&#34;,11)=&#34;TSDWN^REPLY&#34; .s headstr=headstr_cr .//20140403 .s rackid=$p(requestData,$c(2),3) .s posid=$p(requestData,$c(2),4) .///保存位置号20110621 huhm .//d SetTSMachPos^MIF000(mi,labno,rackid,posid) .// .d ScanOne^MI.MIF000(MachID,labno) .s patstr=$$PATDET(labno)_cr .s tcx=&#34;&#34;,episx=labno .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,49)=&#34;&#34; .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,50)=&#34;&#34; .s chl=&#34;&#34; f s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) q:chl=&#34;&#34; d ..;i chl=&#34;148&#34; d ...;s tcx=tcx_&#34;^^^&#34;_chl_&#34;^20\\&#34; ..;e s tcx=tcx_&#34;^^^&#34;_chl_&#34;^\\&#34; ..s XSBS=$g(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) ..d Trace^MI.MIF000(MachID,chl_&#34;项目稀释&#34;_XSBS_&#34;倍&#34;,&#34;稀释倍数&#34;) ..s tcx=tcx_&#34;^^^&#34;_chl_&#34;^&#34;_XSBS_&#34;\\&#34; .s tcx=$e(tcx,1,$l(tcx)-1) .s SpecimenDR=&#34;&#34; .s VisNumDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;)) .i $l(VisNumDR) s SpecimenDR=$lg(^dbo.RPVisitNumberD(VisNumDR),56) .S specimenTypeID=&#34;1&#34;,specimenType=&#34;血&#34; .I $L(SpecimenDR) D ..S specimenType=$lg($g(^dbo.BTSpecimenD(SpecimenDR)),3) .//标本类型代码,1=血清/血浆,2=尿,3=脑脊液,4=supmt,5=其他 .S specimenID=$S(specimenType[&#34;血&#34;:1,specimenType[&#34;尿&#34;:2,specimenType[&#34;脑脊液&#34;:3,1:1) .///O|1| CEA-10|0^5012^2^^S1^SC|^^^49^|R||||||N||||1|||||||20140324140016|||F .S ordstr=&#34;O|1|&#34;_sampleID_&#34;|&#34;_sampleInfo_&#34;|&#34; .S ordstr=ordstr_tcx_&#34;|R||&#34;_$TR($ZD($P($H,&#34;,&#34;,1),3),&#34;-&#34;)_$TR($ZT($P($H,&#34;,&#34;,2),1),&#34;:&#34;)_&#34;||||N||||&#34;_specimenID_&#34;||||||||||O|||||&#34;_cr .///L .s endstr=&#34;L|1|N&#34;_cr .s str=headstr_patstr_ordstr_endstr .d Send(labno,str) k ^TMP($zn,$j,&#34;ENQ&#34;) q PATDET(epis) ; set patient details record s retstr=&#34;P|1&#34; q retstr Send(epis,str) ; send list of orders if exists w enq,*-3 d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H--&gt;M&#34;) f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;H&lt;--M&#34;) i $c(R)=enq q i $c(R)&#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q i $l(str)&gt;241 d .s str1=$e(str,1,241) .s ret=$$SEND(str1,1) .s str2=&#34;2&#34;_$e(str,242,$l(str)) .s ret=$$SEND(str2,0) e d .s ret=$$SEND(str,0) //f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q //d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;2H&lt;--M&#34;) w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q h 0.2 q ERR h 10 s ^TMPMachErr(+MachID,$j)=$ZERROR_&#34;.错误代码:&#34;_$ECODE q SEND(str,flag) ; send string to instrument i flag=1 d .s str=str_etb .s chsum=$$CHSUM(str) e d .s str=str_etx .s chsum=$$CHSUM(str) w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&#34;H--&gt;M&#34;) f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q i $c(R)=ack d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=eot d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=-1 w nak,*-3 d Trace^MI.MIF000(MachID,R,&#34;H&lt;--M&#34;) q 1 ///w $$CHSUM^MI.MIFCOBASE601(&#34;3O^0101001N01300043225^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^M^^^20200115^1.021^59M^&#34;) CHSUM(x) ; calculate check sum n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y) s z=$e(&#34;0123456789ABCDEF&#34;,z#256\\16+1)_$e(&#34;0123456789ABCDEF&#34;,z#16+1) q z ///发送回应符到仪器 ACK h 0.2 s ack=$c(6) w ack,*-3 d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H--&gt;M&#34;) q NEXTTRAY(tray) q tray ">
+<title>罗氏E601</title>
+
+<link rel='canonical' href='https://work.717170.xyz/p/%E7%BD%97%E6%B0%8Fe601-20250902171037/'>
+
+<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="罗氏E601">
+<meta property='og:description' content="接口说明 仪器厂商 罗氏E601\n仪器型号 罗氏E601\n通讯方式 双向\n仪器类型 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口☑|网口|监听文件|数据库|其他 连接方式：HL7协议|ASTM协议☑|监听文件|数据库|其他 仪器接口说明 增加稀释倍数上传 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 项目通道号 修改记录 序号 日期 操作人 说明 1 2025-04-29 10:57:07\n杨浩然 仪器接口程序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 /// 名称: MI.MIFCOBASE601 /// 描述: Cobas 6000 仪器接口 New Mode /// 通讯方式：双向 /// 编写者:liuzf /// 编写日期: 20150827 /// MIFCOBASE601(MachID) //仪器结果 s MachID=$g(MachID) S ^TMPMACH10(MachID,104)=$H i &#39;$l(MachID) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(MachID),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21),etb=$c(23) //s stx=&#34;[&#34;,etx=&#34;]&#34; s AllRecord=&#34;&#34; S ^TMPMACH10(MachID,102)=$H i $$Start^MI.MIF000(MachID) q f d Main i $$Stop^MI.MIF000(MachID) q c Port q Main SET $ZTRAP=&#34;ERR&#34; r *R:10 e d q .d ORDER i $c(R)=-1 w nak,*-3 i $c(R)&#39;=enq q d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H&lt;--M&#34;) d ACK f r *R:10 q:$c(R)=eot q:R=-1 d .i $c(R)&#39;=stx q .s record=$$Read^MI.MIF000(MachID,&#34;&#34;,lf) q:&#39;$l(record) .d Trace^MI.MIF000(MachID,record,&#34;H&lt;--M&#34;) .d ACK .s record=$e(record,1,$l(record)-1) .i $l(record,etb)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etb,1) .i $l(record,etx)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etx,1) .d Result d Trace^MI.MIF000(MachID,$s($c(R)=eot:&#34;EOT&#34;,1:R),&#34;H&lt;--M&#34;) d ORDER q Last\t; file result if exist d Trace^MI.MIF000(MachID,epis_&#34;$$&#34;_result,&#34;Result&#34;) i $l(epis),$l(result) d Save^MI.MIF000(MachID,epis,result,date,time,QC) s (epis,result,date,time,QC)=&#34;&#34; q Result //s num=$o(^TMP(mi,&#34;&#34;),-1)+1 //s ^TMP(mi,num)=AllRecord s headstr=&#34;&#34; f k=1:1:$l(AllRecord,cr) d .s record=$p(AllRecord,cr,k) .i $e(record,1)=&#34;H&#34; d q ..s (sample,epis,surname,rec,res,result,date,time,QC)=&#34;&#34; ..s headstr=&#34;1&#34;_record .i $e(record,1)=&#34;Q&#34; d q ..;Q|1|^^ 55163517^0^5066^1^^S1^SC||ALL||||||||A ..S sampleID=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,3) ..S sampleInfo=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,4,9) ..S labno=$TR(sampleID,&#34; *&#34;) ..s rack=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,5),&#34; &#34;) ..s pos=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,6),&#34; &#34;) ..;s retVal=$$ReceiveLabno^MI.MIF000(MachID,labno,rack_pos) ..;i retVal&#39;=1 Quit ..i $l(labno) S ^TMP($zn,$j,&#34;ENQ&#34;,labno)=sampleID_$C(2)_sampleInfo_$c(2)_rack_$c(2)_pos // .i $e(record,1)=&#34;O&#34; d q ..;-------双向取条码号--- ..s epis=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;) ..i &#39;$l(epis) s epis=$tr($p($p(record,&#34;|&#34;,4),&#34;^&#34;,1),&#34; &#34;) . ; result record .i $e(record,1)=&#34;R&#34; d q ..;R|1|^^^50/1/not|3.38|ng/ml||N||F|||||E11 ..;R|2|^^^64//not|2.00|IU/L||LL||F|||||E22 ..s code=$p($p($p(record,&#34;|&#34;,3),&#34;^&#34;,4),&#34;/&#34;,1) ..s res=$p(record,&#34;|&#34;,4) ..i res[&#34;^&#34; s res=$p(res,&#34;^&#34;,2) ..s res=$tr(res,&#34; &#34;) ..s Flag=$p(record,&#34;|&#34;,7) ..i Flag=&#34;LL&#34; s res=&#34;&lt;&#34;_res ..i Flag=&#34;HH&#34; s res=&#34;&gt;&#34;_res ..i $l(code),$l(res) s result=result_code_ResultDeli_res_ItemDeli .; last record .i $e(record,1)=&#34;L&#34; d Last i $l(AllRecord) s AllRecord=$p(AllRecord,cr,$l(AllRecord,cr)) q ORDER ;ORDER LIST ^TMP($zn,$j,&#34;ENQ&#34;,epis i &#39;$d(^TMP($zn)) q i &#39;$d(^TMP($zn,$j)) q s labno=&#34;&#34; f s labno=$o(^TMP($zn,$j,&#34;ENQ&#34;,labno)) q:labno=&#34;&#34; d .s requestData=^(labno) .s sampleID=$P(requestData,$C(2),1) .s sampleInfo=$P(requestData,$C(2),2) .s $p(headstr,&#34;|&#34;,11)=&#34;TSDWN^REPLY&#34; .s headstr=headstr_cr .//20140403 .s rackid=$p(requestData,$c(2),3) .s posid=$p(requestData,$c(2),4) .///保存位置号20110621 huhm .//d SetTSMachPos^MIF000(mi,labno,rackid,posid) .// .d ScanOne^MI.MIF000(MachID,labno) .s patstr=$$PATDET(labno)_cr .s tcx=&#34;&#34;,episx=labno .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,49)=&#34;&#34; .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,50)=&#34;&#34; .s chl=&#34;&#34; f s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) q:chl=&#34;&#34; d ..;i chl=&#34;148&#34; d ...;s tcx=tcx_&#34;^^^&#34;_chl_&#34;^20\\&#34; ..;e s tcx=tcx_&#34;^^^&#34;_chl_&#34;^\\&#34; ..s XSBS=$g(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) ..d Trace^MI.MIF000(MachID,chl_&#34;项目稀释&#34;_XSBS_&#34;倍&#34;,&#34;稀释倍数&#34;) ..s tcx=tcx_&#34;^^^&#34;_chl_&#34;^&#34;_XSBS_&#34;\\&#34; .s tcx=$e(tcx,1,$l(tcx)-1) .s SpecimenDR=&#34;&#34; .s VisNumDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;)) .i $l(VisNumDR) s SpecimenDR=$lg(^dbo.RPVisitNumberD(VisNumDR),56) .S specimenTypeID=&#34;1&#34;,specimenType=&#34;血&#34; .I $L(SpecimenDR) D ..S specimenType=$lg($g(^dbo.BTSpecimenD(SpecimenDR)),3) .//标本类型代码,1=血清/血浆,2=尿,3=脑脊液,4=supmt,5=其他 .S specimenID=$S(specimenType[&#34;血&#34;:1,specimenType[&#34;尿&#34;:2,specimenType[&#34;脑脊液&#34;:3,1:1) .///O|1| CEA-10|0^5012^2^^S1^SC|^^^49^|R||||||N||||1|||||||20140324140016|||F .S ordstr=&#34;O|1|&#34;_sampleID_&#34;|&#34;_sampleInfo_&#34;|&#34; .S ordstr=ordstr_tcx_&#34;|R||&#34;_$TR($ZD($P($H,&#34;,&#34;,1),3),&#34;-&#34;)_$TR($ZT($P($H,&#34;,&#34;,2),1),&#34;:&#34;)_&#34;||||N||||&#34;_specimenID_&#34;||||||||||O|||||&#34;_cr .///L .s endstr=&#34;L|1|N&#34;_cr .s str=headstr_patstr_ordstr_endstr .d Send(labno,str) k ^TMP($zn,$j,&#34;ENQ&#34;) q PATDET(epis) ; set patient details record s retstr=&#34;P|1&#34; q retstr Send(epis,str) ; send list of orders if exists w enq,*-3 d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H--&gt;M&#34;) f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;H&lt;--M&#34;) i $c(R)=enq q i $c(R)&#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q i $l(str)&gt;241 d .s str1=$e(str,1,241) .s ret=$$SEND(str1,1) .s str2=&#34;2&#34;_$e(str,242,$l(str)) .s ret=$$SEND(str2,0) e d .s ret=$$SEND(str,0) //f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q //d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;2H&lt;--M&#34;) w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q h 0.2 q ERR h 10 s ^TMPMachErr(+MachID,$j)=$ZERROR_&#34;.错误代码:&#34;_$ECODE q SEND(str,flag) ; send string to instrument i flag=1 d .s str=str_etb .s chsum=$$CHSUM(str) e d .s str=str_etx .s chsum=$$CHSUM(str) w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&#34;H--&gt;M&#34;) f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q i $c(R)=ack d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=eot d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=-1 w nak,*-3 d Trace^MI.MIF000(MachID,R,&#34;H&lt;--M&#34;) q 1 ///w $$CHSUM^MI.MIFCOBASE601(&#34;3O^0101001N01300043225^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^M^^^20200115^1.021^59M^&#34;) CHSUM(x) ; calculate check sum n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y) s z=$e(&#34;0123456789ABCDEF&#34;,z#256\\16+1)_$e(&#34;0123456789ABCDEF&#34;,z#16+1) q z ///发送回应符到仪器 ACK h 0.2 s ack=$c(6) w ack,*-3 d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H--&gt;M&#34;) q NEXTTRAY(tray) q tray ">
+<meta property='og:url' content='https://work.717170.xyz/p/%E7%BD%97%E6%B0%8Fe601-20250902171037/'>
+<meta property='og:site_name' content='木子洋'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-09-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-02T17:10:37&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/img/title.jpg' />
+<meta name="twitter:title" content="罗氏E601">
+<meta name="twitter:description" content="接口说明 仪器厂商 罗氏E601\n仪器型号 罗氏E601\n通讯方式 双向\n仪器类型 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口☑|网口|监听文件|数据库|其他 连接方式：HL7协议|ASTM协议☑|监听文件|数据库|其他 仪器接口说明 增加稀释倍数上传 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 数据格式 项目通道号 修改记录 序号 日期 操作人 说明 1 2025-04-29 10:57:07\n杨浩然 仪器接口程序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 /// 名称: MI.MIFCOBASE601 /// 描述: Cobas 6000 仪器接口 New Mode /// 通讯方式：双向 /// 编写者:liuzf /// 编写日期: 20150827 /// MIFCOBASE601(MachID) //仪器结果 s MachID=$g(MachID) S ^TMPMACH10(MachID,104)=$H i &#39;$l(MachID) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(MachID),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21),etb=$c(23) //s stx=&#34;[&#34;,etx=&#34;]&#34; s AllRecord=&#34;&#34; S ^TMPMACH10(MachID,102)=$H i $$Start^MI.MIF000(MachID) q f d Main i $$Stop^MI.MIF000(MachID) q c Port q Main SET $ZTRAP=&#34;ERR&#34; r *R:10 e d q .d ORDER i $c(R)=-1 w nak,*-3 i $c(R)&#39;=enq q d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H&lt;--M&#34;) d ACK f r *R:10 q:$c(R)=eot q:R=-1 d .i $c(R)&#39;=stx q .s record=$$Read^MI.MIF000(MachID,&#34;&#34;,lf) q:&#39;$l(record) .d Trace^MI.MIF000(MachID,record,&#34;H&lt;--M&#34;) .d ACK .s record=$e(record,1,$l(record)-1) .i $l(record,etb)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etb,1) .i $l(record,etx)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etx,1) .d Result d Trace^MI.MIF000(MachID,$s($c(R)=eot:&#34;EOT&#34;,1:R),&#34;H&lt;--M&#34;) d ORDER q Last\t; file result if exist d Trace^MI.MIF000(MachID,epis_&#34;$$&#34;_result,&#34;Result&#34;) i $l(epis),$l(result) d Save^MI.MIF000(MachID,epis,result,date,time,QC) s (epis,result,date,time,QC)=&#34;&#34; q Result //s num=$o(^TMP(mi,&#34;&#34;),-1)+1 //s ^TMP(mi,num)=AllRecord s headstr=&#34;&#34; f k=1:1:$l(AllRecord,cr) d .s record=$p(AllRecord,cr,k) .i $e(record,1)=&#34;H&#34; d q ..s (sample,epis,surname,rec,res,result,date,time,QC)=&#34;&#34; ..s headstr=&#34;1&#34;_record .i $e(record,1)=&#34;Q&#34; d q ..;Q|1|^^ 55163517^0^5066^1^^S1^SC||ALL||||||||A ..S sampleID=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,3) ..S sampleInfo=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,4,9) ..S labno=$TR(sampleID,&#34; *&#34;) ..s rack=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,5),&#34; &#34;) ..s pos=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,6),&#34; &#34;) ..;s retVal=$$ReceiveLabno^MI.MIF000(MachID,labno,rack_pos) ..;i retVal&#39;=1 Quit ..i $l(labno) S ^TMP($zn,$j,&#34;ENQ&#34;,labno)=sampleID_$C(2)_sampleInfo_$c(2)_rack_$c(2)_pos // .i $e(record,1)=&#34;O&#34; d q ..;-------双向取条码号--- ..s epis=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;) ..i &#39;$l(epis) s epis=$tr($p($p(record,&#34;|&#34;,4),&#34;^&#34;,1),&#34; &#34;) . ; result record .i $e(record,1)=&#34;R&#34; d q ..;R|1|^^^50/1/not|3.38|ng/ml||N||F|||||E11 ..;R|2|^^^64//not|2.00|IU/L||LL||F|||||E22 ..s code=$p($p($p(record,&#34;|&#34;,3),&#34;^&#34;,4),&#34;/&#34;,1) ..s res=$p(record,&#34;|&#34;,4) ..i res[&#34;^&#34; s res=$p(res,&#34;^&#34;,2) ..s res=$tr(res,&#34; &#34;) ..s Flag=$p(record,&#34;|&#34;,7) ..i Flag=&#34;LL&#34; s res=&#34;&lt;&#34;_res ..i Flag=&#34;HH&#34; s res=&#34;&gt;&#34;_res ..i $l(code),$l(res) s result=result_code_ResultDeli_res_ItemDeli .; last record .i $e(record,1)=&#34;L&#34; d Last i $l(AllRecord) s AllRecord=$p(AllRecord,cr,$l(AllRecord,cr)) q ORDER ;ORDER LIST ^TMP($zn,$j,&#34;ENQ&#34;,epis i &#39;$d(^TMP($zn)) q i &#39;$d(^TMP($zn,$j)) q s labno=&#34;&#34; f s labno=$o(^TMP($zn,$j,&#34;ENQ&#34;,labno)) q:labno=&#34;&#34; d .s requestData=^(labno) .s sampleID=$P(requestData,$C(2),1) .s sampleInfo=$P(requestData,$C(2),2) .s $p(headstr,&#34;|&#34;,11)=&#34;TSDWN^REPLY&#34; .s headstr=headstr_cr .//20140403 .s rackid=$p(requestData,$c(2),3) .s posid=$p(requestData,$c(2),4) .///保存位置号20110621 huhm .//d SetTSMachPos^MIF000(mi,labno,rackid,posid) .// .d ScanOne^MI.MIF000(MachID,labno) .s patstr=$$PATDET(labno)_cr .s tcx=&#34;&#34;,episx=labno .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,49)=&#34;&#34; .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,50)=&#34;&#34; .s chl=&#34;&#34; f s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) q:chl=&#34;&#34; d ..;i chl=&#34;148&#34; d ...;s tcx=tcx_&#34;^^^&#34;_chl_&#34;^20\\&#34; ..;e s tcx=tcx_&#34;^^^&#34;_chl_&#34;^\\&#34; ..s XSBS=$g(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) ..d Trace^MI.MIF000(MachID,chl_&#34;项目稀释&#34;_XSBS_&#34;倍&#34;,&#34;稀释倍数&#34;) ..s tcx=tcx_&#34;^^^&#34;_chl_&#34;^&#34;_XSBS_&#34;\\&#34; .s tcx=$e(tcx,1,$l(tcx)-1) .s SpecimenDR=&#34;&#34; .s VisNumDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;)) .i $l(VisNumDR) s SpecimenDR=$lg(^dbo.RPVisitNumberD(VisNumDR),56) .S specimenTypeID=&#34;1&#34;,specimenType=&#34;血&#34; .I $L(SpecimenDR) D ..S specimenType=$lg($g(^dbo.BTSpecimenD(SpecimenDR)),3) .//标本类型代码,1=血清/血浆,2=尿,3=脑脊液,4=supmt,5=其他 .S specimenID=$S(specimenType[&#34;血&#34;:1,specimenType[&#34;尿&#34;:2,specimenType[&#34;脑脊液&#34;:3,1:1) .///O|1| CEA-10|0^5012^2^^S1^SC|^^^49^|R||||||N||||1|||||||20140324140016|||F .S ordstr=&#34;O|1|&#34;_sampleID_&#34;|&#34;_sampleInfo_&#34;|&#34; .S ordstr=ordstr_tcx_&#34;|R||&#34;_$TR($ZD($P($H,&#34;,&#34;,1),3),&#34;-&#34;)_$TR($ZT($P($H,&#34;,&#34;,2),1),&#34;:&#34;)_&#34;||||N||||&#34;_specimenID_&#34;||||||||||O|||||&#34;_cr .///L .s endstr=&#34;L|1|N&#34;_cr .s str=headstr_patstr_ordstr_endstr .d Send(labno,str) k ^TMP($zn,$j,&#34;ENQ&#34;) q PATDET(epis) ; set patient details record s retstr=&#34;P|1&#34; q retstr Send(epis,str) ; send list of orders if exists w enq,*-3 d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H--&gt;M&#34;) f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;H&lt;--M&#34;) i $c(R)=enq q i $c(R)&#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q i $l(str)&gt;241 d .s str1=$e(str,1,241) .s ret=$$SEND(str1,1) .s str2=&#34;2&#34;_$e(str,242,$l(str)) .s ret=$$SEND(str2,0) e d .s ret=$$SEND(str,0) //f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q //d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;2H&lt;--M&#34;) w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q h 0.2 q ERR h 10 s ^TMPMachErr(+MachID,$j)=$ZERROR_&#34;.错误代码:&#34;_$ECODE q SEND(str,flag) ; send string to instrument i flag=1 d .s str=str_etb .s chsum=$$CHSUM(str) e d .s str=str_etx .s chsum=$$CHSUM(str) w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&#34;H--&gt;M&#34;) f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q i $c(R)=ack d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=eot d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H&lt;--M&#34;) q 0 i $c(R)=-1 w nak,*-3 d Trace^MI.MIF000(MachID,R,&#34;H&lt;--M&#34;) q 1 ///w $$CHSUM^MI.MIFCOBASE601(&#34;3O^0101001N01300043225^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^M^^^20200115^1.021^59M^&#34;) CHSUM(x) ; calculate check sum n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y) s z=$e(&#34;0123456789ABCDEF&#34;,z#256\\16+1)_$e(&#34;0123456789ABCDEF&#34;,z#16+1) q z ///发送回应符到仪器 ACK h 0.2 s ack=$c(6) w ack,*-3 d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H--&gt;M&#34;) q NEXTTRAY(tray) q tray "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://work.717170.xyz/img/title.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/touxiang_hu_3261c9b36eb249a9.jpg" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">木子洋</a></h1>
+            <h2 class="site-description">To be or not to be.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muziyangg'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/muziyangg'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1756364241553" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1459" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M739.76 462H484.2a22.22 22.22 0 0 0-22.2 22.21v55.56A22.24 22.24 0 0 0 484.19 562h155.57A22.22 22.22 0 0 1 662 584.22v11.11A66.67 66.67 0 0 1 595.31 662H384.19A22.22 22.22 0 0 1 362 639.79V428.68A66.67 66.67 0 0 1 428.64 362h311.07a22.21 22.21 0 0 0 22.22-22.2v-55.56A22.22 22.22 0 0 0 739.79 262h-311.1A166.67 166.67 0 0 0 262 428.68v311.1A22.22 22.22 0 0 0 284.22 762H612a150 150 0 0 0 150-150V484.23A22.23 22.23 0 0 0 739.77 462z m0 0" fill="#231815" p-id="1460"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#接口说明">接口说明</a></li>
+      </ol>
+    </li>
+    <li><a href="#仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong></a></li>
+    <li><a href="#仪器接口说明">仪器接口说明</a></li>
+    <li><a href="#串口盒子配置">串口盒子配置</a></li>
+    <li><a href="#数据格式"><strong>数据格式</strong></a></li>
+    <li><a href="#项目通道号"><strong>项目通道号</strong></a></li>
+    <li><a href="#修改记录">修改记录</a></li>
+    <li><a href="#仪器接口程序">仪器接口程序</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%BD%97%E6%B0%8Fe601-20250902171037/">
+                
+                    <img src="/img/title.jpg" loading="lazy" alt="Featured image of post 罗氏E601" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/" >
+                2.仪器接口记录
+            </a>
+        
+            <a href="/categories/%E7%BB%BC%E5%90%88%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/" >
+                综合接口程序
+            </a>
+        
+            <a href="/categories/%E7%BD%97%E6%B0%8F%E4%BB%AA%E5%99%A8/" >
+                罗氏仪器
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BD%97%E6%B0%8Fe601-20250902171037/">罗氏E601</a>
+        </h2>
+    
+        
+    </div>
+
+        
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2025-09-02</time>
+                </div>
+            
+
+            
+            
+                        最后更新于
+                        <time class="article-time--updated" datetime="2025-09-02 17:10:37 &#43;0000 UTC" title="2025-09-02 17:10:37 &#43;0000 UTC">
+                            2025-09-02 17:10:37
+                        </time>
+			
+			
+			
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+					<time class="article-words">
+						1333字
+					</time>
+				</div>
+			
+			
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+</header>
+
+
+
+    <section class="article-content">
+    
+    
+    <h3 id="接口说明">接口说明
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">仪器厂商</th>
+          <th style="text-align: left">罗氏E601<br /></th>
+          <th style="text-align: left">仪器型号</th>
+          <th style="text-align: left">罗氏E601<br /></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">通讯方式</td>
+          <td style="text-align: left">双向<br /></td>
+          <td style="text-align: left">仪器类型</td>
+          <td style="text-align: left"><br /></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">医院名称</td>
+          <td style="text-align: left"><br /></td>
+          <td style="text-align: left">程序名称</td>
+          <td style="text-align: left"><br /></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">终端服务器地址</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">终端服务器端口号</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
+</h2><ol>
+<li>接口类型：串口☑|网口|监听文件|数据库|其他</li>
+<li>连接方式：HL7协议|ASTM协议☑|监听文件|数据库|其他</li>
+</ol>
+<h2 id="仪器接口说明">仪器接口说明
+</h2><ul>
+<li>增加稀释倍数上传</li>
+</ul>
+<h2 id="串口盒子配置">串口盒子配置
+</h2><ul>
+<li><strong>波特率：</strong> 9600</li>
+<li><strong>数据位：8</strong></li>
+<li><strong>停止位：</strong> 1</li>
+<li><strong>校验位：</strong> N</li>
+</ul>
+<h2 id="数据格式"><strong>数据格式</strong>
+</h2><h2 id="项目通道号"><strong>项目通道号</strong>
+</h2><h2 id="修改记录">修改记录
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>序号</th>
+          <th>日期</th>
+          <th>操作人</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>2025-04-29 10:57:07<br /></td>
+          <td>杨浩然</td>
+          <td><br /></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="仪器接口程序">仪器接口程序
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 名称: MI.MIFCOBASE601
+</span></span><span class="line"><span class="cl">/// 描述: Cobas 6000 仪器接口  New Mode 
+</span></span><span class="line"><span class="cl">/// 通讯方式：双向
+</span></span><span class="line"><span class="cl">/// 编写者:liuzf
+</span></span><span class="line"><span class="cl">/// 编写日期: 20150827
+</span></span><span class="line"><span class="cl">/// 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MIFCOBASE601(MachID)  //仪器结果
+</span></span><span class="line"><span class="cl">   	s MachID=$g(MachID) 
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(MachID,104)=$H
+</span></span><span class="line"><span class="cl">	i &#39;$l(MachID) q
+</span></span><span class="line"><span class="cl">	s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符
+</span></span><span class="line"><span class="cl">	s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符
+</span></span><span class="line"><span class="cl">	s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符
+</span></span><span class="line"><span class="cl">	s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符
+</span></span><span class="line"><span class="cl">	s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(MachID),10)  //端口号
+</span></span><span class="line"><span class="cl">	//控制字符
+</span></span><span class="line"><span class="cl">	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21),etb=$c(23)
+</span></span><span class="line"><span class="cl">	//s stx=&#34;[&#34;,etx=&#34;]&#34;
+</span></span><span class="line"><span class="cl">	s AllRecord=&#34;&#34;
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(MachID,102)=$H
+</span></span><span class="line"><span class="cl">	i $$Start^MI.MIF000(MachID) q
+</span></span><span class="line"><span class="cl">	f  d Main i $$Stop^MI.MIF000(MachID) q
+</span></span><span class="line"><span class="cl">  	c Port
+</span></span><span class="line"><span class="cl">  	q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Main 
+</span></span><span class="line"><span class="cl">  SET $ZTRAP=&#34;ERR&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  r *R:10 e  d  q
+</span></span><span class="line"><span class="cl">  .d ORDER
+</span></span><span class="line"><span class="cl">  i $c(R)=-1 w nak,*-3
+</span></span><span class="line"><span class="cl">  i $c(R)&#39;=enq q
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  d ACK
+</span></span><span class="line"><span class="cl">  f  r *R:10 q:$c(R)=eot  q:R=-1  d
+</span></span><span class="line"><span class="cl">  .i $c(R)&#39;=stx q
+</span></span><span class="line"><span class="cl">  .s record=$$Read^MI.MIF000(MachID,&#34;&#34;,lf) q:&#39;$l(record)
+</span></span><span class="line"><span class="cl">  .d Trace^MI.MIF000(MachID,record,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  .d ACK
+</span></span><span class="line"><span class="cl">  .s record=$e(record,1,$l(record)-1)
+</span></span><span class="line"><span class="cl">  .i $l(record,etb)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etb,1)
+</span></span><span class="line"><span class="cl">  .i $l(record,etx)&gt;1 s AllRecord=$g(AllRecord)_$p($e(record,2,$l(record)-1),etx,1)
+</span></span><span class="line"><span class="cl">  .d Result
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(MachID,$s($c(R)=eot:&#34;EOT&#34;,1:R),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  d ORDER 
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Last	; file result if exist
+</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(MachID,epis_&#34;$$&#34;_result,&#34;Result&#34;)
+</span></span><span class="line"><span class="cl">  i $l(epis),$l(result) d Save^MI.MIF000(MachID,epis,result,date,time,QC)
+</span></span><span class="line"><span class="cl">  s (epis,result,date,time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Result
+</span></span><span class="line"><span class="cl">  //s num=$o(^TMP(mi,&#34;&#34;),-1)+1
+</span></span><span class="line"><span class="cl">  //s ^TMP(mi,num)=AllRecord
+</span></span><span class="line"><span class="cl">  s headstr=&#34;&#34;
+</span></span><span class="line"><span class="cl">  f k=1:1:$l(AllRecord,cr) d
+</span></span><span class="line"><span class="cl">  .s record=$p(AllRecord,cr,k)
+</span></span><span class="line"><span class="cl">  .i $e(record,1)=&#34;H&#34; d  q
+</span></span><span class="line"><span class="cl">  ..s (sample,epis,surname,rec,res,result,date,time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  ..s headstr=&#34;1&#34;_record
+</span></span><span class="line"><span class="cl">  .i $e(record,1)=&#34;Q&#34; d  q
+</span></span><span class="line"><span class="cl">  ..;Q|1|^^              55163517^0^5066^1^^S1^SC||ALL||||||||A 
+</span></span><span class="line"><span class="cl">  ..S sampleID=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,3)
+</span></span><span class="line"><span class="cl">  ..S sampleInfo=$P($P(record,&#34;|&#34;,3),&#34;^&#34;,4,9)
+</span></span><span class="line"><span class="cl">  ..S labno=$TR(sampleID,&#34; *&#34;)
+</span></span><span class="line"><span class="cl">  ..s rack=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,5),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  ..s pos=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,6),&#34; &#34;) 
+</span></span><span class="line"><span class="cl">  ..;s retVal=$$ReceiveLabno^MI.MIF000(MachID,labno,rack_pos)
+</span></span><span class="line"><span class="cl">  ..;i retVal&#39;=1 Quit
+</span></span><span class="line"><span class="cl">  ..i $l(labno) S ^TMP($zn,$j,&#34;ENQ&#34;,labno)=sampleID_$C(2)_sampleInfo_$c(2)_rack_$c(2)_pos //
+</span></span><span class="line"><span class="cl">  .i $e(record,1)=&#34;O&#34; d  q
+</span></span><span class="line"><span class="cl">  ..;-------双向取条码号---
+</span></span><span class="line"><span class="cl">  ..s epis=$tr($p($p(record,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  ..i &#39;$l(epis) s epis=$tr($p($p(record,&#34;|&#34;,4),&#34;^&#34;,1),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  . ; result record
+</span></span><span class="line"><span class="cl">  .i $e(record,1)=&#34;R&#34; d  q
+</span></span><span class="line"><span class="cl">  ..;R|1|^^^50/1/not|3.38|ng/ml||N||F|||||E11
+</span></span><span class="line"><span class="cl">  ..;R|2|^^^64//not|2.00|IU/L||LL||F|||||E22 
+</span></span><span class="line"><span class="cl">  ..s code=$p($p($p(record,&#34;|&#34;,3),&#34;^&#34;,4),&#34;/&#34;,1)
+</span></span><span class="line"><span class="cl">  ..s res=$p(record,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  ..i res[&#34;^&#34; s res=$p(res,&#34;^&#34;,2)
+</span></span><span class="line"><span class="cl">  ..s res=$tr(res,&#34; &#34;)
+</span></span><span class="line"><span class="cl">  ..s Flag=$p(record,&#34;|&#34;,7)
+</span></span><span class="line"><span class="cl">  ..i Flag=&#34;LL&#34; s res=&#34;&lt;&#34;_res
+</span></span><span class="line"><span class="cl">  ..i Flag=&#34;HH&#34; s res=&#34;&gt;&#34;_res
+</span></span><span class="line"><span class="cl">  ..i $l(code),$l(res) s result=result_code_ResultDeli_res_ItemDeli
+</span></span><span class="line"><span class="cl">  .; last record
+</span></span><span class="line"><span class="cl">  .i $e(record,1)=&#34;L&#34; d Last
+</span></span><span class="line"><span class="cl">  i $l(AllRecord) s AllRecord=$p(AllRecord,cr,$l(AllRecord,cr))
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ORDER  ;ORDER LIST  ^TMP($zn,$j,&#34;ENQ&#34;,epis
+</span></span><span class="line"><span class="cl">  i &#39;$d(^TMP($zn)) q
+</span></span><span class="line"><span class="cl">  i &#39;$d(^TMP($zn,$j)) q
+</span></span><span class="line"><span class="cl">  s labno=&#34;&#34; f  s labno=$o(^TMP($zn,$j,&#34;ENQ&#34;,labno)) q:labno=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">  .s requestData=^(labno)
+</span></span><span class="line"><span class="cl">  .s sampleID=$P(requestData,$C(2),1)
+</span></span><span class="line"><span class="cl">  .s sampleInfo=$P(requestData,$C(2),2)
+</span></span><span class="line"><span class="cl">  .s $p(headstr,&#34;|&#34;,11)=&#34;TSDWN^REPLY&#34;
+</span></span><span class="line"><span class="cl">  .s headstr=headstr_cr
+</span></span><span class="line"><span class="cl">  .//20140403 
+</span></span><span class="line"><span class="cl">  .s rackid=$p(requestData,$c(2),3)
+</span></span><span class="line"><span class="cl">  .s posid=$p(requestData,$c(2),4)
+</span></span><span class="line"><span class="cl">  .///保存位置号20110621 huhm
+</span></span><span class="line"><span class="cl">  .//d SetTSMachPos^MIF000(mi,labno,rackid,posid)
+</span></span><span class="line"><span class="cl">  .//  
+</span></span><span class="line"><span class="cl">  .d ScanOne^MI.MIF000(MachID,labno)  
+</span></span><span class="line"><span class="cl">  .s patstr=$$PATDET(labno)_cr
+</span></span><span class="line"><span class="cl">  .s tcx=&#34;&#34;,episx=labno
+</span></span><span class="line"><span class="cl">  .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,49)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  .//s ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,50)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  .s chl=&#34;&#34; f  s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl)) q:chl=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ..;i chl=&#34;148&#34; d
+</span></span><span class="line"><span class="cl">  ...;s tcx=tcx_&#34;^^^&#34;_chl_&#34;^20\&#34;
+</span></span><span class="line"><span class="cl">  ..;e  s tcx=tcx_&#34;^^^&#34;_chl_&#34;^\&#34;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ..s XSBS=$g(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,labno,chl))
+</span></span><span class="line"><span class="cl">  ..d Trace^MI.MIF000(MachID,chl_&#34;项目稀释&#34;_XSBS_&#34;倍&#34;,&#34;稀释倍数&#34;)
+</span></span><span class="line"><span class="cl">  ..s tcx=tcx_&#34;^^^&#34;_chl_&#34;^&#34;_XSBS_&#34;\&#34;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  .s tcx=$e(tcx,1,$l(tcx)-1)
+</span></span><span class="line"><span class="cl">  .s SpecimenDR=&#34;&#34;
+</span></span><span class="line"><span class="cl">  .s VisNumDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">  .i $l(VisNumDR) s SpecimenDR=$lg(^dbo.RPVisitNumberD(VisNumDR),56)
+</span></span><span class="line"><span class="cl">  .S specimenTypeID=&#34;1&#34;,specimenType=&#34;血&#34;
+</span></span><span class="line"><span class="cl">  .I $L(SpecimenDR) D
+</span></span><span class="line"><span class="cl">  ..S specimenType=$lg($g(^dbo.BTSpecimenD(SpecimenDR)),3) 
+</span></span><span class="line"><span class="cl">  .//标本类型代码,1=血清/血浆,2=尿,3=脑脊液,4=supmt,5=其他
+</span></span><span class="line"><span class="cl">  .S specimenID=$S(specimenType[&#34;血&#34;:1,specimenType[&#34;尿&#34;:2,specimenType[&#34;脑脊液&#34;:3,1:1)
+</span></span><span class="line"><span class="cl">  .///O|1|                CEA-10|0^5012^2^^S1^SC|^^^49^|R||||||N||||1|||||||20140324140016|||F
+</span></span><span class="line"><span class="cl">  .S ordstr=&#34;O|1|&#34;_sampleID_&#34;|&#34;_sampleInfo_&#34;|&#34;
+</span></span><span class="line"><span class="cl">  .S ordstr=ordstr_tcx_&#34;|R||&#34;_$TR($ZD($P($H,&#34;,&#34;,1),3),&#34;-&#34;)_$TR($ZT($P($H,&#34;,&#34;,2),1),&#34;:&#34;)_&#34;||||N||||&#34;_specimenID_&#34;||||||||||O|||||&#34;_cr
+</span></span><span class="line"><span class="cl">  .///L
+</span></span><span class="line"><span class="cl">  .s endstr=&#34;L|1|N&#34;_cr
+</span></span><span class="line"><span class="cl">  .s str=headstr_patstr_ordstr_endstr
+</span></span><span class="line"><span class="cl">  .d Send(labno,str)   
+</span></span><span class="line"><span class="cl">  k ^TMP($zn,$j,&#34;ENQ&#34;)
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">PATDET(epis)  ; set patient details record
+</span></span><span class="line"><span class="cl">  s retstr=&#34;P|1&#34;
+</span></span><span class="line"><span class="cl">  q retstr  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Send(epis,str)  ; send list of orders if exists
+</span></span><span class="line"><span class="cl">  w enq,*-3 d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">  f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  i $c(R)=enq q
+</span></span><span class="line"><span class="cl">  i $c(R)&#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q
+</span></span><span class="line"><span class="cl">  i $l(str)&gt;241 d
+</span></span><span class="line"><span class="cl">  .s str1=$e(str,1,241)
+</span></span><span class="line"><span class="cl">  .s ret=$$SEND(str1,1)
+</span></span><span class="line"><span class="cl">  .s str2=&#34;2&#34;_$e(str,242,$l(str))
+</span></span><span class="line"><span class="cl">  .s ret=$$SEND(str2,0)
+</span></span><span class="line"><span class="cl">  e  d
+</span></span><span class="line"><span class="cl">  .s ret=$$SEND(str,0)
+</span></span><span class="line"><span class="cl">  //f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q
+</span></span><span class="line"><span class="cl">  //d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;2H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q
+</span></span><span class="line"><span class="cl">  h 0.2
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ERR
+</span></span><span class="line"><span class="cl"> h 10
+</span></span><span class="line"><span class="cl"> s ^TMPMachErr(+MachID,$j)=$ZERROR_&#34;.错误代码:&#34;_$ECODE
+</span></span><span class="line"><span class="cl"> q 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">SEND(str,flag)  ; send string to instrument
+</span></span><span class="line"><span class="cl">  i flag=1 d
+</span></span><span class="line"><span class="cl">  .s str=str_etb
+</span></span><span class="line"><span class="cl">  .s chsum=$$CHSUM(str)
+</span></span><span class="line"><span class="cl">  e  d
+</span></span><span class="line"><span class="cl">  .s str=str_etx
+</span></span><span class="line"><span class="cl">  .s chsum=$$CHSUM(str)
+</span></span><span class="line"><span class="cl">  w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">  f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q
+</span></span><span class="line"><span class="cl">  i $c(R)=ack d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H&lt;--M&#34;) q 0
+</span></span><span class="line"><span class="cl">  i $c(R)=eot d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H&lt;--M&#34;) q 0
+</span></span><span class="line"><span class="cl">  i $c(R)=-1 w nak,*-3
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(MachID,R,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  q 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">///w $$CHSUM^MI.MIFCOBASE601(&#34;3O^0101001N01300043225^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^M^^^20200115^1.021^59M^&#34;)
+</span></span><span class="line"><span class="cl">CHSUM(x)  ; calculate check sum
+</span></span><span class="line"><span class="cl">  n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y)
+</span></span><span class="line"><span class="cl">  s z=$e(&#34;0123456789ABCDEF&#34;,z#256\16+1)_$e(&#34;0123456789ABCDEF&#34;,z#16+1)
+</span></span><span class="line"><span class="cl">  q z
+</span></span><span class="line"><span class="cl"> ///发送回应符到仪器
+</span></span><span class="line"><span class="cl">ACK
+</span></span><span class="line"><span class="cl">  h 0.2
+</span></span><span class="line"><span class="cl">  s ack=$c(6)
+</span></span><span class="line"><span class="cl">  w ack,*-3 d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	   
+</span></span><span class="line"><span class="cl">NEXTTRAY(tray)  
+</span></span><span class="line"><span class="cl">  q tray
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    <section>
+        页面浏览量<span id="busuanzi_value_page_pv">Loading</span>
+    </section>
+</footer>
+
+
+    
+</article>
+
+<div class="post-password">
+	
+</div>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BD%97%E6%B0%8F%E6%B5%81%E6%B0%B4%E7%BA%BFit3000-20250902171037/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%BD%97%E6%B0%8F%E6%B5%81%E6%B0%B4%E7%BA%BFit3000-20250902171037/assets/image-20250403125731-kgqb3bk.5157a0afd5413c0de413a1eb70a0a315_hu_4323a1d21f517d15.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 罗氏流水线IT3000"
+                        data-key="罗氏流水线IT3000 20250902171037" 
+                        data-hash="md5-UVegr9VBPA3kE6HrcKCjFQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">罗氏流水线IT3000</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BD%97%E6%B0%8F%E6%B5%81%E6%B0%B4%E7%BA%BFrs600-20250902171037/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%BD%97%E6%B0%8F%E6%B5%81%E6%B0%B4%E7%BA%BFrs600-20250902171037/assets/image-20230713171820668-20250317141249-oljkc64.cc576c26b4a865aa2936d4ebc458063a_hu_7ccff2713510a167.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 罗氏流水线RS600"
+                        data-key="罗氏流水线RS600 20250902171037" 
+                        data-hash="md5-zFdsJrSoZaopNtTrxFgGOg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">罗氏流水线RS600</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-20250829163158/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-20250829163158/assets/image-20250813195117-i4t8mzw.514ebadd6aa316fd35a7a0649a9afb40_hu_cdb4225cba05a436.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 仪器公共方法"
+                        data-key="仪器公共方法 20250829163158" 
+                        data-hash="md5-UU663WqjFv01p6Bkmpr7QA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">仪器公共方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BB%AA%E5%99%A8%E6%8A%A5%E8%AD%A6%E4%BF%A1%E6%81%AF-20250829163158/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="仪器报警信息 20250829163158" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">仪器报警信息</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250829163158/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-20250829163158/assets/image-20250110220839-bac5x44.910134c129f7fd8b0bf1599efff1e14c_hu_2b2afe2a10667c83.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 双向接口程序整合"
+                        data-key="双向接口程序整合 20250829163158" 
+                        data-hash="md5-kQE0wSn3/YsL8Vme//HhTA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">双向接口程序整合</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline.717170.xyz"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 muziyang
+    </section>
+    
+    <section class="powerby">
+        
+            网站总访客数：<span id='busuanzi_value_site_uv'>Loading</span><br/>网站总访问量：<span id='busuanzi_value_site_pv'>Loading</span> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+    </body>
+</html>
