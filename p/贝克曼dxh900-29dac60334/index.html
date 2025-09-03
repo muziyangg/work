@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" title: 贝克曼DXH900 slug: 贝克曼DXH900 29dac60334 description: date: 2025-09-03 lastmod: 2025-09-03 22:17:39 image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg math: license: hidden: false draft: false password: categories: [&lsquo;2.仪器接口记录&rsquo;, &lsquo;综合接口程序&rsquo;] tags: [&lsquo;贝克曼仪器&rsquo;] 接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n">
 <title>贝克曼DXH900</title>
 
 <link rel='canonical' href='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/'>
 
 <link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="贝克曼DXH900">
-<meta property='og:description' content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n">
+<meta property='og:description' content=" title: 贝克曼DXH900 slug: 贝克曼DXH900 29dac60334 description: date: 2025-09-03 lastmod: 2025-09-03 22:17:39 image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg math: license: hidden: false draft: false password: categories: [&lsquo;2.仪器接口记录&rsquo;, &lsquo;综合接口程序&rsquo;] tags: [&lsquo;贝克曼仪器&rsquo;] 接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n">
 <meta property='og:url' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/'>
 <meta property='og:site_name' content='木子洋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='贝克曼仪器' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-03T22:17:39&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='贝克曼仪器' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-03T22:32:47&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
 <meta name="twitter:title" content="贝克曼DXH900">
-<meta name="twitter:description" content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content=" title: 贝克曼DXH900 slug: 贝克曼DXH900 29dac60334 description: date: 2025-09-03 lastmod: 2025-09-03 22:17:39 image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg math: license: hidden: false draft: false password: categories: [&lsquo;2.仪器接口记录&rsquo;, &lsquo;综合接口程序&rsquo;] tags: [&lsquo;贝克曼仪器&rsquo;] 接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -262,7 +262,19 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#tags-贝克曼仪器">title: 贝克曼DXH900
+slug: 贝克曼DXH900 29dac60334
+description:
+date: 2025-09-03
+lastmod: 2025-09-03 22:17:39
+image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg
+math:
+license:
+hidden: false
+draft: false
+password:
+categories: [&lsquo;2.仪器接口记录&rsquo;, &lsquo;综合接口程序&rsquo;]
+tags: [&lsquo;贝克曼仪器&rsquo;]</a>
       <ol>
         <li><a href="#接口说明">接口说明</a></li>
       </ol>
@@ -349,8 +361,8 @@
             
             
                         最后更新于
-                        <time class="article-time--updated" datetime="2025-09-03 22:17:39 &#43;0000 UTC" title="2025-09-03 22:17:39 &#43;0000 UTC">
-                            2025-09-03 22:17:39
+                        <time class="article-time--updated" datetime="2025-09-03 22:32:47 &#43;0000 UTC" title="2025-09-03 22:32:47 &#43;0000 UTC">
+                            2025-09-03 22:32:47
                         </time>
 			
 			
@@ -365,7 +377,7 @@
 
 
 					<time class="article-words">
-						5269字
+						5373字
 					</time>
 				</div>
 			
@@ -399,7 +411,21 @@
     <section class="article-content">
     
     
-    <h3 id="接口说明">接口说明
+    <hr>
+<h2 id="tags-贝克曼仪器">title: 贝克曼DXH900
+slug: 贝克曼DXH900 29dac60334
+description:
+date: 2025-09-03
+lastmod: 2025-09-03 22:17:39
+image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg
+math:
+license:
+hidden: false
+draft: false
+password:
+categories: [&lsquo;2.仪器接口记录&rsquo;, &lsquo;综合接口程序&rsquo;]
+tags: [&lsquo;贝克曼仪器&rsquo;]
+</h2><h3 id="接口说明">接口说明
 </h3><div class="table-wrapper"><table>
   <thead>
       <tr>

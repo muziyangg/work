@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-        <lastBuildDate>Wed, 03 Sep 2025 22:17:39 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/tags/%E8%B4%9D%E5%85%8B%E6%9B%BC%E4%BB%AA%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Sep 2025 22:32:47 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/tags/%E8%B4%9D%E5%85%8B%E6%9B%BC%E4%BB%AA%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>贝克曼AU680</title>
         <link>https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-a9c830b8e4/</link>
         <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
@@ -565,7 +565,21 @@
         <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
         
         <guid>https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/</guid>
-        <description>&lt;img src="https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg" alt="Featured image of post 贝克曼DXH900" /&gt;&lt;h3 id=&#34;接口说明&#34;&gt;接口说明
+        <description>&lt;img src="https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg" alt="Featured image of post 贝克曼DXH900" /&gt;&lt;hr&gt;
+&lt;h2 id=&#34;tags-贝克曼仪器&#34;&gt;title: 贝克曼DXH900
+slug: 贝克曼DXH900 29dac60334
+description:
+date: 2025-09-03
+lastmod: 2025-09-03 22:17:39
+image: assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg
+math:
+license:
+hidden: false
+draft: false
+password:
+categories: [&amp;lsquo;2.仪器接口记录&amp;rsquo;, &amp;lsquo;综合接口程序&amp;rsquo;]
+tags: [&amp;lsquo;贝克曼仪器&amp;rsquo;]
+&lt;/h2&gt;&lt;h3 id=&#34;接口说明&#34;&gt;接口说明
 &lt;/h3&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
