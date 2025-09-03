@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中\n公共方法 通过通道号获取检测项目 Code2TCDR 1 2 3 4 5 6 7 8 9 10 11 12 ClassMethod Code2TCDR(mi, code) { s mi=$g(mi),code=$g(code) s ret=&#34;&#34; i &#39;$l(mi) q ret i &#39;$l(code) q ret i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d .s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;)) .s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3) .s ret=TestCodeDR q ret } 保存架子号 SaveRackNo 20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据\n20250330 如果架子号相同时不增加标本操作日志\n">
+<title>仪器公共方法</title>
+
+<link rel='canonical' href='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/'>
+
+<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="仪器公共方法">
+<meta property='og:description' content=" 方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中\n公共方法 通过通道号获取检测项目 Code2TCDR 1 2 3 4 5 6 7 8 9 10 11 12 ClassMethod Code2TCDR(mi, code) { s mi=$g(mi),code=$g(code) s ret=&#34;&#34; i &#39;$l(mi) q ret i &#39;$l(code) q ret i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d .s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;)) .s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3) .s ret=TestCodeDR q ret } 保存架子号 SaveRackNo 20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据\n20250330 如果架子号相同时不增加标本操作日志\n">
+<meta property='og:url' content='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/'>
+<meta property='og:site_name' content='木子洋'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-03T23:20:56&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw.png' />
+<meta name="twitter:title" content="仪器公共方法">
+<meta name="twitter:description" content=" 方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中\n公共方法 通过通道号获取检测项目 Code2TCDR 1 2 3 4 5 6 7 8 9 10 11 12 ClassMethod Code2TCDR(mi, code) { s mi=$g(mi),code=$g(code) s ret=&#34;&#34; i &#39;$l(mi) q ret i &#39;$l(code) q ret i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d .s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;)) .s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3) .s ret=TestCodeDR q ret } 保存架子号 SaveRackNo 20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据\n20250330 如果架子号相同时不增加标本操作日志\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/touxiang_hu_3261c9b36eb249a9.jpg" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">木子洋</a></h1>
+            <h2 class="site-description">To be or not to be.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muziyangg'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/muziyangg'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1756364241553" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1459" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M739.76 462H484.2a22.22 22.22 0 0 0-22.2 22.21v55.56A22.24 22.24 0 0 0 484.19 562h155.57A22.22 22.22 0 0 1 662 584.22v11.11A66.67 66.67 0 0 1 595.31 662H384.19A22.22 22.22 0 0 1 362 639.79V428.68A66.67 66.67 0 0 1 428.64 362h311.07a22.21 22.21 0 0 0 22.22-22.2v-55.56A22.22 22.22 0 0 0 739.79 262h-311.1A166.67 166.67 0 0 0 262 428.68v311.1A22.22 22.22 0 0 0 284.22 762H612a150 150 0 0 0 150-150V484.23A22.23 22.23 0 0 0 739.77 462z m0 0" fill="#231815" p-id="1460"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#公共方法">公共方法</a>
+      <ol>
+        <li><a href="#通过通道号获取检测项目-code2tcdr">通过通道号获取检测项目 Code2TCDR</a></li>
+        <li><a href="#保存架子号-saverackno">保存架子号 SaveRackNo</a>
+          <ol>
+            <li><a href="#bak">BAK</a></li>
+          </ol>
+        </li>
+        <li><a href="#保存报警信息">保存报警信息</a>
+          <ol>
+            <li><a href="#20250329">20250329</a></li>
+            <li><a href="#bak-1">BAK</a></li>
+          </ol>
+        </li>
+        <li><a href="#获取报警信息global">获取报警信息Global</a></li>
+        <li><a href="#自动核收">自动核收</a></li>
+        <li><a href="#消息弹窗">消息弹窗</a></li>
+        <li><a href="#获取该检测项目是否异常">获取该检测项目是否异常</a></li>
+        <li><a href="#微生物结果直接保存">微生物结果直接保存</a></li>
+        <li><a href="#保存报警信息标志">保存报警信息标志</a></li>
+        <li><a href="#保存标本操作日志">保存标本操作日志</a></li>
+        <li><a href="#去除重复消息">去除重复消息</a></li>
+      </ol>
+    </li>
+    <li><a href="#私有方法">私有方法</a>
+      <ol>
+        <li><a href="#万泰仪器报警信息和判断阴阳性">万泰仪器报警信息和判断阴阳性</a>
+          <ol>
+            <li><a href="#报警信息">报警信息</a></li>
+            <li><a href="#获取扩展结果阴阳性">获取扩展结果阴阳性</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/">
+                <img src="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw_hu_220007221198743.png"
+                        srcset="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw_hu_220007221198743.png 800w, /p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw_hu_b347582dd64f6841.png 1600w"
+                        width="800" 
+                        height="750" 
+                        loading="lazy"
+                        alt="Featured image of post 仪器公共方法" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/2.%E4%BB%AA%E5%99%A8%E6%8E%A5%E5%8F%A3%E8%AE%B0%E5%BD%95/" >
+                2.仪器接口记录
+            </a>
+        
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/" >
+                个人接口程序
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/">仪器公共方法</a>
+        </h2>
+    
+        
+    </div>
+
+        
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2025-09-03</time>
+                </div>
+            
+
+            
+            
+                        最后更新于
+                        <time class="article-time--updated" datetime="2025-09-03 23:20:56 &#43;0000 UTC" title="2025-09-03 23:20:56 &#43;0000 UTC">
+                            2025-09-03 23:20:56
+                        </time>
+			
+			
+			
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+					<time class="article-words">
+						6216字
+					</time>
+				</div>
+			
+			
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 13 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+</header>
+
+
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中</p></blockquote>
+<h2 id="公共方法">公共方法
+</h2><h3 id="通过通道号获取检测项目-code2tcdr">通过通道号获取检测项目 Code2TCDR
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ClassMethod Code2TCDR(mi, code)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),code=$g(code)
+</span></span><span class="line"><span class="cl">	s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q ret
+</span></span><span class="line"><span class="cl">	i &#39;$l(code) q ret
+</span></span><span class="line"><span class="cl">	i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d
+</span></span><span class="line"><span class="cl">	.s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3)
+</span></span><span class="line"><span class="cl">	.s ret=TestCodeDR
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="保存架子号-saverackno">保存架子号 SaveRackNo
+</h3><blockquote>
+<p>20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据<br>
+20250330 如果架子号相同时不增加标本操作日志</p>
+<p>20250821 如果操作类型为上机，增加上机日志，类型为 6</p></blockquote>
+<p><img src="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw.png"
+	width="272"
+	height="255"
+	srcset="/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw_hu_d9ca4b18f6811791.png 480w, /p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw_hu_1aa8bdbe37902ae4.png 1024w"
+	loading="lazy"
+	
+		alt="image"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="106"
+		data-flex-basis="256px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 保存归档,分类信息,架子号,新增保存类型和参数工作小组ID，针对仪器不在对应的工作小组也可以保存架子号。
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveRackNo(labno, positioninfo, mi, typename, curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveRackNo(&#34;9000000193&#34;,&#34;50-1&#34;,&#34;6&#34;,&#34;上机&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod SaveRackNo(labno, positioninfo, mi, typename, curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno)
+</span></span><span class="line"><span class="cl">	s positioninfo=$g(positioninfo)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),curWorkGroupMachineDR=$g(curWorkGroupMachineDR),typename=$g(typename)
+</span></span><span class="line"><span class="cl">	i &#39;$L(curWorkGroupMachineDR) s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i $l(typename) s positioninfo=typename_&#34;:&#34;_positioninfo
+</span></span><span class="line"><span class="cl">	s hasFindRep=0
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR)) d
+</span></span><span class="line"><span class="cl">	..s WorkGroupMachineDR=&#34;&#34; f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR)) q:WorkGroupMachineDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	...s OrderNo=&#34;&#34; f  s OrderNo=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo)) q:OrderNo=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	....s ReportDR=&#34;&#34; f  s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo,ReportDR)) q:ReportDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.....s WorkGroupMachineDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),4) 
+</span></span><span class="line"><span class="cl">	.....s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.....i $l(objrep.RackNo),objrep.RackNo&#39;=positioninfo try{j ..SaveRecord(labno,&#34;架子号位置更新:&#34;_objrep.RackNo_&#34;--&gt;&#34;_positioninfo,mi,&#34;101&#34;)}catch{}	//架子号更新
+</span></span><span class="line"><span class="cl">	.....s objrep.RackNo=positioninfo
+</span></span><span class="line"><span class="cl">	.....s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.....i typename=&#34;上机&#34; try{j ..SaveRecord(labno,&#34;仪器上机:&#34;_positioninfo,mi,&#34;6&#34;)}catch{}
+</span></span><span class="line"><span class="cl">	.....s hasFindRep=1
+</span></span><span class="line"><span class="cl">	.....i (&#39;$SYSTEM.Status.IsOK(sc)) d
+</span></span><span class="line"><span class="cl">	......d Trace^MI.MIF000(mi,&#34;-1^存&#34;_typename_&#34;信息失败:&#34;_$SYSTEM.Status.GetErrorText(sc),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	i hasFindRep=0,$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.i $l(objrep.RackNo),objrep.RackNo&#39;=positioninfo try{j ..SaveRecord(labno,&#34;架子号位置更新:&#34;_objrep.RackNo_&#34;--&gt;&#34;_positioninfo,mi,&#34;101&#34;)}catch{}	//架子号更新
+</span></span><span class="line"><span class="cl">	.s objrep.RackNo=positioninfo
+</span></span><span class="line"><span class="cl">	.s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.i typename=&#34;上机&#34; try{j ..SaveRecord(labno,&#34;仪器上机:&#34;_positioninfo,mi,&#34;6&#34;)}catch{}
+</span></span><span class="line"><span class="cl">	.s hasFindRep=1
+</span></span><span class="line"><span class="cl">	i hasFindRep=0 d Trace^MI.MIF000(mi,labno_&#34;:没有找到报告&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	q hasFindRep
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// 记录标本日志
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveRecord(&#34;9000000193&#34;,&#34;仪器上机:上机:50-1--&gt;上机:50-1&#34;,&#34;6&#34;,&#34;100&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod SaveRecord(labno, OperateNotes, mi, OperateTypeCode, curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno)
+</span></span><span class="line"><span class="cl">	s OperateNotes=$g(OperateNotes)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),curWorkGroupMachineDR=$g(curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">	s OperateTypeCode=$g(OperateTypeCode)
+</span></span><span class="line"><span class="cl">	i &#39;$l(curWorkGroupMachineDR),$l(mi) s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.//标本ID,操作时间,操作者,操作说明,操作类型,工作组,标本拒收类型
+</span></span><span class="line"><span class="cl">	.//BTOperatorType 标本操作类型表
+</span></span><span class="line"><span class="cl">	.d ##class(HIS.DHCCommon).SaveRecord(VisitNumberDR,$zd($h,8),$p($h,&#34;,&#34;,2),&#34;&#34;,OperateNotes,OperateTypeCode,curWorkGroupMachineDR,&#34;&#34;)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="bak">BAK
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 保存架子号
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveRackNo(mi,labno, positioninfo)
+</span></span><span class="line"><span class="cl">ClassMethod SaveRackNo(mi, labno, positioninfo)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno)
+</span></span><span class="line"><span class="cl">	s positioninfo=$g(positioninfo)
+</span></span><span class="line"><span class="cl">	s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	s hasFindRep=0
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR)) d
+</span></span><span class="line"><span class="cl">	..s WorkGroupMachineDR=&#34;&#34; f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR)) q:WorkGroupMachineDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	...s OrderNo=&#34;&#34; f  s OrderNo=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo)) q:OrderNo=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	....s ReportDR=&#34;&#34; f  s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo,ReportDR)) q:ReportDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.....s WorkGroupMachineDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),4) 
+</span></span><span class="line"><span class="cl">	.....s CanDoTS=0
+</span></span><span class="line"><span class="cl">    .....i $d(^dbo.RPVisitNumberTestSetI(&#34;IndexReportID&#34;,ReportDR)) d
+</span></span><span class="line"><span class="cl">    ......s TestSetDR=&#34;&#34; f  s TestSetDR=$o(^dbo.RPVisitNumberTestSetI(&#34;IndexReportID&#34;,ReportDR,TestSetDR)) q:TestSetDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">    .......i $d(^dbo.BTTestSetWorkGroupMachineI(&#34;IndexWorkGroupMachine&#34;,curWorkGroupMachineDR,TestSetDR)) d
+</span></span><span class="line"><span class="cl">    ........s CanDoTS=1
+</span></span><span class="line"><span class="cl">    .....i CanDoTS=0 q
+</span></span><span class="line"><span class="cl">	.....s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.....s objrep.RackNo=positioninfo
+</span></span><span class="line"><span class="cl">	.....s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.....s hasFindRep=1
+</span></span><span class="line"><span class="cl">	.....i (&#39;$SYSTEM.Status.IsOK(sc)) d
+</span></span><span class="line"><span class="cl">	......d Trace^MI.MIF000(mi,&#34;-1^存位置信息失败:&#34;_$SYSTEM.Status.GetErrorText(sc),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	i hasFindRep=0,$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.s objrep.RackNo=positioninfo
+</span></span><span class="line"><span class="cl">	.s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.s hasFindRep=1
+</span></span><span class="line"><span class="cl">	i hasFindRep=0 d Trace^MI.MIF000(mi,labno_&#34;:没有找到报告&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	q &#34;1&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="保存报警信息">保存报警信息
+</h3><h4 id="20250329">20250329
+</h4><blockquote>
+<p>将处理好后的报警信息存入到评价信息</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 保存评价信息(仪器报警信息等提示信息)
+</span></span><span class="line"><span class="cl">/// 条码号或者流水号，存储信息，仪器主键，工作小组(仪器和工作小组非关联使用)，是否打印(1 主评价，0 次评价)
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveAlarmInformation(&#34;1003791311&#34;,&#34;Lymphopenia：淋巴细胞减少；Anemia：贫血；Reticulocytosis：网织红细胞增多&#34;,&#34;3&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod SaveAlarmInformation(labno, conclusion, predealMI, curWorkGroupMachineDR, IsPrint)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno),conclusion=$g(conclusion),predealMI=$g(predealMI),curWorkGroupMachineDR=$g(curWorkGroupMachineDR),IsPrint=$g(IsPrint)
+</span></span><span class="line"><span class="cl">	i &#39;$l(predealMI),&#39;$l(curWorkGroupMachineDR) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	i IsPrint&#39;=1 s IsPrint=&#34;0&#34;	//1 打印主评价，0 不打印次评价
+</span></span><span class="line"><span class="cl">	i &#39;$l(curWorkGroupMachineDR) s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(predealMI)),6)
+</span></span><span class="line"><span class="cl">	s hasFindRep=0
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR)) d
+</span></span><span class="line"><span class="cl">	..s WorkGroupMachineDR=&#34;&#34; f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR)) q:WorkGroupMachineDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	...s OrderNo=&#34;&#34; f  s OrderNo=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo)) q:OrderNo=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	....s ReportDR=&#34;&#34; f  s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo,ReportDR)) q:ReportDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.....s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22) 
+</span></span><span class="line"><span class="cl">	.....;i Status=&#34;3&#34; q	//审核后的标本存储报警信息，测试用
+</span></span><span class="line"><span class="cl">	.....s WorkGroupMachineDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),4) 
+</span></span><span class="line"><span class="cl">	.....s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.....i IsPrint=1 d
+</span></span><span class="line"><span class="cl">	......i $l(objrep.MajorConclusion) s objrep.MajorConclusion=objrep.MajorConclusion_&#34;,&#34;_conclusion
+</span></span><span class="line"><span class="cl">	......e  s objrep.MajorConclusion=conclusion
+</span></span><span class="line"><span class="cl">	.....e  d
+</span></span><span class="line"><span class="cl">	......i $l(objrep.MinorConclusion) s objrep.MinorConclusion=objrep.MinorConclusion_&#34;,&#34;_conclusion
+</span></span><span class="line"><span class="cl">	......e  s objrep.MinorConclusion=conclusion
+</span></span><span class="line"><span class="cl">	.....s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.....s hasFindRep=1
+</span></span><span class="line"><span class="cl">	.....i (&#39;$SYSTEM.Status.IsOK(sc)) d
+</span></span><span class="line"><span class="cl">	......d Trace^MI.MIF000(predealMI,&#34;-1^存标本质量信息失败:&#34;_$SYSTEM.Status.GetErrorText(sc),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	i hasFindRep=0,$l(curWorkGroupMachineDR),$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.i IsPrint=1 d
+</span></span><span class="line"><span class="cl">	..s objrep.MajorConclusion=conclusion
+</span></span><span class="line"><span class="cl">	.e  s objrep.MinorConclusion=conclusion
+</span></span><span class="line"><span class="cl">	.s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.s hasFindRep=1
+</span></span><span class="line"><span class="cl">	i hasFindRep=0 d Trace^MI.MIF000(predealMI,labno_&#34;:没有找到报告&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	try{D ##class(MI.Special.Common).SaveResultWarned(labno,conclusion,predealMI, curWorkGroupMachineDR)}catch{}	//保存至报告表报警信息
+</span></span><span class="line"><span class="cl">	q &#34;1&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="bak-1">BAK
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// Creator：      yanghaoran
+</span></span><span class="line"><span class="cl">/// CreatDate：    20240828
+</span></span><span class="line"><span class="cl">/// Description：  保存报警提示信息
+</span></span><span class="line"><span class="cl">/// Input：        mi 仪器主键,epis 流水号,expertRules 报警信息,expertRulesType 报警信息仪器类型(存在值将报警信息进行转换，不存在则直接保存报警信息)
+</span></span><span class="line"><span class="cl">/// 			   SaveTypeData (分隔符^)保存类型(1:次评价不打印，2:主评价可打印)，为空默认为1
+</span></span><span class="line"><span class="cl">/// 				   			是否保存未转换数据(1:保存，0:不保存)，为空默认为0
+</span></span><span class="line"><span class="cl">/// Output：   
+</span></span><span class="line"><span class="cl">/// DeBug:		   w ##Class(MI.Special.Common).SaveAlarmInformation(57,1200150259127,&#34;CSCSCS&#34;) 
+</span></span><span class="line"><span class="cl">/// DeBug:		   w ##Class(MI.Special.Common).SaveAlarmInformation(2,1892,&#34;Basophilia：嗜碱性粒细胞增加；NRBC?：有核红细胞？；Anisocytosis：红细胞大小不均；Macrocytosis：大红细胞症；Hypochromia：低色素性；WBC_Abn_Scattergram：白细胞异常散点图；IG_Present：幼稚粒细胞存在；PLT_Abn_Distribution：血小板异常直方图；Blasts/Abn_Lympho?：原始细胞/异常淋巴细胞?&#34;) 
+</span></span><span class="line"><span class="cl">ClassMethod SaveAlarmInformation(mi, epis, expertRules, expertRulesType, SaveTypeData)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s mi=$g(mi)
+</span></span><span class="line"><span class="cl">    s epis=$g(epis)
+</span></span><span class="line"><span class="cl">    s expertRules=$g(expertRules)
+</span></span><span class="line"><span class="cl">    s SaveTypeData=$g(SaveTypeData)
+</span></span><span class="line"><span class="cl">    s SaveType=$p(SaveTypeData,&#34;^&#34;,1)
+</span></span><span class="line"><span class="cl">    i &#39;$l(SaveType) s SaveType=1		// 保存类型(1:次评价不打印，2:主评价可打印)，为空默认为1
+</span></span><span class="line"><span class="cl">    s expertRulesIsSave=$p(SaveTypeData,&#34;^&#34;,2)
+</span></span><span class="line"><span class="cl">    i &#39;$l(expertRulesIsSave) s expertRulesIsSave=&#34;0&#34;	// 是否保存未转换数据(1:保存，0:不保存)，为空默认为0
+</span></span><span class="line"><span class="cl">    s expertRulesType=$g(expertRulesType)
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    // 配置信息
+</span></span><span class="line"><span class="cl">    s Sep=&#34;；&#34;	// 文本串分隔符
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    // 转换报警信息
+</span></span><span class="line"><span class="cl">    i $l(expertRulesType) d
+</span></span><span class="line"><span class="cl">    .s InputInfo=&#34;&#34;
+</span></span><span class="line"><span class="cl">    .s PoliceInfo=expertRules
+</span></span><span class="line"><span class="cl">    .i $l(PoliceInfo),$d(^LISPolice(expertRulesType,PoliceInfo)) d
+</span></span><span class="line"><span class="cl">  	..s InputInfo=$g(^LISPolice(expertRulesType,PoliceInfo))
+</span></span><span class="line"><span class="cl">  	..d Trace^MI.MIF000(MachID,PoliceInfo_&#34;$$&#34;_InputInfo,&#34;报警信息&#34;)
+</span></span><span class="line"><span class="cl">  	.i $l(InputInfo) d
+</span></span><span class="line"><span class="cl">  	..s expertRules=InputInfo
+</span></span><span class="line"><span class="cl">  	.e  d
+</span></span><span class="line"><span class="cl">  	..i expertRulesIsSave=0 d
+</span></span><span class="line"><span class="cl">  	...s expertRules=&#34;&#34;
+</span></span><span class="line"><span class="cl">  	...d Trace^MI.MIF000(MachID,&#34;转换报警信息失败。&#34;,&#34;报警信息异常&#34;)
+</span></span><span class="line"><span class="cl">  	..e  d
+</span></span><span class="line"><span class="cl">  	...d Trace^MI.MIF000(MachID,&#34;保存原始报警信息。&#34;,&#34;报警信息异常&#34;)
+</span></span><span class="line"><span class="cl">  	i &#39;$l(expertRules) q &#34;&#34;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    s ReportDR=$$GetReportID(mi,epis)
+</span></span><span class="line"><span class="cl">    i &#39;$l(ReportDR) q &#34;&#34;
+</span></span><span class="line"><span class="cl">    s obj=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">    s TMPstr=obj.MinorConclusion
+</span></span><span class="line"><span class="cl">    i TMPstr&#39;[expertRules d
+</span></span><span class="line"><span class="cl">    .i $l(TMPstr) d
+</span></span><span class="line"><span class="cl">    ..s Str=TMPstr_Sep_expertRules
+</span></span><span class="line"><span class="cl">    .e  d
+</span></span><span class="line"><span class="cl">    ..s Str=expertRules
+</span></span><span class="line"><span class="cl">    .s Str=$$DislodgeRepetition(Str,Sep)
+</span></span><span class="line"><span class="cl">    .i SaveType=1 d
+</span></span><span class="line"><span class="cl">    ..s obj.MinorConclusion=Str		//YHR 20230411 保存在报告次评价 不可打印
+</span></span><span class="line"><span class="cl">    .i SaveType=2 d
+</span></span><span class="line"><span class="cl">    ..s obj.MinorConclusion=Str		//YHR 20230411 保存在报告主评价 可打印
+</span></span><span class="line"><span class="cl">    s ret=obj.%Save()
+</span></span><span class="line"><span class="cl">    D Trace^MI.MIF000(mi,ret_&#34;$$&#34;_expertRules,&#34;SaveAlarmInformation&#34;)
+</span></span><span class="line"><span class="cl">    q ret
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">GetReportID(mi,AssayNo)
+</span></span><span class="line"><span class="cl">	// 根据仪器试验号获取报告ID
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),AssayNo=$g(AssayNo)
+</span></span><span class="line"><span class="cl">	s ReportDR=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(AssayNo) q ReportDR
+</span></span><span class="line"><span class="cl">	s WGMachineID=$lg(^dbo.BTMIMachineParameterD(mi),6)
+</span></span><span class="line"><span class="cl">	i $D(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,WGMachineID,AssayNo)) d
+</span></span><span class="line"><span class="cl">	.s TransmitDate=$zd($p($h,&#34;,&#34;,1),8)
+</span></span><span class="line"><span class="cl">	.s ReportID=$O(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,WGMachineID,AssayNo,TransmitDate,&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">	i $l(ReportDR) q ReportDR
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,AssayNo)) d
+</span></span><span class="line"><span class="cl">	.s VisitnumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,AssayNo,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1)) d
+</span></span><span class="line"><span class="cl">	..s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1,&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">	q ReportDR
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DislodgeRepetition(Str,Sep)
+</span></span><span class="line"><span class="cl">	// 去除重复信息
+</span></span><span class="line"><span class="cl">	s Sep=$g(Sep)
+</span></span><span class="line"><span class="cl">	i &#39;$l(Sep) s Sep=&#34;；&#34;
+</span></span><span class="line"><span class="cl">	k ^LISTMPStr
+</span></span><span class="line"><span class="cl">	s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	f p=1:1:$l(Str,Sep) d
+</span></span><span class="line"><span class="cl">	.s Strp=$p(Str,Sep,p)
+</span></span><span class="line"><span class="cl">	.i &#39;$l(Strp) q
+</span></span><span class="line"><span class="cl">	.s ^LISTMPStr(&#34;Data&#34;,Strp)=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s GStr=&#34;&#34; f  s GStr=$o(^LISTMPStr(&#34;Data&#34;,GStr)) q:GStr=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.s ret=ret_Sep_GStr
+</span></span><span class="line"><span class="cl">	s ret=$e(ret,2,*)
+</span></span><span class="line"><span class="cl">	k ^LISTMPStr
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取报警信息global">获取报警信息Global
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取报警信息global
+</span></span><span class="line"><span class="cl">/// d ##class(MI.Special.Tool).GetPoliceGlobal()
+</span></span><span class="line"><span class="cl">ClassMethod GetPoliceGlobal()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	//****MI.Special.PoliceInfo***//	相关仪器报警信息存储记录
+</span></span><span class="line"><span class="cl">	// 用 $$ 分割报警信息代码和解释
+</span></span><span class="line"><span class="cl">	s MachineName=&#34;&#34;		;仪器型号
+</span></span><span class="line"><span class="cl">	s police=&#34;&#34;				;报警信息代码
+</span></span><span class="line"><span class="cl">	s explain=&#34;&#34;			;报警信息解释
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	;k ^LISPolice(MachineName) // 如果要覆盖则放开
+</span></span><span class="line"><span class="cl">	for i=1:1:$l(police,&#34;$$&#34;) d
+</span></span><span class="line"><span class="cl">	.s po=$p(police,&#34;$$&#34;,i)
+</span></span><span class="line"><span class="cl">	.s ex=$p(explain,&#34;$$&#34;,i)
+</span></span><span class="line"><span class="cl">	.i &#39;$l(po) q
+</span></span><span class="line"><span class="cl">	.s ^LISPolice(MachineName,po)=ex
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="自动核收">自动核收
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 自动核收方法
+</span></span><span class="line"><span class="cl">/// w ##class(MI.Special.AutomaticReceipt).AutoAccept(&#34;24&#34;,&#34;9000000254&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod AutoAccept(mi, barcode)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	D Trace^MI.MIF000(mi,&#34;开始自动核收:&#34;_barcode,&#34;自动核收&#34;)
+</span></span><span class="line"><span class="cl">	s ZDHSret=1
+</span></span><span class="line"><span class="cl">	s HSSign=0
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,barcode)) d
+</span></span><span class="line"><span class="cl">	.s VisitnumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR)) d
+</span></span><span class="line"><span class="cl">	..s HSSign=0
+</span></span><span class="line"><span class="cl">	/*------自动核收-------*/
+</span></span><span class="line"><span class="cl">    i ($l(barcode)&gt;9)&amp;&amp;((&#39;$d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,barcode)))||(HSSign=0)) d
+</span></span><span class="line"><span class="cl">    .;s dealret=$$ReceiveLabno^MI.MIF000(mi,barcode)
+</span></span><span class="line"><span class="cl">	.s dealret=##Class(LIS.Common.DHCVisitNumber).ReceiveLabNoByWGM(mi,barcode)		//调用自动核收方法
+</span></span><span class="line"><span class="cl">	.d Trace^MI.MIF000(mi,barcode_&#34;核收到仪器返回:&#34;_dealret,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	.s HSSign=1
+</span></span><span class="line"><span class="cl">	.i dealret[&#34;标本已核收&#34; D Trace^MI.MIF000(mi,&#34;该标本已核收&#34;,&#34;核收返回&#34;) q 
+</span></span><span class="line"><span class="cl">	.i dealret[&#34;排样到&#34; D Trace^MI.MIF000(mi,&#34;该标本已核收&#34;,&#34;核收返回&#34;) q 
+</span></span><span class="line"><span class="cl">	.e  i dealret=&#34;1&#34;  d
+</span></span><span class="line"><span class="cl">	..D Trace^MI.MIF000(mi,&#34;核收成功&#34;,&#34;核收返回&#34;)
+</span></span><span class="line"><span class="cl">	.e  d
+</span></span><span class="line"><span class="cl">	..s ZDHSret=0
+</span></span><span class="line"><span class="cl">	..D Trace^MI.MIF000(mi,&#34;该标本核收失败&#34;,&#34;核收返回&#34;)
+</span></span><span class="line"><span class="cl">	..s retObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisMsgAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">	..s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	..s CurWorkGroupDR=$lg(^dbo.BTWorkGroupMachineD(curWorkGroupMachineDR),4)
+</span></span><span class="line"><span class="cl">	..s curMachName=$lg($g(^dbo.BTMIMachineParameterD(mi)),5)
+</span></span><span class="line"><span class="cl">	..s perUser = &#34;WG-&#34;_CurWorkGroupDR
+</span></span><span class="line"><span class="cl">	..;s ret=retObj.SendMsg(&#34;dhcc&#34;,&#34;{ &#34;&#34;type&#34;&#34;: &#34;&#34;&#34;&#34;, &#34;&#34;info&#34;&#34;: &#34;&#34;&#34;_barcode_&#34;处理核收失败:&#34;_dealret_&#34;,仪器【&#34;_curMachName_&#34;】！&#34;_&#34;&#34;&#34;, &#34;&#34;dealurl&#34;&#34;: &#34;&#34;&#34;&#34; }&#34;, &#34;Crisis&#34;, perUser)
+</span></span><span class="line"><span class="cl">	/*------自动核收-------*/
+</span></span><span class="line"><span class="cl">	q ZDHSret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="消息弹窗">消息弹窗
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 弹窗
+</span></span><span class="line"><span class="cl">/// w ##class(MI.Special.AutomaticReceipt).TanChuang(mi,epis,dealret)
+</span></span><span class="line"><span class="cl">ClassMethod TanChuang(mi, epis, dealret)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s retObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisMsgAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">	s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	s CurWorkGroupDR=$lg(^dbo.BTWorkGroupMachineD(curWorkGroupMachineDR),4)
+</span></span><span class="line"><span class="cl">	s curMachName=$lg($g(^dbo.BTMIMachineParameterD(mi)),5)
+</span></span><span class="line"><span class="cl">	s perUser = &#34;WG-&#34;_CurWorkGroupDR
+</span></span><span class="line"><span class="cl">	s ret=retObj.SendMsg(&#34;dhcc&#34;,&#34;{ &#34;&#34;type&#34;&#34;: &#34;&#34;&#34;&#34;, &#34;&#34;info&#34;&#34;: &#34;&#34;&#34;_epis_&#34;处理核收失败:&#34;_dealret_&#34;,仪器【&#34;_curMachName_&#34;】！&#34;_&#34;&#34;&#34;, &#34;&#34;dealurl&#34;&#34;: &#34;&#34;&#34;&#34; }&#34;, &#34;Crisis&#34;, perUser)
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>‍</p>
+<h3 id="获取该检测项目是否异常">获取该检测项目是否异常
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取该检测结果是否异常
+</span></span><span class="line"><span class="cl">/// w ##class(MI.Special.JudgeResult).IsAbFlag(&#34;29&#34;,&#34;24092500125&#34;,&#34;48&#34;,&#34;2&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod IsAbFlag(mi, epis, code, res)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s Nres=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) q Nres
+</span></span><span class="line"><span class="cl">	s MachineTCDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(MachineTCDR)),3)
+</span></span><span class="line"><span class="cl">	i &#39;$l(TestCodeDR) q Nres
+</span></span><span class="line"><span class="cl">	s ReportDR=$p($$GetLabnoByEpis(mi,epis),&#34;^&#34;,1)
+</span></span><span class="line"><span class="cl">	i &#39;$l(ReportDR) q Nres
+</span></span><span class="line"><span class="cl">	s Range=##Class(LISSP.DHCRPVisitNumberReport).CheckResultAbFlag(ReportDR,TestCodeDR,res)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s AbFlag=$lg(Range,1)
+</span></span><span class="line"><span class="cl">	i $l(AbFlag) d
+</span></span><span class="line"><span class="cl">	.s Nres=&#34;阳性&#34;
+</span></span><span class="line"><span class="cl">	e  s Nres=&#34;阴性&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	q Nres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">GetLabnoByEpis(mi,Epis)
+</span></span><span class="line"><span class="cl">	s (ret,ReportDR)=&#34;&#34;,mi=$g(mi)
+</span></span><span class="line"><span class="cl">	s date=$zd($h,8)
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q Epis
+</span></span><span class="line"><span class="cl">	s WGMachineID=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i &#39;$l(WGMachineID) q Epis
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,date,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis))) {
+</span></span><span class="line"><span class="cl">		s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,date,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis),&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">		S VisitNumberDR=$LG($G(^dbo.RPVisitNumberReportD(ReportDR)),2)
+</span></span><span class="line"><span class="cl">		s ret=$lg(^dbo.RPVisitNumberD(VisitNumberDR),2)
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis)) d
+</span></span><span class="line"><span class="cl">	.s VisitnumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1)) d
+</span></span><span class="line"><span class="cl">	..s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1,&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">	q ReportDR_&#34;^&#34;_ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="微生物结果直接保存">微生物结果直接保存
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// Creator：      yanghaoran
+</span></span><span class="line"><span class="cl">/// CreatDate：    20240828
+</span></span><span class="line"><span class="cl">/// Description：  微生物质谱结果直接保存
+</span></span><span class="line"><span class="cl">/// Updata：   
+</span></span><span class="line"><span class="cl">/// Input：        mi 仪器主键, Epis 流水号, result 细菌名称, isolateNumber 细菌通道号(为空默认为1(细菌一))
+</span></span><span class="line"><span class="cl">/// Output：   
+</span></span><span class="line"><span class="cl">/// DeBug:		   w ##class(MI.Special.MakeMidReportNode).MakeMidReportNode(57,&#34;WX241101002&#34;,&#34;金黄色葡萄球菌&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod MakeMidReportNode(mi, Epis, result, isolateNumber) As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),Epis=$g(Epis)
+</span></span><span class="line"><span class="cl">	s isolateNumber=$g(isolateNumber)
+</span></span><span class="line"><span class="cl">	i &#39;$l(isolateNumber) s isolateNumber=1
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q Epis
+</span></span><span class="line"><span class="cl">	i &#39;$l(Epis) q Epis
+</span></span><span class="line"><span class="cl">	i &#39;$l(result) q Epis
+</span></span><span class="line"><span class="cl">	i $d(^dbo.BTMIMachineMicroBugsI(&#34;IndexChannel&#34;,mi,result)) d
+</span></span><span class="line"><span class="cl">	.s MMicroBugsDR=$o(^dbo.BTMIMachineMicroBugsI(&#34;IndexChannel&#34;,mi,result,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s OrganismDR=$lg($g(^dbo.BTMIMachineMicroBugsD(MMicroBugsDR)),4)
+</span></span><span class="line"><span class="cl">	.i $l(OrganismDR) s result=$lg($g(^dbo.BTOrganismD(OrganismDR)),3)
+</span></span><span class="line"><span class="cl">	s WGMachineID=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s (ReportDR,Labno,VisitNumberDR)=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(WGMachineID) q ret
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis))) {
+</span></span><span class="line"><span class="cl">		s date=$o(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis),&#34;&#34;))
+</span></span><span class="line"><span class="cl">		s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis),date,&#34;&#34;))
+</span></span><span class="line"><span class="cl">		S VisitNumberDR=$LG($G(^dbo.RPVisitNumberReportD(ReportDR)),2)
+</span></span><span class="line"><span class="cl">		s Labno=$lg(^dbo.RPVisitNumberD(VisitNumberDR),2)
+</span></span><span class="line"><span class="cl">	}else{		// 核收在其他工作小组(一个仪器对应多个工作小组)
+</span></span><span class="line"><span class="cl">		s QuitFlag=0
+</span></span><span class="line"><span class="cl">		s fWGMachineID=&#34;&#34; f  s fWGMachineID=$o(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,fWGMachineID)) q:(fWGMachineID=&#34;&#34;)||(QuitFlag=1)  d
+</span></span><span class="line"><span class="cl">		.i $d(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,fWGMachineID,##Class(LIS.Util.Common).IndexData(Epis))) d
+</span></span><span class="line"><span class="cl">		..s date=$o(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,fWGMachineID,##Class(LIS.Util.Common).IndexData(Epis),&#34;&#34;))
+</span></span><span class="line"><span class="cl">		..s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexMicNo&#34;,fWGMachineID,##Class(LIS.Util.Common).IndexData(Epis),date,&#34;&#34;))
+</span></span><span class="line"><span class="cl">		..S VisitNumberDR=$LG($G(^dbo.RPVisitNumberReportD(ReportDR)),2)
+</span></span><span class="line"><span class="cl">		..s Labno=$lg(^dbo.RPVisitNumberD(VisitNumberDR),2)
+</span></span><span class="line"><span class="cl">		..s QuitFlag=1
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	i &#39;$l(ReportDR),$d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis)) d
+</span></span><span class="line"><span class="cl">	.s VisitnumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s WGMachineID=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i &#39;$l(WGMachineID) q
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1)) d
+</span></span><span class="line"><span class="cl">	..s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i &#39;$l(ReportDR) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.IDPResultI(&#34;IndexIDPElement&#34;,ReportDR,2)) q &#34;&#34;	//初鉴预报告节点
+</span></span><span class="line"><span class="cl">	s IDPResultDR=$o(^dbo.IDPResultI(&#34;IndexIDPElement&#34;,ReportDR,2,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.RPVisitNumberTestSetI(&#34;IndexReportID&#34;,ReportDR)) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s TestSetDR=$o(^dbo.RPVisitNumberTestSetI(&#34;IndexReportID&#34;,ReportDR,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,isolateNumber)) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s MachineTCDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,isolateNumber,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(MachineTCDR)),3)
+</span></span><span class="line"><span class="cl">	i &#39;$l($g(TestCodeDR)) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s ITestCodeDR=TestCodeDR_&#34;^&#34;
+</span></span><span class="line"><span class="cl">	try{s ret=##Class(IDP.WS.BLL.DHCMidReport).MakeMidReportNodeDo(IDPResultDR,ITestCodeDR,&#34;^&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;^^^^&#34;)}catch{}
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberRepMidI(&#34;IndexMidReport&#34;,ReportDR)) d
+</span></span><span class="line"><span class="cl">	.s OrderNo=&#34;&#34; f  s OrderNo=$o(^dbo.RPVisitNumberRepMidI(&#34;IndexMidReport&#34;,ReportDR,OrderNo)) q:OrderNo=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	..s RepMidDR=$o(^dbo.RPVisitNumberRepMidI(&#34;IndexMidReport&#34;,ReportDR,OrderNo,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	..i $d(^dbo.RPVisitNumberRepMidResI(&#34;IndexMidReportTCItem&#34;,RepMidDR,TestCodeDR)) d
+</span></span><span class="line"><span class="cl">	...s RepMidResDR=$o(^dbo.RPVisitNumberRepMidResI(&#34;IndexMidReportTCItem&#34;,RepMidDR,TestCodeDR,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	...s obj=##class(dbo.RPVisitNumberRepMidRes).%OpenId(RepMidResDR)
+</span></span><span class="line"><span class="cl">	...s obj.Result=result
+</span></span><span class="line"><span class="cl">	...s obj.TextRes=result
+</span></span><span class="line"><span class="cl">	...s sc=obj.%Save()
+</span></span><span class="line"><span class="cl">	...If ($SYSTEM.Status.IsOK(sc)) {s ret=1}
+</span></span><span class="line"><span class="cl">    ...Else  s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="保存报警信息标志">保存报警信息标志
+</h3><blockquote>
+<p>存放报警信息标志至报告表中</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 保存报告表报警信息标志
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveResultWarned(&#34;1003803130&#34;,&#34;1&#34;,&#34;34&#34;,&#34;41&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod SaveResultWarned(labno, conclusion, predealMI, curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno)
+</span></span><span class="line"><span class="cl">	s conclusion=$g(conclusion)
+</span></span><span class="line"><span class="cl">	s predealMI=$g(predealMI),curWorkGroupMachineDR=$g(curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">	i &#39;$l(curWorkGroupMachineDR) s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(predealMI)),6)
+</span></span><span class="line"><span class="cl">	i $l(conclusion)&gt;20 s conclusion=$e(conclusion,1,20)_&#34;...&#34; 
+</span></span><span class="line"><span class="cl">	s hasFindRep=0
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR)) d
+</span></span><span class="line"><span class="cl">	..s WorkGroupMachineDR=&#34;&#34; f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR)) q:WorkGroupMachineDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	...s OrderNo=&#34;&#34; f  s OrderNo=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo)) q:OrderNo=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	....s ReportDR=&#34;&#34; f  s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitNumberDR,WorkGroupMachineDR,OrderNo,ReportDR)) q:ReportDR=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.....s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22) 
+</span></span><span class="line"><span class="cl">	.....i Status=&#34;3&#34; q
+</span></span><span class="line"><span class="cl">	.....s WorkGroupMachineDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),4) 
+</span></span><span class="line"><span class="cl">	.....s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.....s objrep.ResultWarned=conclusion
+</span></span><span class="line"><span class="cl">	.....s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.....s hasFindRep=1
+</span></span><span class="line"><span class="cl">	.....i (&#39;$SYSTEM.Status.IsOK(sc)) d
+</span></span><span class="line"><span class="cl">	......d Trace^MI.MIF000(predealMI,&#34;-1^存标本质量信息失败:&#34;_$SYSTEM.Status.GetErrorText(sc),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	i hasFindRep=0,$l(curWorkGroupMachineDR),$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd($h,8),curWorkGroupMachineDR,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.s objrep=##Class(dbo.RPVisitNumberReport).%OpenId(ReportDR)
+</span></span><span class="line"><span class="cl">	.s objrep.ResultWarned=conclusion
+</span></span><span class="line"><span class="cl">	.s sc=objrep.%Save()
+</span></span><span class="line"><span class="cl">	.s hasFindRep=1
+</span></span><span class="line"><span class="cl">	i hasFindRep=0 d Trace^MI.MIF000(predealMI,labno_&#34;:没有找到报告&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	q &#34;1&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="保存标本操作日志">保存标本操作日志
+</h3><blockquote>
+<p>标本操作日志，保存仪器对于标本的操作等后台对于标本的操作</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 记录标本日志
+</span></span><span class="line"><span class="cl">/// D ##class(MI.Special.Common).SaveRecord(&#34;&#34;,&#34;&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod SaveRecord(labno, OperateNotes, mi, OperateTypeCode, curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s labno=$g(labno)
+</span></span><span class="line"><span class="cl">	s OperateNotes=$g(OperateNotes)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),curWorkGroupMachineDR=$g(curWorkGroupMachineDR)
+</span></span><span class="line"><span class="cl">	s OperateTypeCode=$g(OperateTypeCode)
+</span></span><span class="line"><span class="cl">	i &#39;$l(curWorkGroupMachineDR),$l(mi) s curWorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno))) d
+</span></span><span class="line"><span class="cl">	.s VisitNumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.//标本ID,操作时间,操作者,操作说明,操作类型,工作组,标本拒收类型
+</span></span><span class="line"><span class="cl">	.//BTOperatorType 标本操作类型表
+</span></span><span class="line"><span class="cl">	.d ##class(HIS.DHCCommon).SaveRecord(VisitNumberDR,$zd($h,8),$p($h,&#34;,&#34;,2),&#34;&#34;,OperateNotes,OperateTypeCode,curWorkGroupMachineDR,&#34;&#34;)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="去除重复消息">去除重复消息
+</h3><blockquote>
+<p>根据分隔符将重复的字符过滤只保留一个</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// w ##class(YHR.Problem.ScaleConversion).DislodgeRepetition(&#34;123；223；12；123；22；241&#34;,&#34;；&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod DislodgeRepetition(Str, Sep)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	// 去除重复信息
+</span></span><span class="line"><span class="cl">	s Sep=$g(Sep)
+</span></span><span class="line"><span class="cl">	i &#39;$l(Sep) s Sep=&#34;；&#34;
+</span></span><span class="line"><span class="cl">	k LISTMPStr
+</span></span><span class="line"><span class="cl">	s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	f p=1:1:$l(Str,Sep) d
+</span></span><span class="line"><span class="cl">	.s Strp=$p(Str,Sep,p)
+</span></span><span class="line"><span class="cl">	.i &#39;$l(Strp) q
+</span></span><span class="line"><span class="cl">	.s LISTMPStr(&#34;Data&#34;,Strp)=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s GStr=&#34;&#34; f  s GStr=$o(LISTMPStr(&#34;Data&#34;,GStr)) q:GStr=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	.s ret=ret_Sep_GStr
+</span></span><span class="line"><span class="cl">	s ret=$e(ret,2,*)
+</span></span><span class="line"><span class="cl">	k LISTMPStr
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="私有方法">私有方法
+</h2><h3 id="万泰仪器报警信息和判断阴阳性">万泰仪器报警信息和判断阴阳性
+</h3><h4 id="报警信息">报警信息
+</h4><blockquote>
+<p>万泰的报警信息需要将报警信息串从16进制在转换为2进制，随后根据所在位置确定是第几位报警信息</p></blockquote>
+<h5 id="获取报警信息global-1">获取报警信息global
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// w ##class(MI.Special.JudgeResult).GetPolice(&#34;42000100000&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod GetPolice(PoliceInfo)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s str=..scaleconversion4(PoliceInfo,&#34;16&#34;,&#34;2&#34;)	// 进制转换
+</span></span><span class="line"><span class="cl">	k ^LISCaris200(&#34;Data&#34;)
+</span></span><span class="line"><span class="cl">	s strLong=$l(str)
+</span></span><span class="line"><span class="cl">	f i=1:1:strLong d
+</span></span><span class="line"><span class="cl">	.s stri=$e(str,i)
+</span></span><span class="line"><span class="cl">	.i stri=1 d
+</span></span><span class="line"><span class="cl">	..s ^LISCaris200(&#34;Data&#34;,strLong+1-i)=1
+</span></span><span class="line"><span class="cl">	q &#34;&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="进制转换">进制转换
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// w ##class(YHR.Problem.ScaleConversion).zeroize()
+</span></span><span class="line"><span class="cl">/// 补零
+</span></span><span class="line"><span class="cl">ClassMethod zeroize(fnum, long)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s fnumlong=$l(fnum)
+</span></span><span class="line"><span class="cl">	s fnumlongdiff=long-fnumlong
+</span></span><span class="line"><span class="cl">	f i=1:1:fnumlongdiff d
+</span></span><span class="line"><span class="cl">	.s fnum=&#34;0&#34;_fnum
+</span></span><span class="line"><span class="cl">	q fnum
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// w ##class(YHR.Problem.ScaleConversion).scaleconversion2()
+</span></span><span class="line"><span class="cl">/// 其他进制转十进制
+</span></span><span class="line"><span class="cl">ClassMethod Other2Ten(snum, scale)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s snum=$g(snum)
+</span></span><span class="line"><span class="cl">	s tnum=0
+</span></span><span class="line"><span class="cl">	s numlong=$l(snum)
+</span></span><span class="line"><span class="cl">	f i=1:1:$L(snum) d
+</span></span><span class="line"><span class="cl">	.s numi=$e(snum,i)
+</span></span><span class="line"><span class="cl">	.s numi=$$Sixteen(numi)
+</span></span><span class="line"><span class="cl">	.s tnum=tnum+(numi*(scale**(numlong-i)))
+</span></span><span class="line"><span class="cl">	q tnum
+</span></span><span class="line"><span class="cl">Sixteen(numi)
+</span></span><span class="line"><span class="cl">	i (numi=&#34;A&#34;)||(numi=&#34;a&#34;) s numi=10
+</span></span><span class="line"><span class="cl">	i (numi=&#34;B&#34;)||(numi=&#34;b&#34;) s numi=11
+</span></span><span class="line"><span class="cl">	i (numi=&#34;C&#34;)||(numi=&#34;c&#34;) s numi=12
+</span></span><span class="line"><span class="cl">	i (numi=&#34;D&#34;)||(numi=&#34;d&#34;) s numi=13
+</span></span><span class="line"><span class="cl">	i (numi=&#34;E&#34;)||(numi=&#34;e&#34;) s numi=14
+</span></span><span class="line"><span class="cl">	i (numi=&#34;F&#34;)||(numi=&#34;f&#34;) s numi=15
+</span></span><span class="line"><span class="cl">	q numi
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// w ##class(YHR.Problem.ScaleConversion).scaleconversion3()
+</span></span><span class="line"><span class="cl">/// 十进制转其他进制
+</span></span><span class="line"><span class="cl">ClassMethod Ten2Other(snum, scale)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s snum=$g(snum)
+</span></span><span class="line"><span class="cl">	s tnum=&#34;&#34;
+</span></span><span class="line"><span class="cl">	f i=1:1:10 q:(snum=0)||&#39;$l(snum)  d
+</span></span><span class="line"><span class="cl">	.s pnum1=snum
+</span></span><span class="line"><span class="cl">	.s snum=$p(snum/scale,&#34;.&#34;,1)
+</span></span><span class="line"><span class="cl">	.s pnum2=pnum1#scale
+</span></span><span class="line"><span class="cl">	.s pnum2=$$Sixteen(pnum2)
+</span></span><span class="line"><span class="cl">	.s tnum=pnum2_tnum
+</span></span><span class="line"><span class="cl">	i scale=2 d
+</span></span><span class="line"><span class="cl">	.s tnum=..zeroize(tnum,8)
+</span></span><span class="line"><span class="cl">	q tnum
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Sixteen(pnum2)
+</span></span><span class="line"><span class="cl">	i pnum2=10 s pnum2=&#34;A&#34;
+</span></span><span class="line"><span class="cl">	i pnum2=11 s pnum2=&#34;B&#34;
+</span></span><span class="line"><span class="cl">	i pnum2=12 s pnum2=&#34;C&#34;
+</span></span><span class="line"><span class="cl">	i pnum2=13 s pnum2=&#34;D&#34;
+</span></span><span class="line"><span class="cl">	i pnum2=14 s pnum2=&#34;E&#34;
+</span></span><span class="line"><span class="cl">	i pnum2=15 s pnum2=&#34;F&#34;
+</span></span><span class="line"><span class="cl">	q pnum2
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// w ##class(YHR.Problem.ScaleConversion).scaleconversion4()
+</span></span><span class="line"><span class="cl">/// 进制转换
+</span></span><span class="line"><span class="cl">ClassMethod scale(snum, scale1, scale2)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s cnum=..Other2Ten(snum,scale1)
+</span></span><span class="line"><span class="cl">	s num=..Ten2Other(cnum,scale2)
+</span></span><span class="line"><span class="cl">	q num
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="获取扩展结果阴阳性">获取扩展结果阴阳性
+</h4><blockquote>
+<p>调用<code>##Class(LISSP.DHCRPVisitNumberReport).CheckResultAbFlag(ReportDR,TestCodeDR,res)</code>方法获取结果的判断</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// w ##class(MI.Special.JudgeResult).IsYang(&#34;29&#34;,&#34;24092500125&#34;,&#34;48&#34;,&#34;2&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod IsYang(mi, epis, code, res)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	// IndexResultChannel	MachineParameterDR, ResultChannel	BTMIMachineTestCode
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s Nres=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) q Nres
+</span></span><span class="line"><span class="cl">	s MachineTCDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(MachineTCDR)),3)
+</span></span><span class="line"><span class="cl">	i &#39;$l(TestCodeDR) q Nres
+</span></span><span class="line"><span class="cl">	s Units=$lg($g(^dbo.BTTestCodeD(TestCodeDR)),8)
+</span></span><span class="line"><span class="cl">	i Units&#39;=&#34;COI&#34; q Nres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s ReportDR=$p($$GetLabnoByEpis(mi,epis),&#34;^&#34;,1)
+</span></span><span class="line"><span class="cl">	i &#39;$l(ReportDR) q Nres
+</span></span><span class="line"><span class="cl">	s Range=##Class(LISSP.DHCRPVisitNumberReport).CheckResultAbFlag(ReportDR,TestCodeDR,res)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s AbFlag=$lg(Range,1)
+</span></span><span class="line"><span class="cl">	i $l(AbFlag) d
+</span></span><span class="line"><span class="cl">	.s Nres=&#34;阳性&#34;
+</span></span><span class="line"><span class="cl">	e  s Nres=&#34;阴性&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	q Nres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">GetLabnoByEpis(mi,Epis)
+</span></span><span class="line"><span class="cl">	s (ret,ReportDR)=&#34;&#34;,mi=$g(mi)
+</span></span><span class="line"><span class="cl">	s date=$zd($h,8)
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q Epis
+</span></span><span class="line"><span class="cl">	s WGMachineID=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i &#39;$l(WGMachineID) q Epis
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,date,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis))) {
+</span></span><span class="line"><span class="cl">		s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,date,WGMachineID,##Class(LIS.Util.Common).IndexData(Epis),&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">		S VisitNumberDR=$LG($G(^dbo.RPVisitNumberReportD(ReportDR)),2)
+</span></span><span class="line"><span class="cl">		s ret=$lg(^dbo.RPVisitNumberD(VisitNumberDR),2)	
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	i $d(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis)) d
+</span></span><span class="line"><span class="cl">	.s VisitnumberDR=$o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,Epis,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	.i $d(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1)) d
+</span></span><span class="line"><span class="cl">	..s ReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexReportID&#34;,VisitnumberDR,WGMachineID,1,&#34;&#34;),-1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	q ReportDR_&#34;^&#34;_ret
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>‍</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    <section>
+        页面浏览量<span id="busuanzi_value_page_pv">Loading</span>
+    </section>
+</footer>
+
+
+    
+</article>
+
+<div class="post-password">
+	
+</div>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BB%AA%E5%99%A8%E6%8A%A5%E8%AD%A6%E4%BF%A1%E6%81%AF-d32f758247/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="仪器报警信息 d32f758247" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">仪器报警信息</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-676313ec8e/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8F%8C%E5%90%91%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F%E6%95%B4%E5%90%88-676313ec8e/assets/image-20250110220839-bac5x44.910134c129f7fd8b0bf1599efff1e14c_hu_2b2afe2a10667c83.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 双向接口程序整合"
+                        data-key="双向接口程序整合 676313ec8e" 
+                        data-hash="md5-kQE0wSn3/YsL8Vme//HhTA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">双向接口程序整合</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E9%80%9A%E7%94%A8%E4%BC%A0%E8%BE%93%E6%8E%A5%E5%8F%A3-5ce4a28788/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="通用传输接口 5ce4a28788" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">通用传输接口</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%87%E6%B3%B0wan200-da9f234969/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="万泰WAN200 da9f234969" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">万泰WAN200</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%B8%AD%E5%85%83%E5%B0%BF%E6%9C%BA1600-fe923b78ec/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="中元尿机1600 fe923b78ec" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">中元尿机1600</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline.717170.xyz"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 muziyang
+    </section>
+    
+    <section class="powerby">
+        
+            网站总访客数：<span id='busuanzi_value_site_uv'>Loading</span><br/>网站总访问量：<span id='busuanzi_value_site_pv'>Loading</span> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+    </body>
+</html>
