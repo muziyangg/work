@@ -1,0 +1,2260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>1.个人程序 on 木子洋</title>
+        <link>https://work.717170.xyz/categories/1.%E4%B8%AA%E4%BA%BA%E7%A8%8B%E5%BA%8F/</link>
+        <description>Recent content in 1.个人程序 on 木子洋</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>muziyang</copyright>
+        <lastBuildDate>Wed, 03 Sep 2025 23:12:14 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/categories/1.%E4%B8%AA%E4%BA%BA%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>功能对应路径</title>
+        <link>https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/</link>
+        <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/</guid>
+        <description>&lt;img src="https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182228977-20241227020427-8nbvjef.png" alt="Featured image of post 功能对应路径" /&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;title:  功能对应路径&lt;br&gt;
+slug: 功能对应路径 20250110002410&lt;br&gt;
+description:&lt;br&gt;
+date: 2025-01-10&lt;br&gt;
+lastmod: 2025-01-10&lt;br&gt;
+image: /img/title.jpg&lt;br&gt;
+math:&lt;br&gt;
+license:&lt;br&gt;
+hidden: false&lt;br&gt;
+draft: false&lt;br&gt;
+password:&lt;br&gt;
+categories: [&amp;quot;&amp;quot;]&lt;br&gt;
+tags: [&amp;quot;&amp;quot;]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;结果异常改变打印颜色&#34;&gt;结果异常改变打印颜色
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrint&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182228977-20241227020427-8nbvjef.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1059&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182228977-20241227020427-8nbvjef_hu_3d202cffbbb85e3d.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182228977-20241227020427-8nbvjef_hu_78150a44c0b8c569.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230327182228977&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在此处添加异常结果信息&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;更新模板所有字段&#34;&gt;更新模板所有字段
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrintBase&lt;/p&gt;
+&lt;h3 id=&#34;lis-设置默认打印机&#34;&gt;lis 设置默认打印机
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrintBarCode&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182804383-20241227020427-nwmvf2f.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1059&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182804383-20241227020427-nwmvf2f_hu_9c7d3ce05b7c71ff.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182804383-20241227020427-nwmvf2f_hu_c5d8b775061aa23a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230327182804383&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.设置打印机名称为 tiaoma&lt;/p&gt;
+&lt;p&gt;2.创建打印机副本命名为条码&lt;/p&gt;
+&lt;p&gt;3.修改代码默认打印机名称&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;模板设计器增加可用元素&#34;&gt;模板设计器增加可用元素
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReportPrint // 添加可用参数&lt;/p&gt;
+&lt;p&gt;HIS.DHCReportPrintBase //更新 global&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327183933549-20241227020427-o4w4piz.png&#34;
+	width=&#34;1786&#34;
+	height=&#34;967&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327183933549-20241227020427-o4w4piz_hu_9535e6ddb5ca93db.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327183933549-20241227020427-o4w4piz_hu_7d41910ba48f7386.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230327183933549&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;443px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327184227688-20241227020427-e6nw26k.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1048&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327184227688-20241227020427-e6nw26k_hu_6d5905f49eac2e08.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327184227688-20241227020427-e6nw26k_hu_ae4f12733828bd1c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230327184227688&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/3-20241227020427-c4syjbb.png&#34;
+	width=&#34;662&#34;
+	height=&#34;443&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/3-20241227020427-c4syjbb_hu_1abdf636864a7f34.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/3-20241227020427-c4syjbb_hu_4bc317d940c98e7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/4-20241227020427-tuhuhms.png&#34;
+	width=&#34;661&#34;
+	height=&#34;321&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/4-20241227020427-tuhuhms_hu_ea8dcb034bde5b2d.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/4-20241227020427-tuhuhms_hu_1c7a09f3ee8ad9e3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;205&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/5-20241227020427-4uk29jq.png&#34;
+	width=&#34;1210&#34;
+	height=&#34;413&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/5-20241227020427-4uk29jq_hu_2125296e3475a39b.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/5-20241227020427-4uk29jq_hu_97cc2af345ab9872.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;292&#34;
+		data-flex-basis=&#34;703px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/6-20241227020427-zqts20n.png&#34;
+	width=&#34;923&#34;
+	height=&#34;267&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/6-20241227020427-zqts20n_hu_9b7c378904edf481.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/6-20241227020427-zqts20n_hu_28df8f1e321fbead.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;345&#34;
+		data-flex-basis=&#34;829px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;初始化字符串位置&lt;/p&gt;
+&lt;p&gt;拼接 RetStr 字符串&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;保存标本登记存储过程&#34;&gt;保存标本登记存储过程
+&lt;/h3&gt;&lt;p&gt;LISSP.DHCRPVisitNumber&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150638703-20241227020427-mc4vzyq.png&#34;
+	width=&#34;1344&#34;
+	height=&#34;636&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150638703-20241227020427-mc4vzyq_hu_2fa7b06e37879b9c.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150638703-20241227020427-mc4vzyq_hu_340da486dc3a3012.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230404150638703&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;211&#34;
+		data-flex-basis=&#34;507px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150541132-20241227020427-4tkqw05.png&#34;
+	width=&#34;1773&#34;
+	height=&#34;769&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150541132-20241227020427-4tkqw05_hu_b79d7724ced8f707.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230404150541132-20241227020427-4tkqw05_hu_596d7ce63a06eafc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230404150541132&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;接收用户提示不存在&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;自动任务lis-和-his-信息同步拒收&#34;&gt;自动任务（lis 和 his 信息同步，拒收）
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;win服务器版本lis，【dhc-app】web.DHCLisRealTimeInterface&lt;/p&gt;
+&lt;p&gt;linux服务器版本lis，【dhc-lisdata】LISAPP.TASK.LisRealTimeInterface&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;TASK.LisRealTimeInterface&lt;/p&gt;
+&lt;p&gt;w ##Class(TASK.LISRealTimeTask).Do()&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181656503-20241227020427-9jed0n1.png&#34;
+	width=&#34;818&#34;
+	height=&#34;293&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181656503-20241227020427-9jed0n1_hu_ffab178cd8024dbc.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181656503-20241227020427-9jed0n1_hu_6eb619891c666a9b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230406181656503&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181615270-20241227020427-g78dghz.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1059&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181615270-20241227020427-g78dghz_hu_aa2278cb9978944f.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230406181615270-20241227020427-g78dghz_hu_334d9aa875b3511b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230406181615270&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;同步-his-数据&#34;&gt;同步 his 数据
+&lt;/h3&gt;&lt;p&gt;LIS.Util.SyncData&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230528003652878-20241227020427-l3a64jk.png&#34;
+	width=&#34;1005&#34;
+	height=&#34;434&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230528003652878-20241227020427-l3a64jk_hu_f0e5243a97b66f31.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230528003652878-20241227020427-l3a64jk_hu_3bffbface2fd2c53.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230528003652878&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;555px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;同步病区和科室数据，利用sql进行数据同步&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;标本接收核收&#34;&gt;标本接收核收
+&lt;/h3&gt;&lt;p&gt;（LISSP.DHCRPVisitNumber).ReceiveVisitNumber&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P0 C:集中接收 H:核收
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P1检测号(流水号/条码号)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P2细菌鉴定号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P3流水号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P4核收者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P5接收备注ReceiveNotes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P6接收质量SpecimenQualityDR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P7接收医嘱列表VisTSDRLists
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P8工作小组idWorkGroupMachineDR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P9 CarryUserDR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P10接收时间TransmitDate 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P11 CheckTestSetDRList
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P12 RackNo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P13接收IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Param.P14 ExParaList 格式：送达人信息@
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;w ##Class(LISSP.DHCRPVisitNumber).ReceiveVisitNumber(&amp;#34;1000253031&amp;#34;,&amp;#34;&amp;lt;Data&amp;gt;&amp;lt;P11&amp;gt;@&amp;lt;/P11&amp;gt;&amp;lt;P5&amp;gt;&amp;lt;/P5&amp;gt;&amp;lt;P14&amp;gt;@&amp;lt;/P14&amp;gt;&amp;lt;P6&amp;gt;&amp;lt;/P6&amp;gt;&amp;lt;P12&amp;gt;&amp;lt;/P12&amp;gt;&amp;lt;P13&amp;gt;10.20.25.174&amp;lt;/P13&amp;gt;&amp;lt;P0&amp;gt;H&amp;lt;/P0&amp;gt;&amp;lt;P9&amp;gt;&amp;lt;/P9&amp;gt;&amp;lt;P1&amp;gt;&amp;lt;/P1&amp;gt;&amp;lt;P3&amp;gt;22&amp;lt;/P3&amp;gt;&amp;lt;P2&amp;gt;&amp;lt;/P2&amp;gt;&amp;lt;P7&amp;gt;&amp;lt;/P7&amp;gt;&amp;lt;P10&amp;gt;2023-08-23&amp;lt;/P10&amp;gt;&amp;lt;P8&amp;gt;6&amp;lt;/P8&amp;gt;&amp;lt;P4&amp;gt;11627&amp;lt;/P4&amp;gt;&amp;lt;/Data&amp;gt;&amp;#34;,&amp;#34;11627^4^0^13^1&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;bs-标本接收&#34;&gt;BS 标本接收
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReceiveWebService——ReceiveAllHIS&lt;/p&gt;
+&lt;p&gt;HIS.DHCReceiveProcess——ReceiveAllBS&lt;/p&gt;
+&lt;p&gt;HIS.DHCReceiveCommon——CheckSampleInfo&lt;/p&gt;
+&lt;h3 id=&#34;标本审核&#34;&gt;标本审核
+&lt;/h3&gt;&lt;p&gt;w ##Class(LISSP.DHCRPVisitNumberReport).SaveResult(&amp;ldquo;2507&amp;rdquo;,&amp;quot; &lt;Data&gt; &lt;P3&gt; &lt;/P3&gt; &lt;P12&gt; &lt;/P12&gt; &lt;P4&gt; &lt;/P4&gt; &lt;P0&gt; A &lt;/P0&gt; &lt;P8&gt; &lt;/P8&gt; &lt;P10&gt; &lt;/P10&gt; &lt;P5&gt; &lt;/P5&gt; &lt;P1&gt;^^^^^81^^^^^^^^^&lt;/P1&gt; &lt;P13&gt; &lt;/P13&gt; &lt;P9&gt; &lt;/P9&gt; &lt;P14&gt; &lt;/P14&gt; &lt;P6&gt; 127.0.0.1 &lt;/P6&gt; &lt;P2&gt; 611^^1017^^测试^^^^^^^^A^^^^*10~9/L^^^^4^^^^^^2017-11-01^^09:02:32^^1^^^^^^^^^^^^^^^^^^2507@@&lt;/P2&gt; &lt;P11&gt; &lt;/P11&gt; &lt;P7&gt; &lt;/P7&gt; &lt;/Data&gt; &amp;ldquo;,&amp;rdquo; 113&lt;sup&gt;27^^2&lt;/sup&gt;1 &amp;ldquo;)&lt;/p&gt;
+&lt;h3 id=&#34;微生物审核&#34;&gt;微生物审核
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LIS.WS.BLL.DHCRPMicReportSave&lt;/p&gt;
+&lt;p&gt;/// w ##Class(IDP.WS.BLL.DHCIDPResult).EndIDPReportMTHD(&amp;ldquo;1597887@715&amp;rdquo;, &amp;ldquo;3&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;8280&amp;rdquo;, &amp;ldquo;11521&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;11595&lt;sup&gt;4&lt;/sup&gt;0&lt;sup&gt;16&lt;/sup&gt;1&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;保存条码医嘱信息&#34;&gt;保存条码医嘱信息
+&lt;/h3&gt;&lt;p&gt;HIS.DHCReceiveCommon——SaveLabNoTSInfo&lt;/p&gt;
+&lt;p&gt;//签收生成上传信息&lt;/p&gt;
+&lt;h3 id=&#34;报告处理页面功能&#34;&gt;报告处理页面功能
+&lt;/h3&gt;&lt;p&gt;(检验)LIS.WS.BLL.DHCRPReportManage.QryWorkList&lt;/p&gt;
+&lt;p&gt;(微生物)LIS.WS.BLL.DHCRPMicNumberReport.QryLabInformatin&lt;/p&gt;
+&lt;h3 id=&#34;参考范围方法&#34;&gt;参考范围方法
+&lt;/h3&gt;&lt;p&gt;LISSP.BLL.DHCCommonInterface&lt;/p&gt;
+&lt;h3 id=&#34;保存标本登记存储过程-1&#34;&gt;保存标本登记存储过程
+&lt;/h3&gt;&lt;p&gt;LISSP.DHCRPVisitNumber&lt;/p&gt;
+&lt;h3 id=&#34;首页功能显示&#34;&gt;首页功能显示
+&lt;/h3&gt;&lt;p&gt;LISSTAT.LIS.QryST.HomePage&lt;/p&gt;
+&lt;h3 id=&#34;报告查询&#34;&gt;报告查询
+&lt;/h3&gt;&lt;p&gt;老 LIS.WS.BLL.DHCRPQueryReport&lt;/p&gt;
+&lt;p&gt;新 LIS.WS.BLL.DHCReportQuery&lt;/p&gt;
+&lt;p&gt;新 LIS.WS.BLL.DHCLISReportPrint	自助程序&lt;/p&gt;
+&lt;h3 id=&#34;标本状态查询&#34;&gt;标本状态查询
+&lt;/h3&gt;&lt;p&gt;LIS.WS.BLL.DHCStatSample&lt;/p&gt;
+&lt;h3 id=&#34;输血打印&#34;&gt;输血打印
+&lt;/h3&gt;&lt;h4 id=&#34;申请单&#34;&gt;申请单
+&lt;/h4&gt;&lt;p&gt;HIS.DHCReportPrintReqForm&lt;/p&gt;
+&lt;h4 id=&#34;发血单&#34;&gt;发血单
+&lt;/h4&gt;&lt;p&gt;HIS.DHCReportPrintXM&lt;/p&gt;
+&lt;h4 id=&#34;审批单&#34;&gt;审批单
+&lt;/h4&gt;&lt;p&gt;HIS.DHCBDPrintBigReqform&lt;/p&gt;
+&lt;h4 id=&#34;配血单&#34;&gt;配血单
+&lt;/h4&gt;&lt;p&gt;HIS.DHCReportPrintXMMethod&lt;/p&gt;
+&lt;h4 id=&#34;取血单&#34;&gt;取血单
+&lt;/h4&gt;&lt;p&gt;HIS.DHCReportPrintTakeRecordPack&lt;/p&gt;
+&lt;h3 id=&#34;服务器问题弹窗&#34;&gt;服务器问题弹窗
+&lt;/h3&gt;&lt;p&gt;LIS.WS.DHCLISServiceBase&lt;/p&gt;
+&lt;h3 id=&#34;获取工作小组最大流水号&#34;&gt;获取工作小组最大流水号
+&lt;/h3&gt;&lt;p&gt;w ##class(LISSP.DHCRPVisitNumberReport).GetMaxEpisodeNo(&amp;ldquo;12&amp;rdquo;)&lt;/p&gt;
+&lt;h3 id=&#34;通过编号规则获取流水号&#34;&gt;通过编号规则获取流水号
+&lt;/h3&gt;&lt;p&gt;编号规则面向所有需要编号的业务提供服务，只需要维护规则业务调用接口得到编号即可，走号不与业务耦合
+调用接口, 通过规则主键得到下一号: w ##class(LIS.WS.BLL.DHCLISRuleNo).GetNextNoByRowIDMTHD(&amp;ldquo;1&amp;rdquo;)
+调用接口, 通过规则代码得到下一号: w ##class(LIS.WS.BLL.DHCLISRuleNo).GetNextNoByCodeMTHD(&amp;ldquo;001&amp;rdquo;, &amp;ldquo;&amp;rdquo;)
+调用接口, 取消号的使用释放可用号: w ##class(LIS.WS.BLL.DHCLISRuleNo).CancelNoUse(&amp;rdquo;&amp;quot;, &amp;ldquo;&amp;quot;)或 CancelNoUseByRowIDMTHD(&amp;rdquo;&amp;quot;, &amp;ldquo;&amp;rdquo;)&lt;/p&gt;
+&lt;h3 id=&#34;自动核收方法&#34;&gt;自动核收方法
+&lt;/h3&gt;&lt;p&gt;w ##Class(LIS.Common.DHCVisitNumber).ReceiveLabNoByWGMWithMsg(&amp;ldquo;4&amp;rdquo;, &amp;ldquo;1000100975&amp;rdquo;, &amp;ldquo;&amp;rdquo;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;///标本核收
+s retVal =$$ReceiveLabno^MI.MIF000(mi, epis, RackNo)
+i retVal&amp;rsquo;= 1 Quit&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;检验公共消息接口&#34;&gt;检验公共消息接口
+&lt;/h3&gt;&lt;p&gt;d ##Class(TASK.LISRealTimeTask).Do()&lt;/p&gt;
+&lt;h3 id=&#34;检验仪器自启任务&#34;&gt;检验仪器自启任务
+&lt;/h3&gt;&lt;p&gt;d ##Class(MI.Common.MachineControl).StartAll()&lt;/p&gt;
+&lt;h3 id=&#34;主动上传方法&#34;&gt;主动上传方法
+&lt;/h3&gt;&lt;p&gt;复查 LIS.Common.DHCVisitNumber&amp;ndash;CreateUploadRecordMTHD&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091326128-20241227020427-88v831q.png&#34;
+	width=&#34;1654&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091326128-20241227020427-88v831q_hu_748d52092304dd36.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091326128-20241227020427-88v831q_hu_1452e72de8084906.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230714091326128&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;290&#34;
+		data-flex-basis=&#34;696px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;拒收 LISSP.DHCRPVisitNumber&amp;ndash;RejectVisitNumber&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091528326-20241227020427-8e8u63q.png&#34;
+	width=&#34;1608&#34;
+	height=&#34;618&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091528326-20241227020427-8e8u63q_hu_1eeea6e20299f89f.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230714091528326-20241227020427-8e8u63q_hu_d0701577b986dcca.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230714091528326&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;260&#34;
+		data-flex-basis=&#34;624px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;外送方法&#34;&gt;外送方法
+&lt;/h3&gt;&lt;p&gt;LIS.Service.ENS.SaveReport&lt;/p&gt;
+&lt;h3 id=&#34;查询-his-用户信息&#34;&gt;查询 his 用户信息
+&lt;/h3&gt;&lt;p&gt;LIS.WS.BLL.HISSSUser&lt;/p&gt;
+&lt;h3 id=&#34;根据就诊号-化验项目-审核日期查询对照码结果&#34;&gt;根据就诊号, 化验项目, 审核日期查询对照码结果
+&lt;/h3&gt;&lt;p&gt;web.DHCENS.STBLL.Method.GetResult&lt;/p&gt;
+&lt;h3 id=&#34;标本状态查询-1&#34;&gt;标本状态查询
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;d ##Class(%ResultSet).RunQuery(&amp;ldquo;LIS.WS.BLL.DHCStatSample&amp;rdquo;, &amp;ldquo;QryStatSample&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;9000000762&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;20&amp;rdquo;, &amp;ldquo;1&amp;rdquo;, &amp;ldquo;113&lt;sup&gt;7&lt;/sup&gt;0&lt;sup&gt;12&lt;/sup&gt;1&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;回退拒收标本&#34;&gt;回退拒收标本
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;w ##Class(LISSP.DHCRPVisitNumber).RejectVisitNumber(&amp;ldquo;00000000574&amp;rdquo;, &amp;ldquo;&lt;Data&gt; &lt;P6&gt; &lt;/P6&gt; &lt;P8&gt; &lt;/P8&gt; &lt;P3&gt; &lt;/P3&gt; &lt;P12&gt; &lt;/P12&gt; &lt;P2&gt;&lt;sup&gt;5 &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P2&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P10&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P10&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P11&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P11&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P13&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P13&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P4&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P4&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P14&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P14&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P0&amp;gt;&lt;/sup&gt;​&lt;sup&gt; 19 &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P0&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P1&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P1&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P9&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P9&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P7&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P7&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;P5&amp;gt;&lt;/sup&gt;​&lt;sup&gt; 113.140.81.66 &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/P5&amp;gt;&lt;/sup&gt;​&lt;sup&gt; &lt;/sup&gt;​&lt;sup&gt;&amp;lt;/Data&amp;gt;&lt;/sup&gt;​&lt;sup&gt;&amp;quot;, &amp;quot;113&lt;/sup&gt;7&lt;sup&gt;0&lt;/sup&gt;12^1&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;his-导入数据&#34;&gt;HIS 导入数据
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;DHCLIS.DHCBTData&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;查询仪器监控数据&#34;&gt;查询仪器监控数据
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;LIS.WS.BLL.DHCMachineParameter&amp;rdquo;, &amp;ldquo;QryMachineTransferResult&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;^TMPMACHRESULT(MachID, SttDate),-1)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;标本核收界面通过登记号查询信息&#34;&gt;标本核收界面通过登记号查询信息
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;/// d ##Class(%ResultSet).RunQuery(&amp;ldquo;LIS.WS.BLL.DHCHisOrderItem&amp;rdquo;, &amp;ldquo;QryHisOrderItemListByRegNo&amp;rdquo;, &amp;ldquo;0000000006&amp;rdquo;, &amp;ldquo;13&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;&amp;rdquo;, &amp;ldquo;8280&lt;sup&gt;3&lt;/sup&gt;0&lt;sup&gt;2&lt;/sup&gt;1&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;基础数据查询公用方法&#34;&gt;基础数据查询公用方法
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LIS.WS.BLL.DHCLISBaseCore&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;推送-otmsg-消息&#34;&gt;推送 otmsg 消息
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LISSP.BLL.DHCOTMsgStock		微生物审核调用&lt;br&gt;
+LISSP.BLL.DealMsgQueue		普通审核调用&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;定时任务&#34;&gt;定时任务
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;【dhc-app】web.DHCLisRealTimeInterface&lt;/p&gt;
+&lt;p&gt;d ##Class(LIS.WS.DHCLISServiceBase).ManaInvoke(&amp;ldquo;TASK.LISRealTimeTask&amp;rdquo;, &amp;ldquo;Do&amp;rdquo;) 新&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;报表授权&#34;&gt;报表授权
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;zn &amp;ldquo;%sys&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;d ##class(BSP.SMP.DHCManageRolesAndUsers).GrantRolesSQLPrivilege()&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;保存危急值处理消息&#34;&gt;保存危急值处理消息
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;w ##Class(DHCLIS.DHCCommon).SaveTransPanicNotice(37, &amp;ldquo;01697&amp;rdquo;, &amp;ldquo;&lt;sup&gt;fasf&lt;/sup&gt;231312^afdafsa&amp;rdquo;, &amp;ldquo;&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;通用根据条件query查询数据&#34;&gt;通用根据条件query查询数据
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LISSTAT.LIS.ComQuery.Condition&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20250104102309-tkp4f9v.png&#34;
+	width=&#34;1418&#34;
+	height=&#34;599&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20250104102309-tkp4f9v_hu_1798986a116967e.png 480w, https://work.717170.xyz/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20250104102309-tkp4f9v_hu_20eff41dddab2763.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;568px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;检验自助打印机查询&#34;&gt;检验自助打印机查询
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LIS.WS.BLL.DHCSelfPrint&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;标本追踪获取信息&#34;&gt;标本追踪获取信息
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LIS.WS.BLL.DHCTraceReport	QryVisitnumberInfo&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;质量指标汇总数据生成&#34;&gt;质量指标汇总数据生成
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;d ##Class(LISSTAT.LIS.QSI.CreatDataBS).Creat(&amp;ldquo;2018-01-01&amp;rdquo;,&amp;ldquo;2019-07-01&amp;rdquo;,&amp;ldquo;AUTHDATE&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;工作量统计&#34;&gt;工作量统计
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;d ##Class(%ResultSet).RunQuery(&amp;ldquo;LIS.WS.BLL.DHCStatWorkLoadByTestCode&amp;rdquo;,&amp;ldquo;QryVisitnumberWorkLoadNew&amp;rdquo;,&amp;ldquo;2025-04-02&amp;rdquo;,&amp;ldquo;2025-04-02&amp;rdquo;,&amp;ldquo;4&amp;rdquo;,&amp;ldquo;48&amp;rdquo;,&amp;quot;&amp;quot;,&amp;quot;;;;;;;&amp;quot;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;Machine,TestCode&amp;rdquo;,&amp;quot;^^^00:00&lt;sup&gt;23:59&lt;/sup&gt;&amp;quot;,&amp;quot;&amp;quot;,,&amp;quot;&amp;quot;,&amp;ldquo;20&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;9473&lt;sup&gt;4&lt;/sup&gt;0&lt;sup&gt;13&lt;/sup&gt;1&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;判断用户权限&#34;&gt;判断用户权限
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;i ##class(LISSTAT.LIS.ComClass.Permission).Sessions(Sessions,WorkGpDR) q&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;索引格式化&#34;&gt;索引格式化
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;##Class(LIS.Util.Common).IndexData(TSetCode)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;查询质控数据&#34;&gt;查询质控数据
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;d ##class(%ResultSet).RunQuery(&amp;ldquo;LIS.WS.BLL.DHCQCCalXSD&amp;rdquo;,&amp;ldquo;QryCalTestResultMonthData&amp;rdquo;,&amp;ldquo;20250701&amp;rdquo;,&amp;ldquo;20250731&amp;rdquo;,&amp;ldquo;20&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;16&amp;rdquo;,&amp;ldquo;12&amp;rdquo;,&amp;quot;&amp;quot;,12,&amp;ldquo;1&amp;rdquo;,735374452,&amp;quot;&amp;quot;,&amp;quot;&amp;quot;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;杀死进程&#34;&gt;杀死进程
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;结束指定进程号的进程&lt;br&gt;
+/// w ##Class(LIS.WS.DHCLISServiceBase).KillJobByID()&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;接收查询his返回&#34;&gt;接收查询his返回
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;s RetVal=##class(LISAPP.LIS.BLL.DHCReceiveInterface).GetLabNoInfo(BarCode)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;报告查询查看详细结果&#34;&gt;报告查询查看详细结果
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;QryTSInfoAExecute+85^LIS.WS.BLL.DHCRPVisitNumberReport.1&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;获取电子病历信息&#34;&gt;获取电子病历信息
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;w ##class(LIS.WS.BLL.DHCEMRView).GetEmrAddrMTHD(&amp;ldquo;25072800014&amp;rdquo;)&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>记录临时数据</title>
+        <link>https://work.717170.xyz/p/%E8%AE%B0%E5%BD%95%E4%B8%B4%E6%97%B6%E6%95%B0%E6%8D%AE-de218cf708/</link>
+        <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/p/%E8%AE%B0%E5%BD%95%E4%B8%B4%E6%97%B6%E6%95%B0%E6%8D%AE-de218cf708/</guid>
+        <description>&lt;img src="https://work.717170.xyz/img/title.jpg" alt="Featured image of post 记录临时数据" /&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;95
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Class MI.Special.Record Extends %RegisteredObject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 记录临时数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参:数据类型，数据索引，数据，类型（1天数,0数字），限制天数/数字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(MI.Special.Record).RecordData(&amp;#34;TEST&amp;#34;,&amp;#34;9000000001&amp;#34;,&amp;#34;testdata&amp;#34;,0,5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod RecordData(DataType, DataIndex, Data, InfoType, InfoLimit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DataIndex=$g(DataIndex),Data=$g(Data),InfoLimit=$g(InfoLimit),DataType=$g(DataType),InfoType=$g(InfoType)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(DataIndex) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(InfoType) s InfoType=1							// 没有存储类型默认为按照天数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DataType))&amp;amp;&amp;amp;(InfoType=1) s DataType=&amp;#34;TMPDATA&amp;#34;	// 天数没有数据类型索引默认为 TMPDATA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DataType))&amp;amp;&amp;amp;(InfoType=0) s DataType=&amp;#34;TMPNUM&amp;#34;		// 数字没有数据类型索引默认为 TMPNUM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(InfoLimit))&amp;amp;&amp;amp;(InfoType=1) s InfoLimit=5				// 天数没有数据限制默认为 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(InfoLimit))&amp;amp;&amp;amp;(InfoType=0) s InfoLimit=1000			// 数字没有数据限制默认为 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoDate=$zd($p($h,&amp;#34;,&amp;#34;,1),8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoTime=$tr($zt($p($h,&amp;#34;,&amp;#34;,2)),&amp;#34;:&amp;#34;,&amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sign=0,OutPutSign=1,QSign=0,DataSign=1 //包含数据,是否输出,是否新增
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=1 d SaveDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=0 d SaveNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=1 d DeleteDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=0 d DeleteNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DeleteNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType)) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastInfoNum&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoNum=LastInfoNum-InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextNextInfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,LastNextInfoNum),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastNextNextInfoNum&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DeleteNum=LastNextInfoNum f  s DeleteNum=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum),-1) q:(DeleteNum=&amp;#34;&amp;#34;)||(DeleteNum&amp;lt;0)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s DeleteDataIndex=&amp;#34;&amp;#34; f  s DeleteDataIndex=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum,DeleteDataIndex),-1) q:(DeleteDataIndex=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s LISRecordDR=&amp;#34;&amp;#34; f  s LISRecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum,DeleteDataIndex,LISRecordDR),-1) q:(LISRecordDR=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...&amp;amp;sql(delete from dbo.LIS_Record where RowID=:LISRecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DeleteDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType)) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoDate=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastInfoDate&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoDateNum=$zdh(LastInfoDate,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoDateNum=LastInfoDateNum-InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoDate=$zd(LastNextInfoDateNum,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextNextInfoDate=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,LastNextInfoDate),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastNextNextInfoDate&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DeleteDate=LastNextInfoDate f  s DeleteDate=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate),-1) q:(DeleteDate=&amp;#34;&amp;#34;)||(DeleteDate&amp;lt;0)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s DeleteDataIndex=&amp;#34;&amp;#34; f  s DeleteDataIndex=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate,DeleteDataIndex),-1) q:(DeleteDataIndex=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s LISRecordDR=&amp;#34;&amp;#34; f  s LISRecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate,DeleteDataIndex,LISRecordDR),-1) q:(LISRecordDR=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...&amp;amp;sql(delete from dbo.LIS_Record where RowID=:LISRecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SaveNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataType=DataType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataIndex=DataIndex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Data=Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoType=InfoType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoLimit=InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Sequence=&amp;#34;1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoNumDT=InfoDate_InfoTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoNum=+InfoNum+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sc=obj.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SaveDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $d(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OSequence=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s RecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,OSequence,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OldData=$lg($g(^dbo.LISRecordD(RecordDR)),4)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i OldData=Data d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s obj=##class(dbo.LISRecord).%OpenId(RecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataType=DataType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataIndex=DataIndex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Data=Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoType=InfoType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoLimit=InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoDate=InfoDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoTime=InfoTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s obj.Sequence=&amp;#34;1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OSequence=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s obj.Sequence=+OSequence+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sc=obj.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;109
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;110
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;111
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;112
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;113
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;114
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;115
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;116
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;117
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;118
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;119
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;120
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;121
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;122
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;123
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;124
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;125
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;126
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;127
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;128
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;129
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;130
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;131
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;132
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;133
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;134
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;135
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;136
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;137
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;138
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;139
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;140
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;141
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;142
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;143
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;144
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;145
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;146
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;147
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;148
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;149
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;150
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;151
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;152
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;153
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;154
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;155
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;156
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;157
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;158
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Class MI.Special.Record Extends %RegisteredObject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 记录临时数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参:数据类型，数据索引，数据，类型（1天数,0数字），限制天数/数字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(MI.Special.Record).RecordData(&amp;#34;TEST&amp;#34;,&amp;#34;9000000001&amp;#34;,&amp;#34;testdata&amp;#34;,0,5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod RecordDataNew(DataType, DataIndex, Data, InfoType, InfoLimit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DataIndex=$g(DataIndex),Data=$g(Data),InfoLimit=$g(InfoLimit),DataType=$g(DataType),InfoType=$g(InfoType)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(DataIndex) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(InfoType) s InfoType=1							// 没有存储类型默认为按照天数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DataType))&amp;amp;&amp;amp;(InfoType=1) s DataType=&amp;#34;TMPDATA&amp;#34;	// 天数没有数据类型索引默认为 TMPDATA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DataType))&amp;amp;&amp;amp;(InfoType=0) s DataType=&amp;#34;TMPNUM&amp;#34;		// 数字没有数据类型索引默认为 TMPNUM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(InfoLimit))&amp;amp;&amp;amp;(InfoType=1) s InfoLimit=5				// 天数没有数据限制默认为 5	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(InfoLimit))&amp;amp;&amp;amp;(InfoType=0) s InfoLimit=1000			// 数字没有数据限制默认为 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoDate=$zd($p($h,&amp;#34;,&amp;#34;,1),8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoTime=$tr($zt($p($h,&amp;#34;,&amp;#34;,2)),&amp;#34;:&amp;#34;,&amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sign=0,OutPutSign=1,QSign=0,DataSign=1 //包含数据,是否输出,是否新增
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=1 d SaveDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=0 d SaveNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=1 d DeleteDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i InfoType=0 d DeleteNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DeleteNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType)) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastInfoNum&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoNum=LastInfoNum-InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextNextInfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,LastNextInfoNum),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastNextNextInfoNum&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DeleteNum=LastNextInfoNum f  s DeleteNum=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum),-1) q:(DeleteNum=&amp;#34;&amp;#34;)||(DeleteNum&amp;lt;0)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s DeleteDataIndex=&amp;#34;&amp;#34; f  s DeleteDataIndex=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum,DeleteDataIndex),-1) q:(DeleteDataIndex=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s LISRecordDR=&amp;#34;&amp;#34; f  s LISRecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,DeleteNum,DeleteDataIndex,LISRecordDR),-1) q:(LISRecordDR=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...&amp;amp;sql(delete from dbo.LIS_Record where RowID=:LISRecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DeleteDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType)) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoDate=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastInfoDate&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastInfoDateNum=$zdh(LastInfoDate,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoDateNum=LastInfoDateNum-InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextInfoDate=$zd(LastNextInfoDateNum,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastNextNextInfoDate=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,LastNextInfoDate),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i LastNextNextInfoDate&amp;lt;=0 q		//如果为空获取为负数时退出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DeleteDate=LastNextInfoDate f  s DeleteDate=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate),-1) q:(DeleteDate=&amp;#34;&amp;#34;)||(DeleteDate&amp;lt;0)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s DeleteDataIndex=&amp;#34;&amp;#34; f  s DeleteDataIndex=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate,DeleteDataIndex),-1) q:(DeleteDataIndex=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s LISRecordDR=&amp;#34;&amp;#34; f  s LISRecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexInfoDate&amp;#34;,DataType,DeleteDate,DeleteDataIndex,LISRecordDR),-1) q:(LISRecordDR=&amp;#34;&amp;#34;)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...&amp;amp;sql(delete from dbo.LIS_Record where RowID=:LISRecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SaveNum
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataType=DataType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataIndex=DataIndex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Data=Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoType=InfoType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoLimit=InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Sequence=&amp;#34;1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoNumDT=InfoDate_InfoTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s InfoNum=+$o(^dbo.LISRecordI(&amp;#34;IndexInfoNum&amp;#34;,DataType,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoNum=+InfoNum+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sc=obj.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SaveDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $d(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OSequence=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s RecordDR=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,OSequence,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OldData=$lg($g(^dbo.LISRecordD(RecordDR)),4)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i OldData=Data d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s obj=##class(dbo.LISRecord).%OpenId(RecordDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  s obj=##class(dbo.LISRecord).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataType=DataType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataIndex=DataIndex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.Data=Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoType=InfoType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoLimit=InfoLimit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoDate=InfoDate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.InfoTime=InfoTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s obj.Sequence=&amp;#34;1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s OSequence=$o(^dbo.LISRecordI(&amp;#34;IndexMater&amp;#34;,DataType,DataIndex,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s obj.Sequence=+OSequence+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sc=obj.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 记录临时数据新
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参:唯一入参，数据，索引，第几个数据，类型（1天数,0数字），天数/数字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(MI.Special.Record).RecordData(&amp;#34;&amp;#34;,&amp;#34;a&amp;#34;,&amp;#34;LSLSX&amp;#34;,0,1,5)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// try{d ##class(MI.Special.Record).RecordData(epis,recordbak,&amp;#34;MI.MIFRS600&amp;#34;,1,10)}catch{}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(MI.Special.Record).RecordData(&amp;#34;34&amp;#34;,&amp;#34;CS&amp;#34;,&amp;#34;LSLSX&amp;#34;,0,1,2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod RecordData(Ginseng, Data, Index, OrderNum, Type, DayNumber)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Index=$g(Index),Ginseng=$g(Ginseng),Data=$g(Data),Type=$g(Type),DayNumber=$g(DayNumber)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q ..RecordDataNew(Index,Ginseng,Data,Type,DayNumber)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Ginseng=$g(Ginseng),Data=$g(Data),DayNumber=$g(DayNumber),Index=$g(Index),Type=$g(Type),OrderNum=$g(OrderNum)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(Ginseng) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(Type) s Type=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(Index))&amp;amp;&amp;amp;(Type=1) s Index=&amp;#34;TMPDATA&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(Index))&amp;amp;&amp;amp;(Type=0) s Index=&amp;#34;TMPNUM&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DayNumber))&amp;amp;&amp;amp;(Type=1) s DayNumber=5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i (&amp;#39;$l(DayNumber))&amp;amp;&amp;amp;(Type=0) s DayNumber=1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DateTime=$zd($p($h,&amp;#34;,&amp;#34;,1),8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sign=0,OutPutSign=1,QSign=0,DataSign=1 //包含数据,是否输出,是否新增
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $d(^LISTMPDATA(Index,Ginseng)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s sign=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i ($l(OrderNum))&amp;amp;&amp;amp;($d(^LISTMPDATA(Index,Ginseng,OrderNum))) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s RecordData=$o(^LISTMPDATA(Index,Ginseng,OrderNum,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s OldData=$g(^LISTMPDATA(Index,Ginseng,OrderNum,RecordData))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s OutPut=OrderNum_&amp;#34;^&amp;#34;_OldData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s Order=&amp;#34;&amp;#34; f  s Order=$o(^LISTMPDATA(Index,Ginseng,Order)) q:(Order=&amp;#34;&amp;#34;)||(QSign=1)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s RecordData=$o(^LISTMPDATA(Index,Ginseng,Order,&amp;#34;&amp;#34;),-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s OldData=$g(^LISTMPDATA(Index,Ginseng,Order,RecordData))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...i OldData=Data d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....s OutPutSign=1,DataSign=0,QSign=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....s OutPutSign=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s Order=&amp;#34;&amp;#34; f  s Order=$o(^LISTMPDATA(Index,Ginseng,Order))  q:(Order=&amp;#34;&amp;#34;)||(QSign=1)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s RecordData=&amp;#34;&amp;#34; f  s RecordData=$o(^LISTMPDATA(Index,Ginseng,Order,RecordData),-1) q:(RecordData=&amp;#34;&amp;#34;)||(QSign=1)  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....s OldData=$g(^LISTMPDATA(Index,Ginseng,Order,RecordData))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....s OutPut=Order_&amp;#34;^&amp;#34;_OldData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....i OldData=Data d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.....s OutPutSign=1,DataSign=0,QSign=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.....s OutPutSign=1,DataSign=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i DataSign=1  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i Type=1 d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s RecordData=DateTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s ^LISTMPDATANUM(Type,Index)=RecordData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s RecordData=$i(^LISTMPDATANUM(Type,Index))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Order=$o(^LISTMPDATA(Index,Ginseng,&amp;#34;&amp;#34;),-1)+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s ^LISTMPDATA(Index,Ginseng,Order,RecordData)=Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i OutPutSign=1 s OutPut=Order_&amp;#34;^&amp;#34;_Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LastData=^LISTMPDATANUM(Type,Index)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Ginseng=&amp;#34;&amp;#34; f  s Ginseng=$o(^LISTMPDATA(Index,Ginseng)) q:Ginseng=&amp;#34;&amp;#34;  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Order=&amp;#34;&amp;#34; f  s Order=$o(^LISTMPDATA(Index,Ginseng,Order)) q:Order=&amp;#34;&amp;#34;  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..i Type=1 d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s LastDataNum=$zdh(LastData,8) f j=LastDataNum-DayNumber:-1 q:&amp;#39;$d(^LISTMPDATA(Index,Ginseng,Order,$zd(j,8)))  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	....k ^LISTMPDATA(Index,Ginseng,Order,$zd(j,8))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..i Type=0 f j=LastData-DayNumber:-1 q:&amp;#39;$d(^LISTMPDATA(Index,Ginseng,Order,j))  k ^LISTMPDATA(Index,Ginseng,Order,j)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q OutPut
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;‍&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>肾小球滤过率</title>
+        <link>https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/</link>
+        <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/</guid>
+        <description>&lt;img src="https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/assets/%E6%9C%80%E6%96%B0%E7%89%88%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-20250305094927-44pn7ja.jpg" alt="Featured image of post 肾小球滤过率" /&gt;&lt;blockquote&gt;
+&lt;p&gt;lis中维护的公式，替换肌酐的代码【AC017】&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$s((({PatSex}=&amp;#34;男&amp;#34;)&amp;amp;&amp;amp;(({AC017}/88.4)&amp;lt;=0.9)):(142*((({AC017}/88.4)/0.9)**(-0.302))*(0.9938**{PatAge})),(({PatSex}=&amp;#34;男&amp;#34;)&amp;amp;&amp;amp;(({AC017}/88.4)&amp;gt;0.9)):(142*((({AC017}/88.4)/0.9)**(-1.200))*(0.9938**{PatAge})),(({PatSex}=&amp;#34;女&amp;#34;)&amp;amp;&amp;amp;(({AC017}/88.4)&amp;lt;=0.7)):((142*1.012)*((({AC017}/88.4)/0.7)**(-0.241))*(0.9938**{PatAge})),(({PatSex}=&amp;#34;女&amp;#34;)&amp;amp;&amp;amp;(({AC017}/88.4)&amp;gt;0.7)):((142*1.012)*((({AC017}/88.4)/0.7)**(-1.200))*(0.9938**{PatAge})),1:&amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;最新版肾小球滤过率公式&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/assets/%E6%9C%80%E6%96%B0%E7%89%88%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-20250305094927-44pn7ja.jpg&#34;
+	width=&#34;1179&#34;
+	height=&#34;4896&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/assets/%E6%9C%80%E6%96%B0%E7%89%88%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-20250305094927-44pn7ja_hu_a159289562aceba6.jpg 480w, https://work.717170.xyz/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/assets/%E6%9C%80%E6%96%B0%E7%89%88%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-20250305094927-44pn7ja_hu_b125bd663e40062b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;最新版肾小球滤过率计算公式&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;24&#34;
+		data-flex-basis=&#34;57px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>通用工具类方法</title>
+        <link>https://work.717170.xyz/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/</link>
+        <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/</guid>
+        <description>&lt;img src="https://work.717170.xyz/img/title.jpg" alt="Featured image of post 通用工具类方法" /&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-xpe28pn&#34; &gt;对外接口工具类&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-5s6qhlj&#34; &gt;输出XML	QueryToXML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-4zu0hoz&#34; &gt;输出JSON	Query2Json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-3jyyb0j&#34; &gt;Json拆数	dealJson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-fukk1wv&#34; &gt;读取Json	ReadJson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-gbfvtuv&#34; &gt;读取XML	ReadXML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-45nimlj&#34; &gt;写入超长、转换成流	SendLongString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-rgyr9xp&#34; &gt;将query输出到CSV文件	Query2Csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-qkl4t6b&#34; &gt;(示例) 将数据输出到txt文件	OutPut2TXT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-g5wyf56&#34; &gt;写日志到文件中(可续写)		WriteLog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-r7qwbmf&#34; &gt;(示例) 读取服务器文件数据(按照txt方式读取)		Read2TXT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-uz7jcod&#34; &gt;获取互认数据	GetData&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317141448-76y6qjp&#34; &gt;PDF报告转base64	GetBase64ByDRMTHD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-smml9a2&#34; &gt;通用工具类&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-knvlo0t&#34; &gt;不足N位补0	ZeroPadding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-7q1yl9s&#34; &gt;获取客户端IP	GetOutLocalIP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-2stz0y1&#34; &gt;获取服务器本地IP	GetInLocalIP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-bw4xlia&#34; &gt;获取当前命名空间物理路径	GetNameSpacePath&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-0v081a4&#34; &gt;获取License信息	ShowLicenseInfo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-o1d1wva&#34; &gt;判断文件夹是否存在	IsDirectoryExists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-wbzjjkj&#34; &gt;文件夹不存在创建文件夹	CreateNotExistDir&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250317142148-5ypm6p7&#34; &gt;获取时间多少秒之前的时间	GetMinutesAgoTime&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;#20250225110518-307ylxl&#34; &gt;编程小工具&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#20250225110540-k8rb3y2&#34; &gt;初始化入参变量&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;对外接口工具类&#34;&gt;&lt;span id=&#34;20250317141448-xpe28pn&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;对外接口工具类
+&lt;/h2&gt;&lt;h3 id=&#34;输出xmlquerytoxml&#34;&gt;&lt;span id=&#34;20250317141448-5s6qhlj&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;输出XML	QueryToXML
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================输出XML============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// query 转换为xml方法
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(V.TEST.Special).QueryToXML(&amp;#34;20201120&amp;#34;,&amp;#34;20201120&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod QueryToXML(SttDate, EndDate)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s QueryName=&amp;#34;LISService.Problem.SXCZ.QryMethod:QryMethod&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Set rsetNew = ##class(%ResultSet).%New(QueryName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ClassName=&amp;#34;LISService.Problem.SXCZ.QryMethod&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s FuncName=&amp;#34;QryMethod&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rsetNew=##class(%XML.DataSet).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rsetNew.ClassName = ClassName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rsetNew.QueryName = FuncName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	*/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Set sc = rsetNew.Execute(SttDate, EndDate)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s colCount=rsetNew.GetColumnCount()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s OutPut=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    While (rsetNew.Next()) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s RequestXML=##class(LIS.Util.COM.XML).New(&amp;#34;Request&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s HeaderXML=##class(LIS.Util.COM.XML).New(&amp;#34;Header&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s HeaderXML.SourceSystem=&amp;#34;LIS&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s HeaderXML.MessageID=&amp;#34;1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d RequestXML.Insert(HeaderXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s BodyXML=##class(LIS.Util.COM.XML).New(&amp;#34;Body&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s LISReportInfoXML=##class(LIS.Util.COM.XML).New(&amp;#34;LISReportInfo&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s LISItemResultListXML=##class(LIS.Util.COM.XML).New(&amp;#34;LISItemResultList&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s LISItemSenResultListXML=##class(LIS.Util.COM.XML).New(&amp;#34;LISItemSenResultList&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s LISItemResRstXML=##class(LIS.Util.COM.XML).New(&amp;#34;LISItemResRst&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s XMLFlag=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		f i=1:1:colCount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s colName=rsetNew.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s colValue=rsetNew.GetDataByName(colName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if colName=&amp;#34;LISReportInfo&amp;#34; s XMLFlag=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if colName=&amp;#34;LISItemResultList&amp;#34; s XMLFlag=2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if colName=&amp;#34;LISItemSenResultList&amp;#34; s XMLFlag=3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if colName=&amp;#34;LISItemResRst&amp;#34; s XMLFlag=4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if XMLFlag=1,colName&amp;#39;=&amp;#34;LISReportInfo&amp;#34;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				d LISReportInfoXML.Set(colName,colValue)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if XMLFlag=2,colName&amp;#39;=&amp;#34;LISItemResultList&amp;#34;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				d LISItemResultListXML.Set(colName,colValue)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if XMLFlag=3,colName&amp;#39;=&amp;#34;LISItemSenResultList&amp;#34;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				d LISItemSenResultListXML.Set(colName,colValue)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			if XMLFlag=4,colName&amp;#39;=&amp;#34;LISItemResRst&amp;#34;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				d LISItemResRstXML.Set(colName,colValue)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d BodyXML.Insert(LISReportInfoXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d BodyXML.Insert(LISItemResultListXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d BodyXML.Insert(LISItemSenResultListXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d BodyXML.Insert(LISItemResRstXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d RequestXML.Insert(BodyXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s OutPut=RequestXML.ToXMLStream()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q OutPut
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;输出jsonquery2json&#34;&gt;&lt;span id=&#34;20250317141448-4zu0hoz&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;输出JSON	Query2Json
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================输出JSON============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     将query转换为json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  className:类名,queryName:query方法名,arg...:可以包含多个参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.DataShare.LISTool).Query2Json(&amp;#34;LISService.DataShare.LISData&amp;#34;,&amp;#34;Data&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod Query2Json(className, queryName, arg...)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s array = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs = ##class(%ResultSet).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.ClassName = className
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.QueryName = queryName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d rs.Execute(arg...)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s array = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#; 属性值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	while (rs.Next()) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s valStr = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s obj = {}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		for i = 1 : 1 : rs.GetColumnCount(){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s columnName = rs.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s val = rs.Data(columnName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			d obj.%Set(columnName, val)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d array.%Push(obj)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q array.%ToJSON()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;json拆数dealjson&#34;&gt;&lt;span id=&#34;20250317141448-3jyyb0j&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;Json拆数	dealJson
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// json拆数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(V.TEST.Special).dealJson()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod dealJson()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s MaxLen=3		// 最大数组
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s json=##class(V.TEST.Special).QueryToJson(&amp;#34;20201120&amp;#34;,&amp;#34;20201120&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	set obj = ##class(%DynamicAbstractObject).%FromJSON(json)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s objLen=obj.%Size()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s CirNum=$p((objLen+1)/MaxLen,&amp;#34;.&amp;#34;,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	for i=0:1:CirNum d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Array=[]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s jMaxLen=i*MaxLen
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.for j=jMaxLen:1:jMaxLen+MaxLen-1 d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..i j&amp;gt;(objLen-1) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..d Array.%Push(obj.%Get(j))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Arraystr=Array.%ToJSON()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.//放置调用方法
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;读取jsonreadjson&#34;&gt;&lt;span id=&#34;20250317141448-fukk1wv&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;读取Json	ReadJson
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================读取JSON============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod ReadJson()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ParamObj={}.%FromJSON(Params)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s objItems=##class(LIS.Util.COM.JSONUtils).%New().FromJSON(Param)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/*		//编写Json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S Main={}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Main.&amp;#34;receivestatus&amp;#34;=ResultCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Date=$h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Main.&amp;#34;receivedate&amp;#34;=$tr($zd($p(Date,&amp;#34;,&amp;#34;,1),3),&amp;#34;-&amp;#34;,&amp;#34;.&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Main.&amp;#34;receivetime&amp;#34;=$tr($zd($p(Date,&amp;#34;,&amp;#34;,1),3),&amp;#34;-&amp;#34;,&amp;#34;.&amp;#34;)_&amp;#34; &amp;#34;_$zt($p(Date,&amp;#34;,&amp;#34;,2),1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Main.&amp;#34;labno&amp;#34;=Labno
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    set OutStr=Main.%ToJSON()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	*/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;读取xmlreadxml&#34;&gt;&lt;span id=&#34;20250317141448-gbfvtuv&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;读取XML	ReadXML
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================读取XML============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod ReadXML()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj= ##class(LIS.Util.COM.XML).FromXML(Input)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/*		//编写XML
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RequestXML=##class(LIS.Util.COM.XML).New(&amp;#34;Request&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s OrdersXML=##class(LIS.Util.COM.XML).New(&amp;#34;Orders&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s objVisitNumber=##class(LIS.Util.COM.XML).New(&amp;#34;OrderList&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RequestXML.ResultCode=&amp;#34;-1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RequestXML.ResultContent=&amp;#34;查询标本信息失败:HIS条码信息不存在！&amp;#34; 		//YHR 20240410 老系统查询返回信息为空时返回
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	d OrdersXML.Insert(objVisitNumber)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    d RequestXML.Insert(OrdersXML)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RetValue=RequestXML.ToXMLStream()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	*/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;写入超长转换成流sendlongstring&#34;&gt;&lt;span id=&#34;20250317141448-45nimlj&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;写入超长、转换成流	SendLongString
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================写入超长、转换成流============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod SendLongString()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s charStream=##class(%GlobalCharacterStream).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d charStream.Write(&amp;#34;1&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q charStream
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;将query输出到csv文件query2csv&#34;&gt;&lt;span id=&#34;20250317141448-rgyr9xp&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;将query输出到CSV文件	Query2Csv
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ============================导出数据到文件============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     将query输出到CSV文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  className:类名,queryName:query方法名,filePath:输出路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.DataShare.LISTool).Query2Csv(&amp;#34;LISService.DataShare.LISData&amp;#34;,&amp;#34;Data&amp;#34;,&amp;#34;D:\LISDATA\DATA\test.csv&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod Query2Csv(className, queryName, filePath)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file = ##class(%FileCharacterStream).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file.Filename = filePath
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s array = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs = ##class(%ResultSet).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.ClassName = className
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.QueryName = queryName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d rs.Execute(&amp;#34;2020-11-20&amp;#34;,&amp;#34;2020-11-20&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#; 列名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s colStr = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	for i = 1 : 1 : rs.GetColumnCount(){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s columnName = rs.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s colStr = $s(colStr = &amp;#34;&amp;#34; : columnName, 1 : colStr _ &amp;#34;,&amp;#34; _ columnName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		;b ;a101
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.Write(colStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#; 属性值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	while (rs.Next()) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s valStr = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		for i = 1 : 1 : rs.GetColumnCount(){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s columnName = rs.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s val = rs.Data(columnName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s valStr = $s(valStr = &amp;#34;&amp;#34; : val, 1 : valStr _ &amp;#34;,&amp;#34; _ val)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d file.Write($c(10) _ valStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q $$$OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     将query输出到CSV文件，可以入参多个参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  className:类名,queryName:query方法名,filePath:输出路径,arg...:可以包含多个参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(YHR.OutPutTXT).Query2CsvNew(&amp;#34;LISService.DataShare.LISData&amp;#34;,&amp;#34;Data&amp;#34;,&amp;#34;D:\LISDATA\DATA\test1.csv&amp;#34;,&amp;#34;2020-11-20&amp;#34;,&amp;#34;2020-11-20&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod Query2CsvNew(className, queryName, filePath, arg...)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file = ##class(%FileCharacterStream).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file.Filename = filePath
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s array = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs = ##class(%ResultSet).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.ClassName = className
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s rs.QueryName = queryName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d rs.Execute(arg...)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#; 列名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s colStr = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	for i = 1 : 1 : rs.GetColumnCount(){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s columnName = rs.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s colStr = $s(colStr = &amp;#34;&amp;#34; : columnName, 1 : colStr _ &amp;#34;,&amp;#34; _ columnName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		;b ;a101
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.Write(colStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	#; 属性值
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	while (rs.Next()) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s valStr = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		for i = 1 : 1 : rs.GetColumnCount(){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s columnName = rs.GetColumnName(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s val = rs.Data(columnName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			s valStr = $s(valStr = &amp;#34;&amp;#34; : val, 1 : valStr _ &amp;#34;,&amp;#34; _ val)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		d file.Write($c(10) _ valStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q $$$OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;示例-将数据输出到txt文件output2txt&#34;&gt;&lt;span id=&#34;20250317141448-qkl4t6b&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;(示例) 将数据输出到txt文件	OutPut2TXT
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     (示例) 将数据输出到txt文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod OutPut2TXT()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// windows路径为 盘符+&amp;#34;\&amp;#34; (&amp;#34;D:\Test.txt&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// Linux路径为 &amp;#34;/&amp;#34; (/dthealth/细菌导入模板.csv)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s File=&amp;#34;D:\LISDATA\DATA\Test.txt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	o File:&amp;#34;WNS&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	u File
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w &amp;#34;123&amp;#34;_$c(13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w &amp;#34;234&amp;#34;_$c(13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w &amp;#34;111&amp;#34;_$C(9)_&amp;#34;222&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	c File
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Quit $$$OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     (示例) 将数据输出到txt文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod OutPut2TXTNew()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// windows路径为 盘符+&amp;#34;\&amp;#34; (&amp;#34;D:\Test.txt&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// Linux路径为 &amp;#34;/&amp;#34; (/dthealth/细菌导入模板.csv)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s filePath=&amp;#34;D:\LISDATA\DATA\XML.txt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file = ##class(%FileCharacterStream).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file.Filename = filePath
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s colStr=&amp;#34;CS&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.Write(colStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Quit $$$OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;写日志到文件中可续写writelog&#34;&gt;&lt;span id=&#34;20250317141448-g5wyf56&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;写日志到文件中(可续写)		WriteLog
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 写日志到文件中
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##Class(YHR.OutPutTXT).WriteLog(&amp;#34;测试&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// logStr:日志串
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// logpath:日志路径，不给就由内部控制
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod WriteLog(logStr, logpath)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s logStr=$g(logStr)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s logpath=$g(logpath)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s IsLinux=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i ##class(%SYSTEM.Version).GetOS()=&amp;#34;Windows&amp;#34; s IsLinux=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//默认路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(logpath) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i IsLinux=0 d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s logpath=&amp;#34;D:\LISDATA\DATA\&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s logpath=&amp;#34;/&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^LogFileIndex) s ^LogFileIndex=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s index=$g(^LogFileIndex)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s logName=logpath_&amp;#34;Log&amp;#34;_index_&amp;#34;.txt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s file=##class(%File).%New(logName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//存在就追加
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i ##class(%File).Exists(logName) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.Do file.Open(&amp;#34;AWS:/SHARED&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//不存在就新建
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.Do file.Open(&amp;#34;WSN:/SHARED&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//日志头
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HeadStr=$zd($h,8)_&amp;#34; [&amp;#34;_$zt($p($h,&amp;#34;,&amp;#34;,2))_&amp;#34;] &amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//写日志
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.WriteLine($zcvt(HeadStr_logStr,&amp;#34;O&amp;#34;,&amp;#34;UTF8&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//判断大小
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s fileSize=file.Size
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//文件大了就换一个
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i fileSize&amp;gt;(1024*1000) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s ^LogFileIndex=^LogFileIndex+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d file.Close()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;示例-读取服务器文件数据按照txt方式读取read2txt&#34;&gt;&lt;span id=&#34;20250317141448-r7qwbmf&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;(示例) 读取服务器文件数据(按照txt方式读取)		Read2TXT
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 描述:     (示例) 读取服务器文件数据(按照txt方式读取)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写者：  yanghaoran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 编写日期: 20241030
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 入参：	  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 出参:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod Read2TXT()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// windows路径为 盘符+&amp;#34;\&amp;#34; (&amp;#34;D:\Test.txt&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// Linux路径为 &amp;#34;/&amp;#34; (/dthealth/细菌导入模板.csv)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s logName=&amp;#34;/dthealth/app/dthis/imedicallis/imedicallis/tmp/File/细菌导入模板.csv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s file=##class(%File).%New(logName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s status=file.Open(&amp;#34;RU&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i status&amp;#39;=1 d file.Close() w status q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	set AllStr = file.Read(, .sc)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Quit $$$OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取互认数据getdata&#34;&gt;&lt;span id=&#34;20250317141448-uz7jcod&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取互认数据	GetData
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;93
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// =============================获取互认数据=============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取互认数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// dbo.CFBTHISData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// Input:互认系统代码，医院代码，数据类型，代码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// Outpue:对照代码，对照名称，对照主键
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(LISService.DataShare.LISData).GetData(&amp;#34;&amp;#34;,&amp;#34;&amp;#34;,&amp;#34;SP&amp;#34;,&amp;#34;SP015&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetData(fDataType, fCode, HospitalCode, SYSCode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s fDataType=$g(fDataType),fCode=$g(fCode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ret=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(fDataType) q ret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(fCode) q ret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HospitalCode=$g(HospitalCode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(HospitalCode) s HospitalCode=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SYSCode=$g(SYSCode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(SYSCode) s SYSCode=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^dbo.CFBTHISDataI(&amp;#34;IndexMaster&amp;#34;,fDataType,fCode,SYSCode,HospitalCode)) q ret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataCode=$o(^dbo.CFBTHISDataI(&amp;#34;IndexMaster&amp;#34;,fDataType,fCode,SYSCode,HospitalCode,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataDR=$o(^dbo.CFBTHISDataI(&amp;#34;IndexMaster&amp;#34;,fDataType,fCode,SYSCode,HospitalCode,HISDataCode,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataData=$g(^dbo.CFBTHISDataD(HISDataDR))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataCode=$lg(HISDataData,6)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataName=$lg(HISDataData,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataID=$lg(HISDataData,7)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ret=$lb(HISDataCode,HISDataName,HISDataID)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q ret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 更新互认数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.Problem.QryMethod).UpdCFBTHISData(&amp;#34;&amp;#34;, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod UpdCFBTHISData(RowID, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName) As %String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RowID=$g(RowID),DataType=$g(DataType),DataCode=$g(DataCode),SYSCode=$g(SYSCode),HospitalCode=$g(HospitalCode),HISDataCode=$g(HISDataCode),HISDataID=$g(HISDataID),HISDataName=$g(HISDataName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	;s ^YHR(&amp;#34;UpdCFBTHISData&amp;#34;)=$lb(RowID,DataType,DataCode,SYSCode,HospitalCode,HISDataCode,HISDataID,HISDataName)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RetValue=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(HospitalCode) q &amp;#34;医院代码为空&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(SYSCode) q &amp;#34;互认系统代码为空&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(DataType) q &amp;#34;互认类型为空&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $l(DataCode),&amp;#39;$l(RowID) s RowID=$o(^dbo.CFBTHISDataI(&amp;#34;IndexDataCode&amp;#34;,HospitalCode,SYSCode,DataType,DataCode,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s RowIDBak=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $l(RowID),$l(DataCode) s RowIDBak=$o(^dbo.CFBTHISDataI(&amp;#34;IndexDataCode&amp;#34;,HospitalCode,SYSCode,DataType,DataCode,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $l(RowIDBak),RowIDBak&amp;#39;=RowID q &amp;#34;存在相同代码数据&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $l(RowID),$d(^dbo.CFBTHISDataD(RowID)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s obj=##Class(dbo.CFBTHISData).%OpenId(RowID)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}else{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s obj=##Class(dbo.CFBTHISData).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	If &amp;#39;$IsObject(obj) q 100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataType=DataType
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.DataCode=DataCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.SYSCode=SYSCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.HospitalCode=HospitalCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.HISDataCode=HISDataCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.HISDataID=HISDataID
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s obj.HISDataName=HISDataName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s sc=obj.%Save()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	If ($SYSTEM.Status.IsOK(sc)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 	s RetValue=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	else {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 	s RetValue=$SYSTEM.Status.GetErrorText(sc)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Quit RetValue
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 导入互认数据
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// d ##class(LISService.Problem.QryMethod).leadIntoData()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod leadIntoData()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Split=&amp;#34;$$&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SYSCode=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HospitalCode=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DataType=&amp;#34;SP&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// 系统代码集
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SYSCodes=&amp;#34;CS1$$CS2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// 对照代码集
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataCodes=&amp;#34;DZ1$$DZ2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// 对照名称集
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataNames=&amp;#34;对照1$$对照2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/// 对照主键集
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s HISDataIDs=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	for i=1:1:$l(SYSCodes,Split) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s SYSCode=$p(SYSCodes,Split,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s HISDataCode=$p(HISDataCodes,Split,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s HISDataName=$p(HISDataNames,Split,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s HISDataID=$p(HISDataIDs,Split,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i &amp;#39;$l(SYSCode) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.try{d ##class(LISService.Problem.QryMethod).UpdCFBTHISData(&amp;#34;&amp;#34;, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName)}catch{}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pdf报告转base64getbase64bydrmthd&#34;&gt;&lt;span id=&#34;20250317141448-76y6qjp&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;PDF报告转base64	GetBase64ByDRMTHD
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// =============================PDF报告转base64=============================///
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 通过报告主键转PDFBase64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// ReportDR:报告主键
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##Class(LISService.DataShare.LISTool).GetBase64ByDRMTHD(&amp;#34;187&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetBase64ByDRMTHD(ReportDR, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s ReportDR=$g(ReportDR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s Ret=&amp;#34;&amp;#34;,PDFFileString=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i $d(^dbo.RPVisitNumberReportFileI(&amp;#34;IndexMater&amp;#34;,##Class(LIS.Util.Common).IndexData(ReportDR))) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .s FileInfoID=$o(^dbo.RPVisitNumberReportFileI(&amp;#34;IndexMater&amp;#34;,##Class(LIS.Util.Common).IndexData(ReportDR),&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .;s PDFPath=$lg($g(^dbo.RPVisitNumberReportFileD(FileInfoID)),6)_&amp;#34;.zip&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .s PDFPath=$lg($g(^dbo.RPVisitNumberReportFileD(FileInfoID)),6)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LisSoap=##class(LISReportService.LISReportServiceSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s PDFFileString=LisSoap.GetServerFileBase64(PDFPath)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q PDFFileString
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;通用工具类&#34;&gt;&lt;span id=&#34;20250317142148-smml9a2&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;通用工具类
+&lt;/h2&gt;&lt;h3 id=&#34;不足n位补0zeropadding&#34;&gt;&lt;span id=&#34;20250317142148-knvlo0t&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;不足N位补0	ZeroPadding
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 不足N位补0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod ZeroPadding(target, num)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q $tr($j(target, num), &amp;#34; &amp;#34;, &amp;#34;0&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取客户端ipgetoutlocalip&#34;&gt;&lt;span id=&#34;20250317142148-7q1yl9s&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取客户端IP	GetOutLocalIP
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取客户端IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetOutLocalIP() As %String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q ##class(%SYSTEM.Process).ClientIPAddress()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取服务器本地ipgetinlocalip&#34;&gt;&lt;span id=&#34;20250317142148-2stz0y1&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取服务器本地IP	GetInLocalIP
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取服务器本地IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetInLocalIP() As %String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q $p($zu(54,13,$zu(54,0)),&amp;#34;,&amp;#34;,1 )
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取当前命名空间物理路径getnamespacepath&#34;&gt;&lt;span id=&#34;20250317142148-bw4xlia&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取当前命名空间物理路径	GetNameSpacePath
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取当前命名空间物理路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetNameSpacePath() As %String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q ##class(%Library.File).NormalizeDirectory(&amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取license信息showlicenseinfo&#34;&gt;&lt;span id=&#34;20250317142148-0v081a4&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取License信息	ShowLicenseInfo
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取License信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod ShowLicenseInfo() As %Boolean
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d ##class(%SYSTEM.License).ShowCounts()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;判断文件夹是否存在isdirectoryexists&#34;&gt;&lt;span id=&#34;20250317142148-o1d1wva&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;判断文件夹是否存在	IsDirectoryExists
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 判断文件夹是否存在
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod IsDirectoryExists(filePath) As %Boolean
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q ##class(%File).DirectoryExists(filePath)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;文件夹不存在创建文件夹createnotexistdir&#34;&gt;&lt;span id=&#34;20250317142148-wbzjjkj&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;文件夹不存在创建文件夹	CreateNotExistDir
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 文件夹不存在创建文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod CreateNotExistDir(filePath) As %Boolean
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if (&amp;#39;(##class(%File).DirectoryExists(filePath))){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        d ##class(%File).CreateNewDir(filePath, &amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;获取时间多少秒之前的时间getminutesagotime&#34;&gt;&lt;span id=&#34;20250317142148-5ypm6p7&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;获取时间多少秒之前的时间	GetMinutesAgoTime
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 获取时间多少秒之前的时间
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(YHR.Tool.Method1).GetMinutesAgoTime($zdt($h,8),7200)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(YHR.Tool.Method1).GetMinutesAgoTime(&amp;#34;20241125 10:04:00&amp;#34;,7200)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetMinutesAgoTime(DateTime, timeDiff)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	try{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Date=$zdh($p(DateTime,&amp;#34; &amp;#34;,1),8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Time=$zth($p(DateTime,&amp;#34; &amp;#34;,2))}catch{s (Date,Time)=&amp;#34;&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(Date) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s DateSince=$fn(timeDiff/86400,&amp;#34;&amp;#34;,0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s TimeSince=(timeDiff#86400)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i Time&amp;gt;=TimeSince d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Date=$zd(Date-DateSince,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Time=$zt(Time-TimeSince)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Date=$zd(Date-DateSince-1,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s Time=$zt(86400+Time-TimeSince)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q Date_&amp;#34; &amp;#34;_Time
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;编程小工具&#34;&gt;&lt;span id=&#34;20250225110518-307ylxl&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;编程小工具
+&lt;/h2&gt;&lt;h3 id=&#34;初始化入参变量&#34;&gt;&lt;span id=&#34;20250225110540-k8rb3y2&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;初始化入参变量
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(Z.TEST.TEST).GetInit(&amp;#34;RegNo, IndexSCode, TestSets, Days, HospitalDR, fVisitNumberNo&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClassMethod GetInit(str)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s str=$g(str)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(str) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s OutPut=&amp;#34;s &amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	f i=1:1:$l(str,&amp;#34;,&amp;#34;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s stri=$p(str,&amp;#34;,&amp;#34;,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s stri=$tr(stri,&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		s OutPut=OutPut_stri_&amp;#34;=$g(&amp;#34;_stri_&amp;#34;),&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s OutPut=$e(OutPut,1,*-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q OutPut
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 对外接口工具类\n输出XML\tQueryToXML 输出JSON\tQuery2Json Json拆数\tdealJson 读取Json\tReadJson 读取XML\tReadXML 写入超长、转换成流\tSendLongString 将query输出到CSV文件\tQuery2Csv (示例)\u00a0将数据输出到txt文件\tOutPut2TXT 写日志到文件中(可续写)\tWriteLog (示例)\u00a0读取服务器文件数据(按照txt方式读取)\tRead2TXT 获取互认数据\tGetData PDF报告转base64\tGetBase64ByDRMTHD 通用工具类\n">
+<title>通用工具类方法</title>
+
+<link rel='canonical' href='https://work.717170.xyz/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/'>
+
+<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="通用工具类方法">
+<meta property='og:description' content=" 对外接口工具类\n输出XML\tQueryToXML 输出JSON\tQuery2Json Json拆数\tdealJson 读取Json\tReadJson 读取XML\tReadXML 写入超长、转换成流\tSendLongString 将query输出到CSV文件\tQuery2Csv (示例)\u00a0将数据输出到txt文件\tOutPut2TXT 写日志到文件中(可续写)\tWriteLog (示例)\u00a0读取服务器文件数据(按照txt方式读取)\tRead2TXT 获取互认数据\tGetData PDF报告转base64\tGetBase64ByDRMTHD 通用工具类\n">
+<meta property='og:url' content='https://work.717170.xyz/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/'>
+<meta property='og:site_name' content='木子洋'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-03T23:12:14&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/img/title.jpg' />
+<meta name="twitter:title" content="通用工具类方法">
+<meta name="twitter:description" content=" 对外接口工具类\n输出XML\tQueryToXML 输出JSON\tQuery2Json Json拆数\tdealJson 读取Json\tReadJson 读取XML\tReadXML 写入超长、转换成流\tSendLongString 将query输出到CSV文件\tQuery2Csv (示例)\u00a0将数据输出到txt文件\tOutPut2TXT 写日志到文件中(可续写)\tWriteLog (示例)\u00a0读取服务器文件数据(按照txt方式读取)\tRead2TXT 获取互认数据\tGetData PDF报告转base64\tGetBase64ByDRMTHD 通用工具类\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://work.717170.xyz/img/title.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/touxiang_hu_3261c9b36eb249a9.jpg" width="300"
+                            height="285" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">木子洋</a></h1>
+            <h2 class="site-description">To be or not to be.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muziyangg'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/muziyangg'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1756364241553" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1459" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M739.76 462H484.2a22.22 22.22 0 0 0-22.2 22.21v55.56A22.24 22.24 0 0 0 484.19 562h155.57A22.22 22.22 0 0 1 662 584.22v11.11A66.67 66.67 0 0 1 595.31 662H384.19A22.22 22.22 0 0 1 362 639.79V428.68A66.67 66.67 0 0 1 428.64 362h311.07a22.21 22.21 0 0 0 22.22-22.2v-55.56A22.22 22.22 0 0 0 739.79 262h-311.1A166.67 166.67 0 0 0 262 428.68v311.1A22.22 22.22 0 0 0 284.22 762H612a150 150 0 0 0 150-150V484.23A22.23 22.23 0 0 0 739.77 462z m0 0" fill="#231815" p-id="1460"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#对外接口工具类"><span id="20250317141448-xpe28pn"></span>对外接口工具类</a>
+      <ol>
+        <li><a href="#输出xmlquerytoxml"><span id="20250317141448-5s6qhlj"></span>输出XML QueryToXML</a></li>
+        <li><a href="#输出jsonquery2json"><span id="20250317141448-4zu0hoz"></span>输出JSON Query2Json</a></li>
+        <li><a href="#json拆数dealjson"><span id="20250317141448-3jyyb0j"></span>Json拆数 dealJson</a></li>
+        <li><a href="#读取jsonreadjson"><span id="20250317141448-fukk1wv"></span>读取Json ReadJson</a></li>
+        <li><a href="#读取xmlreadxml"><span id="20250317141448-gbfvtuv"></span>读取XML ReadXML</a></li>
+        <li><a href="#写入超长转换成流sendlongstring"><span id="20250317141448-45nimlj"></span>写入超长、转换成流 SendLongString</a></li>
+        <li><a href="#将query输出到csv文件query2csv"><span id="20250317141448-rgyr9xp"></span>将query输出到CSV文件 Query2Csv</a></li>
+        <li><a href="#示例-将数据输出到txt文件output2txt"><span id="20250317141448-qkl4t6b"></span>(示例) 将数据输出到txt文件 OutPut2TXT</a></li>
+        <li><a href="#写日志到文件中可续写writelog"><span id="20250317141448-g5wyf56"></span>写日志到文件中(可续写) WriteLog</a></li>
+        <li><a href="#示例-读取服务器文件数据按照txt方式读取read2txt"><span id="20250317141448-r7qwbmf"></span>(示例) 读取服务器文件数据(按照txt方式读取) Read2TXT</a></li>
+        <li><a href="#获取互认数据getdata"><span id="20250317141448-uz7jcod"></span>获取互认数据 GetData</a></li>
+        <li><a href="#pdf报告转base64getbase64bydrmthd"><span id="20250317141448-76y6qjp"></span>PDF报告转base64 GetBase64ByDRMTHD</a></li>
+      </ol>
+    </li>
+    <li><a href="#通用工具类"><span id="20250317142148-smml9a2"></span>通用工具类</a>
+      <ol>
+        <li><a href="#不足n位补0zeropadding"><span id="20250317142148-knvlo0t"></span>不足N位补0 ZeroPadding</a></li>
+        <li><a href="#获取客户端ipgetoutlocalip"><span id="20250317142148-7q1yl9s"></span>获取客户端IP GetOutLocalIP</a></li>
+        <li><a href="#获取服务器本地ipgetinlocalip"><span id="20250317142148-2stz0y1"></span>获取服务器本地IP GetInLocalIP</a></li>
+        <li><a href="#获取当前命名空间物理路径getnamespacepath"><span id="20250317142148-bw4xlia"></span>获取当前命名空间物理路径 GetNameSpacePath</a></li>
+        <li><a href="#获取license信息showlicenseinfo"><span id="20250317142148-0v081a4"></span>获取License信息 ShowLicenseInfo</a></li>
+        <li><a href="#判断文件夹是否存在isdirectoryexists"><span id="20250317142148-o1d1wva"></span>判断文件夹是否存在 IsDirectoryExists</a></li>
+        <li><a href="#文件夹不存在创建文件夹createnotexistdir"><span id="20250317142148-wbzjjkj"></span>文件夹不存在创建文件夹 CreateNotExistDir</a></li>
+        <li><a href="#获取时间多少秒之前的时间getminutesagotime"><span id="20250317142148-5ypm6p7"></span>获取时间多少秒之前的时间 GetMinutesAgoTime</a></li>
+      </ol>
+    </li>
+    <li><a href="#编程小工具"><span id="20250225110518-307ylxl"></span>编程小工具</a>
+      <ol>
+        <li><a href="#初始化入参变量"><span id="20250225110540-k8rb3y2"></span>初始化入参变量</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/">
+                
+                    <img src="/img/title.jpg" loading="lazy" alt="Featured image of post 通用工具类方法" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/1.%E4%B8%AA%E4%BA%BA%E7%A8%8B%E5%BA%8F/" >
+                1.个人程序
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95-e371126151/">通用工具类方法</a>
+        </h2>
+    
+        
+    </div>
+
+        
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2025-09-03</time>
+                </div>
+            
+
+            
+            
+                        最后更新于
+                        <time class="article-time--updated" datetime="2025-09-03 23:12:14 &#43;0000 UTC" title="2025-09-03 23:12:14 &#43;0000 UTC">
+                            2025-09-03 23:12:14
+                        </time>
+			
+			
+			
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+					<time class="article-words">
+						3822字
+					</time>
+				</div>
+			
+			
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 8 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+</header>
+
+
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<ul>
+<li>
+<p><a class="link" href="#20250317141448-xpe28pn" >对外接口工具类</a></p>
+<ul>
+<li><a class="link" href="#20250317141448-5s6qhlj" >输出XML	QueryToXML</a></li>
+<li><a class="link" href="#20250317141448-4zu0hoz" >输出JSON	Query2Json</a></li>
+<li><a class="link" href="#20250317141448-3jyyb0j" >Json拆数	dealJson</a></li>
+<li><a class="link" href="#20250317141448-fukk1wv" >读取Json	ReadJson</a></li>
+<li><a class="link" href="#20250317141448-gbfvtuv" >读取XML	ReadXML</a></li>
+<li><a class="link" href="#20250317141448-45nimlj" >写入超长、转换成流	SendLongString</a></li>
+<li><a class="link" href="#20250317141448-rgyr9xp" >将query输出到CSV文件	Query2Csv</a></li>
+<li><a class="link" href="#20250317141448-qkl4t6b" >(示例) 将数据输出到txt文件	OutPut2TXT</a></li>
+<li><a class="link" href="#20250317141448-g5wyf56" >写日志到文件中(可续写)		WriteLog</a></li>
+<li><a class="link" href="#20250317141448-r7qwbmf" >(示例) 读取服务器文件数据(按照txt方式读取)		Read2TXT</a></li>
+<li><a class="link" href="#20250317141448-uz7jcod" >获取互认数据	GetData</a></li>
+<li><a class="link" href="#20250317141448-76y6qjp" >PDF报告转base64	GetBase64ByDRMTHD</a></li>
+</ul>
+</li>
+<li>
+<p><a class="link" href="#20250317142148-smml9a2" >通用工具类</a></p>
+<ul>
+<li><a class="link" href="#20250317142148-knvlo0t" >不足N位补0	ZeroPadding</a></li>
+<li><a class="link" href="#20250317142148-7q1yl9s" >获取客户端IP	GetOutLocalIP</a></li>
+<li><a class="link" href="#20250317142148-2stz0y1" >获取服务器本地IP	GetInLocalIP</a></li>
+<li><a class="link" href="#20250317142148-bw4xlia" >获取当前命名空间物理路径	GetNameSpacePath</a></li>
+<li><a class="link" href="#20250317142148-0v081a4" >获取License信息	ShowLicenseInfo</a></li>
+<li><a class="link" href="#20250317142148-o1d1wva" >判断文件夹是否存在	IsDirectoryExists</a></li>
+<li><a class="link" href="#20250317142148-wbzjjkj" >文件夹不存在创建文件夹	CreateNotExistDir</a></li>
+<li><a class="link" href="#20250317142148-5ypm6p7" >获取时间多少秒之前的时间	GetMinutesAgoTime</a></li>
+</ul>
+</li>
+<li>
+<p><a class="link" href="#20250225110518-307ylxl" >编程小工具</a></p>
+<ul>
+<li><a class="link" href="#20250225110540-k8rb3y2" >初始化入参变量</a></li>
+</ul>
+</li>
+</ul></blockquote>
+<p>‍</p>
+<h2 id="对外接口工具类"><span id="20250317141448-xpe28pn" style="display: none;"></span>对外接口工具类
+</h2><h3 id="输出xmlquerytoxml"><span id="20250317141448-5s6qhlj" style="display: none;"></span>输出XML	QueryToXML
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================输出XML============================///
+</span></span><span class="line"><span class="cl">/// query 转换为xml方法
+</span></span><span class="line"><span class="cl">/// w ##class(V.TEST.Special).QueryToXML(&#34;20201120&#34;,&#34;20201120&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod QueryToXML(SttDate, EndDate)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s QueryName=&#34;LISService.Problem.SXCZ.QryMethod:QryMethod&#34;
+</span></span><span class="line"><span class="cl">	Set rsetNew = ##class(%ResultSet).%New(QueryName)
+</span></span><span class="line"><span class="cl">	/*
+</span></span><span class="line"><span class="cl">	s ClassName=&#34;LISService.Problem.SXCZ.QryMethod&#34;
+</span></span><span class="line"><span class="cl">	s FuncName=&#34;QryMethod&#34;
+</span></span><span class="line"><span class="cl">	s rsetNew=##class(%XML.DataSet).%New()
+</span></span><span class="line"><span class="cl">	s rsetNew.ClassName = ClassName
+</span></span><span class="line"><span class="cl">	s rsetNew.QueryName = FuncName
+</span></span><span class="line"><span class="cl">	*/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Set sc = rsetNew.Execute(SttDate, EndDate)
+</span></span><span class="line"><span class="cl">	s colCount=rsetNew.GetColumnCount()
+</span></span><span class="line"><span class="cl">	s OutPut=&#34;&#34;
+</span></span><span class="line"><span class="cl">    While (rsetNew.Next()) 
+</span></span><span class="line"><span class="cl">    {
+</span></span><span class="line"><span class="cl">		s RequestXML=##class(LIS.Util.COM.XML).New(&#34;Request&#34;)
+</span></span><span class="line"><span class="cl">		s HeaderXML=##class(LIS.Util.COM.XML).New(&#34;Header&#34;)
+</span></span><span class="line"><span class="cl">		s HeaderXML.SourceSystem=&#34;LIS&#34;
+</span></span><span class="line"><span class="cl">		s HeaderXML.MessageID=&#34;1&#34;
+</span></span><span class="line"><span class="cl">		d RequestXML.Insert(HeaderXML)
+</span></span><span class="line"><span class="cl">		s BodyXML=##class(LIS.Util.COM.XML).New(&#34;Body&#34;)
+</span></span><span class="line"><span class="cl">		s LISReportInfoXML=##class(LIS.Util.COM.XML).New(&#34;LISReportInfo&#34;)
+</span></span><span class="line"><span class="cl">		s LISItemResultListXML=##class(LIS.Util.COM.XML).New(&#34;LISItemResultList&#34;)
+</span></span><span class="line"><span class="cl">		s LISItemSenResultListXML=##class(LIS.Util.COM.XML).New(&#34;LISItemSenResultList&#34;)
+</span></span><span class="line"><span class="cl">		s LISItemResRstXML=##class(LIS.Util.COM.XML).New(&#34;LISItemResRst&#34;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		s XMLFlag=0
+</span></span><span class="line"><span class="cl">		f i=1:1:colCount
+</span></span><span class="line"><span class="cl">		{
+</span></span><span class="line"><span class="cl">			s colName=rsetNew.GetColumnName(i)
+</span></span><span class="line"><span class="cl">			s colValue=rsetNew.GetDataByName(colName)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			if colName=&#34;LISReportInfo&#34; s XMLFlag=1
+</span></span><span class="line"><span class="cl">			if colName=&#34;LISItemResultList&#34; s XMLFlag=2
+</span></span><span class="line"><span class="cl">			if colName=&#34;LISItemSenResultList&#34; s XMLFlag=3
+</span></span><span class="line"><span class="cl">			if colName=&#34;LISItemResRst&#34; s XMLFlag=4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			if XMLFlag=1,colName&#39;=&#34;LISReportInfo&#34;{
+</span></span><span class="line"><span class="cl">				d LISReportInfoXML.Set(colName,colValue)
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">			if XMLFlag=2,colName&#39;=&#34;LISItemResultList&#34;{
+</span></span><span class="line"><span class="cl">				d LISItemResultListXML.Set(colName,colValue)
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">			if XMLFlag=3,colName&#39;=&#34;LISItemSenResultList&#34;{
+</span></span><span class="line"><span class="cl">				d LISItemSenResultListXML.Set(colName,colValue)
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">			if XMLFlag=4,colName&#39;=&#34;LISItemResRst&#34;{
+</span></span><span class="line"><span class="cl">				d LISItemResRstXML.Set(colName,colValue)
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">		d BodyXML.Insert(LISReportInfoXML)
+</span></span><span class="line"><span class="cl">		d BodyXML.Insert(LISItemResultListXML)
+</span></span><span class="line"><span class="cl">		d BodyXML.Insert(LISItemSenResultListXML)
+</span></span><span class="line"><span class="cl">		d BodyXML.Insert(LISItemResRstXML)
+</span></span><span class="line"><span class="cl">		d RequestXML.Insert(BodyXML)
+</span></span><span class="line"><span class="cl">		s OutPut=RequestXML.ToXMLStream()
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    q OutPut
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="输出jsonquery2json"><span id="20250317141448-4zu0hoz" style="display: none;"></span>输出JSON	Query2Json
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================输出JSON============================///
+</span></span><span class="line"><span class="cl">/// 描述:     将query转换为json
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  className:类名,queryName:query方法名,arg...:可以包含多个参数
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.DataShare.LISTool).Query2Json(&#34;LISService.DataShare.LISData&#34;,&#34;Data&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod Query2Json(className, queryName, arg...)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s array = []
+</span></span><span class="line"><span class="cl">	s rs = ##class(%ResultSet).%New()
+</span></span><span class="line"><span class="cl">	s rs.ClassName = className
+</span></span><span class="line"><span class="cl">	s rs.QueryName = queryName
+</span></span><span class="line"><span class="cl">	d rs.Execute(arg...)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s array = []
+</span></span><span class="line"><span class="cl">	#; 属性值
+</span></span><span class="line"><span class="cl">	while (rs.Next()) {
+</span></span><span class="line"><span class="cl">		s valStr = &#34;&#34;
+</span></span><span class="line"><span class="cl">		s obj = {}
+</span></span><span class="line"><span class="cl">		for i = 1 : 1 : rs.GetColumnCount(){
+</span></span><span class="line"><span class="cl">			s columnName = rs.GetColumnName(i)
+</span></span><span class="line"><span class="cl">			s val = rs.Data(columnName)
+</span></span><span class="line"><span class="cl">			d obj.%Set(columnName, val)
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">		d array.%Push(obj)
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	q array.%ToJSON()
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="json拆数dealjson"><span id="20250317141448-3jyyb0j" style="display: none;"></span>Json拆数	dealJson
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// json拆数
+</span></span><span class="line"><span class="cl">/// d ##class(V.TEST.Special).dealJson()
+</span></span><span class="line"><span class="cl">ClassMethod dealJson()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s MaxLen=3		// 最大数组
+</span></span><span class="line"><span class="cl">	s json=##class(V.TEST.Special).QueryToJson(&#34;20201120&#34;,&#34;20201120&#34;)
+</span></span><span class="line"><span class="cl">	set obj = ##class(%DynamicAbstractObject).%FromJSON(json)
+</span></span><span class="line"><span class="cl">	s objLen=obj.%Size()
+</span></span><span class="line"><span class="cl">	s CirNum=$p((objLen+1)/MaxLen,&#34;.&#34;,1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	for i=0:1:CirNum d
+</span></span><span class="line"><span class="cl">	.s Array=[]
+</span></span><span class="line"><span class="cl">	.s jMaxLen=i*MaxLen
+</span></span><span class="line"><span class="cl">	.for j=jMaxLen:1:jMaxLen+MaxLen-1 d
+</span></span><span class="line"><span class="cl">	..i j&gt;(objLen-1) q
+</span></span><span class="line"><span class="cl">	..d Array.%Push(obj.%Get(j))
+</span></span><span class="line"><span class="cl">	.s Arraystr=Array.%ToJSON()
+</span></span><span class="line"><span class="cl">	.//放置调用方法
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="读取jsonreadjson"><span id="20250317141448-fukk1wv" style="display: none;"></span>读取Json	ReadJson
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================读取JSON============================///
+</span></span><span class="line"><span class="cl">ClassMethod ReadJson()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s ParamObj={}.%FromJSON(Params)
+</span></span><span class="line"><span class="cl">	s objItems=##class(LIS.Util.COM.JSONUtils).%New().FromJSON(Param)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	/*		//编写Json
+</span></span><span class="line"><span class="cl">	S Main={}
+</span></span><span class="line"><span class="cl">    s Main.&#34;receivestatus&#34;=ResultCode
+</span></span><span class="line"><span class="cl">    s Date=$h
+</span></span><span class="line"><span class="cl">    s Main.&#34;receivedate&#34;=$tr($zd($p(Date,&#34;,&#34;,1),3),&#34;-&#34;,&#34;.&#34;)
+</span></span><span class="line"><span class="cl">    s Main.&#34;receivetime&#34;=$tr($zd($p(Date,&#34;,&#34;,1),3),&#34;-&#34;,&#34;.&#34;)_&#34; &#34;_$zt($p(Date,&#34;,&#34;,2),1)
+</span></span><span class="line"><span class="cl">    s Main.&#34;labno&#34;=Labno
+</span></span><span class="line"><span class="cl">    set OutStr=Main.%ToJSON()
+</span></span><span class="line"><span class="cl">	*/
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="读取xmlreadxml"><span id="20250317141448-gbfvtuv" style="display: none;"></span>读取XML	ReadXML
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================读取XML============================///
+</span></span><span class="line"><span class="cl">ClassMethod ReadXML()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s obj= ##class(LIS.Util.COM.XML).FromXML(Input)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	/*		//编写XML
+</span></span><span class="line"><span class="cl">	s RequestXML=##class(LIS.Util.COM.XML).New(&#34;Request&#34;)
+</span></span><span class="line"><span class="cl">	s OrdersXML=##class(LIS.Util.COM.XML).New(&#34;Orders&#34;)
+</span></span><span class="line"><span class="cl">	s objVisitNumber=##class(LIS.Util.COM.XML).New(&#34;OrderList&#34;)
+</span></span><span class="line"><span class="cl">	s RequestXML.ResultCode=&#34;-1&#34;
+</span></span><span class="line"><span class="cl">	s RequestXML.ResultContent=&#34;查询标本信息失败:HIS条码信息不存在！&#34; 		//YHR 20240410 老系统查询返回信息为空时返回
+</span></span><span class="line"><span class="cl">   	d OrdersXML.Insert(objVisitNumber)
+</span></span><span class="line"><span class="cl">    d RequestXML.Insert(OrdersXML)
+</span></span><span class="line"><span class="cl">	s RetValue=RequestXML.ToXMLStream()
+</span></span><span class="line"><span class="cl">	*/
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="写入超长转换成流sendlongstring"><span id="20250317141448-45nimlj" style="display: none;"></span>写入超长、转换成流	SendLongString
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================写入超长、转换成流============================///
+</span></span><span class="line"><span class="cl">ClassMethod SendLongString()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s charStream=##class(%GlobalCharacterStream).%New()
+</span></span><span class="line"><span class="cl">	d charStream.Write(&#34;1&#34;)
+</span></span><span class="line"><span class="cl">	q charStream
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="将query输出到csv文件query2csv"><span id="20250317141448-rgyr9xp" style="display: none;"></span>将query输出到CSV文件	Query2Csv
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// ============================导出数据到文件============================///
+</span></span><span class="line"><span class="cl">/// 描述:     将query输出到CSV文件
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  className:类名,queryName:query方法名,filePath:输出路径
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.DataShare.LISTool).Query2Csv(&#34;LISService.DataShare.LISData&#34;,&#34;Data&#34;,&#34;D:\LISDATA\DATA\test.csv&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod Query2Csv(className, queryName, filePath)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s file = ##class(%FileCharacterStream).%New()
+</span></span><span class="line"><span class="cl">	s file.Filename = filePath
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s array = []
+</span></span><span class="line"><span class="cl">	s rs = ##class(%ResultSet).%New()
+</span></span><span class="line"><span class="cl">	s rs.ClassName = className
+</span></span><span class="line"><span class="cl">	s rs.QueryName = queryName
+</span></span><span class="line"><span class="cl">	d rs.Execute(&#34;2020-11-20&#34;,&#34;2020-11-20&#34;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	#; 列名
+</span></span><span class="line"><span class="cl">	s colStr = &#34;&#34;
+</span></span><span class="line"><span class="cl">	for i = 1 : 1 : rs.GetColumnCount(){
+</span></span><span class="line"><span class="cl">		s columnName = rs.GetColumnName(i)
+</span></span><span class="line"><span class="cl">		s colStr = $s(colStr = &#34;&#34; : columnName, 1 : colStr _ &#34;,&#34; _ columnName)
+</span></span><span class="line"><span class="cl">		;b ;a101
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	d file.Write(colStr)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	#; 属性值
+</span></span><span class="line"><span class="cl">	while (rs.Next()) {
+</span></span><span class="line"><span class="cl">		s valStr = &#34;&#34;
+</span></span><span class="line"><span class="cl">		for i = 1 : 1 : rs.GetColumnCount(){
+</span></span><span class="line"><span class="cl">			s columnName = rs.GetColumnName(i)
+</span></span><span class="line"><span class="cl">			s val = rs.Data(columnName)
+</span></span><span class="line"><span class="cl">			s valStr = $s(valStr = &#34;&#34; : val, 1 : valStr _ &#34;,&#34; _ val)
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">		d file.Write($c(10) _ valStr)
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	d file.%Save()
+</span></span><span class="line"><span class="cl">	q $$$OK
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// 描述:     将query输出到CSV文件，可以入参多个参数
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  className:类名,queryName:query方法名,filePath:输出路径,arg...:可以包含多个参数
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(YHR.OutPutTXT).Query2CsvNew(&#34;LISService.DataShare.LISData&#34;,&#34;Data&#34;,&#34;D:\LISDATA\DATA\test1.csv&#34;,&#34;2020-11-20&#34;,&#34;2020-11-20&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod Query2CsvNew(className, queryName, filePath, arg...)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s file = ##class(%FileCharacterStream).%New()
+</span></span><span class="line"><span class="cl">	s file.Filename = filePath
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s array = []
+</span></span><span class="line"><span class="cl">	s rs = ##class(%ResultSet).%New()
+</span></span><span class="line"><span class="cl">	s rs.ClassName = className
+</span></span><span class="line"><span class="cl">	s rs.QueryName = queryName
+</span></span><span class="line"><span class="cl">	d rs.Execute(arg...)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	#; 列名
+</span></span><span class="line"><span class="cl">	s colStr = &#34;&#34;
+</span></span><span class="line"><span class="cl">	for i = 1 : 1 : rs.GetColumnCount(){
+</span></span><span class="line"><span class="cl">		s columnName = rs.GetColumnName(i)
+</span></span><span class="line"><span class="cl">		s colStr = $s(colStr = &#34;&#34; : columnName, 1 : colStr _ &#34;,&#34; _ columnName)
+</span></span><span class="line"><span class="cl">		;b ;a101
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	d file.Write(colStr)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	#; 属性值
+</span></span><span class="line"><span class="cl">	while (rs.Next()) {
+</span></span><span class="line"><span class="cl">		s valStr = &#34;&#34;
+</span></span><span class="line"><span class="cl">		for i = 1 : 1 : rs.GetColumnCount(){
+</span></span><span class="line"><span class="cl">			s columnName = rs.GetColumnName(i)
+</span></span><span class="line"><span class="cl">			s val = rs.Data(columnName)
+</span></span><span class="line"><span class="cl">			s valStr = $s(valStr = &#34;&#34; : val, 1 : valStr _ &#34;,&#34; _ val)
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">		d file.Write($c(10) _ valStr)
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	d file.%Save()
+</span></span><span class="line"><span class="cl">	q $$$OK
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="示例-将数据输出到txt文件output2txt"><span id="20250317141448-qkl4t6b" style="display: none;"></span>(示例) 将数据输出到txt文件	OutPut2TXT
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 描述:     (示例) 将数据输出到txt文件
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+</span></span><span class="line"><span class="cl">ClassMethod OutPut2TXT()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	/// windows路径为 盘符+&#34;\&#34; (&#34;D:\Test.txt&#34;)
+</span></span><span class="line"><span class="cl">	/// Linux路径为 &#34;/&#34; (/dthealth/细菌导入模板.csv)
+</span></span><span class="line"><span class="cl">	s File=&#34;D:\LISDATA\DATA\Test.txt&#34;
+</span></span><span class="line"><span class="cl">	o File:&#34;WNS&#34;
+</span></span><span class="line"><span class="cl">	u File
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	w &#34;123&#34;_$c(13)
+</span></span><span class="line"><span class="cl">	w &#34;234&#34;_$c(13)
+</span></span><span class="line"><span class="cl">	w &#34;111&#34;_$C(9)_&#34;222&#34;
+</span></span><span class="line"><span class="cl">	c File
+</span></span><span class="line"><span class="cl">	Quit $$$OK
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// 描述:     (示例) 将数据输出到txt文件
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+</span></span><span class="line"><span class="cl">ClassMethod OutPut2TXTNew()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	/// windows路径为 盘符+&#34;\&#34; (&#34;D:\Test.txt&#34;)
+</span></span><span class="line"><span class="cl">	/// Linux路径为 &#34;/&#34; (/dthealth/细菌导入模板.csv)
+</span></span><span class="line"><span class="cl">	s filePath=&#34;D:\LISDATA\DATA\XML.txt&#34;
+</span></span><span class="line"><span class="cl">	s file = ##class(%FileCharacterStream).%New()
+</span></span><span class="line"><span class="cl">	s file.Filename = filePath
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s colStr=&#34;CS&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	d file.Write(colStr)
+</span></span><span class="line"><span class="cl">	d file.%Save()
+</span></span><span class="line"><span class="cl">	Quit $$$OK
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="写日志到文件中可续写writelog"><span id="20250317141448-g5wyf56" style="display: none;"></span>写日志到文件中(可续写)		WriteLog
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 写日志到文件中
+</span></span><span class="line"><span class="cl">/// w ##Class(YHR.OutPutTXT).WriteLog(&#34;测试&#34;)
+</span></span><span class="line"><span class="cl">/// logStr:日志串
+</span></span><span class="line"><span class="cl">/// logpath:日志路径，不给就由内部控制
+</span></span><span class="line"><span class="cl">ClassMethod WriteLog(logStr, logpath)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s logStr=$g(logStr)
+</span></span><span class="line"><span class="cl">	s logpath=$g(logpath)
+</span></span><span class="line"><span class="cl">	s IsLinux=1
+</span></span><span class="line"><span class="cl">	i ##class(%SYSTEM.Version).GetOS()=&#34;Windows&#34; s IsLinux=0
+</span></span><span class="line"><span class="cl">	//默认路径
+</span></span><span class="line"><span class="cl">	i &#39;$l(logpath) d
+</span></span><span class="line"><span class="cl">	.i IsLinux=0 d
+</span></span><span class="line"><span class="cl">	..s logpath=&#34;D:\LISDATA\DATA\&#34;
+</span></span><span class="line"><span class="cl">	.e  d
+</span></span><span class="line"><span class="cl">	..s logpath=&#34;/&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$d(^LogFileIndex) s ^LogFileIndex=0
+</span></span><span class="line"><span class="cl">	s index=$g(^LogFileIndex)
+</span></span><span class="line"><span class="cl">	s logName=logpath_&#34;Log&#34;_index_&#34;.txt&#34;
+</span></span><span class="line"><span class="cl">	s file=##class(%File).%New(logName)
+</span></span><span class="line"><span class="cl">	//存在就追加
+</span></span><span class="line"><span class="cl">	i ##class(%File).Exists(logName) d
+</span></span><span class="line"><span class="cl">	.Do file.Open(&#34;AWS:/SHARED&#34;)
+</span></span><span class="line"><span class="cl">	//不存在就新建
+</span></span><span class="line"><span class="cl">	e  d
+</span></span><span class="line"><span class="cl">	.Do file.Open(&#34;WSN:/SHARED&#34;)
+</span></span><span class="line"><span class="cl">	//日志头
+</span></span><span class="line"><span class="cl">	s HeadStr=$zd($h,8)_&#34; [&#34;_$zt($p($h,&#34;,&#34;,2))_&#34;] &#34;
+</span></span><span class="line"><span class="cl">	//写日志
+</span></span><span class="line"><span class="cl">	d file.WriteLine($zcvt(HeadStr_logStr,&#34;O&#34;,&#34;UTF8&#34;))
+</span></span><span class="line"><span class="cl">	//判断大小
+</span></span><span class="line"><span class="cl">	s fileSize=file.Size
+</span></span><span class="line"><span class="cl">	//文件大了就换一个
+</span></span><span class="line"><span class="cl">	i fileSize&gt;(1024*1000) d
+</span></span><span class="line"><span class="cl">	.s ^LogFileIndex=^LogFileIndex+1
+</span></span><span class="line"><span class="cl">	d file.Close()
+</span></span><span class="line"><span class="cl">	q &#34;&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="示例-读取服务器文件数据按照txt方式读取read2txt"><span id="20250317141448-r7qwbmf" style="display: none;"></span>(示例) 读取服务器文件数据(按照txt方式读取)		Read2TXT
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 描述:     (示例) 读取服务器文件数据(按照txt方式读取)
+</span></span><span class="line"><span class="cl">/// 编写者：  yanghaoran
+</span></span><span class="line"><span class="cl">/// 编写日期: 20241030
+</span></span><span class="line"><span class="cl">/// 入参：	  
+</span></span><span class="line"><span class="cl">/// 出参:
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.DataShare.LISTool).OutPut2TXT()
+</span></span><span class="line"><span class="cl">ClassMethod Read2TXT()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	/// windows路径为 盘符+&#34;\&#34; (&#34;D:\Test.txt&#34;)
+</span></span><span class="line"><span class="cl">	/// Linux路径为 &#34;/&#34; (/dthealth/细菌导入模板.csv)
+</span></span><span class="line"><span class="cl">	s logName=&#34;/dthealth/app/dthis/imedicallis/imedicallis/tmp/File/细菌导入模板.csv&#34;
+</span></span><span class="line"><span class="cl"> 	s file=##class(%File).%New(logName)
+</span></span><span class="line"><span class="cl">	s status=file.Open(&#34;RU&#34;)
+</span></span><span class="line"><span class="cl">	i status&#39;=1 d file.Close() w status q &#34;&#34;
+</span></span><span class="line"><span class="cl">	set AllStr = file.Read(, .sc)
+</span></span><span class="line"><span class="cl">	Quit $$$OK
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取互认数据getdata"><span id="20250317141448-uz7jcod" style="display: none;"></span>获取互认数据	GetData
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// =============================获取互认数据=============================///
+</span></span><span class="line"><span class="cl">/// 获取互认数据
+</span></span><span class="line"><span class="cl">/// dbo.CFBTHISData
+</span></span><span class="line"><span class="cl">/// Input:互认系统代码，医院代码，数据类型，代码
+</span></span><span class="line"><span class="cl">/// Outpue:对照代码，对照名称，对照主键
+</span></span><span class="line"><span class="cl">/// w ##class(LISService.DataShare.LISData).GetData(&#34;&#34;,&#34;&#34;,&#34;SP&#34;,&#34;SP015&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod GetData(fDataType, fCode, HospitalCode, SYSCode)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s fDataType=$g(fDataType),fCode=$g(fCode)
+</span></span><span class="line"><span class="cl">	s ret=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(fDataType) q ret
+</span></span><span class="line"><span class="cl">	i &#39;$l(fCode) q ret
+</span></span><span class="line"><span class="cl">	s HospitalCode=$g(HospitalCode)
+</span></span><span class="line"><span class="cl">	i &#39;$l(HospitalCode) s HospitalCode=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s SYSCode=$g(SYSCode)
+</span></span><span class="line"><span class="cl">	i &#39;$l(SYSCode) s SYSCode=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$d(^dbo.CFBTHISDataI(&#34;IndexMaster&#34;,fDataType,fCode,SYSCode,HospitalCode)) q ret
+</span></span><span class="line"><span class="cl">	s HISDataCode=$o(^dbo.CFBTHISDataI(&#34;IndexMaster&#34;,fDataType,fCode,SYSCode,HospitalCode,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s HISDataDR=$o(^dbo.CFBTHISDataI(&#34;IndexMaster&#34;,fDataType,fCode,SYSCode,HospitalCode,HISDataCode,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s HISDataData=$g(^dbo.CFBTHISDataD(HISDataDR))
+</span></span><span class="line"><span class="cl">	s HISDataCode=$lg(HISDataData,6)
+</span></span><span class="line"><span class="cl">	s HISDataName=$lg(HISDataData,8)
+</span></span><span class="line"><span class="cl">	s HISDataID=$lg(HISDataData,7)
+</span></span><span class="line"><span class="cl">	s ret=$lb(HISDataCode,HISDataName,HISDataID)
+</span></span><span class="line"><span class="cl">	q ret
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// 更新互认数据
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.Problem.QryMethod).UpdCFBTHISData(&#34;&#34;, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName)
+</span></span><span class="line"><span class="cl">ClassMethod UpdCFBTHISData(RowID, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName) As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s RowID=$g(RowID),DataType=$g(DataType),DataCode=$g(DataCode),SYSCode=$g(SYSCode),HospitalCode=$g(HospitalCode),HISDataCode=$g(HISDataCode),HISDataID=$g(HISDataID),HISDataName=$g(HISDataName)
+</span></span><span class="line"><span class="cl">	;s ^YHR(&#34;UpdCFBTHISData&#34;)=$lb(RowID,DataType,DataCode,SYSCode,HospitalCode,HISDataCode,HISDataID,HISDataName)
+</span></span><span class="line"><span class="cl">	s RetValue=0
+</span></span><span class="line"><span class="cl">	i &#39;$l(HospitalCode) q &#34;医院代码为空&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(SYSCode) q &#34;互认系统代码为空&#34;
+</span></span><span class="line"><span class="cl">	i &#39;$l(DataType) q &#34;互认类型为空&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	i $l(DataCode),&#39;$l(RowID) s RowID=$o(^dbo.CFBTHISDataI(&#34;IndexDataCode&#34;,HospitalCode,SYSCode,DataType,DataCode,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	s RowIDBak=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(RowID),$l(DataCode) s RowIDBak=$o(^dbo.CFBTHISDataI(&#34;IndexDataCode&#34;,HospitalCode,SYSCode,DataType,DataCode,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i $l(RowIDBak),RowIDBak&#39;=RowID q &#34;存在相同代码数据&#34;
+</span></span><span class="line"><span class="cl">	i $l(RowID),$d(^dbo.CFBTHISDataD(RowID)) {
+</span></span><span class="line"><span class="cl">		s obj=##Class(dbo.CFBTHISData).%OpenId(RowID)
+</span></span><span class="line"><span class="cl">	}else{
+</span></span><span class="line"><span class="cl">		s obj=##Class(dbo.CFBTHISData).%New()
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	If &#39;$IsObject(obj) q 100
+</span></span><span class="line"><span class="cl">	s obj.DataType=DataType
+</span></span><span class="line"><span class="cl">	s obj.DataCode=DataCode
+</span></span><span class="line"><span class="cl">	s obj.SYSCode=SYSCode
+</span></span><span class="line"><span class="cl">	s obj.HospitalCode=HospitalCode
+</span></span><span class="line"><span class="cl">	s obj.HISDataCode=HISDataCode
+</span></span><span class="line"><span class="cl">	s obj.HISDataID=HISDataID
+</span></span><span class="line"><span class="cl">	s obj.HISDataName=HISDataName
+</span></span><span class="line"><span class="cl">	s sc=obj.%Save()
+</span></span><span class="line"><span class="cl"> 	If ($SYSTEM.Status.IsOK(sc)) {
+</span></span><span class="line"><span class="cl">	 	s RetValue=1
+</span></span><span class="line"><span class="cl"> 	}
+</span></span><span class="line"><span class="cl"> 	else {
+</span></span><span class="line"><span class="cl">	 	s RetValue=$SYSTEM.Status.GetErrorText(sc)
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Quit RetValue
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// 导入互认数据
+</span></span><span class="line"><span class="cl">/// d ##class(LISService.Problem.QryMethod).leadIntoData()
+</span></span><span class="line"><span class="cl">ClassMethod leadIntoData()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s Split=&#34;$$&#34;
+</span></span><span class="line"><span class="cl">	s SYSCode=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s HospitalCode=&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s DataType=&#34;SP&#34;
+</span></span><span class="line"><span class="cl">	/// 系统代码集
+</span></span><span class="line"><span class="cl">	s SYSCodes=&#34;CS1$$CS2&#34;
+</span></span><span class="line"><span class="cl">	/// 对照代码集
+</span></span><span class="line"><span class="cl">	s HISDataCodes=&#34;DZ1$$DZ2&#34;
+</span></span><span class="line"><span class="cl">	/// 对照名称集
+</span></span><span class="line"><span class="cl">	s HISDataNames=&#34;对照1$$对照2&#34;
+</span></span><span class="line"><span class="cl">	/// 对照主键集
+</span></span><span class="line"><span class="cl">	s HISDataIDs=&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	for i=1:1:$l(SYSCodes,Split) d
+</span></span><span class="line"><span class="cl">	.s SYSCode=$p(SYSCodes,Split,i)
+</span></span><span class="line"><span class="cl">	.s HISDataCode=$p(HISDataCodes,Split,i)
+</span></span><span class="line"><span class="cl">	.s HISDataName=$p(HISDataNames,Split,i)
+</span></span><span class="line"><span class="cl">	.s HISDataID=$p(HISDataIDs,Split,i)
+</span></span><span class="line"><span class="cl">	.i &#39;$l(SYSCode) q
+</span></span><span class="line"><span class="cl">	.try{d ##class(LISService.Problem.QryMethod).UpdCFBTHISData(&#34;&#34;, DataType, DataCode, SYSCode, HospitalCode, HISDataCode, HISDataID, HISDataName)}catch{}
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pdf报告转base64getbase64bydrmthd"><span id="20250317141448-76y6qjp" style="display: none;"></span>PDF报告转base64	GetBase64ByDRMTHD
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// =============================PDF报告转base64=============================///
+</span></span><span class="line"><span class="cl">/// 通过报告主键转PDFBase64
+</span></span><span class="line"><span class="cl">/// ReportDR:报告主键
+</span></span><span class="line"><span class="cl">/// w ##Class(LISService.DataShare.LISTool).GetBase64ByDRMTHD(&#34;187&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod GetBase64ByDRMTHD(ReportDR, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    s ReportDR=$g(ReportDR)
+</span></span><span class="line"><span class="cl">    s Ret=&#34;&#34;,PDFFileString=&#34;&#34;
+</span></span><span class="line"><span class="cl">    i $d(^dbo.RPVisitNumberReportFileI(&#34;IndexMater&#34;,##Class(LIS.Util.Common).IndexData(ReportDR))) d
+</span></span><span class="line"><span class="cl">    .s FileInfoID=$o(^dbo.RPVisitNumberReportFileI(&#34;IndexMater&#34;,##Class(LIS.Util.Common).IndexData(ReportDR),&#34;&#34;))
+</span></span><span class="line"><span class="cl">    .;s PDFPath=$lg($g(^dbo.RPVisitNumberReportFileD(FileInfoID)),6)_&#34;.zip&#34;
+</span></span><span class="line"><span class="cl">    .s PDFPath=$lg($g(^dbo.RPVisitNumberReportFileD(FileInfoID)),6)
+</span></span><span class="line"><span class="cl">	s LisSoap=##class(LISReportService.LISReportServiceSoap).%New()
+</span></span><span class="line"><span class="cl">	s PDFFileString=LisSoap.GetServerFileBase64(PDFPath)
+</span></span><span class="line"><span class="cl">    q PDFFileString
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="通用工具类"><span id="20250317142148-smml9a2" style="display: none;"></span>通用工具类
+</h2><h3 id="不足n位补0zeropadding"><span id="20250317142148-knvlo0t" style="display: none;"></span>不足N位补0	ZeroPadding
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 不足N位补0
+</span></span><span class="line"><span class="cl">ClassMethod ZeroPadding(target, num)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    q $tr($j(target, num), &#34; &#34;, &#34;0&#34;)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取客户端ipgetoutlocalip"><span id="20250317142148-7q1yl9s" style="display: none;"></span>获取客户端IP	GetOutLocalIP
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取客户端IP
+</span></span><span class="line"><span class="cl">ClassMethod GetOutLocalIP() As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	q ##class(%SYSTEM.Process).ClientIPAddress()
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取服务器本地ipgetinlocalip"><span id="20250317142148-2stz0y1" style="display: none;"></span>获取服务器本地IP	GetInLocalIP
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取服务器本地IP
+</span></span><span class="line"><span class="cl">ClassMethod GetInLocalIP() As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	q $p($zu(54,13,$zu(54,0)),&#34;,&#34;,1 )
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取当前命名空间物理路径getnamespacepath"><span id="20250317142148-bw4xlia" style="display: none;"></span>获取当前命名空间物理路径	GetNameSpacePath
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取当前命名空间物理路径
+</span></span><span class="line"><span class="cl">ClassMethod GetNameSpacePath() As %String
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	q ##class(%Library.File).NormalizeDirectory(&#34;&#34;)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取license信息showlicenseinfo"><span id="20250317142148-0v081a4" style="display: none;"></span>获取License信息	ShowLicenseInfo
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取License信息
+</span></span><span class="line"><span class="cl">ClassMethod ShowLicenseInfo() As %Boolean
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	d ##class(%SYSTEM.License).ShowCounts()
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="判断文件夹是否存在isdirectoryexists"><span id="20250317142148-o1d1wva" style="display: none;"></span>判断文件夹是否存在	IsDirectoryExists
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 判断文件夹是否存在
+</span></span><span class="line"><span class="cl">ClassMethod IsDirectoryExists(filePath) As %Boolean
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	q ##class(%File).DirectoryExists(filePath)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="文件夹不存在创建文件夹createnotexistdir"><span id="20250317142148-wbzjjkj" style="display: none;"></span>文件夹不存在创建文件夹	CreateNotExistDir
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 文件夹不存在创建文件夹
+</span></span><span class="line"><span class="cl">ClassMethod CreateNotExistDir(filePath) As %Boolean
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    if (&#39;(##class(%File).DirectoryExists(filePath))){
+</span></span><span class="line"><span class="cl">        d ##class(%File).CreateNewDir(filePath, &#34;&#34;)
+</span></span><span class="line"><span class="cl">    }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="获取时间多少秒之前的时间getminutesagotime"><span id="20250317142148-5ypm6p7" style="display: none;"></span>获取时间多少秒之前的时间	GetMinutesAgoTime
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// 获取时间多少秒之前的时间
+</span></span><span class="line"><span class="cl">/// w ##class(YHR.Tool.Method1).GetMinutesAgoTime($zdt($h,8),7200)
+</span></span><span class="line"><span class="cl">/// w ##class(YHR.Tool.Method1).GetMinutesAgoTime(&#34;20241125 10:04:00&#34;,7200)
+</span></span><span class="line"><span class="cl">ClassMethod GetMinutesAgoTime(DateTime, timeDiff)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	try{
+</span></span><span class="line"><span class="cl">	s Date=$zdh($p(DateTime,&#34; &#34;,1),8)
+</span></span><span class="line"><span class="cl">	s Time=$zth($p(DateTime,&#34; &#34;,2))}catch{s (Date,Time)=&#34;&#34;}
+</span></span><span class="line"><span class="cl">	i &#39;$l(Date) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s DateSince=$fn(timeDiff/86400,&#34;&#34;,0)
+</span></span><span class="line"><span class="cl">	s TimeSince=(timeDiff#86400)
+</span></span><span class="line"><span class="cl">	i Time&gt;=TimeSince d
+</span></span><span class="line"><span class="cl">	.s Date=$zd(Date-DateSince,8)
+</span></span><span class="line"><span class="cl">	.s Time=$zt(Time-TimeSince)
+</span></span><span class="line"><span class="cl">	e  d
+</span></span><span class="line"><span class="cl">	.s Date=$zd(Date-DateSince-1,8)
+</span></span><span class="line"><span class="cl">	.s Time=$zt(86400+Time-TimeSince)
+</span></span><span class="line"><span class="cl">	q Date_&#34; &#34;_Time
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="编程小工具"><span id="20250225110518-307ylxl" style="display: none;"></span>编程小工具
+</h2><h3 id="初始化入参变量"><span id="20250225110540-k8rb3y2" style="display: none;"></span>初始化入参变量
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/// w ##class(Z.TEST.TEST).GetInit(&#34;RegNo, IndexSCode, TestSets, Days, HospitalDR, fVisitNumberNo&#34;)
+</span></span><span class="line"><span class="cl">ClassMethod GetInit(str)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	s str=$g(str)
+</span></span><span class="line"><span class="cl">	i &#39;$l(str) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s OutPut=&#34;s &#34;
+</span></span><span class="line"><span class="cl">	f i=1:1:$l(str,&#34;,&#34;) {
+</span></span><span class="line"><span class="cl">		s stri=$p(str,&#34;,&#34;,i)
+</span></span><span class="line"><span class="cl">		s stri=$tr(stri,&#34; &#34;)
+</span></span><span class="line"><span class="cl">		s OutPut=OutPut_stri_&#34;=$g(&#34;_stri_&#34;),&#34;
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	s OutPut=$e(OutPut,1,*-1)
+</span></span><span class="line"><span class="cl">	q OutPut
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    <section>
+        页面浏览量<span id="busuanzi_value_page_pv">Loading</span>
+    </section>
+</footer>
+
+
+    
+</article>
+
+<div class="post-password">
+	
+</div>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8A%9F%E8%83%BD%E5%AF%B9%E5%BA%94%E8%B7%AF%E5%BE%84-bd31d1cf45/assets/image-20230327182228977-20241227020427-8nbvjef.6a6051a6958320f2da150a73fe7b91cb_hu_dc5ed5b29094b093.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 功能对应路径"
+                        data-key="功能对应路径 bd31d1cf45" 
+                        data-hash="md5-amBRppWDIPLaFQpz/nuRyw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">功能对应路径</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87-27d51b55b8/assets/%E6%9C%80%E6%96%B0%E7%89%88%E8%82%BE%E5%B0%8F%E7%90%83%E6%BB%A4%E8%BF%87%E7%8E%87%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-20250305094927-44pn7ja.5dca871392831b5f3cfe78983ffe47fb_hu_e58f01e874eae939.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 肾小球滤过率"
+                        data-key="肾小球滤过率 27d51b55b8" 
+                        data-hash="md5-XcqHE5KDG188/niYP/5H&#43;w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">肾小球滤过率</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%AE%B0%E5%BD%95%E4%B8%B4%E6%97%B6%E6%95%B0%E6%8D%AE-de218cf708/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/title.jpg" loading="lazy" data-key="记录临时数据 de218cf708" data-hash="/img/title.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">记录临时数据</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"Admin","placeholder":null},"requiredMeta":["name","email","url"],"serverURL":"https://waline.717170.xyz"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 muziyang
+    </section>
+    
+    <section class="powerby">
+        
+            网站总访客数：<span id='busuanzi_value_site_uv'>Loading</span><br/>网站总访问量：<span id='busuanzi_value_site_pv'>Loading</span> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+    </body>
+</html>
