@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>muziyang</copyright>
-        <lastBuildDate>Wed, 03 Sep 2025 09:07:05 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/categories/%E7%BB%BC%E5%90%88%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Sep 2025 22:17:39 +0000</lastBuildDate><atom:link href="https://work.717170.xyz/categories/%E7%BB%BC%E5%90%88%E6%8E%A5%E5%8F%A3%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>贝克曼AU680</title>
         <link>https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-a9c830b8e4/</link>
         <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
@@ -558,6 +558,689 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>贝克曼DXH900</title>
+        <link>https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/</link>
+        <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/</guid>
+        <description>&lt;img src="https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg" alt="Featured image of post 贝克曼DXH900" /&gt;&lt;h3 id=&#34;接口说明&#34;&gt;接口说明
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;仪器厂商&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;贝克曼DXH900&lt;br /&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;仪器型号&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;贝克曼DXH900&lt;br /&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;通讯方式&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;双向&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;仪器类型&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;临检血常规&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;医院名称&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;br /&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;程序名称&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;MI.MIFDXH900&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;终端服务器地址&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;终端服务器端口号&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;仪器上接口标示和接口类型&#34;&gt;&lt;strong&gt;仪器上接口标示和接口类型&lt;/strong&gt;
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;接口类型：串口&lt;/li&gt;
+&lt;li&gt;连接方式：ASTM协议&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;仪器接口说明&#34;&gt;仪器接口说明
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。&lt;/li&gt;
+&lt;li&gt;仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率&lt;/li&gt;
+&lt;li&gt;传图的格式为图片字符串从后往前8192个字符&lt;/li&gt;
+&lt;li&gt;仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&amp;ldquo;DXH900&amp;rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。&lt;/li&gt;
+&lt;li&gt;仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号&lt;/li&gt;
+&lt;li&gt;仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;仪器报警信息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	贝克曼DXH900
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s MachineName=&amp;#34;DXH900&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s police=&amp;#34;Abn Hemoglobin$$Cellular Inter$$Dimorphic Reds$$Giant Platelets$$Imm Grans$$Left Shift$$LY Blast$$MO Blast$$NE Blast$$NRBC$$RBC Frag/Micro$$Red Cell Aggl$$Sickled Cells$$Variant LY$$Abn Diff Pattern$$Abn NRBC Pattern$$Abn RBC Pattern$$Abn Retic Pattern$$Abn TNC Pattern$$Abn WBC Pattern$$Aged Sample$$AL2 Blank Voltage: N$$AL2 Blank Voltage: R$$Bubbles$$Carryover$$Cellular Inter$$Cover Opened$$Data Disc: D$$Data Disc: N$$Data Disc: R$$Excessive Debris: D$$Flow Cell Clog: D$$Flow Cell Clog: N$$Flow Cell Clog: R$$HGB Blank Shift$$HGB Inter: WBC$$High Event Rate: D$$High Event Rate: N$$High Event Rate: R$$High OP Events: D$$High RF Events: D$$Low AL2 Events: N$$Low DC Events: N$$Low Event Rate: D$$Low Event Rate: N$$Low Event Rate: R$$Low Events: D$$Low Events: N$$Low Events: R$$Low OP Events: D$$Low RMALS Events: D$$MCV Inter: PLT$$MCV Inter: WBC$$MO-NE Overlap$$NE-EO Overlap$$No Aspiration$$Non-blood Specimen$$NRBC Inter$$NRBC-LY Overlap$$Nucleated Cells$$Partial Aspiration$$Platelet Clumps$$PLT Carryover$$PLT Inter: Debris$$RBC-PLT Overlap$$Range Error$$RET Inter: Debris$$RET Inter: PLT$$RET-RBC Overlap$$System Event: D$$System Event: HGB$$System Event: N$$System Event: PLT$$System Event: R$$System Event: RBC$$System Event: TNC$$System Event: WBC$$TNC Carryover$$Undefined Pop: D$$Unknown Error$$WBC Carryover$$Anemia$$Basophilia$$Basophilia#$$Eosinophilia$$Eosinophilia#$$Erythrocytosis$$Hypochromia (1+, 2+, 3+)$$Leukocytosis$$Leukopenia$$Lymphocytosis$$Lymphocytosis#$$Lymphopenia$$Lymphopenia#$$Monocytosis$$Monocytosis#$$Neutropenia$$Neutropenia#$$Neutrophilia$$Neutrophilia#$$Anisocytosis (1+, 2+, 3+)$$Large Platelets$$Small Platelets$$Thrombocytopenia$$Thrombocytosis$$Macrocytosis (1+, 2+, 3+)$$Microcytosis (1+, 2+, 3+)$$Reticulocytosis$$Reticulocytosis#$$NRBCs Present&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s explain=&amp;#34;Abnormal Hemoglobin$$细胞干涉$$二态红$$巨血小板$$未成熟粒细胞$$左移$$LY 原始细胞$$MO 原始细胞$$NE 原始细胞$$NRBC$$RBC Frag/Microcytes$$Red Cell Agglut$$镰状细胞$$变体淋巴细胞$$异常 Diff 模式$$异常 NRBC 模式$$异常 RBC 模式$$异常网织红细胞模式$$异常 TNC 模式$$异常 WBC 模式$$已老化的样品$$AL2 空白电压：次数$$AL2 空白电压：R$$气泡$$携带污染$$细胞干涉$$已打开盖板$$数据中断：D$$数据中断：次数$$数据中断：R$$过多的碎片：D$$流动室淤塞：D$$流动室淤塞：次数$$流动室淤塞：R$$HGB 空白偏移$$HGB 干涉：WBC$$高发生率：D$$高发生率：次数$$高发生率：R$$高 OP 颗粒：D$$高 RF 颗粒 D$$低 AL2 颗粒：次数$$低 DC 颗粒：次数$$低发生率：D$$低发生率：次数$$低发生率：R$$低颗粒：D$$低颗粒：次数$$低颗粒：R$$低 OP 颗粒：D$$低 RMALS 颗粒：D$$MCV 干涉：PLT$$MCV 干涉：WBC$$MO-NE 重叠$$NE-EO 重叠$$无吸样$$非血液标本$$NRBC 干扰$$NRBC-LY 重叠$$有核细胞$$部分吸样$$血小板凝块$$PLT 携带污染$$PLT 干涉：碎片$$RBC-PLT 重叠$$范围错误$$RET 干扰：碎片$$RET 干扰：PLT$$RET-RBC 重叠$$系统事件：D$$系统事件：HGB$$系统事件：次数$$系统事件：PLT$$系统事件：R$$系统事件：RBC$$系统事件：TNC$$系统事件：WBC$$TNC 携带污染$$未定义的弹出窗口：D$$未知错误$$WBC 携带污染$$贫血$$嗜碱性细胞增多$$嗜碱性细胞增多 #$$嗜酸性细胞增多$$嗜酸性细胞增多 #$$红血球增多$$血红蛋白过少 (1+, 2+, 3+)$$白血球增多$$白血球减少$$淋巴球增多$$淋巴球增多 #$$淋巴球减少$$淋巴球减少 #$$单核细胞增多$$单核细胞增多 #$$嗜中性白血球减少$$嗜中性白血球减少 #$$嗜中性白血球增多$$嗜中性白血球增多 #$$红细胞大小不等症 (1+, 2+, 3+)$$血小板过大$$血小板过小$$血小板减少$$血小板增多$$巨红细胞 (1+, 2+, 3+)$$小红细胞 (1+, 2+, 3+)$$网织红血球过多$$网织红血球过多 #$$存在 NRBC&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;串口盒子配置&#34;&gt;串口盒子配置
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;波特率：&lt;/strong&gt; 115200&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据位：8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;停止位：&lt;/strong&gt; 1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;校验位：&lt;/strong&gt; N&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;仪器图片&#34;&gt;仪器图片
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg&#34;
+	width=&#34;2331&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c_hu_4c0c416850ecec07.jpg 480w, https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-29dac60334/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c_hu_5ff2591559e01985.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;5e9b583f046fee17af1cfb11439dc5e7&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;518px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据格式&#34;&gt;&lt;strong&gt;数据格式&lt;/strong&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081635
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H&amp;lt;--M : 2019-05-05 11:40:28 : 4C|1|I|Test□names□beginning□with□@□are□research□use□only.□Not□for□use□in□diagnostics□procedures.|G【13】【3】B9【13】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081636
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H--&amp;gt;M : 2019-05-05 11:40:28 : ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081637
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H&amp;lt;--M : 2019-05-05 11:40:28 : 5M|1|!!!WBC.Histogram.Array|02020202020304070A0F161D27323E4C5A67727B828686847F7971685F554D453E3834302D2B2927252321201E1D1D1C1C1C1C1C1B1B1A19171616151514141414131313121111100F0F0E0D0D0D0C0C0C0C0B0B0A0A0A0909090908080808070707060606060606060505050505050505050505050505050506060606070707080809090A0A0B0B0C0C0C0D0D0E0E0F0F1011121315161718191A1A1B1C1D1E1E1F20212223232424252526262727282829292A2A2B2B2C2C2D2D2D2D2D2D2D2C2C2B2B2A2A292828272726262625252424242323222121201F1E1E1D1C1B1A1A1918171716151514131312121111100F0F0E0E0D0C0C0B0A0A090808070707|||||F||||20190505112916|AW46295【13】【3】C6【13】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081638
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H--&amp;gt;M : 2019-05-05 11:40:28 : ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081639
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H&amp;lt;--M : 2019-05-05 11:40:29 : 6M|2|!!!Plt.Histogram.Array|000000000002071119222B35404B56606B747D868D949A9FA2A3A29F9B96908A847E78726C66615D5955524E4A46423D3934312D2A28252322201F1E1D1C1A1918171615141312111110100F0F0E0D0D0C0B0B0B0A0A0909080800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000|||||F||||20190505112916|AW46295【13】【3】FF【13】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081640
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H--&amp;gt;M : 2019-05-05 11:40:29 : ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081641
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H&amp;lt;--M : 2019-05-05 11:40:29 : 7M|3|!!!RBC.Histogram.Array|05040404040404030202010100000101010101010202030404040506080A0D1014191F26303D4A576574869AAFC2D5E4F0F8FCFFFEFAF2E8DBCDBCAB9A8A7B6E6052453B342F2A251F1A1715131210101010100F0E0E0D0D0D0C0C0C0C0C0B0C0C0C0C0B0B0C0B0B0B0B0C0C0C0C0B0B0B0A0A090909090909080808080808080808080706060505050505050404030304040404040404040404040303020202010101010202030202020202020101010101010101000000000000010100000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000|||||F||||20190505112916|AW46295【13】【3】C6【13】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081642
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H--&amp;gt;M : 2019-05-05 11:40:29 : ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081643
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;H&amp;lt;--M : 2019-05-05 11:40:33 : 0M|4|!!!5PD1|0E10010100400040000008000000000000000000000000000000000000000000000000001F0000000000000015000000150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001500000000000000000000000000000000000000000000000000000000000000001F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001F1F00001F0000001F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001F1F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000B0000000000000000000000000000000000000000000000000000000000000000001F0000001F00000000000000000000000000150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000201F000000000000000000000000000000000000000000000000000000000B000000000000000000000000000000000000000000000000000000000015001F0000000020000000000000000000150000000000000000000000000B000B0B0B000000000000000000000000000000000000000000000000000000000000001F001F0000000000000000000000000000000000000000000000000B0000000C0B0B0B0B0000000000000000000000000000000000000000000000001F00000021201F1F001F000000000000000000000000000000000000000000000000000B00000C0000000000000000000000000000000000000000000000000000001F2121201F2000000000000000000000001500000000000000000000000000000B0B000B00000000000000000000000000000000000000000000000000001F1F21222321221F21201F1F0000000000000000000015000000000000000B0000000B0D0D0C0C00000000000000000000000000000000000000000000001F001F0021152323222424210000000000000000001500000015000000000000000B0B000E0C0B000B00000000000000000000000000000000000000000000001F1F1F00211F202423202122000015000000000000161618160000150015000000000B0B000F0D0B00000000000000000000000000000000000000001F1F0000002000201F24242425252420201F1F0000000000000019151515160000000000000B0E000C0B0B0B0D00000C00000000000000000000000000000000000000001F002220222325252324232320001F00000000161500161A1A1816150000000B0B000C0E0E0E0C0D00000000000000000000000000000000001F001F0000001F0020212023242325242524222300000000001500161A1B1A1A1B1817151515000B0B0C0C10000B0B0E0C00000000000000000000000000000000000000150000001F212222232425242524221F00000000151518171A1B1B1B1B1B181700150B000B000C0B0D0F0C000C0B000000000000000000000000000000000000000000210022222323252424242223211F1500000015151A1B1B1C1C1C1B1A160015000B0B0B0F0D0E0B0C0D0B00000000000000000000000000000000000000000000210020232124252524242322221F000000000016191C1B1C1C1C1B15151500000B0C0C0F0E0D000C0C00000000000000000000000000000000000000000000001F212024232425242321242300201F001515151B1B1C1C1C1C1C1B1A1A001500000B0C0C0C0B0B0C0C00000B0000000000000000000000000000000000001F000021002124202224242023201F1F00001516191B1C1C1C1C1C1C1B1B191500000B0B00000C0E0B0C000000000000000000000000000000000000002900001F1F1F201F2320232223211F21000000001517161A1B1C1C1D1C1C1C1B1900000000000B0B0C0C0B000B00000000000000000000000000000000000000292900002A1F00201F1F201F2229001F0000001500151A1B1C1C1C1C1C1C1C1C191616000000000000000B0B000B000000000000000000000000000000290000000000292A292A1F2015002A1F1F001500001F001716191B1C1C1D1C1C1C1C1C19150000000B0C000B0B0000000000000000000000000000000000000000000000292929292A2A29202A1F0129001F000000000000171A1B1C1C1C1D1C1C1C1A181515000B000000000000000000000000000000000000000000002900000000002900292C00292A01012C012A2A292B0029151600191A1B1C1C1C1C1C1C1B1A001500000000000B0000000000000000000000000000000000000000000000292900002A2A2C2D2D2E2C2C29010101001500000015181A1A1B1B1C1C1B1B161500000000000B000000000000000000000000000000000000000000002900000029292D2C2D2E2D2E2D2D2D01010301002A000000001616191A1A1B1B1A19171515000000000000000000000000000000000000000000000000000000002A0029002E2D2E2B2F2E2F2F2F2E2D2C01000115000000001515151616191915161500000000000000000000000000000000000000000000000000000000000000292B2A2A2D2F2F2E2F2E012F0401012D2A002900000000000000150000160016000000000000000000000000000000000000000000000000002900000000292900292C2C2F2E2F2F302F2F2F022F022A2C000029000000000000000000001515000000000000000000000000000000000000000000000000000000000000292A2B2A2B2A2F2E2F2F30302F302F2F2E010000292A000000000000000000000000000000000000000000000000000000000000000000000000000000002A290000292E2E2E2F302F302F2F2F302F2F2D2D2A2900290000000000000000000000000000000000000000000000000000000000000000000000000000000000002929292D2D2E2D2F302F2F2F2F2F2F01012D29002B00000000000015000000000015000000000000000000000000000000000000000000000000000000002A2A292B2C2D2E2E2F2F2F2F2F2F2F2F2D2B2B2E2A002B000000000000000000000000000000000000000000000000000000000000000000000000000029002929000029292E2E2F2F2F2F2F2F2F2F2E2F2E2E2E2C0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002A2E2B2D2E2F2E2F2F2F2F2E2F2E2E2C2C292900000000000000000000000000000000000000000000000000000000000000000000000000000000290029292A29292C2B2E2E2D2E2D2F2E2D2C2D2C2B2B2B000000000000000000000000000000000000000000000000000000000000000000000000000000000000002B2900292B002A2A2D292C2D002C2A29002929290000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002B00002A002A2A00292C292A2A29000000000000000000000000000000000000000000000000003300330000000000000000000000000000001533003300292900002900002929000000290000000000000000000000000000000000000000000015000000000000000000000000000000000000000000000000330000003300000000000000000029000000000000000000000000000000000000000000000000001500000000330000000000000000000000000000000000000000003300000000000000330029000000000000000000000000000000000000000000000000000000000000000033000000000000000000000000000000003300000000330000000000002900000000000029000000000000000000000000000000000000000000330000000000000000000000003300000000000000000000000000000000000000000029000000000000000000000000000000000000000000000000330000003300000000000000000000000000000000000000000000003336333300330000000000000000000000000000000000000000000000000000000000000000330000000000000000000000000000000000000000000000000033000000000000000000000000000000000000000000000000000000330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1081644
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;项目通道号&#34;&gt;&lt;strong&gt;项目通道号&lt;/strong&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;修改记录&#34;&gt;修改记录
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;序号&lt;/th&gt;
+          &lt;th&gt;日期&lt;/th&gt;
+          &lt;th&gt;操作人&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2025-01-25 18:20:23&lt;br /&gt;&lt;/td&gt;
+          &lt;td&gt;杨浩然&lt;/td&gt;
+          &lt;td&gt;编写接口&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;2025年09月03日17:42:31&lt;/td&gt;
+          &lt;td&gt;杨浩然&lt;/td&gt;
+          &lt;td&gt;DXH流水线多仪器质控区分&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id=&#34;仪器接口程序&#34;&gt;仪器接口程序
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;109
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;110
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;111
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;112
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;113
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;114
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;115
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;116
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;117
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;118
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;119
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;120
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;121
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;122
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;123
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;124
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;125
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;126
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;127
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;128
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;129
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;130
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;131
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;132
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;133
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;134
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;135
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;136
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;137
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;138
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;139
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;140
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;141
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;142
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;143
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;144
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;145
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;146
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;147
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;148
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;149
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;150
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;151
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;152
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;153
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;154
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;155
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;156
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;157
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;158
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;159
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;160
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;161
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;162
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;163
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;164
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;165
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;166
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;167
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;168
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;169
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;170
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;171
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;172
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;173
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;174
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;175
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;176
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;177
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;178
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;179
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;180
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;181
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;182
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;183
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;184
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;185
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;186
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;187
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;188
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;189
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;190
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;191
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;192
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;193
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;194
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;195
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;196
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;197
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;198
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;199
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;200
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;201
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;202
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;203
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;204
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;205
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;206
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;207
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;208
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;209
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;210
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;211
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;212
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;213
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;214
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;215
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;216
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;217
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;218
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;219
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;220
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;221
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;222
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;223
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;224
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;225
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;226
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;227
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;228
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;229
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;230
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;231
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;232
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;233
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;234
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;235
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;236
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;237
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;238
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;239
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;240
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;241
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;242
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;243
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;244
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;245
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;246
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;247
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;248
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;249
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;250
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;251
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;252
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;253
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;254
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;255
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MIFDXH800I(MachID) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s MachID=$g(MachID) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(MachID,104)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(MachID) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Port=&amp;#34;|TCP|&amp;#34;_$li(^dbo.BTMIMachineParameterD(MachID),17) //端口号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//控制字符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	//s stx=&amp;#34;[&amp;#34;,etx=&amp;#34;]&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	S ^TMPMACH10(MachID,102)=$H
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $$Start^MI.MIF000(MachID) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	f  d Main i $$Stop^MI.MIF000(MachID) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	c Port
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	///结果采集和数据分解
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	r *R:10 e  d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.d ORDER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	i $c(R)&amp;#39;=enq q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	d Trace^MI.MIF000(MachID,&amp;#34;ENQ&amp;#34;,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	d ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	s (Epis,Result,Date,Time,QC,MachineCode)=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	f  r *R:10 q:$c(R)=eot  q:R=-1  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $c(R)&amp;#39;=stx q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.s Record=$$Read^MI.MIF000(MachID,&amp;#34;&amp;#34;,lf) q:&amp;#39;$l(Record)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.d Trace^MI.MIF000(MachID,Record,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.d ACK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;C&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//报警信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s PoliceInfo=$p(Record,&amp;#34;|&amp;#34;,4)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..i $l(PoliceInfo),$d(^LISPolice(&amp;#34;DXH900&amp;#34;,PoliceInfo)) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	...s InputInfo=$g(^LISPolice(&amp;#34;DXH900&amp;#34;,PoliceInfo))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	...d Trace^MI.MIF000(MachID,PoliceInfo_&amp;#34;$$&amp;#34;_InputInfo,&amp;#34;报警信息&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	...try{s ret=##Class(MI.Special.Common).SaveAlarmInformation(MachID,Epis,InputInfo)}catch{}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;Q&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//询问信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s QEpis=$tr($p(Record,&amp;#34;|&amp;#34;,3),&amp;#34;!&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..;d Trace^MI.MIF000(MachID,QEpis,&amp;#34;QEpis&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..S ^TMPQUERY(MachID,1)=QEpis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..i $l(QEpis) s ^TMP($zn,$j,&amp;#34;ENQ&amp;#34;,QEpis)=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;H&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//结果头信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..d Last s (Epis,Result,Date,Time,QC)=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;P&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//病人信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;O&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s Epis=$tr($p($p(Record,&amp;#34;|&amp;#34;,3),&amp;#34;^&amp;#34;,1),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s QC=$tr($p(Record,&amp;#34;|&amp;#34;,12),&amp;#34; &amp;#34;) 	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s:&amp;#39;$l(Epis) Epis=$tr($p($p(Record,&amp;#34;|&amp;#34;,4),&amp;#34;^&amp;#34;,1),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..i $l(QC) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	...s Epis=$tr($p(Epis,&amp;#34;!&amp;#34;,2),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//判断是否是质控编号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//s QC=$$findQC^MIF000(mi,epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	.i $e(Record,2)=&amp;#34;R&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//仪器型号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s MachineCode=$p($p(Record,&amp;#34;|&amp;#34;,15),$c(13),1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//结果信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..s Chl=$tr($tr($p($p(Record,&amp;#34;|&amp;#34;,3),&amp;#34;!&amp;#34;,4),&amp;#34; &amp;#34;),&amp;#34;@&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	..//s ResStus=$tr($p($p(Record,&amp;#34;|&amp;#34;,3),&amp;#34;^&amp;#34;,11),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s Res=$p($tr($p(Record,&amp;#34;|&amp;#34;,4),&amp;#34; &amp;#34;),&amp;#34;!&amp;#34;,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..//i ResStus&amp;#39;=&amp;#34;F&amp;#34; q //判断结果状态
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..i $l(Chl),$l(Res) s Result=Result_Chl_ResultDeli_Res_ItemDeli
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.//绘图
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .i $e(Record,2)=&amp;#34;M&amp;#34; d  q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..//结果信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..s Chl=$tr($p($p(Record,&amp;#34;|&amp;#34;,3),&amp;#34;!&amp;#34;,4),&amp;#34; &amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..s Res=$P($tr($p(Record,&amp;#34;|&amp;#34;,4),&amp;#34; |&amp;#34;),&amp;#34;!&amp;#34;,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..s Chl=$p(Chl,&amp;#34;.&amp;#34;,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i Chl=&amp;#34;WBC&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&amp;#34;MI.MIFDXH800&amp;#34;,&amp;#34;-1&amp;#34;,&amp;#34;Histogram#WBCF.bmp#######10#10#320#138&amp;#34;,&amp;#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...d Trace^MI.MIF000(MachID,tret,&amp;#34;绘图返回&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i Chl=&amp;#34;Plt&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&amp;#34;MI.MIFDXH800&amp;#34;,&amp;#34;-1&amp;#34;,&amp;#34;Histogram#PLT.bmp#######10#10#320#138&amp;#34;,&amp;#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...d Trace^MI.MIF000(MachID,tret,&amp;#34;绘图返回&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i Chl=&amp;#34;RBC&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&amp;#34;MI.MIFDXH800&amp;#34;,&amp;#34;-1&amp;#34;,&amp;#34;Histogram#RBCH.bmp#######10#10#320#138&amp;#34;,&amp;#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...d Trace^MI.MIF000(MachID,tret,&amp;#34;绘图返回&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i Chl=&amp;#34;5PD1&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s Res=$e(Res,$l(Res)-8191,$l(Res))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&amp;#34;MI.MIFDXH800&amp;#34;,&amp;#34;-1&amp;#34;,&amp;#34;DiffPlot#5PD1.bmp#######10#10#320#138&amp;#34;,&amp;#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...d Trace^MI.MIF000(MachID,tret,&amp;#34;绘图返回&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ..i Chl=&amp;#34;NRBC1&amp;#34; d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s Res=$e(Res,$l(Res)-8191,$l(Res))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&amp;#34;MI.MIFDXH800&amp;#34;,&amp;#34;-1&amp;#34;,&amp;#34;DiffPlot#NRBC1.bmp#######10#10#320#138&amp;#34;,&amp;#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ...d Trace^MI.MIF000(MachID,tret,&amp;#34;绘图返回&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i $e(Record,2)=&amp;#34;L&amp;#34; d Last q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d Trace^MI.MIF000(MachID,$s($c(R)=eot:&amp;#34;EOT&amp;#34;,1:R),&amp;#34;H&amp;lt;--M&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d ORDER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	///保存结果
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Last  ; file result if exist
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i $l(QC) s Epis=Epis_MachineCode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	d Trace^MI.MIF000(MachID,Epis_&amp;#34;$$&amp;#34;_Result,&amp;#34;Result&amp;#34;) 	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   i $l(Epis),$l(Result) d Save^MI.MIF000(MachID,Epis,Result,Date,Time,QC)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	///上传项目
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ORDER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s date=$tr($zdt($p($h,&amp;#34;,&amp;#34;,1),3),&amp;#34;-&amp;#34;)_$tr($zt($p($h,&amp;#34;,&amp;#34;,2)),&amp;#34;:&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s ^TMPQUERY(MachID,2)=$d(^TMP($zn,$j))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$d(^TMP($zn,$j)) q 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	;d Trace^MI.MIF000(MachID,&amp;#34;准备上传,清除缓存&amp;#34;,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k ^TMP(&amp;#34;MIFTESTCODE&amp;#34;,$j,MachID)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k ^TMPQUERY(MachID,4)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	s Epis=&amp;#34;&amp;#34; f  s Epis=$o(^TMP($zn,$j,&amp;#34;ENQ&amp;#34;,Epis)) q:Epis=&amp;#34;&amp;#34;  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.d ScanOne^MI.MIF000(MachID,Epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.;d PATDET(Epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s LSH=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s LSH=$$CHANGEEPIS(MachID,Epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.d Trace^MI.MIF000(MachID,Epis,&amp;#34;Epis&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s TCx=&amp;#34;&amp;#34;,Episx=Epis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s chl=&amp;#34;&amp;#34; f  s chl=$o(^TMP(&amp;#34;MIFTESTCODE&amp;#34;,$j,MachID,Epis,chl)) q:chl=&amp;#34;&amp;#34;  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s TCx=TCx_&amp;#34;!!!&amp;#34;_chl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.;s TCx=TCx_&amp;#34;\&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.i TCx[&amp;#34;CDR&amp;#34; s TCx=&amp;#34;!!!CDR&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s sam=&amp;#34;Sam&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s pat=&amp;#34;219!King!Eric!T&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s F=&amp;#34;F&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s FA=&amp;#34;Fairview!952-121-1123&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.s ^TMPQUERY(MachID,3)=TCx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.i $l(TCx) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;H|\!~|||LISHOST|||||||P|LIS2-A|&amp;#34;_date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;P|1||&amp;#34;_LSH  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..;s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;O|1|&amp;#34;_Episx_&amp;#34;|&amp;#34;_Pos_&amp;#34;|&amp;#34;_tcx_&amp;#34;|R||||||A||||Whole blood|||||||||||&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..;s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;O|1|&amp;#34;_Episx_&amp;#34;||&amp;#34;_TCx_&amp;#34;|R|&amp;#34;_date_&amp;#34;|&amp;#34;_date_&amp;#34;|||&amp;#34;_sam_&amp;#34;|A||||Whole blood|&amp;#34;_pat_&amp;#34;|||||||||&amp;#34;_F_&amp;#34;||&amp;#34;_FA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;O|1|&amp;#34;_Episx_&amp;#34;||&amp;#34;_TCx_&amp;#34;|R|&amp;#34;_date_&amp;#34;|&amp;#34;_date_&amp;#34;|||&amp;#34;_sam_&amp;#34;|A||||Whole blood&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;L|1|N&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	.e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	..s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;Q|1|^&amp;#34;_Epis_&amp;#34;||^^^ALL||||||||X&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	k ^TMP($zn,$j,&amp;#34;ENQ&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	k ^TMP(&amp;#34;MIFTESTCODE&amp;#34;,$j,MachID)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	q:&amp;#39;$d(^TMPTMIF(MachID,22))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	m ^TMPQUERY(MachID,4)=^TMPTMIF(MachID,22)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	d Send k ^TMPTMIF(MachID,22)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	///病人基本信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PATDET(Epis)  ; set patient details record
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s line=$o(^TMPTMIF(MachID,22,&amp;#34;&amp;#34;),-1)+1,^TMPTMIF(MachID,22,line)=&amp;#34;P|1|&amp;#34;_+$h_&amp;#34;||||||U||||||||||||||||||||||||||&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	q 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	///发送检测项目
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Send  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w enq,*-3 d Trace^MI.MIF000(MachID,&amp;#34;ENQ&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	d Trace^MI.MIF000(MachID,$s($c(R)=ack:&amp;#34;ACK&amp;#34;,$c(R)=enq:&amp;#34;ENQ&amp;#34;,$c(R)=nak:&amp;#34;NAK&amp;#34;,1:R),&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	i $c(R)=enq q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	i $c(R)&amp;#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&amp;#34;EOT&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	//q:$$SEND(&amp;#34;1H|\^&amp;amp;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	;q:$$SEND(&amp;#34;1H|\^&amp;amp;|||LIS||||||||LIS2-A|&amp;#34;_date)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s x=&amp;#34;&amp;#34; f FRAME=1:1 s x=$O(^TMPQUERY(MachID,4,x)) q:x=&amp;#34;&amp;#34;  q:$$SEND(FRAME#8_^TMPQUERY(MachID,4,x))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	w eot,*-3 d Trace^MI.MIF000(MachID,&amp;#34;EOT&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	k ^TMPTMIF(MachID,22)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	///发送字符串
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SEND(str)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s str=str_cr_etx,chsum=$$CHSUM(str)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	i $c(R)=ack d Trace^MI.MIF000(MachID,&amp;#34;ACK&amp;#34;,&amp;#34;H&amp;lt;--M&amp;#34;) q 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	i $c(R)=eot d Trace^MI.MIF000(MachID,&amp;#34;EOT&amp;#34;,&amp;#34;H&amp;lt;--M&amp;#34;) q 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	d Trace^MI.MIF000(MachID,R,&amp;#34;H&amp;lt;--M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	q 1 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	///生成校验码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CHSUM(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	s z=$e(&amp;#34;0123456789ABCDEF&amp;#34;,z#256\16+1)_$e(&amp;#34;0123456789ABCDEF&amp;#34;,z#16+1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	q z    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	///发送回应符到仪器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ACK	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w ack,*-3 d Trace^MI.MIF000(MachID,&amp;#34;ACK&amp;#34;,&amp;#34;H--&amp;gt;M&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CHANGEEPIS(mi,epis)  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 	//根据流水号找检测号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    S DATA=$zd($h,8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s mi=$g(mi),epis=$g(epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s VisitNumberReportDR=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	b ;//^dbo.RPVisitNumberReportI(&amp;#34;IndexEpisodeNo&amp;#34;,TransmitDate, WorkGroupMachineDR, EpisodeNo)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i &amp;#39;$l(mi) q epis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i &amp;#39;$l(epis) q epis    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s WorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(WorkGroupMachineDR) q epis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s VisitNumberReportDR=$o(^dbo.RPVisitNumberReportI(&amp;#34;IndexAcceptDate&amp;#34;,WorkGroupMachineDR,DATA,&amp;#34; &amp;#34;_epis,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(VisitNumberReportDR) q epis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s LSH=$lg($g(^dbo.RPVisitNumberReportD(VisitNumberReportDR)),8)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i &amp;#39;$l(LSH) q epis 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B ;LSH
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Q LSH
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//// w $$GetName^MI.MIFBECKImage(70,3003497773)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;//// 取病人姓名按拼音输出,&amp;#34;^&amp;#34;分隔
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GetName(MachID,epis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s epis = $g(epis),MachID=$g(MachID)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s SurName=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i $l(epis)=0 q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s VisitNumberDR = $o(^dbo.RPVisitNumberI(&amp;#34;IndexVisitNumber&amp;#34;,##Class(LIS.Util.Common).IndexData(epis),&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i &amp;#39;$l(VisitNumberDR) q &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    //标本信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s RPVisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s SurName=$lg(RPVisitNumberData,13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i SurName&amp;#39;=&amp;#34;&amp;#34; s SurName=$$GetCNCODE(SurName,3,&amp;#34;^&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    q SurName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// Description:返回汉字的编码信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// Input：	HANZI:汉字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 			FLAG:返回何种编码(1:ASC码,2:汉字,3:拼音,4:首拼,5:四角码6:五笔码7:区位码8:笔划数9:郑码)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 			SPLIT:分割符(可以为空)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// Output：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 	非0:返回编码信息:ASC码^汉字^拼音^首拼^四角码^五笔码^区位码^笔划数^郑码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// 	0：未找到编码信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// CreatDate:2011-06-08
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(web.DHCINSUPort).GetCNCODE(&amp;#34;东华&amp;#34;,4,&amp;#34;^&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/// w ##class(web.DHCINSUPort).GetCNCODE(&amp;#34;东华&amp;#34;,4,&amp;#34;&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GetCNCODE(HANZIS,FLAG, SPLIT)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Rtnstr=&amp;#34;0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q:$g(HANZIS)=&amp;#34;&amp;#34; Rtnstr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s Rtnstr=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	f i=1:1:$l(HANZIS) d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s HANZI=$EXTRACT(HANZIS,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.s ASCIICODE=$ASCII(HANZI)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.i $D(^DHCCharacterEncoding(&amp;#34;0&amp;#34;,&amp;#34;ASCII&amp;#34;,ASCIICODE))&amp;#39;=0 d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s rowid=$o(^DHCCharacterEncoding(&amp;#34;0&amp;#34;,&amp;#34;ASCII&amp;#34;,ASCIICODE,&amp;#34;&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s tmpstr=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s:FLAG=&amp;#34;&amp;#34; tmpstr=$g(^DHCCharacterEncoding(rowid))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s:FLAG&amp;#39;=&amp;#34;&amp;#34; tmpstr=$p(^DHCCharacterEncoding(rowid),&amp;#34;^&amp;#34;,FLAG)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..i Rtnstr=&amp;#34;&amp;#34;  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s Rtnstr=tmpstr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...s Rtnstr=Rtnstr_SPLIT_tmpstr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	.e  d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s:Rtnstr=&amp;#34;&amp;#34; Rtnstr=&amp;#34;?&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..s Rtnstr=Rtnstr_SPLIT_&amp;#34;?&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	q Rtnstr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;仪器文档&#34;&gt;仪器文档
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;assets/DXH900%20LIS%e6%94%af%e6%8c%81%e6%89%8b%e5%86%8cV1.2%2011-20250903174942-azwc9ua.docx&#34; &gt;DXH900 LIS支持手册V1.2 11.docx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>迪尔DL96A</title>
