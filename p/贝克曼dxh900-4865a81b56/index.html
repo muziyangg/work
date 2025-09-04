@@ -10,7 +10,7 @@
 <meta property='og:description' content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n">
 <meta property='og:url' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/'>
 <meta property='og:site_name' content='木子洋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='贝克曼仪器' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-03T23:20:57&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='贝克曼仪器' /><meta property='article:published_time' content='2025-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-04T07:50:43&#43;00:00'/><meta property='og:image' content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
 <meta name="twitter:title" content="贝克曼DXH900">
 <meta name="twitter:description" content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
@@ -262,11 +262,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li><a href="#接口说明">接口说明</a></li>
-      </ol>
-    </li>
+    <li><a href="#接口说明">接口说明</a></li>
     <li><a href="#仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong></a></li>
     <li><a href="#仪器接口说明">仪器接口说明</a></li>
     <li><a href="#串口盒子配置">串口盒子配置</a></li>
@@ -349,8 +345,8 @@
             
             
                         最后更新于
-                        <time class="article-time--updated" datetime="2025-09-03 23:20:57 &#43;0000 UTC" title="2025-09-03 23:20:57 &#43;0000 UTC">
-                            2025-09-03 23:20:57
+                        <time class="article-time--updated" datetime="2025-09-04 07:50:43 &#43;0000 UTC" title="2025-09-04 07:50:43 &#43;0000 UTC">
+                            2025-09-04 07:50:43
                         </time>
 			
 			
@@ -365,7 +361,7 @@
 
 
 					<time class="article-words">
-						5269字
+						5284字
 					</time>
 				</div>
 			
@@ -399,8 +395,8 @@
     <section class="article-content">
     
     
-    <h3 id="接口说明">接口说明
-</h3><div class="table-wrapper"><table>
+    <h2 id="接口说明">接口说明
+</h2><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th style="text-align: left">仪器厂商</th>
@@ -1072,7 +1068,17 @@
 </div>
 </div><h2 id="附录">附录
 </h2><h3 id="仪器文档">仪器文档
-</h3><p><a class="link" href="assets/DXH900%20LIS%e6%94%af%e6%8c%81%e6%89%8b%e5%86%8cV1.2%2011-20250903174942-azwc9ua.docx" >DXH900 LIS支持手册V1.2 11.docx</a></p>
+</h3><p><a class="link" href="assets/DXH900%20LIS%e6%94%af%e6%8c%81%e6%89%8b%e5%86%8cV1.2%2011.pdf" >DXH900 LIS支持手册V1.2 11.pdf</a> <a href="assets/DXH900%20LIS支持手册V1.2%2011.pdf" 
+download="DXH900 LIS支持手册V1.2 11.pdf"
+class="pdf-download" style="margin-left: 10px;">
+<img src="/icons/pdf.svg" alt="PDF文件" style="width:16px; height:16px; margin-right:5px;">
+点击下载pdf
+</a> <a href="assets/DXH900%20LIS支持手册V1.2%2011-20250903174942-azwc9ua.docx" 
+download="DXH900 LIS支持手册V1.2 11.docx"
+class="docx-download" style="margin-left: 10px;">
+<img src="/icons/word.svg" alt="DOCX文件" style="width:16px; height:16px; margin-right:5px;">
+点击下载docx
+</a></p>
 <p>‍</p>
 
 </section>
