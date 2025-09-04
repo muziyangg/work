@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://work.717170.xyz/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/scss/style.min.03a781d9157f24b812ddd138de5660e9264f58b2adb326fa7d814bcd56b0e29c.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="记录制作的接口文件和功能。\n">
 <meta property='og:url' content='https://work.717170.xyz/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='木子洋'>
@@ -239,7 +239,444 @@
     </ol>
 </aside>
 
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <div class="widget search-widget">
+    <div class="search-box">
+        <form class="search-form widget">
+            <p>
+                <input type="text" class="search-input" placeholder="搜索本页内容..." />
+                <button type="button" title="搜索" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </p>
+        </form>
+        <div class="search-results" style="display: none !important;"></div>
+        <div class="search-stats"></div>
+    </div>
     
+    <div class="search-navigation">
+        <button class="nav-button" id="prev-match" aria-label="上一个匹配项">
+            <img src="/icons/up.svg" alt="上一个匹配项" width="16" height="16">
+        </button>
+        <span id="match-counter"></span>
+        <button class="nav-button" id="next-match" aria-label="下一个匹配项">
+            <img src="/icons/down.svg" alt="下一个匹配项" width="16" height="16">
+        </button>
+    </div>
+</div>
+
+<style>
+ 
+.search-widget {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-form {
+    position: relative;
+    --button-size: 80px;
+    margin-bottom: 1rem;
+}
+
+.search-form.widget {
+    --button-size: 60px;
+}
+
+.search-form.widget input {
+    padding: 15px 20px;
+    height: auto;
+}
+
+.search-form p {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: var(--card-background);
+    box-shadow: var(--shadow-l1);
+    color: var(--card-text-color-main);
+    width: 100%;
+    border: 1px solid var(--card-border-color);
+    -webkit-appearance: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    font-size: 1.5rem !important;
+    min-height: 48px;
+}
+
+.search-input::placeholder {
+    font-size: 1.5rem;
+    color: var(--card-text-color-tertiary);
+    opacity: 1;
+}
+
+.search-input:focus {
+    outline: 0;
+    box-shadow: var(--shadow-l2);
+    border-color: var(--primary-color);
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 24px;
+    height: 48px;
+    width: var(--button-size);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px;
+}
+
+.search-button:focus svg {
+    stroke-width: 2;
+    color: var(--accent-color);
+}
+
+.search-button svg {
+    color: var(--card-text-color-secondary);
+    stroke-width: 1.33;
+    transition: all 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.search-stats {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--card-text-color-tertiary);
+}
+
+.search-navigation {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 8px;
+    background: var(--card-background-secondary);
+    border-radius: var(--card-border-radius);
+}
+
+.nav-button {
+    padding: 5px 10px;
+    background: #2c559c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-button:hover {
+    background: #1e3d76;
+}
+
+.nav-button:disabled {
+    background: var(--card-text-color-tertiary);
+    cursor: not-allowed;
+}
+
+.nav-button img {
+    filter: invert(70%);
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover img {
+    opacity: 0.9;
+}
+
+.nav-button:disabled img {
+    filter: invert(40%);
+}
+
+#match-counter {
+    font-size: 14px;
+    color: var(--card-text-color-tertiary);
+}
+
+.search-highlight {
+    background-color: #ffeb3b;
+    padding: 0 2px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.search-highlight.current {
+    background-color: #ff9800;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('.search-widget .search-input');
+    const searchResults = document.querySelector('.search-widget .search-results');
+    const searchStats = document.querySelector('.search-widget .search-stats');
+    const searchNav = document.querySelector('.search-widget .search-navigation');
+    const prevButton = document.querySelector('.search-widget #prev-match');
+    const nextButton = document.querySelector('.search-widget #next-match');
+    const matchCounter = document.querySelector('.search-widget #match-counter');
+    const searchForm = document.querySelector('.search-form');
+    const searchButton = document.querySelector('.search-button');
+    
+    let currentMatches = [];
+    let currentMatchIndex = -1;
+    let searchDebounceTimer = null;
+    const DEBOUNCE_DELAY = 1000;
+    
+    
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+    
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim();
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+            handleSearchInput(searchTerm);
+        }, DEBOUNCE_DELAY);
+    });
+    
+    
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault(); 
+            const searchTerm = this.value.trim();
+            
+            
+            clearTimeout(searchDebounceTimer);
+            
+            
+            if (currentMatches.length > 0) {
+                currentMatchIndex = (currentMatchIndex + 1) % currentMatches.length;
+                navigateToMatch();
+            } 
+            
+            else if (searchTerm.length >= 1) {
+                handleSearchInput(searchTerm);
+            }
+        }
+    });
+    
+    
+    searchButton.addEventListener('click', function() {
+        clearTimeout(searchDebounceTimer);
+        const searchTerm = searchInput.value.trim();
+        handleSearchInput(searchTerm);
+    });
+    
+    
+    function handleSearchInput(term) {
+        if (term.length < 1) {
+            resetSearch();
+            return;
+        }
+        performSearch(term);
+    }
+    
+    
+    function resetSearch() {
+        searchResults.style.display = 'none';
+        searchNav.style.display = 'none';
+        clearHighlights();
+        currentMatches = [];
+        currentMatchIndex = -1;
+        searchStats.textContent = '';
+    }
+    
+    
+    function performSearch(term) {
+        clearHighlights();
+        currentMatches = [];
+        currentMatchIndex = -1;
+        
+        const articleContent = document.querySelector('.article-content');
+        if (!articleContent) return;
+        
+        const textNodes = getTextNodes(articleContent);
+        
+        textNodes.forEach(node => {
+            const text = node.textContent;
+            const regex = new RegExp(term, 'gi');
+            let match;
+            
+            while ((match = regex.exec(text)) !== null) {
+                if (match.index >= 0 && match.index + match[0].length <= text.length) {
+                    currentMatches.push({
+                        node: node,
+                        offset: match.index,
+                        length: match[0].length,
+                        text: match[0]
+                    });
+                }
+                if (match.index === regex.lastIndex) {
+                    regex.lastIndex++;
+                }
+            }
+        });
+        
+        displaySearchResults(term);
+        highlightMatches();
+        updateNavigation();
+        
+        
+        if (currentMatches.length > 0) {
+            currentMatchIndex = 0;
+            navigateToMatch();
+        }
+    }
+    
+    
+    function getTextNodes(element) {
+        const textNodes = [];
+        const walker = document.createTreeWalker(
+            element, 
+            NodeFilter.SHOW_TEXT, 
+            {
+                acceptNode: function(node) {
+                    if (node.parentNode.classList.contains('search-highlight') ||
+                        node.parentNode.tagName === 'CODE' || 
+                        node.parentNode.tagName === 'PRE') {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (node.textContent.trim().length === 0) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        let node;
+        while ((node = walker.nextNode())) {
+            textNodes.push(node);
+        }
+        
+        return textNodes;
+    }
+    
+    
+    function displaySearchResults(term) {
+        if (currentMatches.length === 0) {
+            searchStats.textContent = `未找到"${term}"的匹配结果`;
+            searchNav.style.display = 'none';
+            return;
+        }
+        
+        searchStats.textContent = `找到${currentMatches.length}个"${term}"的匹配结果`;
+        searchNav.style.display = 'flex';
+    }
+    
+    
+    function highlightMatches() {
+        currentMatches.forEach(match => {
+            try {
+                const node = match.node;
+                const textLength = node.textContent.length;
+                
+                if (match.offset < 0 || match.offset >= textLength) {
+                    console.warn('无效的匹配偏移量', match);
+                    return;
+                }
+                
+                const endOffset = Math.min(match.offset + match.length, textLength);
+                
+                const range = document.createRange();
+                range.setStart(node, match.offset);
+                range.setEnd(node, endOffset);
+                
+                const highlight = document.createElement('span');
+                highlight.className = 'search-highlight';
+                range.surroundContents(highlight);
+            } catch (e) {
+                console.error('高亮匹配项失败:', e, match);
+            }
+        });
+    }
+    
+    
+    function clearHighlights() {
+        const highlights = document.querySelectorAll('.search-highlight');
+        highlights.forEach(highlight => {
+            const parent = highlight.parentNode;
+            const textNode = document.createTextNode(highlight.textContent);
+            parent.replaceChild(textNode, highlight);
+            parent.normalize();
+        });
+    }
+    
+    
+    function updateNavigation() {
+        matchCounter.textContent = currentMatches.length > 0 ? 
+            `${currentMatchIndex + 1} / ${currentMatches.length}` : 
+            '无匹配结果';
+        
+        prevButton.disabled = currentMatches.length === 0;
+        nextButton.disabled = currentMatches.length === 0;
+    }
+    
+    
+    nextButton.addEventListener('click', function() {
+        if (currentMatches.length === 0) return;
+        currentMatchIndex = (currentMatchIndex + 1) % currentMatches.length;
+        navigateToMatch();
+    });
+    
+    
+    prevButton.addEventListener('click', function() {
+        if (currentMatches.length === 0) return;
+        currentMatchIndex = (currentMatchIndex - 1 + currentMatches.length) % currentMatches.length;
+        navigateToMatch();
+    });
+    
+    
+    function navigateToMatch() {
+        if (currentMatchIndex < 0 || currentMatchIndex >= currentMatches.length) return;
+        
+        const highlights = document.querySelectorAll('.search-highlight');
+        if (highlights.length > 0 && currentMatchIndex < highlights.length) {
+            highlights.forEach(h => h.classList.remove('current'));
+            highlights[currentMatchIndex].classList.add('current');
+            highlights[currentMatchIndex].scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+        
+        updateNavigation();
+    }
+    
+    
+    searchNav.style.display = 'none';
+});
+</script>
+    
+            
+        
+            
+                
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">

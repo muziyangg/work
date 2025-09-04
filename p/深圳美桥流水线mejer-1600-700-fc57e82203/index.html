@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://work.717170.xyz/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/'>
 
-<link rel="stylesheet" href="/scss/style.min.9f449ccc662f48c455f81316fd5cb87099956cabbb7a108c4681662ea647628e.css"><meta property='og:title' content="深圳美桥流水线MeJer-1600+700">
+<link rel="stylesheet" href="/scss/style.min.03a781d9157f24b812ddd138de5660e9264f58b2adb326fa7d814bcd56b0e29c.css"><meta property='og:title' content="深圳美桥流水线MeJer-1600+700">
 <meta property='og:description' content="接口说明 仪器厂商 深圳美桥MeJer-1600\n仪器型号 深圳美桥MeJer-1600\n通讯方式 单向☑|双向|主动上传\n仪器类型 尿常规尿沉渣流水线 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口☑|网口|监听文件|数据库|其他 连接方式：HL7协议|ASTM协议|监听文件|数据库|其他☑ 仪器接口说明 附带双向说明，未写 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 仪器图片 仪器配置 数据格式 项目通道号 修改记录 序号 日期 操作人 说明 1 2025-08-21 19:02:44\n杨浩然 仪器接口程序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 MIFFUS3000HL7(mi) s mi=$g(mi) S ^TMPMACH10(mi,104)=$H i &#39;$l(mi) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23) s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1 s SB=$C(11),EB=$C(28),CR=$c(13) s MSH=&#34;MSH|^~\\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34; S ^TMPMACH10(mi,102)=$H i $$Start^MI.MIF000(mi) q f d Main i $$Stop^MI.MIF000(mi) q c Port q ErrHandler h 10 s iError=+$g(iError)+1 i iError&gt;100 s ret=$$Stop^MI.MIF000(mi) q d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;) q Main SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0 s record=$$Read^MI.MIF000(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q ;s record=$tr(record,&#34;*&#34;,&#34; &#34;) d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;) s (sample,epis,surname,result,date,time,QC)=&#34;&#34; //R0123□□□□□□□□□□□□□0101010005v s Deli=$c(13,10) f reci=1:1:$l(record,&#34;]&#34;){ s recordi=$p(record,&#34;]&#34;,reci) d Trace^MI.MIF000(mi,recordi,&#34;recordi&#34;) s type=$e($p(recordi,&#34;[&#34;,1),*-1,*) i type=&#34;NZ&#34;{ s NZ=$p(recordi,&#34;[&#34;,2) f i=1:1:$l(NZ,Deli) d .s rec=$p(NZ,Deli,i) .i i=2 s epis=rec .s code=$tr($tr($e(rec,1,4),&#34; &#34;),&#34;*&#34;) .i ((code=&#34;URO&#34;)||(code=&#34;pH&#34;)||(code=&#34;SG&#34;)) d ..s res=$tr($e(rec,10,*),&#34; &#34;) .e d ..s res=$tr($e(rec,5,9),&#34; &#34;) .i $l(code),$l(res) s result=result_code_$c(92)_res_$c(44) i $l(epis) s epis=+epis i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC) } i type=&#34;CZ&#34;{ s CZ=$p(recordi,&#34;[&#34;,2) s (sample,epis,surname,result,date,time,QC)=&#34;&#34; f i=1:1:$l(CZ,Deli) d .s rec=$p(CZ,Deli,i) .i i=3 s epis=rec .s code=$tr($p(rec,&#34; &#34;,1),&#34;*&#34;) .s res=$p(rec,&#34; &#34;,2) .i $l(code),$l(res) s result=result_code_$c(92)_res_$c(44) i $l(epis) s epis=+epis i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC) } } /* f i=1:1:$l(record,$c(13,10)) d .s rec=$p(record,$c(13,10),i) .d Trace^MI.MIF000(mi,rec,&#34;rec&#34;) .i i=2 s epis=$tr(rec,&#34; &#34;) .s code=$tr($e(rec,1,4),&#34; &#34;) .s codeflag=1 .i ((code=&#34;URO&#34;)||(code=&#34;pH&#34;)||(code=&#34;SG&#34;)) d ..s res=$tr($e(rec,10,*),&#34; &#34;) ..s codeflag=2 .i codeflag=1 d ..s res=$tr($e(rec,5,10),&#34; &#34;) .s result=result_code_$c(92)_res_$c(44) d Trace^MI.MIF000(mi,epis_&#34;$$&#34;_result,&#34;Result&#34;) i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC) */ q 附录 监听接口 未写 记录双向上传数据库，尿常规 1 ，全套 2，尿沉渣 3\n">
 <meta property='og:url' content='https://work.717170.xyz/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/'>
 <meta property='og:site_name' content='木子洋'>
@@ -241,6 +241,436 @@
 </aside>
 
     <aside class="sidebar right-sidebar sticky">
+        
+            
+                <div class="widget search-widget">
+    <div class="search-box">
+        <form class="search-form widget">
+            <p>
+                <input type="text" class="search-input" placeholder="搜索本页内容..." />
+                <button type="button" title="搜索" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </p>
+        </form>
+        <div class="search-results" style="display: none !important;"></div>
+        <div class="search-stats"></div>
+    </div>
+    
+    <div class="search-navigation">
+        <button class="nav-button" id="prev-match" aria-label="上一个匹配项">
+            <img src="/icons/up.svg" alt="上一个匹配项" width="16" height="16">
+        </button>
+        <span id="match-counter"></span>
+        <button class="nav-button" id="next-match" aria-label="下一个匹配项">
+            <img src="/icons/down.svg" alt="下一个匹配项" width="16" height="16">
+        </button>
+    </div>
+</div>
+
+<style>
+ 
+.search-widget {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-form {
+    position: relative;
+    --button-size: 80px;
+    margin-bottom: 1rem;
+}
+
+.search-form.widget {
+    --button-size: 60px;
+}
+
+.search-form.widget input {
+    padding: 15px 20px;
+    height: auto;
+}
+
+.search-form p {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: var(--card-background);
+    box-shadow: var(--shadow-l1);
+    color: var(--card-text-color-main);
+    width: 100%;
+    border: 1px solid var(--card-border-color);
+    -webkit-appearance: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    font-size: 1.5rem !important;
+    min-height: 48px;
+}
+
+.search-input::placeholder {
+    font-size: 1.5rem;
+    color: var(--card-text-color-tertiary);
+    opacity: 1;
+}
+
+.search-input:focus {
+    outline: 0;
+    box-shadow: var(--shadow-l2);
+    border-color: var(--primary-color);
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 24px;
+    height: 48px;
+    width: var(--button-size);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0 10px;
+}
+
+.search-button:focus svg {
+    stroke-width: 2;
+    color: var(--accent-color);
+}
+
+.search-button svg {
+    color: var(--card-text-color-secondary);
+    stroke-width: 1.33;
+    transition: all 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.search-stats {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--card-text-color-tertiary);
+}
+
+.search-navigation {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 8px;
+    background: var(--card-background-secondary);
+    border-radius: var(--card-border-radius);
+}
+
+.nav-button {
+    padding: 5px 10px;
+    background: #2c559c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-button:hover {
+    background: #1e3d76;
+}
+
+.nav-button:disabled {
+    background: var(--card-text-color-tertiary);
+    cursor: not-allowed;
+}
+
+.nav-button img {
+    filter: invert(70%);
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover img {
+    opacity: 0.9;
+}
+
+.nav-button:disabled img {
+    filter: invert(40%);
+}
+
+#match-counter {
+    font-size: 14px;
+    color: var(--card-text-color-tertiary);
+}
+
+.search-highlight {
+    background-color: #ffeb3b;
+    padding: 0 2px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.search-highlight.current {
+    background-color: #ff9800;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('.search-widget .search-input');
+    const searchResults = document.querySelector('.search-widget .search-results');
+    const searchStats = document.querySelector('.search-widget .search-stats');
+    const searchNav = document.querySelector('.search-widget .search-navigation');
+    const prevButton = document.querySelector('.search-widget #prev-match');
+    const nextButton = document.querySelector('.search-widget #next-match');
+    const matchCounter = document.querySelector('.search-widget #match-counter');
+    const searchForm = document.querySelector('.search-form');
+    const searchButton = document.querySelector('.search-button');
+    
+    let currentMatches = [];
+    let currentMatchIndex = -1;
+    let searchDebounceTimer = null;
+    const DEBOUNCE_DELAY = 1000;
+    
+    
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+    
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.trim();
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = setTimeout(() => {
+            handleSearchInput(searchTerm);
+        }, DEBOUNCE_DELAY);
+    });
+    
+    
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault(); 
+            const searchTerm = this.value.trim();
+            
+            
+            clearTimeout(searchDebounceTimer);
+            
+            
+            if (currentMatches.length > 0) {
+                currentMatchIndex = (currentMatchIndex + 1) % currentMatches.length;
+                navigateToMatch();
+            } 
+            
+            else if (searchTerm.length >= 1) {
+                handleSearchInput(searchTerm);
+            }
+        }
+    });
+    
+    
+    searchButton.addEventListener('click', function() {
+        clearTimeout(searchDebounceTimer);
+        const searchTerm = searchInput.value.trim();
+        handleSearchInput(searchTerm);
+    });
+    
+    
+    function handleSearchInput(term) {
+        if (term.length < 1) {
+            resetSearch();
+            return;
+        }
+        performSearch(term);
+    }
+    
+    
+    function resetSearch() {
+        searchResults.style.display = 'none';
+        searchNav.style.display = 'none';
+        clearHighlights();
+        currentMatches = [];
+        currentMatchIndex = -1;
+        searchStats.textContent = '';
+    }
+    
+    
+    function performSearch(term) {
+        clearHighlights();
+        currentMatches = [];
+        currentMatchIndex = -1;
+        
+        const articleContent = document.querySelector('.article-content');
+        if (!articleContent) return;
+        
+        const textNodes = getTextNodes(articleContent);
+        
+        textNodes.forEach(node => {
+            const text = node.textContent;
+            const regex = new RegExp(term, 'gi');
+            let match;
+            
+            while ((match = regex.exec(text)) !== null) {
+                if (match.index >= 0 && match.index + match[0].length <= text.length) {
+                    currentMatches.push({
+                        node: node,
+                        offset: match.index,
+                        length: match[0].length,
+                        text: match[0]
+                    });
+                }
+                if (match.index === regex.lastIndex) {
+                    regex.lastIndex++;
+                }
+            }
+        });
+        
+        displaySearchResults(term);
+        highlightMatches();
+        updateNavigation();
+        
+        
+        if (currentMatches.length > 0) {
+            currentMatchIndex = 0;
+            navigateToMatch();
+        }
+    }
+    
+    
+    function getTextNodes(element) {
+        const textNodes = [];
+        const walker = document.createTreeWalker(
+            element, 
+            NodeFilter.SHOW_TEXT, 
+            {
+                acceptNode: function(node) {
+                    if (node.parentNode.classList.contains('search-highlight') ||
+                        node.parentNode.tagName === 'CODE' || 
+                        node.parentNode.tagName === 'PRE') {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (node.textContent.trim().length === 0) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        let node;
+        while ((node = walker.nextNode())) {
+            textNodes.push(node);
+        }
+        
+        return textNodes;
+    }
+    
+    
+    function displaySearchResults(term) {
+        if (currentMatches.length === 0) {
+            searchStats.textContent = `未找到"${term}"的匹配结果`;
+            searchNav.style.display = 'none';
+            return;
+        }
+        
+        searchStats.textContent = `找到${currentMatches.length}个"${term}"的匹配结果`;
+        searchNav.style.display = 'flex';
+    }
+    
+    
+    function highlightMatches() {
+        currentMatches.forEach(match => {
+            try {
+                const node = match.node;
+                const textLength = node.textContent.length;
+                
+                if (match.offset < 0 || match.offset >= textLength) {
+                    console.warn('无效的匹配偏移量', match);
+                    return;
+                }
+                
+                const endOffset = Math.min(match.offset + match.length, textLength);
+                
+                const range = document.createRange();
+                range.setStart(node, match.offset);
+                range.setEnd(node, endOffset);
+                
+                const highlight = document.createElement('span');
+                highlight.className = 'search-highlight';
+                range.surroundContents(highlight);
+            } catch (e) {
+                console.error('高亮匹配项失败:', e, match);
+            }
+        });
+    }
+    
+    
+    function clearHighlights() {
+        const highlights = document.querySelectorAll('.search-highlight');
+        highlights.forEach(highlight => {
+            const parent = highlight.parentNode;
+            const textNode = document.createTextNode(highlight.textContent);
+            parent.replaceChild(textNode, highlight);
+            parent.normalize();
+        });
+    }
+    
+    
+    function updateNavigation() {
+        matchCounter.textContent = currentMatches.length > 0 ? 
+            `${currentMatchIndex + 1} / ${currentMatches.length}` : 
+            '无匹配结果';
+        
+        prevButton.disabled = currentMatches.length === 0;
+        nextButton.disabled = currentMatches.length === 0;
+    }
+    
+    
+    nextButton.addEventListener('click', function() {
+        if (currentMatches.length === 0) return;
+        currentMatchIndex = (currentMatchIndex + 1) % currentMatches.length;
+        navigateToMatch();
+    });
+    
+    
+    prevButton.addEventListener('click', function() {
+        if (currentMatches.length === 0) return;
+        currentMatchIndex = (currentMatchIndex - 1 + currentMatches.length) % currentMatches.length;
+        navigateToMatch();
+    });
+    
+    
+    function navigateToMatch() {
+        if (currentMatchIndex < 0 || currentMatchIndex >= currentMatches.length) return;
+        
+        const highlights = document.querySelectorAll('.search-highlight');
+        if (highlights.length > 0 && currentMatchIndex < highlights.length) {
+            highlights.forEach(h => h.classList.remove('current'));
+            highlights[currentMatchIndex].classList.add('current');
+            highlights[currentMatchIndex].scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+        
+        updateNavigation();
+    }
+    
+    
+    searchNav.style.display = 'none';
+});
+</script>
+    
+            
         
             
                 
