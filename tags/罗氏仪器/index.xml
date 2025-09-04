@@ -3317,7 +3317,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;通过编号规则获取自动核收对应的流水号&#34;&gt;&lt;span id=&#34;20250403122745-22nhmpf&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;通过编号规则获取自动核收对应的流水号
+&lt;/div&gt;&lt;h3 id=&#34;20250403122745-22nhmpf&#34;&gt;通过编号规则获取自动核收对应的流水号
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;本方法通过维护编号规则，编号规则代码与工作小组代码相同时，从编号规则获取对应工作小组流水号。&lt;/p&gt;
 &lt;p&gt;避免核收失败流水号浪费造成跳号情况，本方法做出以下处理。&lt;/p&gt;
@@ -5118,7 +5118,7 @@
 &lt;/div&gt;&lt;h2 id=&#34;问题处理记录&#34;&gt;问题处理记录
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;本节点为接口使用过程中踩过的雷和遇到过的问题以及处理方案&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;无法及时读取文件处理造成获取结果过慢&#34;&gt;&lt;span id=&#34;20250403102148-sh95o3i&#34; style=&#34;display: none;&#34;&gt;&lt;/span&gt;无法及时读取文件处理造成获取结果过慢
+&lt;h3 id=&#34;20250403102148-sh95o3i&#34;&gt;无法及时读取文件处理造成获取结果过慢
 &lt;/h3&gt;&lt;p&gt;1.修改监听配置，允许同一台电脑上存在多个监听。（新版本监听支持，本接口对应使用软件在附件中）&lt;/p&gt;
 &lt;p&gt;监听中存在两个配置，&lt;strong&gt;AllowMultiOpen（是否允许多开，1允许，0不允许，默认不允许）&lt;/strong&gt; 和&lt;strong&gt;OpenMessageService（多开版本维护为0，如果是1的话会造成系统崩溃！！！如果是正常在用电脑，其中一个维护为1就可以，其他的一定要设置为0）&lt;/strong&gt; &lt;img src=&#34;https://work.717170.xyz/p/%E7%BD%97%E6%B0%8F%E6%B5%81%E6%B0%B4%E7%BA%BFit3000-4f6183cee7/assets/image-20250403103932-qy0x4j8.png&#34;
 	width=&#34;1401&#34;
