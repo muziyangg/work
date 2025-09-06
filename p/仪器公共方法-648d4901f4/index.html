@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/'>
 
-<link rel="stylesheet" href="/scss/style.min.1034928c5287fb6b474f5d52e71d04ed8d3c72bf1108ee93ad72da19ceed5388.css"><meta property='og:title' content="仪器公共方法">
+<link rel="stylesheet" href="/scss/style.min.403cb35b172dc427cceac60bb0b5e732e1d730897d66e25555a6c163b451a9c3.css"><meta property='og:title' content="仪器公共方法">
 <meta property='og:description' content=" 方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中\n公共方法 通过通道号获取检测项目 Code2TCDR 1 2 3 4 5 6 7 8 9 10 11 12 ClassMethod Code2TCDR(mi, code) { s mi=$g(mi),code=$g(code) s ret=&#34;&#34; i &#39;$l(mi) q ret i &#39;$l(code) q ret i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d .s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;)) .s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3) .s ret=TestCodeDR q ret } 保存架子号 SaveRackNo 20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据\n20250330 如果架子号相同时不增加标本操作日志\n">
 <meta property='og:url' content='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/'>
 <meta property='og:site_name' content='木子洋'>
@@ -2437,7 +2437,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.bb1eaf11044be5d45e9944395f8f492bb3f7541cae00b1624d206eac7546462c.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -2449,6 +2449,272 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(customFont);
     }());
 </script>
+
+<style>
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+        
+          
+          
+            @font-face {
+              font-family: 'Jnbbh jnbbhbold fontFont Jnbbh jnbbhbold fontFont';
+              src: url(https://work.717170.xyz/font/JNBBH/JNBBHBold.ttf) format('truetype');
+              font-weight: 700;
+              font-style: italic;
+            }
+          
+        
+      
+
+      :root {
+        
+          
+            --base-font-family: 'Jnbbh jnbbhbold fontFont Jnbbh jnbbhbold fontFont', sans-serif;
+            --code-font-family: 'Jnbbh jnbbhbold fontFont Jnbbh jnbbhbold fontFont', monospace;
+          
+        
+      }
+    
+  
+  
+  
+</style>
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+
+    
+    
+      
+      
+        
+        
+          
+          
+          
+          
+          
+          
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+          
+          
+          
+            
+            
+          
+        
+      
+    
+
+    
+    
+      
+    
+
+    
+      <style>
+        body {
+          background-image: url(https://work.717170.xyz/background/img/hash-26b35337aea87c2.png);
+          background-repeat: no-repeat;
+          background-position: center top;
+          background-size: cover;
+          
+            background-attachment: fixed;
+          
+        }
+      </style>
+    
+  
+
+    
+    
+	
+
+
+
+  
+    
+      <div id="particles-js"></div>
+      <script src=https://work.717170.xyz/background/particles.min.js></script>
+      <script>
+        particlesJS.load('particles-js', "https://work.717170.xyz/background/particlesjs-config.json", function() {
+          console.log('particles.js loaded - callback');
+        });
+      </script>
+      <style>
+        #particles-js {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          pointer-events: none;
+        }
+        
+        .main-content {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
+    
+  
 
 
 <script defer src="https://cn.vercount.one/js"></script>
