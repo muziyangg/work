@@ -1071,22 +1071,23 @@
             font-size: 12px;
         }
         
+         
         .page-link:not(.prev):not(.next):not(.dots) {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: transparent;  
+            border: none;  
             color: #333;
         }
         
+         
         .page-link.current {
             background-color: #007bff;
-            border-color: #007bff;
             color: white;
             font-weight: bold;
         }
         
-        .page-link:hover:not(.current):not(.disabled) {
+         
+        .page-link:not(.prev):not(.next):not(.dots):not(.current):hover {
             background-color: #f0f0f0;
-            border-color: #ccc;
         }
         
         .page-link.dots {
@@ -1120,6 +1121,8 @@
             text-align: center;
             height: 36px;
             box-sizing: border-box;
+            background-color: #fff;
+            color: #333;
         }
         
         #pageJumpInput:focus {
@@ -1182,9 +1185,52 @@
                 padding: 0;
             }
         }
+
+         
+        [data-scheme="dark"] {
+             
+            .page-link.prev,
+            .page-link.next {
+                background-color: #333;
+                color: #ddd;
+            }
+            
+             
+            .page-link:not(.prev):not(.next):not(.dots) {
+                color: #ddd;
+            }
+            
+             
+            .page-link:not(.prev):not(.next):not(.dots):not(.current):hover {
+                background-color: #444;
+            }
+            
+             
+            .page-link.dots {
+                color: #777;
+            }
+            
+             
+            .page-link.disabled {
+                color: #777;
+                background-color: #333;
+            }
+            
+             
+            #pageJumpInput {
+                background-color: #333;
+                border-color: #555;
+                color: #ddd;
+            }
+            
+             
+            .page-info {
+                color: #aaa;
+            }
+        }
     </style>
 
-<footer class="site-footer">
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
