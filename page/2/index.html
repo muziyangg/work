@@ -940,49 +940,57 @@
         
     </section>
 
-    <nav class='pagination'>
-        
-        
-            <a class='page-link prev' href='https://work.717170.xyz/page/1/'>上一页</a>
-        
+    <nav class='pagination-container'>
+        <div class='pagination'>
+            
+            
+                <a class='page-link prev' href='https://work.717170.xyz/page/1/'>
+                    <span class="icon">←</span>
+                    <span class="text">上一页</span>
+                </a>
+            
 
-        
-        
+            
+            
 
-        
             
-                <a class='page-link' href='https://work.717170.xyz/page/1/'>1</a>
+                
+                    <a class='page-link' href='https://work.717170.xyz/page/1/'>1</a>
+                
             
-        
+                
+                    <span class='page-link current'>2</span>
+                
             
-                <span class='page-link current'>2</span>
+                
+                    <a class='page-link' href='https://work.717170.xyz/page/3/'>3</a>
+                
             
-        
+                
+                    <a class='page-link' href='https://work.717170.xyz/page/4/'>4</a>
+                
             
-                <a class='page-link' href='https://work.717170.xyz/page/3/'>3</a>
-            
-        
-            
-                <a class='page-link' href='https://work.717170.xyz/page/4/'>4</a>
-            
-        
 
-        
-        
-            <a class='page-link next' href='https://work.717170.xyz/page/3/'>下一页</a>
-        
+            
+            
+                <a class='page-link next' href='https://work.717170.xyz/page/3/'>
+                    <span class="text">下一页</span>
+                    <span class="icon">→</span>
+                </a>
+            
 
-        
-        <div class="page-jump">
-            <input 
-                type="number" 
-                id="pageJumpInput" 
-                min="1" 
-                max="4" 
-                placeholder="2"
-                onkeypress="handlePageJump(event,  4 , 'https:\/\/work.717170.xyz\/')"
-            >
-            <span class="page-info">2 / 4</span>
+            
+            <div class="page-jump">
+                <input 
+                    type="number" 
+                    id="pageJumpInput" 
+                    min="1" 
+                    max="4" 
+                    value="2"
+                    onkeypress="handlePageJump(event,  4 , 'https:\/\/work.717170.xyz\/')"
+                >
+                <span class="page-info">/ 4</span>
+            </div>
         </div>
     </nav>
 
@@ -995,31 +1003,125 @@
                     window.location.href = url;
                 } else {
                     alert(`请输入有效的页码 (1-${totalPages})`);
-                    event.target.value = '';
+                    event.target.value = '2';
                 }
             }
         }
+        
+        
+        document.getElementById('pageJumpInput')?.addEventListener('focus', function() {
+            this.select();
+        });
     </script>
 
     <style>
+         
+        .pagination-container {
+            overflow-x: auto;
+            padding: 8px 0;
+            margin: 20px 0;
+            -webkit-overflow-scrolling: touch;  
+        }
+        
+         
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 6px;
+            padding: 0 8px;
+            margin: 0 auto;
+            list-style: none;
+            min-width: max-content;  
+        }
+        
+        .page-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            height: 36px;
+            padding: 0 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+            white-space: nowrap;  
+        }
+        
+         
+        .page-link.prev,
+        .page-link.next {
+            background-color: #f5f5f5;
+            color: #333;
+            gap: 4px;
+            padding: 0 12px;
+        }
+        
+         
+        .page-link.prev .icon,
+        .page-link.next .icon {
+            display: none;
+            font-size: 12px;
+        }
+        
+        .page-link:not(.prev):not(.next):not(.dots) {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+        
+        .page-link.current {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .page-link:hover:not(.current):not(.disabled) {
+            background-color: #f0f0f0;
+            border-color: #ccc;
+        }
+        
+        .page-link.dots {
+            border: none;
+            background: transparent;
+            color: #999;
+            cursor: default;
+            min-width: auto;
+        }
+        
+        .page-link.disabled {
+            color: #999;
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+        
+         
         .page-jump {
             display: flex;
             align-items: center;
-            margin-left: 15px;
-            gap: 8px;
+            margin-left: 10px;
+            gap: 6px;
+            white-space: nowrap;
         }
         
         #pageJumpInput {
-            width: 60px;
+            width: 50px;
             padding: 5px 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
             text-align: center;
+            height: 36px;
+            box-sizing: border-box;
         }
         
         #pageJumpInput:focus {
             outline: none;
             border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
         }
         
         .page-info {
@@ -1029,19 +1131,55 @@
         
          
         @media (max-width: 768px) {
-            .page-jump {
-                margin-left: 0;
-                margin-top: 10px;
-                justify-content: center;
-                width: 100%;
+            .pagination-container {
+                margin: 15px 0;
+                padding: 6px 0;
             }
             
             .pagination {
-                flex-direction: column;
-                align-items: center;
+                gap: 4px;
+            }
+            
+            .page-link {
+                min-width: 32px;
+                height: 32px;
+                font-size: 13px;
+                padding: 0 8px;
+            }
+            
+            #pageJumpInput {
+                width: 45px;
+                height: 32px;
+            }
+            
+            .page-jump {
+                margin-left: 6px;
+            }
+        }
+        
+         
+        @media (max-width: 480px) {
+             
+            .page-link.prev .icon,
+            .page-link.next .icon {
+                display: inline-block;
+                font-size: 14px;
+            }
+            
+             
+            .page-link.prev .text,
+            .page-link.next .text {
+                display: none;
+            }
+            
+            .page-link.prev,
+            .page-link.next {
+                min-width: 32px;
+                padding: 0;
             }
         }
     </style>
+
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
