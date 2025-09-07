@@ -15,7 +15,7 @@
 <meta name="twitter:description" content=" 通过接口测试仪器是否能传输到系统。\n如果日志中无传输日志则说明无传输，排查硬件问题。\n有传输的话则可根据传输日志解析。\n普通测试 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 MIFYHR(mi) s mi=$g(mi) S ^TMPMACH10(mi,104)=$H i &#39;$l(mi) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23) s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1 s SB=$C(11),EB=$C(28),CR=$c(13) s MSH=&#34;MSH|^~\\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34; S ^TMPMACH10(mi,102)=$H i $$Start^MI.MIF000(mi) q f d Main i $$Stop^MI.MIF000(mi) q c Port q ErrHandler h 10 s iError=+$g(iError)+1 i iError&gt;100 s ret=$$Stop^MI.MIF000(mi) q d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;) q Main SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0 s record=$$Read^MI.MIF000(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q ;s record=$tr(record,&#34;*&#34;,&#34; &#34;) d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;) s (sample,epis,surname,result,date,time,QC)=&#34;&#34; //R0123□□□□□□□□□□□□□0101010005v s epis=$TR($E(record,4,18),&#34; &#34;) s code=$E(record,19,20) s res=$TR($E(record,25,28),&#34;0&#34;) s result=code_$c(92)_res_$c(44) ;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC) q 要回复ACK版 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 MIFFUS3000HL7(mi) s mi=$g(mi) S ^TMPMACH10(mi,104)=$H i &#39;$l(mi) q s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符 s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符 s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符 s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符 s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10) //端口号 //控制字符 s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23) s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1 s SB=$C(11),EB=$C(28),CR=$c(13) s MSH=&#34;MSH|^~\\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34; S ^TMPMACH10(mi,102)=$H i $$Start^MI.MIF000(mi) q f d Main i $$Stop^MI.MIF000(mi) q c Port q ErrHandler h 10 s iError=+$g(iError)+1 i iError&gt;100 s ret=$$Stop^MI.MIF000(mi) q d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;) q Main SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0 s record=$$Read(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q ;s record=$tr(record,&#34;*&#34;,&#34; &#34;) d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;) ;d ACK s (sample,epis,surname,result,date,time,QC)=&#34;&#34; //R0123□□□□□□□□□□□□□0101010005v s epis=$TR($E(record,4,18),&#34; &#34;) s code=$E(record,19,20) s res=$TR($E(record,25,28),&#34;0&#34;) s result=code_$c(92)_res_$c(44) ;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC) q /// Creator： Huhm /// CreatDate： 20150528 /// Description: 从通讯端口读取数据 /// Table： 无 /// Input： 仪器ID,开始符,结束符,是否保存所有数据,是否显示控制字符,超时时间值 /// Output： 无 /// Return： 0 /// Others： Read(mi,StartChar,EndChar,AllData,ControlChar,TimeOut) n (mi,StartChar,EndChar,AllData,ControlChar,TimeOut) s StartChar=$g(StartChar),EndChar=$g(EndChar),AllData=$g(AllData),ControlChar=$g(ControlChar),TimeOut=$g(TimeOut) s (Line,Flag)=0 i &#39;$l(mi) q &#34;&#34; s:&#39;TimeOut TimeOut=10 s:&#39;$l(StartChar) Flag=1 SET $ZTRAP=&#34;ErrRead&#34;,$ECODE=&#34;&#34; //捕获错误开始 //循环读取一直读到字符包含结束字符 s Result=&#34;&#34; f r *x:TimeOut q:(&#34;,&#34;_EndChar_&#34;,&#34;)[(&#34;,&#34;_$c(x)_&#34;,&#34;) q:x=-1 i x d .d ACKE .//记录数据到globle .i $l($g(mi)),AllData=&#34;Y&#34; d ..i &#39;Line s Line=$o(^TMPMACHDATA(mi,99,&#34;&#34;),-1)+1 ..s ^TMPMACHDATA(mi,99,Line)=$g(^TMPMACHDATA(mi,99,Line))_$c(x) .//读的字符没包含开始字符就退出，不累积到要的数据里 .i &#39;Flag,(&#34;,&#34;_StartChar_&#34;,&#34;)[(&#34;,&#34;_$c(x)_&#34;,&#34;) s Flag=1 q .//是否要0-32的不可见字符 .i ControlChar=&#34;Y&#34;,x&lt;32 q .//累积数据 .i Flag s Result=Result_$c(x) q Result ACK\t; send &#39;ack&#39; to instrument s ack=$c(6) w ack,*-3 d Trace^MI.MIF000(mi,&#34;ACK&#34;,&#34;H--&gt;M&#34;) q ACKE\t; send &#39;ack&#39; to instrument s ack=$c(6) w ack,*-3 ;d Trace^MI.MIF000(mi,&#34;ACK&#34;,&#34;H--&gt;M&#34;) q ErrRead s Error=$ze s Max=200 s Date=$zd(+$h,3),Time=$zt($p($h,&#34;,&#34;,2)) s Num=$o(^TMPMACHDATA(+mi,98,&#34;&#34;),-1)+1,^TMPMACHDATA(+mi,98,Num)=Date_&#34; &#34;_Time_&#34; : Read : &#34;_Error f j=Num-Max:-1 q:&#39;$d(^TMPMACHDATA(+mi,98,j)) k ^TMPMACHDATA(+mi,98,j) h 3 q &#34;&#34; "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/img/title.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
-
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
     </head>
     <body class="
     article-page
@@ -813,6 +813,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <section class="article-content">
     
     
+    
+    
     <blockquote>
 <p>通过接口测试仪器是否能传输到系统。</p>
 <p>如果日志中无传输日志则说明无传输，排查硬件问题。</p>
@@ -1108,7 +1110,1495 @@ document.addEventListener('DOMContentLoaded', function() {
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <blockquote>
+<p>通过接口测试仪器是否能传输到系统。</p>
+<p>如果日志中无传输日志则说明无传输，排查硬件问题。</p>
+<p>有传输的话则可根据传输日志解析。</p></blockquote>
+<h3 id="普通测试">普通测试
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">MIFYHR(mi)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi) 
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,104)=$H
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q
+</span></span><span class="line"><span class="cl">	s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符
+</span></span><span class="line"><span class="cl">	s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符
+</span></span><span class="line"><span class="cl">	s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符
+</span></span><span class="line"><span class="cl">	s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符
+</span></span><span class="line"><span class="cl">	s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10)  //端口号
+</span></span><span class="line"><span class="cl">	//控制字符
+</span></span><span class="line"><span class="cl">  	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
+</span></span><span class="line"><span class="cl"> 	s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1
+</span></span><span class="line"><span class="cl"> 	s SB=$C(11),EB=$C(28),CR=$c(13)
+</span></span><span class="line"><span class="cl"> 	s MSH=&#34;MSH|^~\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34;
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,102)=$H
+</span></span><span class="line"><span class="cl">	i $$Start^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">	f  d Main i $$Stop^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">  	c Port
+</span></span><span class="line"><span class="cl">  	q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">ErrHandler
+</span></span><span class="line"><span class="cl">    h 10
+</span></span><span class="line"><span class="cl">    s iError=+$g(iError)+1
+</span></span><span class="line"><span class="cl">    i iError&gt;100 s ret=$$Stop^MI.MIF000(mi)  q
+</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;)
+</span></span><span class="line"><span class="cl">    q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Main   
+</span></span><span class="line"><span class="cl">	SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0
+</span></span><span class="line"><span class="cl">	s record=$$Read^MI.MIF000(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q
+</span></span><span class="line"><span class="cl">	;s record=$tr(record,&#34;*&#34;,&#34; &#34;)
+</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	s (sample,epis,surname,result,date,time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">	//R0123□□□□□□□□□□□□□0101010005v
+</span></span><span class="line"><span class="cl">	s epis=$TR($E(record,4,18),&#34; &#34;)
+</span></span><span class="line"><span class="cl">	s code=$E(record,19,20)
+</span></span><span class="line"><span class="cl">	s res=$TR($E(record,25,28),&#34;0&#34;)
+</span></span><span class="line"><span class="cl">	s result=code_$c(92)_res_$c(44)
+</span></span><span class="line"><span class="cl">	;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl"> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="要回复ack版">要回复ACK版
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">MIFFUS3000HL7(mi)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi) 
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,104)=$H
+</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q
+</span></span><span class="line"><span class="cl">	s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符
+</span></span><span class="line"><span class="cl">	s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符
+</span></span><span class="line"><span class="cl">	s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符
+</span></span><span class="line"><span class="cl">	s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符
+</span></span><span class="line"><span class="cl">	s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10)  //端口号
+</span></span><span class="line"><span class="cl">	//控制字符
+</span></span><span class="line"><span class="cl">  	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
+</span></span><span class="line"><span class="cl"> 	s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1
+</span></span><span class="line"><span class="cl"> 	s SB=$C(11),EB=$C(28),CR=$c(13)
+</span></span><span class="line"><span class="cl"> 	s MSH=&#34;MSH|^~\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34;
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,102)=$H
+</span></span><span class="line"><span class="cl">	i $$Start^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">	f  d Main i $$Stop^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">  	c Port
+</span></span><span class="line"><span class="cl">  	q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">ErrHandler
+</span></span><span class="line"><span class="cl">    h 10
+</span></span><span class="line"><span class="cl">    s iError=+$g(iError)+1
+</span></span><span class="line"><span class="cl">    i iError&gt;100 s ret=$$Stop^MI.MIF000(mi)  q
+</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;)
+</span></span><span class="line"><span class="cl">    q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Main   
+</span></span><span class="line"><span class="cl">  SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0
+</span></span><span class="line"><span class="cl">  s record=$$Read(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q
+</span></span><span class="line"><span class="cl">  ;s record=$tr(record,&#34;*&#34;,&#34; &#34;)
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  ;d ACK
+</span></span><span class="line"><span class="cl">  s (sample,epis,surname,result,date,time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  //R0123□□□□□□□□□□□□□0101010005v
+</span></span><span class="line"><span class="cl">  s epis=$TR($E(record,4,18),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  s code=$E(record,19,20)
+</span></span><span class="line"><span class="cl">  s res=$TR($E(record,25,28),&#34;0&#34;)
+</span></span><span class="line"><span class="cl">  s result=code_$c(92)_res_$c(44)
+</span></span><span class="line"><span class="cl">  ;i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">      /// Creator：      Huhm
+</span></span><span class="line"><span class="cl">     /// CreatDate：    20150528
+</span></span><span class="line"><span class="cl">     /// Description:   从通讯端口读取数据
+</span></span><span class="line"><span class="cl">     /// Table：        无
+</span></span><span class="line"><span class="cl">     /// Input：        仪器ID,开始符,结束符,是否保存所有数据,是否显示控制字符,超时时间值
+</span></span><span class="line"><span class="cl">     /// Output：       无
+</span></span><span class="line"><span class="cl">     /// Return：       0
+</span></span><span class="line"><span class="cl">     /// Others：      
+</span></span><span class="line"><span class="cl">Read(mi,StartChar,EndChar,AllData,ControlChar,TimeOut) n (mi,StartChar,EndChar,AllData,ControlChar,TimeOut)
+</span></span><span class="line"><span class="cl">    s StartChar=$g(StartChar),EndChar=$g(EndChar),AllData=$g(AllData),ControlChar=$g(ControlChar),TimeOut=$g(TimeOut)
+</span></span><span class="line"><span class="cl">    s (Line,Flag)=0
+</span></span><span class="line"><span class="cl">    i &#39;$l(mi) q &#34;&#34;
+</span></span><span class="line"><span class="cl">    s:&#39;TimeOut TimeOut=10 
+</span></span><span class="line"><span class="cl">    s:&#39;$l(StartChar) Flag=1
+</span></span><span class="line"><span class="cl">    SET $ZTRAP=&#34;ErrRead&#34;,$ECODE=&#34;&#34;  //捕获错误开始 
+</span></span><span class="line"><span class="cl">    //循环读取一直读到字符包含结束字符
+</span></span><span class="line"><span class="cl">    s Result=&#34;&#34; f  r *x:TimeOut q:(&#34;,&#34;_EndChar_&#34;,&#34;)[(&#34;,&#34;_$c(x)_&#34;,&#34;)  q:x=-1  i x d
+</span></span><span class="line"><span class="cl">    .d ACKE
+</span></span><span class="line"><span class="cl">    .//记录数据到globle
+</span></span><span class="line"><span class="cl">    .i $l($g(mi)),AllData=&#34;Y&#34; d
+</span></span><span class="line"><span class="cl">    ..i &#39;Line s Line=$o(^TMPMACHDATA(mi,99,&#34;&#34;),-1)+1
+</span></span><span class="line"><span class="cl">    ..s ^TMPMACHDATA(mi,99,Line)=$g(^TMPMACHDATA(mi,99,Line))_$c(x)
+</span></span><span class="line"><span class="cl">    .//读的字符没包含开始字符就退出，不累积到要的数据里
+</span></span><span class="line"><span class="cl">    .i &#39;Flag,(&#34;,&#34;_StartChar_&#34;,&#34;)[(&#34;,&#34;_$c(x)_&#34;,&#34;) s Flag=1 q
+</span></span><span class="line"><span class="cl">    .//是否要0-32的不可见字符
+</span></span><span class="line"><span class="cl">    .i ControlChar=&#34;Y&#34;,x&lt;32 q
+</span></span><span class="line"><span class="cl">    .//累积数据
+</span></span><span class="line"><span class="cl">    .i Flag s Result=Result_$c(x)
+</span></span><span class="line"><span class="cl">    q Result 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">ACK	    ; send &#39;ack&#39; to instrument
+</span></span><span class="line"><span class="cl">	s ack=$c(6)
+</span></span><span class="line"><span class="cl">   w ack,*-3
+</span></span><span class="line"><span class="cl">   d Trace^MI.MIF000(mi,&#34;ACK&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">   q
+</span></span><span class="line"><span class="cl">ACKE	    ; send &#39;ack&#39; to instrument
+</span></span><span class="line"><span class="cl">	s ack=$c(6)
+</span></span><span class="line"><span class="cl">   w ack,*-3
+</span></span><span class="line"><span class="cl">   ;d Trace^MI.MIF000(mi,&#34;ACK&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">   q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">ErrRead
+</span></span><span class="line"><span class="cl">    s Error=$ze
+</span></span><span class="line"><span class="cl">    s Max=200
+</span></span><span class="line"><span class="cl">    s Date=$zd(+$h,3),Time=$zt($p($h,&#34;,&#34;,2))
+</span></span><span class="line"><span class="cl">    s Num=$o(^TMPMACHDATA(+mi,98,&#34;&#34;),-1)+1,^TMPMACHDATA(+mi,98,Num)=Date_&#34; &#34;_Time_&#34; : Read : &#34;_Error
+</span></span><span class="line"><span class="cl">    f j=Num-Max:-1 q:&#39;$d(^TMPMACHDATA(+mi,98,j))  k ^TMPMACHDATA(+mi,98,j)
+</span></span><span class="line"><span class="cl">    h 3     
+</span></span><span class="line"><span class="cl">    q &#34;&#34; 
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    
+    
+    
+    
 </section>
+
+
+<style>
+   
+  .document-link {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+    padding: 0 2px;
+  }
+  
+   
+  .docx-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .doc-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .pdf-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .xls-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .xlsx-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .ppt-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+  .pptx-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+   
+  .other-link::after { content: "📎"; font-size: 0.8em; margin-left: 4px; }
+
+
+   
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-container {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-overlay.active .modal-container {
+    transform: translateY(0);
+  }
+  
+  .modal-header {
+    padding: 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin: 0 16px;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .search-input.loading {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='16 12 12 8 8 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 32px;
+  }
+  
+  .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nav-button {
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    pointer-events: auto !important;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background: #e0e0e0;
+  }
+  
+  .nav-button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+  
+   
+  .nav-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    color: #333;  
+    transition: color 0.2s;
+  }
+  
+  .nav-button:hover:not(:disabled) .icon {
+    color: #000;  
+  }
+  
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  
+  .search-results.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .modal-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  
+  .modal-footer {
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background: #5a6268;
+  }
+  
+  .btn-close {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-close:hover {
+    background: #5a6268;
+  }
+  
+  .highlight {
+    background-color: #fff3cd;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  
+  .highlight.active {
+    background-color: #ffeeba;
+    outline: 2px solid #ffc107;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { outline-color: #ffc107; }
+    50% { outline-color: #ffecb5; }
+    100% { outline-color: #ffc107; }
+  }
+
+
+   
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background-color: white;
+  }
+  
+  table th, 
+  table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    word-wrap: break-word;
+    vertical-align: top;
+  }
+  
+  table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  table tr:hover {
+    background-color: #f1f3f5;
+  }
+  
+   
+  table .highlight {
+    display: inline;
+    margin: 0 -2px;
+    padding: 0 2px;
+  }
+  
+   
+  table [id^="search-match-"] {
+    position: relative;
+  }
+  
+   
+  .pdf-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-embed-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-view-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  @media (max-width: 768px) {
+    .table-wrapper {
+      margin: 12px 0;
+      border-radius: 2px;
+    }
+    
+    table th, 
+    table td {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+    
+     
+    .nav-button .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+
+</style>
+
+
+<div class="modal-overlay" id="document-modal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">文档预览</h3>
+      <div class="modal-actions">
+        
+        <div class="search-container" id="search-container">
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文档内容...">
+          <div class="search-results" id="search-results">
+            <span id="match-count">未搜索</span>
+            <div class="search-controls">
+              <button class="nav-button" id="prev-match" title="上一个匹配项 (Shift+Enter)">
+                
+                <img src="/icons/up.svg" alt="上一个匹配项" class="icon" />
+              </button>
+              <button class="nav-button" id="next-match" title="下一个匹配项 (Enter)">
+                
+                <img src="/icons/down.svg" alt="下一个匹配项" class="icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-close" id="close-modal">关闭</button>
+      </div>
+    </div>
+    <div class="modal-body" id="document-preview">
+      
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="open-new-tab">新标签页打开</button>
+      <a href="" class="btn btn-primary" id="download-link" download>下载文档</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const documentConfig = {
+        defaultAction: "map[action:modal]",
+        docx: { action: "mammoth" },
+        doc: { action: "officeViewmodal" },
+        pdf: { action: "modal" },
+        xls: { action: "officeView" },
+        xlsx: { action: "officeViewmodal" },
+        ppt: { action: "officeEmbed" },
+        pptx: { action: "officeEmbed" }
+    };
+
+
+    
+    const modal = document.getElementById('document-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const previewContainer = document.querySelector('#document-modal #document-preview');
+    const closeModalBtn = document.getElementById('close-modal');
+    const downloadLink = document.getElementById('download-link');
+    const openNewTabBtn = document.getElementById('open-new-tab');
+    const searchInput = document.getElementById('search-input');
+    const searchContainer = document.getElementById('search-container');
+    const searchResults = document.getElementById('search-results');
+    const matchCount = document.getElementById('match-count');
+    const prevMatchBtn = document.getElementById('prev-match');
+    const nextMatchBtn = document.getElementById('next-match');
+    
+    
+    let currentDocContent = null;
+    let currentDocType = null;
+    let currentDocUrl = null;
+    let currentSearchTerm = '';
+    let matchCountTotal = 0;
+    let currentMatchIndex = -1;
+    let isSearching = false;
+    let searchTimeout = null;
+    let currentAction = null; 
+    const SEARCH_DELAY = 300;
+    const MATCH_ID_PREFIX = 'search-match-';
+    const MAMMOTH_SUPPORTED_TYPES = ['docx', 'xlsx', 'pptx']; 
+    
+    
+    if (!modal || !previewContainer || !searchResults || !prevMatchBtn || !nextMatchBtn) {
+        console.error('关键元素未找到，请检查HTML结构');
+        return;
+    }
+
+
+    
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        previewContainer.innerHTML = '';
+        updateSearchUI();
+    }
+
+
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        resetSearch();
+        previewContainer.innerHTML = '';
+        currentDocContent = null;
+        currentDocType = null;
+        currentDocUrl = null;
+        currentAction = null;
+    }
+
+
+    
+    function resetSearch() {
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+            searchTimeout = null;
+        }
+        
+        searchInput.classList.remove('loading');
+        searchInput.value = '';
+        currentSearchTerm = '';
+        matchCountTotal = 0;
+        currentMatchIndex = -1;
+        
+        
+        if (previewContainer) {
+            const highlights = previewContainer.querySelectorAll('.highlight');
+            highlights.forEach(el => {
+                const textNode = document.createTextNode(el.textContent);
+                el.parentNode.replaceChild(textNode, el);
+            });
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function updateSearchUI() {
+        
+        const showSearch = currentAction === 'mammoth' && 
+                          MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);
+                          
+        searchContainer.style.display = showSearch ? 'block' : 'none';
+        
+        
+        if (currentSearchTerm === '' && matchCountTotal === 0) {
+            searchResults.classList.remove('visible');
+        } else {
+            searchResults.classList.add('visible');
+        }
+        
+        
+        if (currentSearchTerm === '') {
+            matchCount.textContent = '未搜索';
+        } else if (matchCountTotal === 0) {
+            matchCount.textContent = '未找到匹配项';
+        } else {
+            matchCount.textContent = `找到 ${matchCountTotal} 个匹配项 (${currentMatchIndex + 1}/${matchCountTotal})`;
+        }
+        
+        
+        const hasMatches = matchCountTotal > 0;
+        prevMatchBtn.disabled = !hasMatches;
+        nextMatchBtn.disabled = !hasMatches;
+    }
+
+
+    
+    async function performSearch(text) {
+        
+        if (isSearching || currentAction !== 'mammoth' || 
+            !MAMMOTH_SUPPORTED_TYPES.includes(currentDocType)) {
+            return;
+        }
+        
+        if (!text || text.trim() === '' || !currentDocContent) {
+            resetSearch();
+            return;
+        }
+        
+        isSearching = true;
+        searchInput.classList.add('loading');
+        currentSearchTerm = text.trim();
+        updateSearchUI();
+        
+        try {
+            await new Promise(resolve => {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(resolve, { timeout: 1000 });
+                } else {
+                    setTimeout(resolve, 0);
+                }
+            });
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = currentDocContent;
+            
+            
+            const term = currentSearchTerm.toLowerCase();
+            const newMatchCount = findAndMarkMatches(tempDiv, term);
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            
+            matchCountTotal = newMatchCount;
+            currentMatchIndex = newMatchCount > 0 ? 0 : -1;
+            
+            
+            previewContainer.innerHTML = tempDiv.innerHTML;
+            
+            
+            if (matchCountTotal > 0) {
+                scrollToMatch(0);
+            }
+            
+        } catch (error) {
+            console.error('搜索出错:', error);
+            matchCount.textContent = '搜索出错';
+        } finally {
+            isSearching = false;
+            searchInput.classList.remove('loading');
+            updateSearchUI();
+        }
+    }
+
+
+    
+    function findAndMarkMatches(element, term) {
+        if (!term) return 0;
+        
+        let matchNumber = 0;
+        
+        function processNode(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                
+                if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'IMG', 'VIDEO', 'AUDIO'].includes(node.tagName)) {
+                    return;
+                }
+                
+                
+                const children = Array.from(node.childNodes);
+                children.forEach(processNode);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                const lowerText = text.toLowerCase();
+                let index = 0;
+                const termLength = term.length;
+                
+                while ((index = lowerText.indexOf(term, index)) !== -1) {
+                    
+                    const parent = node.parentNode;
+                    if (!parent) {
+                        index += termLength;
+                        continue;
+                    }
+                    
+                    const currentNode = node;
+                    const beforeNode = currentNode.splitText(index);
+                    const matchNode = beforeNode.splitText(termLength);
+                    
+                    
+                    const highlight = document.createElement('span');
+                    highlight.className = 'highlight';
+                    highlight.id = `${MATCH_ID_PREFIX}${matchNumber}`;
+                    highlight.textContent = beforeNode.textContent;
+                    
+                    parent.replaceChild(highlight, beforeNode);
+                    matchNumber++;
+                    
+                    
+                    index += termLength;
+                    node = matchNode;
+                }
+            }
+        }
+        
+        processNode(element);
+        return matchNumber;
+    }
+
+
+    
+    function scrollToMatch(index) {
+        
+        if (matchCountTotal === 0 || index < 0 || index >= matchCountTotal) {
+            console.warn('无效的匹配项索引:', index);
+            return;
+        }
+        
+        
+        document.querySelectorAll('.highlight.active').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        
+        const matchId = `${MATCH_ID_PREFIX}${index}`;
+        const matchElement = document.getElementById(matchId);
+        
+        if (!matchElement) {
+            console.warn(`匹配项ID ${matchId} 未找到在DOM中`);
+            restoreMatches();
+            return;
+        }
+        
+        
+        currentMatchIndex = index;
+        matchElement.classList.add('active');
+        
+        
+        matchElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'center'
+        });
+        
+        
+        const tableWrapper = matchElement.closest('.table-wrapper');
+        if (tableWrapper) {
+            const tableRect = matchElement.getBoundingClientRect();
+            const wrapperRect = tableWrapper.getBoundingClientRect();
+            
+            
+            if (tableRect.left < wrapperRect.left || tableRect.right > wrapperRect.right) {
+                
+                tableWrapper.scrollLeft += (tableRect.left - wrapperRect.left) - (wrapperRect.width / 4);
+            }
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function restoreMatches() {
+        console.log('尝试恢复匹配项索引');
+        
+        const matches = document.querySelectorAll(`[id^="${MATCH_ID_PREFIX}"]`);
+        matchCountTotal = matches.length;
+        
+        if (matchCountTotal > 0) {
+            currentMatchIndex = 0;
+            updateSearchUI();
+            scrollToMatch(0);
+        } else {
+            if (currentSearchTerm) {
+                performSearch(currentSearchTerm);
+            }
+        }
+    }
+
+
+    
+    function goToNextMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const nextIndex = (currentMatchIndex + 1) % matchCountTotal;
+        scrollToMatch(nextIndex);
+    }
+
+
+    
+    function goToPrevMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const prevIndex = (currentMatchIndex - 1 + matchCountTotal) % matchCountTotal;
+        scrollToMatch(prevIndex);
+    }
+
+
+    
+    searchInput.addEventListener('input', (e) => {
+        const searchText = e.target.value;
+        
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+        }
+        
+        if (searchText.trim() === '') {
+            resetSearch();
+            return;
+        }
+        
+        searchTimeout = setTimeout(() => {
+            performSearch(searchText);
+        }, SEARCH_DELAY);
+    });
+
+
+    
+    prevMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToPrevMatch();
+    });
+    
+    nextMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToNextMatch();
+    });
+
+
+    
+    searchInput.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'Enter' && e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+        
+        if ((e.key === 'ArrowDown') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'ArrowUp' && !e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+    });
+
+
+    
+    function openInNewTab(url, docType, title) {
+        const action = getDocumentAction(docType);
+        
+        
+        switch(action) {
+            case 'mammoth':
+                
+                const newWindow = window.open('', '_blank');
+                if (newWindow) {
+                    newWindow.document.write(`
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>${title || '文档预览'}</title>
+                            \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            <style>
+                                body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
+                                .loading { text-align: center; padding: 50px; }
+                                .error { color: #dc3545; text-align: center; padding: 50px; }
+                                .table-wrapper { overflow-x: auto; margin: 16px 0; }
+                                table { border-collapse: collapse; width: 100%; }
+                                table th, table td { border: 1px solid #ddd; padding: 8px 12px; }
+                                table th { background-color: #f8f9fa; }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="loading">
+                                <p>正在加载文档...</p>
+                            </div>
+                            \x3Cscript>
+                                // 解析文档并显示
+                                async function loadDocument() {
+                                    try {
+                                        const response = await fetch('${url}');
+                                        if (!response.ok) throw new Error('加载失败');
+                                        
+                                        const arrayBuffer = await response.arrayBuffer();
+                                        const result = await mammoth.convertToHtml({ arrayBuffer });
+                                        
+                                        // 处理表格
+                                        const tempDiv = document.createElement('div');
+                                        tempDiv.innerHTML = result.value;
+                                        
+                                        const tables = tempDiv.querySelectorAll('table');
+                                        tables.forEach(table => {
+                                            const wrapper = document.createElement('div');
+                                            wrapper.className = 'table-wrapper';
+                                            table.parentNode.insertBefore(wrapper, table);
+                                            wrapper.appendChild(table);
+                                        });
+                                        
+                                        document.body.innerHTML = tempDiv.innerHTML;
+                                    } catch (err) {
+                                        document.body.innerHTML = \`
+                                            <div class="error">
+                                                <p>文档加载失败</p>
+                                                <p>\${err.message}</p>
+                                                <p><a href="${url}" download>下载文档</a></p>
+                                            </div>
+                                        \`;
+                                    }
+                                }
+                                
+                                loadDocument();
+                            \x3C/script>
+                        </body>
+                        </html>
+                    `);
+                    newWindow.document.close();
+                }
+                break;
+                
+            case 'officeView':
+            case 'officeViewmodal':
+                
+                const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeViewerUrl, '_blank');
+                break;
+                
+            case 'officeEmbed':
+            case 'officeEmbednewTab':
+                
+                const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeEmbedUrl, '_blank');
+                break;
+                
+            case 'modal':
+                
+                window.open(url, '_blank');
+                break;
+                
+            case 'download':
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = title;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                break;
+                
+            case 'newTab':
+            default:
+                
+                window.open(url, '_blank');
+                break;
+        }
+    }
+
+
+    
+    openNewTabBtn.addEventListener('click', () => {
+        if (currentDocUrl && currentDocType) {
+            openInNewTab(currentDocUrl, currentDocType, modalTitle.textContent);
+        }
+    });
+
+
+    
+    function getDocumentAction(docType) {
+        
+        if (documentConfig[docType] && documentConfig[docType].action) {
+            return documentConfig[docType].action;
+        }
+        return documentConfig.defaultAction;
+    }
+
+
+    
+    function handleOfficeView(url) {
+        const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeViewerUrl, '_blank');
+    }
+
+
+    
+    function handleOfficeViewModal(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-view-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbed(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-embed-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbedNewTab(url) {
+        const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeEmbedUrl, '_blank');
+    }
+
+
+    
+    function handlePdfPreview(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.className = 'pdf-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    async function handleMammothParse(url, title, docType) {
+        if (!MAMMOTH_SUPPORTED_TYPES.includes(docType)) {
+            console.warn(`不支持对${docType}类型使用mammoth解析`);
+            return false;
+        }
+        
+        try {
+            openModal();
+            previewContainer.innerHTML = '<div style="text-align: center; padding: 20px;"><i class="fa fa-spinner fa-spin"></i> 正在解析文档...</div>';
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`请求失败: ${response.status}`);
+            }
+            
+            const arrayBuffer = await response.arrayBuffer();
+            let result;
+            
+            
+            switch(docType) {
+                case 'docx':
+                    result = await mammoth.convertToHtml({ arrayBuffer });
+                    break;
+                case 'xlsx':
+                    
+                    result = await parseXlsx(arrayBuffer);
+                    break;
+                case 'pptx':
+                    
+                    result = await parsePptx(arrayBuffer);
+                    break;
+                default:
+                    throw new Error(`不支持的文档类型: ${docType}`);
+            }
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = result.value;
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            currentDocContent = tempDiv.innerHTML;
+            previewContainer.innerHTML = currentDocContent;
+            resetSearch();
+            return true;
+            
+        } catch (err) {
+            previewContainer.innerHTML = `<div style="text-align: center; padding: 20px; color: #dc3545;">
+                解析失败，请<a href="${url}" class="btn btn-primary">下载文档</a>查看
+                <p class="error-message">错误: ${err.message}</p>
+            </div>`;
+            console.error('解析错误：', err);
+            return false;
+        }
+    }
+
+
+    
+    async function parseXlsx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="xlsx-content"><p>Excel文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的Excel数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    async function parsePptx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="pptx-content"><p>PowerPoint文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的PowerPoint数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    document.querySelectorAll('.document-link').forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const docUrl = link.href;
+            const docTitle = link.textContent.trim();
+            const docType = link.getAttribute('data-type');
+            const action = getDocumentAction(docType);
+            
+            
+            currentDocUrl = docUrl;
+            currentDocType = docType;
+            currentAction = action;
+            modalTitle.textContent = docTitle;
+            downloadLink.href = docUrl;
+			
+			
+			let fileName = docTitle;
+			
+			const extRegex = new RegExp(`\\.${docType}$`, 'i');
+			if (!extRegex.test(fileName)) {
+				
+				fileName += `.${docType}`;
+			}
+			
+			downloadLink.download = fileName;
+            
+            
+            switch(action) {
+                case 'newTab':
+                    
+                    window.open(docUrl, '_blank');
+                    break;
+                    
+                case 'mammoth':
+                    
+                    await handleMammothParse(docUrl, docTitle, docType);
+                    break;
+                    
+                case 'officeView':
+                    
+                    handleOfficeView(docUrl);
+                    break;
+                    
+                case 'officeViewmodal':
+                    
+                    handleOfficeViewModal(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbed':
+                    
+                    handleOfficeEmbed(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbednewTab':
+                    
+                    handleOfficeEmbedNewTab(docUrl);
+                    break;
+                    
+                case 'download':
+                    
+                    link.click();
+                    break;
+                    
+                case 'modal':
+                default:
+                    
+                    openModal();
+                    
+					const iframe = document.createElement('iframe');
+					iframe.src = docUrl;
+					iframe.className = 'pdf-container';
+					iframe.title = docTitle;
+					previewContainer.appendChild(iframe);
+						
+                    
+                    
+
+                    break;
+            }
+        });
+    });
+
+
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+
+    
+    updateSearchUI();
+});
+</script>
 
 
     <footer class="article-footer">

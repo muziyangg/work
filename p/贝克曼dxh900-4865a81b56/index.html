@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
-
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
     </head>
     <body class="
     article-page
@@ -791,7 +791,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 					<time class="article-words">
-						5284字
+						5283字
 					</time>
 				</div>
 			
@@ -823,6 +823,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <section class="article-content">
+    
+    
     
     
     <h2 id="接口说明">接口说明
@@ -1509,9 +1511,1886 @@ class="docx-download" style="margin-left: 10px;">
 <img src="/icons/word.svg" alt="DOCX文件" style="width:16px; height:16px; margin-right:5px;">
 点击下载docx
 </a></p>
-<p>‍</p>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2 id="接口说明">接口说明
+</h2><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">仪器厂商</th>
+          <th style="text-align: left">贝克曼DXH900<br /></th>
+          <th style="text-align: left">仪器型号</th>
+          <th style="text-align: left">贝克曼DXH900<br /></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">通讯方式</td>
+          <td style="text-align: left">双向</td>
+          <td style="text-align: left">仪器类型</td>
+          <td style="text-align: left">临检血常规</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">医院名称</td>
+          <td style="text-align: left"><br /></td>
+          <td style="text-align: left">程序名称</td>
+          <td style="text-align: left">MI.MIFDXH900</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">终端服务器地址</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">终端服务器端口号</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
+</h2><ol>
+<li>接口类型：串口</li>
+<li>连接方式：ASTM协议</li>
+</ol>
+<h2 id="仪器接口说明">仪器接口说明
+</h2><ul>
+<li>该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。</li>
+<li>仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率</li>
+<li>传图的格式为图片字符串从后往前8192个字符</li>
+<li>仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。</li>
+<li>仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号</li>
+<li>仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音</li>
+</ul>
+<p>仪器报警信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	贝克曼DXH900
+</span></span><span class="line"><span class="cl">	s MachineName=&#34;DXH900&#34;
+</span></span><span class="line"><span class="cl">	s police=&#34;Abn Hemoglobin$$Cellular Inter$$Dimorphic Reds$$Giant Platelets$$Imm Grans$$Left Shift$$LY Blast$$MO Blast$$NE Blast$$NRBC$$RBC Frag/Micro$$Red Cell Aggl$$Sickled Cells$$Variant LY$$Abn Diff Pattern$$Abn NRBC Pattern$$Abn RBC Pattern$$Abn Retic Pattern$$Abn TNC Pattern$$Abn WBC Pattern$$Aged Sample$$AL2 Blank Voltage: N$$AL2 Blank Voltage: R$$Bubbles$$Carryover$$Cellular Inter$$Cover Opened$$Data Disc: D$$Data Disc: N$$Data Disc: R$$Excessive Debris: D$$Flow Cell Clog: D$$Flow Cell Clog: N$$Flow Cell Clog: R$$HGB Blank Shift$$HGB Inter: WBC$$High Event Rate: D$$High Event Rate: N$$High Event Rate: R$$High OP Events: D$$High RF Events: D$$Low AL2 Events: N$$Low DC Events: N$$Low Event Rate: D$$Low Event Rate: N$$Low Event Rate: R$$Low Events: D$$Low Events: N$$Low Events: R$$Low OP Events: D$$Low RMALS Events: D$$MCV Inter: PLT$$MCV Inter: WBC$$MO-NE Overlap$$NE-EO Overlap$$No Aspiration$$Non-blood Specimen$$NRBC Inter$$NRBC-LY Overlap$$Nucleated Cells$$Partial Aspiration$$Platelet Clumps$$PLT Carryover$$PLT Inter: Debris$$RBC-PLT Overlap$$Range Error$$RET Inter: Debris$$RET Inter: PLT$$RET-RBC Overlap$$System Event: D$$System Event: HGB$$System Event: N$$System Event: PLT$$System Event: R$$System Event: RBC$$System Event: TNC$$System Event: WBC$$TNC Carryover$$Undefined Pop: D$$Unknown Error$$WBC Carryover$$Anemia$$Basophilia$$Basophilia#$$Eosinophilia$$Eosinophilia#$$Erythrocytosis$$Hypochromia (1+, 2+, 3+)$$Leukocytosis$$Leukopenia$$Lymphocytosis$$Lymphocytosis#$$Lymphopenia$$Lymphopenia#$$Monocytosis$$Monocytosis#$$Neutropenia$$Neutropenia#$$Neutrophilia$$Neutrophilia#$$Anisocytosis (1+, 2+, 3+)$$Large Platelets$$Small Platelets$$Thrombocytopenia$$Thrombocytosis$$Macrocytosis (1+, 2+, 3+)$$Microcytosis (1+, 2+, 3+)$$Reticulocytosis$$Reticulocytosis#$$NRBCs Present&#34;
+</span></span><span class="line"><span class="cl">	s explain=&#34;Abnormal Hemoglobin$$细胞干涉$$二态红$$巨血小板$$未成熟粒细胞$$左移$$LY 原始细胞$$MO 原始细胞$$NE 原始细胞$$NRBC$$RBC Frag/Microcytes$$Red Cell Agglut$$镰状细胞$$变体淋巴细胞$$异常 Diff 模式$$异常 NRBC 模式$$异常 RBC 模式$$异常网织红细胞模式$$异常 TNC 模式$$异常 WBC 模式$$已老化的样品$$AL2 空白电压：次数$$AL2 空白电压：R$$气泡$$携带污染$$细胞干涉$$已打开盖板$$数据中断：D$$数据中断：次数$$数据中断：R$$过多的碎片：D$$流动室淤塞：D$$流动室淤塞：次数$$流动室淤塞：R$$HGB 空白偏移$$HGB 干涉：WBC$$高发生率：D$$高发生率：次数$$高发生率：R$$高 OP 颗粒：D$$高 RF 颗粒 D$$低 AL2 颗粒：次数$$低 DC 颗粒：次数$$低发生率：D$$低发生率：次数$$低发生率：R$$低颗粒：D$$低颗粒：次数$$低颗粒：R$$低 OP 颗粒：D$$低 RMALS 颗粒：D$$MCV 干涉：PLT$$MCV 干涉：WBC$$MO-NE 重叠$$NE-EO 重叠$$无吸样$$非血液标本$$NRBC 干扰$$NRBC-LY 重叠$$有核细胞$$部分吸样$$血小板凝块$$PLT 携带污染$$PLT 干涉：碎片$$RBC-PLT 重叠$$范围错误$$RET 干扰：碎片$$RET 干扰：PLT$$RET-RBC 重叠$$系统事件：D$$系统事件：HGB$$系统事件：次数$$系统事件：PLT$$系统事件：R$$系统事件：RBC$$系统事件：TNC$$系统事件：WBC$$TNC 携带污染$$未定义的弹出窗口：D$$未知错误$$WBC 携带污染$$贫血$$嗜碱性细胞增多$$嗜碱性细胞增多 #$$嗜酸性细胞增多$$嗜酸性细胞增多 #$$红血球增多$$血红蛋白过少 (1+, 2+, 3+)$$白血球增多$$白血球减少$$淋巴球增多$$淋巴球增多 #$$淋巴球减少$$淋巴球减少 #$$单核细胞增多$$单核细胞增多 #$$嗜中性白血球减少$$嗜中性白血球减少 #$$嗜中性白血球增多$$嗜中性白血球增多 #$$红细胞大小不等症 (1+, 2+, 3+)$$血小板过大$$血小板过小$$血小板减少$$血小板增多$$巨红细胞 (1+, 2+, 3+)$$小红细胞 (1+, 2+, 3+)$$网织红血球过多$$网织红血球过多 #$$存在 NRBC&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="串口盒子配置">串口盒子配置
+</h2><ul>
+<li><strong>波特率：</strong> 115200</li>
+<li><strong>数据位：8</strong></li>
+<li><strong>停止位：</strong> 1</li>
+<li><strong>校验位：</strong> N</li>
+</ul>
+<h2 id="仪器图片">仪器图片
+</h2><p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg"
+	width="2331"
+	height="1080"
+	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c_hu_4c0c416850ecec07.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c_hu_5ff2591559e01985.jpg 1024w"
+	loading="lazy"
+	
+		alt="5e9b583f046fee17af1cfb11439dc5e7"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="215"
+		data-flex-basis="518px"
+	
+></p>
+<h2 id="数据格式"><strong>数据格式</strong>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1081635
+</span></span><span class="line"><span class="cl">H&lt;--M : 2019-05-05 11:40:28 : 4C|1|I|Test□names□beginning□with□@□are□research□use□only.□Not□for□use□in□diagnostics□procedures.|G【13】【3】B9【13】
+</span></span><span class="line"><span class="cl">1081636
+</span></span><span class="line"><span class="cl">H--&gt;M : 2019-05-05 11:40:28 : ACK
+</span></span><span class="line"><span class="cl">1081637
+</span></span><span class="line"><span class="cl">H&lt;--M : 2019-05-05 11:40:28 : 5M|1|!!!WBC.Histogram.Array|02020202020304070A0F161D27323E4C5A67727B828686847F7971685F554D453E3834302D2B2927252321201E1D1D1C1C1C1C1C1B1B1A19171616151514141414131313121111100F0F0E0D0D0D0C0C0C0C0B0B0A0A0A0909090908080808070707060606060606060505050505050505050505050505050506060606070707080809090A0A0B0B0C0C0C0D0D0E0E0F0F1011121315161718191A1A1B1C1D1E1E1F20212223232424252526262727282829292A2A2B2B2C2C2D2D2D2D2D2D2D2C2C2B2B2A2A292828272726262625252424242323222121201F1E1E1D1C1B1A1A1918171716151514131312121111100F0F0E0E0D0C0C0B0A0A090808070707|||||F||||20190505112916|AW46295【13】【3】C6【13】
+</span></span><span class="line"><span class="cl">1081638
+</span></span><span class="line"><span class="cl">H--&gt;M : 2019-05-05 11:40:28 : ACK
+</span></span><span class="line"><span class="cl">1081639
+</span></span><span class="line"><span class="cl">H&lt;--M : 2019-05-05 11:40:29 : 6M|2|!!!Plt.Histogram.Array|000000000002071119222B35404B56606B747D868D949A9FA2A3A29F9B96908A847E78726C66615D5955524E4A46423D3934312D2A28252322201F1E1D1C1A1918171615141312111110100F0F0E0D0D0C0B0B0B0A0A0909080800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000|||||F||||20190505112916|AW46295【13】【3】FF【13】
+</span></span><span class="line"><span class="cl">1081640
+</span></span><span class="line"><span class="cl">H--&gt;M : 2019-05-05 11:40:29 : ACK
+</span></span><span class="line"><span class="cl">1081641
+</span></span><span class="line"><span class="cl">H&lt;--M : 2019-05-05 11:40:29 : 7M|3|!!!RBC.Histogram.Array|05040404040404030202010100000101010101010202030404040506080A0D1014191F26303D4A576574869AAFC2D5E4F0F8FCFFFEFAF2E8DBCDBCAB9A8A7B6E6052453B342F2A251F1A1715131210101010100F0E0E0D0D0D0C0C0C0C0C0B0C0C0C0C0B0B0C0B0B0B0B0C0C0C0C0B0B0B0A0A090909090909080808080808080808080706060505050505050404030304040404040404040404040303020202010101010202030202020202020101010101010101000000000000010100000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000|||||F||||20190505112916|AW46295【13】【3】C6【13】
+</span></span><span class="line"><span class="cl">1081642
+</span></span><span class="line"><span class="cl">H--&gt;M : 2019-05-05 11:40:29 : ACK
+</span></span><span class="line"><span class="cl">1081643
+</span></span><span class="line"><span class="cl">H&lt;--M : 2019-05-05 11:40:33 : 0M|4|!!!5PD1|0E10010100400040000008000000000000000000000000000000000000000000000000001F0000000000000015000000150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001500000000000000000000000000000000000000000000000000000000000000001F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001F1F00001F0000001F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001F1F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000B0000000000000000000000000000000000000000000000000000000000000000001F0000001F00000000000000000000000000150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000201F000000000000000000000000000000000000000000000000000000000B000000000000000000000000000000000000000000000000000000000015001F0000000020000000000000000000150000000000000000000000000B000B0B0B000000000000000000000000000000000000000000000000000000000000001F001F0000000000000000000000000000000000000000000000000B0000000C0B0B0B0B0000000000000000000000000000000000000000000000001F00000021201F1F001F000000000000000000000000000000000000000000000000000B00000C0000000000000000000000000000000000000000000000000000001F2121201F2000000000000000000000001500000000000000000000000000000B0B000B00000000000000000000000000000000000000000000000000001F1F21222321221F21201F1F0000000000000000000015000000000000000B0000000B0D0D0C0C00000000000000000000000000000000000000000000001F001F0021152323222424210000000000000000001500000015000000000000000B0B000E0C0B000B00000000000000000000000000000000000000000000001F1F1F00211F202423202122000015000000000000161618160000150015000000000B0B000F0D0B00000000000000000000000000000000000000001F1F0000002000201F24242425252420201F1F0000000000000019151515160000000000000B0E000C0B0B0B0D00000C00000000000000000000000000000000000000001F002220222325252324232320001F00000000161500161A1A1816150000000B0B000C0E0E0E0C0D00000000000000000000000000000000001F001F0000001F0020212023242325242524222300000000001500161A1B1A1A1B1817151515000B0B0C0C10000B0B0E0C00000000000000000000000000000000000000150000001F212222232425242524221F00000000151518171A1B1B1B1B1B181700150B000B000C0B0D0F0C000C0B000000000000000000000000000000000000000000210022222323252424242223211F1500000015151A1B1B1C1C1C1B1A160015000B0B0B0F0D0E0B0C0D0B00000000000000000000000000000000000000000000210020232124252524242322221F000000000016191C1B1C1C1C1B15151500000B0C0C0F0E0D000C0C00000000000000000000000000000000000000000000001F212024232425242321242300201F001515151B1B1C1C1C1C1C1B1A1A001500000B0C0C0C0B0B0C0C00000B0000000000000000000000000000000000001F000021002124202224242023201F1F00001516191B1C1C1C1C1C1C1B1B191500000B0B00000C0E0B0C000000000000000000000000000000000000002900001F1F1F201F2320232223211F21000000001517161A1B1C1C1D1C1C1C1B1900000000000B0B0C0C0B000B00000000000000000000000000000000000000292900002A1F00201F1F201F2229001F0000001500151A1B1C1C1C1C1C1C1C1C191616000000000000000B0B000B000000000000000000000000000000290000000000292A292A1F2015002A1F1F001500001F001716191B1C1C1D1C1C1C1C1C19150000000B0C000B0B0000000000000000000000000000000000000000000000292929292A2A29202A1F0129001F000000000000171A1B1C1C1C1D1C1C1C1A181515000B000000000000000000000000000000000000000000002900000000002900292C00292A01012C012A2A292B0029151600191A1B1C1C1C1C1C1C1B1A001500000000000B0000000000000000000000000000000000000000000000292900002A2A2C2D2D2E2C2C29010101001500000015181A1A1B1B1C1C1B1B161500000000000B000000000000000000000000000000000000000000002900000029292D2C2D2E2D2E2D2D2D01010301002A000000001616191A1A1B1B1A19171515000000000000000000000000000000000000000000000000000000002A0029002E2D2E2B2F2E2F2F2F2E2D2C01000115000000001515151616191915161500000000000000000000000000000000000000000000000000000000000000292B2A2A2D2F2F2E2F2E012F0401012D2A002900000000000000150000160016000000000000000000000000000000000000000000000000002900000000292900292C2C2F2E2F2F302F2F2F022F022A2C000029000000000000000000001515000000000000000000000000000000000000000000000000000000000000292A2B2A2B2A2F2E2F2F30302F302F2F2E010000292A000000000000000000000000000000000000000000000000000000000000000000000000000000002A290000292E2E2E2F302F302F2F2F302F2F2D2D2A2900290000000000000000000000000000000000000000000000000000000000000000000000000000000000002929292D2D2E2D2F302F2F2F2F2F2F01012D29002B00000000000015000000000015000000000000000000000000000000000000000000000000000000002A2A292B2C2D2E2E2F2F2F2F2F2F2F2F2D2B2B2E2A002B000000000000000000000000000000000000000000000000000000000000000000000000000029002929000029292E2E2F2F2F2F2F2F2F2F2E2F2E2E2E2C0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002A2E2B2D2E2F2E2F2F2F2F2E2F2E2E2C2C292900000000000000000000000000000000000000000000000000000000000000000000000000000000290029292A29292C2B2E2E2D2E2D2F2E2D2C2D2C2B2B2B000000000000000000000000000000000000000000000000000000000000000000000000000000000000002B2900292B002A2A2D292C2D002C2A29002929290000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002B00002A002A2A00292C292A2A29000000000000000000000000000000000000000000000000003300330000000000000000000000000000001533003300292900002900002929000000290000000000000000000000000000000000000000000015000000000000000000000000000000000000000000000000330000003300000000000000000029000000000000000000000000000000000000000000000000001500000000330000000000000000000000000000000000000000003300000000000000330029000000000000000000000000000000000000000000000000000000000000000033000000000000000000000000000000003300000000330000000000002900000000000029000000000000000000000000000000000000000000330000000000000000000000003300000000000000000000000000000000000000000029000000000000000000000000000000000000000000000000330000003300000000000000000000000000000000000000000000003336333300330000000000000000000000000000000000000000000000000000000000000000330000000000000000000000000000000000000000000000000033000000000000000000000000000000000000000000000000000000330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+</span></span><span class="line"><span class="cl">1081644
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="项目通道号"><strong>项目通道号</strong>
+</h2><h2 id="修改记录">修改记录
+</h2><table>
+  <thead>
+      <tr>
+          <th>序号</th>
+          <th>日期</th>
+          <th>操作人</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>2025-01-25 18:20:23<br /></td>
+          <td>杨浩然</td>
+          <td>编写接口</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>2025年09月03日17:42:31</td>
+          <td>杨浩然</td>
+          <td>DXH流水线多仪器质控区分</td>
+      </tr>
+  </tbody>
+</table>
+<p>‍</p>
+<h2 id="仪器接口程序">仪器接口程序
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">MIFDXH800I(MachID) 
+</span></span><span class="line"><span class="cl">	s MachID=$g(MachID) 
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(MachID,104)=$H
+</span></span><span class="line"><span class="cl">	i &#39;$l(MachID) q
+</span></span><span class="line"><span class="cl">	s ItemDeli=$li(^dbo.BTMIMachineParameterD(MachID),12) //项目分隔符
+</span></span><span class="line"><span class="cl">	s ResultDeli=$li(^dbo.BTMIMachineParameterD(MachID),13) //结果分隔符
+</span></span><span class="line"><span class="cl">	s AntDeli=$li(^dbo.BTMIMachineParameterD(MachID),14) //抗生素分隔符
+</span></span><span class="line"><span class="cl">	s SenDeli=$li(^dbo.BTMIMachineParameterD(MachID),15) //药敏结果分隔符
+</span></span><span class="line"><span class="cl">	s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(MachID),17) //端口号
+</span></span><span class="line"><span class="cl">	//控制字符
+</span></span><span class="line"><span class="cl">	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),lf=$c(10),cr=$c(13),nak=$c(21)
+</span></span><span class="line"><span class="cl">	//s stx=&#34;[&#34;,etx=&#34;]&#34;
+</span></span><span class="line"><span class="cl">	S ^TMPMACH10(MachID,102)=$H
+</span></span><span class="line"><span class="cl">	i $$Start^MI.MIF000(MachID) q
+</span></span><span class="line"><span class="cl">	f  d Main i $$Stop^MI.MIF000(MachID) q
+</span></span><span class="line"><span class="cl">  	c Port
+</span></span><span class="line"><span class="cl">  	q
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	///结果采集和数据分解
+</span></span><span class="line"><span class="cl">Main
+</span></span><span class="line"><span class="cl">	r *R:10 e  d  q
+</span></span><span class="line"><span class="cl">	.d ORDER
+</span></span><span class="line"><span class="cl">  	i $c(R)&#39;=enq q
+</span></span><span class="line"><span class="cl">  	d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  	d ACK
+</span></span><span class="line"><span class="cl">  	s (Epis,Result,Date,Time,QC,MachineCode)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  	f  r *R:10 q:$c(R)=eot  q:R=-1  d
+</span></span><span class="line"><span class="cl">  	.i $c(R)&#39;=stx q
+</span></span><span class="line"><span class="cl">  	.s Record=$$Read^MI.MIF000(MachID,&#34;&#34;,lf) q:&#39;$l(Record)
+</span></span><span class="line"><span class="cl">  	.d Trace^MI.MIF000(MachID,Record,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  	.d ACK
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;C&#34; d  q
+</span></span><span class="line"><span class="cl">  	..//报警信息
+</span></span><span class="line"><span class="cl">  	..s PoliceInfo=$p(Record,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  	..i $l(PoliceInfo),$d(^LISPolice(&#34;DXH900&#34;,PoliceInfo)) d
+</span></span><span class="line"><span class="cl">  	...s InputInfo=$g(^LISPolice(&#34;DXH900&#34;,PoliceInfo))
+</span></span><span class="line"><span class="cl">  	...d Trace^MI.MIF000(MachID,PoliceInfo_&#34;$$&#34;_InputInfo,&#34;报警信息&#34;)
+</span></span><span class="line"><span class="cl">  	...try{s ret=##Class(MI.Special.Common).SaveAlarmInformation(MachID,Epis,InputInfo)}catch{}
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;Q&#34; d  q
+</span></span><span class="line"><span class="cl">  	..//询问信息
+</span></span><span class="line"><span class="cl">  	..s QEpis=$tr($p(Record,&#34;|&#34;,3),&#34;!&#34;)
+</span></span><span class="line"><span class="cl">  	..;d Trace^MI.MIF000(MachID,QEpis,&#34;QEpis&#34;)
+</span></span><span class="line"><span class="cl">    ..S ^TMPQUERY(MachID,1)=QEpis
+</span></span><span class="line"><span class="cl">  	..i $l(QEpis) s ^TMP($zn,$j,&#34;ENQ&#34;,QEpis)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;H&#34; d  q
+</span></span><span class="line"><span class="cl">  	..//结果头信息
+</span></span><span class="line"><span class="cl">  	..d Last s (Epis,Result,Date,Time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;P&#34; d  q
+</span></span><span class="line"><span class="cl">  	..//病人信息
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;O&#34; d  q
+</span></span><span class="line"><span class="cl">  	..s Epis=$tr($p($p(Record,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  	..s QC=$tr($p(Record,&#34;|&#34;,12),&#34; &#34;) 	
+</span></span><span class="line"><span class="cl">  	..s:&#39;$l(Epis) Epis=$tr($p($p(Record,&#34;|&#34;,4),&#34;^&#34;,1),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  	..i $l(QC) d
+</span></span><span class="line"><span class="cl">  	...s Epis=$tr($p(Epis,&#34;!&#34;,2),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  	..//判断是否是质控编号
+</span></span><span class="line"><span class="cl">  	..//s QC=$$findQC^MIF000(mi,epis)
+</span></span><span class="line"><span class="cl">  	.i $e(Record,2)=&#34;R&#34; d  q
+</span></span><span class="line"><span class="cl">  	..//仪器型号
+</span></span><span class="line"><span class="cl">  	..s MachineCode=$p($p(Record,&#34;|&#34;,15),$c(13),1)
+</span></span><span class="line"><span class="cl">  	..//结果信息
+</span></span><span class="line"><span class="cl">  	..s Chl=$tr($tr($p($p(Record,&#34;|&#34;,3),&#34;!&#34;,4),&#34; &#34;),&#34;@&#34;)
+</span></span><span class="line"><span class="cl">  	..//s ResStus=$tr($p($p(Record,&#34;|&#34;,3),&#34;^&#34;,11),&#34; &#34;)
+</span></span><span class="line"><span class="cl">	..s Res=$p($tr($p(Record,&#34;|&#34;,4),&#34; &#34;),&#34;!&#34;,1)
+</span></span><span class="line"><span class="cl">	..//i ResStus&#39;=&#34;F&#34; q //判断结果状态
+</span></span><span class="line"><span class="cl">	..i $l(Chl),$l(Res) s Result=Result_Chl_ResultDeli_Res_ItemDeli
+</span></span><span class="line"><span class="cl">	.//绘图
+</span></span><span class="line"><span class="cl">    .i $e(Record,2)=&#34;M&#34; d  q
+</span></span><span class="line"><span class="cl">    ..//结果信息
+</span></span><span class="line"><span class="cl">    ..s Chl=$tr($p($p(Record,&#34;|&#34;,3),&#34;!&#34;,4),&#34; &#34;)
+</span></span><span class="line"><span class="cl">    ..s Res=$P($tr($p(Record,&#34;|&#34;,4),&#34; |&#34;),&#34;!&#34;,1)
+</span></span><span class="line"><span class="cl">    ..s Chl=$p(Chl,&#34;.&#34;,1)
+</span></span><span class="line"><span class="cl">    ..i Chl=&#34;WBC&#34; d
+</span></span><span class="line"><span class="cl">    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&#34;MI.MIFDXH800&#34;,&#34;-1&#34;,&#34;Histogram#WBCF.bmp#######10#10#320#138&#34;,&#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&#34;) 
+</span></span><span class="line"><span class="cl">    ...d Trace^MI.MIF000(MachID,tret,&#34;绘图返回&#34;)
+</span></span><span class="line"><span class="cl">    ..i Chl=&#34;Plt&#34; d
+</span></span><span class="line"><span class="cl">    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&#34;MI.MIFDXH800&#34;,&#34;-1&#34;,&#34;Histogram#PLT.bmp#######10#10#320#138&#34;,&#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&#34;) 
+</span></span><span class="line"><span class="cl">    ...d Trace^MI.MIF000(MachID,tret,&#34;绘图返回&#34;)
+</span></span><span class="line"><span class="cl">    ..i Chl=&#34;RBC&#34; d
+</span></span><span class="line"><span class="cl">    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&#34;MI.MIFDXH800&#34;,&#34;-1&#34;,&#34;Histogram#RBCH.bmp#######10#10#320#138&#34;,&#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&#34;) 
+</span></span><span class="line"><span class="cl">    ...d Trace^MI.MIF000(MachID,tret,&#34;绘图返回&#34;)
+</span></span><span class="line"><span class="cl">    ..i Chl=&#34;5PD1&#34; d
+</span></span><span class="line"><span class="cl">    ...s Res=$e(Res,$l(Res)-8191,$l(Res))
+</span></span><span class="line"><span class="cl">    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&#34;MI.MIFDXH800&#34;,&#34;-1&#34;,&#34;DiffPlot#5PD1.bmp#######10#10#320#138&#34;,&#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&#34;) 
+</span></span><span class="line"><span class="cl">    ...d Trace^MI.MIF000(MachID,tret,&#34;绘图返回&#34;)
+</span></span><span class="line"><span class="cl">    ..i Chl=&#34;NRBC1&#34; d
+</span></span><span class="line"><span class="cl">    ...s Res=$e(Res,$l(Res)-8191,$l(Res))
+</span></span><span class="line"><span class="cl">    ...s tretObj=##Class(wbsLisMsgAsyncHandler.LISMsg.wbsLisDrawImageAsyncHandlerSoap).%New()
+</span></span><span class="line"><span class="cl">    ...s tret=tretObj.DrawImage(Epis,Res,MachID,&#34;MI.MIFDXH800&#34;,&#34;-1&#34;,&#34;DiffPlot#NRBC1.bmp#######10#10#320#138&#34;,&#34;LIS.Mach.ImageDeal.ImageDealDXH800,LIS.Mach.ImageDeal&#34;) 
+</span></span><span class="line"><span class="cl">    ...d Trace^MI.MIF000(MachID,tret,&#34;绘图返回&#34;)
+</span></span><span class="line"><span class="cl">	.i $e(Record,2)=&#34;L&#34; d Last q
+</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(MachID,$s($c(R)=eot:&#34;EOT&#34;,1:R),&#34;H&lt;--M&#34;) 
+</span></span><span class="line"><span class="cl">	d ORDER
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">	///保存结果
+</span></span><span class="line"><span class="cl">Last  ; file result if exist
+</span></span><span class="line"><span class="cl">	i $l(QC) s Epis=Epis_MachineCode
+</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(MachID,Epis_&#34;$$&#34;_Result,&#34;Result&#34;) 	
+</span></span><span class="line"><span class="cl">   i $l(Epis),$l(Result) d Save^MI.MIF000(MachID,Epis,Result,Date,Time,QC)
+</span></span><span class="line"><span class="cl">   q
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	///上传项目
+</span></span><span class="line"><span class="cl">ORDER
+</span></span><span class="line"><span class="cl">	s date=$tr($zdt($p($h,&#34;,&#34;,1),3),&#34;-&#34;)_$tr($zt($p($h,&#34;,&#34;,2)),&#34;:&#34;)
+</span></span><span class="line"><span class="cl">	s ^TMPQUERY(MachID,2)=$d(^TMP($zn,$j))
+</span></span><span class="line"><span class="cl">	i &#39;$d(^TMP($zn,$j)) q 
+</span></span><span class="line"><span class="cl">	;d Trace^MI.MIF000(MachID,&#34;准备上传,清除缓存&#34;,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">	k ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID)
+</span></span><span class="line"><span class="cl">	k ^TMPQUERY(MachID,4)
+</span></span><span class="line"><span class="cl">  	s Epis=&#34;&#34; f  s Epis=$o(^TMP($zn,$j,&#34;ENQ&#34;,Epis)) q:Epis=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">   	.d ScanOne^MI.MIF000(MachID,Epis)
+</span></span><span class="line"><span class="cl">   	.;d PATDET(Epis)
+</span></span><span class="line"><span class="cl">   	.s LSH=&#34;&#34;
+</span></span><span class="line"><span class="cl">   	.s LSH=$$CHANGEEPIS(MachID,Epis)
+</span></span><span class="line"><span class="cl">   	.d Trace^MI.MIF000(MachID,Epis,&#34;Epis&#34;)
+</span></span><span class="line"><span class="cl">   	.s TCx=&#34;&#34;,Episx=Epis
+</span></span><span class="line"><span class="cl">   	.s chl=&#34;&#34; f  s chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,MachID,Epis,chl)) q:chl=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">   	..s TCx=TCx_&#34;!!!&#34;_chl
+</span></span><span class="line"><span class="cl">   	.;s TCx=TCx_&#34;\&#34;
+</span></span><span class="line"><span class="cl">   	.i TCx[&#34;CDR&#34; s TCx=&#34;!!!CDR&#34;
+</span></span><span class="line"><span class="cl">   	.s sam=&#34;Sam&#34;
+</span></span><span class="line"><span class="cl">   	.s pat=&#34;219!King!Eric!T&#34;
+</span></span><span class="line"><span class="cl">   	.s F=&#34;F&#34;
+</span></span><span class="line"><span class="cl">   	.s FA=&#34;Fairview!952-121-1123&#34;
+</span></span><span class="line"><span class="cl">   	.s ^TMPQUERY(MachID,3)=TCx
+</span></span><span class="line"><span class="cl">   	.i $l(TCx) d
+</span></span><span class="line"><span class="cl">   	..s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;H|\!~|||LISHOST|||||||P|LIS2-A|&#34;_date
+</span></span><span class="line"><span class="cl">   	..s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;P|1||&#34;_LSH  
+</span></span><span class="line"><span class="cl">   	..;s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;O|1|&#34;_Episx_&#34;|&#34;_Pos_&#34;|&#34;_tcx_&#34;|R||||||A||||Whole blood|||||||||||&#34;
+</span></span><span class="line"><span class="cl">   	..;s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;O|1|&#34;_Episx_&#34;||&#34;_TCx_&#34;|R|&#34;_date_&#34;|&#34;_date_&#34;|||&#34;_sam_&#34;|A||||Whole blood|&#34;_pat_&#34;|||||||||&#34;_F_&#34;||&#34;_FA
+</span></span><span class="line"><span class="cl">   	..s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;O|1|&#34;_Episx_&#34;||&#34;_TCx_&#34;|R|&#34;_date_&#34;|&#34;_date_&#34;|||&#34;_sam_&#34;|A||||Whole blood&#34;
+</span></span><span class="line"><span class="cl">   	
+</span></span><span class="line"><span class="cl">   	..s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;L|1|N&#34;
+</span></span><span class="line"><span class="cl">   	.e  d
+</span></span><span class="line"><span class="cl">   	..s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;Q|1|^&#34;_Epis_&#34;||^^^ALL||||||||X&#34;
+</span></span><span class="line"><span class="cl">   	k ^TMP($zn,$j,&#34;ENQ&#34;)
+</span></span><span class="line"><span class="cl">   	k ^TMP(&#34;MIFTESTCODE&#34;,$j,MachID)
+</span></span><span class="line"><span class="cl">   	q:&#39;$d(^TMPTMIF(MachID,22))
+</span></span><span class="line"><span class="cl">   	m ^TMPQUERY(MachID,4)=^TMPTMIF(MachID,22)
+</span></span><span class="line"><span class="cl">   	d Send k ^TMPTMIF(MachID,22)
+</span></span><span class="line"><span class="cl">   	q
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">	///病人基本信息
+</span></span><span class="line"><span class="cl">PATDET(Epis)  ; set patient details record
+</span></span><span class="line"><span class="cl"> 	s line=$o(^TMPTMIF(MachID,22,&#34;&#34;),-1)+1,^TMPTMIF(MachID,22,line)=&#34;P|1|&#34;_+$h_&#34;||||||U||||||||||||||||||||||||||&#34;
+</span></span><span class="line"><span class="cl"> 	q 
+</span></span><span class="line"><span class="cl"> 	
+</span></span><span class="line"><span class="cl">	///发送检测项目
+</span></span><span class="line"><span class="cl">Send  
+</span></span><span class="line"><span class="cl">	w enq,*-3 d Trace^MI.MIF000(MachID,&#34;ENQ&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl"> 	f j=1:1:10 r *R:1 i $c(R)=ack!($c(R)=enq) q
+</span></span><span class="line"><span class="cl"> 	d Trace^MI.MIF000(MachID,$s($c(R)=ack:&#34;ACK&#34;,$c(R)=enq:&#34;ENQ&#34;,$c(R)=nak:&#34;NAK&#34;,1:R),&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl"> 	i $c(R)=enq q
+</span></span><span class="line"><span class="cl"> 	i $c(R)&#39;=ack w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;) q
+</span></span><span class="line"><span class="cl"> 	//q:$$SEND(&#34;1H|\^&amp;&#34;)
+</span></span><span class="line"><span class="cl"> 	;q:$$SEND(&#34;1H|\^&amp;|||LIS||||||||LIS2-A|&#34;_date)
+</span></span><span class="line"><span class="cl"> 	s x=&#34;&#34; f FRAME=1:1 s x=$O(^TMPQUERY(MachID,4,x)) q:x=&#34;&#34;  q:$$SEND(FRAME#8_^TMPQUERY(MachID,4,x))
+</span></span><span class="line"><span class="cl">  	w eot,*-3 d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl"> 	k ^TMPTMIF(MachID,22)
+</span></span><span class="line"><span class="cl"> 	q
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"> 	///发送字符串
+</span></span><span class="line"><span class="cl">SEND(str)
+</span></span><span class="line"><span class="cl">	s str=str_cr_etx,chsum=$$CHSUM(str)
+</span></span><span class="line"><span class="cl"> 	w stx,str,chsum,cr,lf,*-3 d Trace^MI.MIF000(MachID,str_chsum,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl"> 	f j=1:1:6 r *R:1 i ($c(R)=ack)!($c(R)=eot) q
+</span></span><span class="line"><span class="cl"> 	i $c(R)=ack d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H&lt;--M&#34;) q 0
+</span></span><span class="line"><span class="cl"> 	i $c(R)=eot d Trace^MI.MIF000(MachID,&#34;EOT&#34;,&#34;H&lt;--M&#34;) q 0
+</span></span><span class="line"><span class="cl"> 	d Trace^MI.MIF000(MachID,R,&#34;H&lt;--M&#34;)
+</span></span><span class="line"><span class="cl"> 	q 1 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"> 	///生成校验码
+</span></span><span class="line"><span class="cl">CHSUM(x)
+</span></span><span class="line"><span class="cl">	n (x) s z=0 f y=1:1:$l(x) s z=z+$a(x,y)
+</span></span><span class="line"><span class="cl"> 	s z=$e(&#34;0123456789ABCDEF&#34;,z#256\16+1)_$e(&#34;0123456789ABCDEF&#34;,z#16+1)
+</span></span><span class="line"><span class="cl"> 	q z    
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  	///发送回应符到仪器
+</span></span><span class="line"><span class="cl">ACK	
+</span></span><span class="line"><span class="cl">	w ack,*-3 d Trace^MI.MIF000(MachID,&#34;ACK&#34;,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">	q
+</span></span><span class="line"><span class="cl">	       
+</span></span><span class="line"><span class="cl">	    
+</span></span><span class="line"><span class="cl">CHANGEEPIS(mi,epis)  
+</span></span><span class="line"><span class="cl"> 	//根据流水号找检测号
+</span></span><span class="line"><span class="cl">    S DATA=$zd($h,8)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),epis=$g(epis)
+</span></span><span class="line"><span class="cl">	s VisitNumberReportDR=&#34;&#34;
+</span></span><span class="line"><span class="cl">	b ;//^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,TransmitDate, WorkGroupMachineDR, EpisodeNo)
+</span></span><span class="line"><span class="cl">    i &#39;$l(mi) q epis
+</span></span><span class="line"><span class="cl">    i &#39;$l(epis) q epis    
+</span></span><span class="line"><span class="cl">	s WorkGroupMachineDR=$lg($g(^dbo.BTMIMachineParameterD(mi)),6)
+</span></span><span class="line"><span class="cl">	i &#39;$l(WorkGroupMachineDR) q epis
+</span></span><span class="line"><span class="cl">	s VisitNumberReportDR=$o(^dbo.RPVisitNumberReportI(&#34;IndexAcceptDate&#34;,WorkGroupMachineDR,DATA,&#34; &#34;_epis,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i &#39;$l(VisitNumberReportDR) q epis
+</span></span><span class="line"><span class="cl">	s LSH=$lg($g(^dbo.RPVisitNumberReportD(VisitNumberReportDR)),8)
+</span></span><span class="line"><span class="cl">	i &#39;$l(LSH) q epis 
+</span></span><span class="line"><span class="cl">	B ;LSH
+</span></span><span class="line"><span class="cl">	Q LSH
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//// w $$GetName^MI.MIFBECKImage(70,3003497773)
+</span></span><span class="line"><span class="cl">//// 取病人姓名按拼音输出,&#34;^&#34;分隔
+</span></span><span class="line"><span class="cl">GetName(MachID,epis)
+</span></span><span class="line"><span class="cl">    s epis = $g(epis),MachID=$g(MachID)
+</span></span><span class="line"><span class="cl">    s SurName=&#34;&#34;
+</span></span><span class="line"><span class="cl">    i $l(epis)=0 q &#34;&#34;
+</span></span><span class="line"><span class="cl">    s VisitNumberDR = $o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(epis),&#34;&#34;))
+</span></span><span class="line"><span class="cl">    i &#39;$l(VisitNumberDR) q &#34;&#34;
+</span></span><span class="line"><span class="cl">    //标本信息
+</span></span><span class="line"><span class="cl">    s RPVisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+</span></span><span class="line"><span class="cl">    s SurName=$lg(RPVisitNumberData,13)
+</span></span><span class="line"><span class="cl">    i SurName&#39;=&#34;&#34; s SurName=$$GetCNCODE(SurName,3,&#34;^&#34;)
+</span></span><span class="line"><span class="cl">    q SurName
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/// Description:返回汉字的编码信息
+</span></span><span class="line"><span class="cl">/// Input：	HANZI:汉字
+</span></span><span class="line"><span class="cl">/// 			FLAG:返回何种编码(1:ASC码,2:汉字,3:拼音,4:首拼,5:四角码6:五笔码7:区位码8:笔划数9:郑码)
+</span></span><span class="line"><span class="cl">/// 			SPLIT:分割符(可以为空)
+</span></span><span class="line"><span class="cl">/// Output：
+</span></span><span class="line"><span class="cl">/// 	非0:返回编码信息:ASC码^汉字^拼音^首拼^四角码^五笔码^区位码^笔划数^郑码
+</span></span><span class="line"><span class="cl">/// 	0：未找到编码信息
+</span></span><span class="line"><span class="cl">/// CreatDate:2011-06-08
+</span></span><span class="line"><span class="cl">/// w ##class(web.DHCINSUPort).GetCNCODE(&#34;东华&#34;,4,&#34;^&#34;)
+</span></span><span class="line"><span class="cl">/// w ##class(web.DHCINSUPort).GetCNCODE(&#34;东华&#34;,4,&#34;&#34;)
+</span></span><span class="line"><span class="cl">GetCNCODE(HANZIS,FLAG, SPLIT)
+</span></span><span class="line"><span class="cl">	s Rtnstr=&#34;0&#34;
+</span></span><span class="line"><span class="cl">	q:$g(HANZIS)=&#34;&#34; Rtnstr
+</span></span><span class="line"><span class="cl">	s Rtnstr=&#34;&#34;
+</span></span><span class="line"><span class="cl">	f i=1:1:$l(HANZIS) d
+</span></span><span class="line"><span class="cl">	.s HANZI=$EXTRACT(HANZIS,i)
+</span></span><span class="line"><span class="cl">	.s ASCIICODE=$ASCII(HANZI)
+</span></span><span class="line"><span class="cl">	.i $D(^DHCCharacterEncoding(&#34;0&#34;,&#34;ASCII&#34;,ASCIICODE))&#39;=0 d
+</span></span><span class="line"><span class="cl">	..s rowid=$o(^DHCCharacterEncoding(&#34;0&#34;,&#34;ASCII&#34;,ASCIICODE,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	..s tmpstr=&#34;&#34;
+</span></span><span class="line"><span class="cl">	..s:FLAG=&#34;&#34; tmpstr=$g(^DHCCharacterEncoding(rowid))
+</span></span><span class="line"><span class="cl">	..s:FLAG&#39;=&#34;&#34; tmpstr=$p(^DHCCharacterEncoding(rowid),&#34;^&#34;,FLAG)
+</span></span><span class="line"><span class="cl">	..i Rtnstr=&#34;&#34;  d
+</span></span><span class="line"><span class="cl">	...s Rtnstr=tmpstr
+</span></span><span class="line"><span class="cl">	..e  d
+</span></span><span class="line"><span class="cl">	...s Rtnstr=Rtnstr_SPLIT_tmpstr
+</span></span><span class="line"><span class="cl">	.e  d
+</span></span><span class="line"><span class="cl">	..s:Rtnstr=&#34;&#34; Rtnstr=&#34;?&#34;
+</span></span><span class="line"><span class="cl">	..s Rtnstr=Rtnstr_SPLIT_&#34;?&#34;
+</span></span><span class="line"><span class="cl">	q Rtnstr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="附录">附录
+</h2><h3 id="仪器文档">仪器文档
+</h3><p><a href="assets/DXH900%20LIS%e6%94%af%e6%8c%81%e6%89%8b%e5%86%8cV1.2%2011.pdf" class="document-link pdf-link" data-type="pdf">DXH900 LIS支持手册V1.2 11</a> <a href="assets/DXH900%20LIS支持手册V1.2%2011.pdf" 
+download="DXH900 LIS支持手册V1.2 11.pdf"
+class="pdf-download" style="margin-left: 10px;">
+<img src="/icons/pdf.svg" alt="PDF文件" style="width:16px; height:16px; margin-right:5px;">
+点击下载pdf
+</a> <a href="assets/DXH900%20LIS支持手册V1.2%2011-20250903174942-azwc9ua.docx" 
+download="DXH900 LIS支持手册V1.2 11.docx"
+class="docx-download" style="margin-left: 10px;">
+<img src="/icons/word.svg" alt="DOCX文件" style="width:16px; height:16px; margin-right:5px;">
+点击下载docx
+</a></p>
+
+    
+    
+    
+    
 </section>
+
+
+<style>
+   
+  .document-link {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+    padding: 0 2px;
+  }
+  
+   
+  .docx-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .doc-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .pdf-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .xls-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .xlsx-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .ppt-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+  .pptx-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+   
+  .other-link::after { content: "📎"; font-size: 0.8em; margin-left: 4px; }
+
+
+   
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-container {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-overlay.active .modal-container {
+    transform: translateY(0);
+  }
+  
+  .modal-header {
+    padding: 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin: 0 16px;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .search-input.loading {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='16 12 12 8 8 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 32px;
+  }
+  
+  .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nav-button {
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    pointer-events: auto !important;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background: #e0e0e0;
+  }
+  
+  .nav-button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+  
+   
+  .nav-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    color: #333;  
+    transition: color 0.2s;
+  }
+  
+  .nav-button:hover:not(:disabled) .icon {
+    color: #000;  
+  }
+  
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  
+  .search-results.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .modal-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  
+  .modal-footer {
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background: #5a6268;
+  }
+  
+  .btn-close {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-close:hover {
+    background: #5a6268;
+  }
+  
+  .highlight {
+    background-color: #fff3cd;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  
+  .highlight.active {
+    background-color: #ffeeba;
+    outline: 2px solid #ffc107;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { outline-color: #ffc107; }
+    50% { outline-color: #ffecb5; }
+    100% { outline-color: #ffc107; }
+  }
+
+
+   
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background-color: white;
+  }
+  
+  table th, 
+  table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    word-wrap: break-word;
+    vertical-align: top;
+  }
+  
+  table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  table tr:hover {
+    background-color: #f1f3f5;
+  }
+  
+   
+  table .highlight {
+    display: inline;
+    margin: 0 -2px;
+    padding: 0 2px;
+  }
+  
+   
+  table [id^="search-match-"] {
+    position: relative;
+  }
+  
+   
+  .pdf-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-embed-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-view-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  @media (max-width: 768px) {
+    .table-wrapper {
+      margin: 12px 0;
+      border-radius: 2px;
+    }
+    
+    table th, 
+    table td {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+    
+     
+    .nav-button .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+
+</style>
+
+
+<div class="modal-overlay" id="document-modal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">文档预览</h3>
+      <div class="modal-actions">
+        
+        <div class="search-container" id="search-container">
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文档内容...">
+          <div class="search-results" id="search-results">
+            <span id="match-count">未搜索</span>
+            <div class="search-controls">
+              <button class="nav-button" id="prev-match" title="上一个匹配项 (Shift+Enter)">
+                
+                <img src="/icons/up.svg" alt="上一个匹配项" class="icon" />
+              </button>
+              <button class="nav-button" id="next-match" title="下一个匹配项 (Enter)">
+                
+                <img src="/icons/down.svg" alt="下一个匹配项" class="icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-close" id="close-modal">关闭</button>
+      </div>
+    </div>
+    <div class="modal-body" id="document-preview">
+      
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="open-new-tab">新标签页打开</button>
+      <a href="" class="btn btn-primary" id="download-link" download>下载文档</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const documentConfig = {
+        defaultAction: "map[action:modal]",
+        docx: { action: "mammoth" },
+        doc: { action: "officeViewmodal" },
+        pdf: { action: "modal" },
+        xls: { action: "officeView" },
+        xlsx: { action: "officeViewmodal" },
+        ppt: { action: "officeEmbed" },
+        pptx: { action: "officeEmbed" }
+    };
+
+
+    
+    const modal = document.getElementById('document-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const previewContainer = document.querySelector('#document-modal #document-preview');
+    const closeModalBtn = document.getElementById('close-modal');
+    const downloadLink = document.getElementById('download-link');
+    const openNewTabBtn = document.getElementById('open-new-tab');
+    const searchInput = document.getElementById('search-input');
+    const searchContainer = document.getElementById('search-container');
+    const searchResults = document.getElementById('search-results');
+    const matchCount = document.getElementById('match-count');
+    const prevMatchBtn = document.getElementById('prev-match');
+    const nextMatchBtn = document.getElementById('next-match');
+    
+    
+    let currentDocContent = null;
+    let currentDocType = null;
+    let currentDocUrl = null;
+    let currentSearchTerm = '';
+    let matchCountTotal = 0;
+    let currentMatchIndex = -1;
+    let isSearching = false;
+    let searchTimeout = null;
+    let currentAction = null; 
+    const SEARCH_DELAY = 300;
+    const MATCH_ID_PREFIX = 'search-match-';
+    const MAMMOTH_SUPPORTED_TYPES = ['docx', 'xlsx', 'pptx']; 
+    
+    
+    if (!modal || !previewContainer || !searchResults || !prevMatchBtn || !nextMatchBtn) {
+        console.error('关键元素未找到，请检查HTML结构');
+        return;
+    }
+
+
+    
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        previewContainer.innerHTML = '';
+        updateSearchUI();
+    }
+
+
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        resetSearch();
+        previewContainer.innerHTML = '';
+        currentDocContent = null;
+        currentDocType = null;
+        currentDocUrl = null;
+        currentAction = null;
+    }
+
+
+    
+    function resetSearch() {
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+            searchTimeout = null;
+        }
+        
+        searchInput.classList.remove('loading');
+        searchInput.value = '';
+        currentSearchTerm = '';
+        matchCountTotal = 0;
+        currentMatchIndex = -1;
+        
+        
+        if (previewContainer) {
+            const highlights = previewContainer.querySelectorAll('.highlight');
+            highlights.forEach(el => {
+                const textNode = document.createTextNode(el.textContent);
+                el.parentNode.replaceChild(textNode, el);
+            });
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function updateSearchUI() {
+        
+        const showSearch = currentAction === 'mammoth' && 
+                          MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);
+                          
+        searchContainer.style.display = showSearch ? 'block' : 'none';
+        
+        
+        if (currentSearchTerm === '' && matchCountTotal === 0) {
+            searchResults.classList.remove('visible');
+        } else {
+            searchResults.classList.add('visible');
+        }
+        
+        
+        if (currentSearchTerm === '') {
+            matchCount.textContent = '未搜索';
+        } else if (matchCountTotal === 0) {
+            matchCount.textContent = '未找到匹配项';
+        } else {
+            matchCount.textContent = `找到 ${matchCountTotal} 个匹配项 (${currentMatchIndex + 1}/${matchCountTotal})`;
+        }
+        
+        
+        const hasMatches = matchCountTotal > 0;
+        prevMatchBtn.disabled = !hasMatches;
+        nextMatchBtn.disabled = !hasMatches;
+    }
+
+
+    
+    async function performSearch(text) {
+        
+        if (isSearching || currentAction !== 'mammoth' || 
+            !MAMMOTH_SUPPORTED_TYPES.includes(currentDocType)) {
+            return;
+        }
+        
+        if (!text || text.trim() === '' || !currentDocContent) {
+            resetSearch();
+            return;
+        }
+        
+        isSearching = true;
+        searchInput.classList.add('loading');
+        currentSearchTerm = text.trim();
+        updateSearchUI();
+        
+        try {
+            await new Promise(resolve => {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(resolve, { timeout: 1000 });
+                } else {
+                    setTimeout(resolve, 0);
+                }
+            });
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = currentDocContent;
+            
+            
+            const term = currentSearchTerm.toLowerCase();
+            const newMatchCount = findAndMarkMatches(tempDiv, term);
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            
+            matchCountTotal = newMatchCount;
+            currentMatchIndex = newMatchCount > 0 ? 0 : -1;
+            
+            
+            previewContainer.innerHTML = tempDiv.innerHTML;
+            
+            
+            if (matchCountTotal > 0) {
+                scrollToMatch(0);
+            }
+            
+        } catch (error) {
+            console.error('搜索出错:', error);
+            matchCount.textContent = '搜索出错';
+        } finally {
+            isSearching = false;
+            searchInput.classList.remove('loading');
+            updateSearchUI();
+        }
+    }
+
+
+    
+    function findAndMarkMatches(element, term) {
+        if (!term) return 0;
+        
+        let matchNumber = 0;
+        
+        function processNode(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                
+                if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'IMG', 'VIDEO', 'AUDIO'].includes(node.tagName)) {
+                    return;
+                }
+                
+                
+                const children = Array.from(node.childNodes);
+                children.forEach(processNode);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                const lowerText = text.toLowerCase();
+                let index = 0;
+                const termLength = term.length;
+                
+                while ((index = lowerText.indexOf(term, index)) !== -1) {
+                    
+                    const parent = node.parentNode;
+                    if (!parent) {
+                        index += termLength;
+                        continue;
+                    }
+                    
+                    const currentNode = node;
+                    const beforeNode = currentNode.splitText(index);
+                    const matchNode = beforeNode.splitText(termLength);
+                    
+                    
+                    const highlight = document.createElement('span');
+                    highlight.className = 'highlight';
+                    highlight.id = `${MATCH_ID_PREFIX}${matchNumber}`;
+                    highlight.textContent = beforeNode.textContent;
+                    
+                    parent.replaceChild(highlight, beforeNode);
+                    matchNumber++;
+                    
+                    
+                    index += termLength;
+                    node = matchNode;
+                }
+            }
+        }
+        
+        processNode(element);
+        return matchNumber;
+    }
+
+
+    
+    function scrollToMatch(index) {
+        
+        if (matchCountTotal === 0 || index < 0 || index >= matchCountTotal) {
+            console.warn('无效的匹配项索引:', index);
+            return;
+        }
+        
+        
+        document.querySelectorAll('.highlight.active').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        
+        const matchId = `${MATCH_ID_PREFIX}${index}`;
+        const matchElement = document.getElementById(matchId);
+        
+        if (!matchElement) {
+            console.warn(`匹配项ID ${matchId} 未找到在DOM中`);
+            restoreMatches();
+            return;
+        }
+        
+        
+        currentMatchIndex = index;
+        matchElement.classList.add('active');
+        
+        
+        matchElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'center'
+        });
+        
+        
+        const tableWrapper = matchElement.closest('.table-wrapper');
+        if (tableWrapper) {
+            const tableRect = matchElement.getBoundingClientRect();
+            const wrapperRect = tableWrapper.getBoundingClientRect();
+            
+            
+            if (tableRect.left < wrapperRect.left || tableRect.right > wrapperRect.right) {
+                
+                tableWrapper.scrollLeft += (tableRect.left - wrapperRect.left) - (wrapperRect.width / 4);
+            }
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function restoreMatches() {
+        console.log('尝试恢复匹配项索引');
+        
+        const matches = document.querySelectorAll(`[id^="${MATCH_ID_PREFIX}"]`);
+        matchCountTotal = matches.length;
+        
+        if (matchCountTotal > 0) {
+            currentMatchIndex = 0;
+            updateSearchUI();
+            scrollToMatch(0);
+        } else {
+            if (currentSearchTerm) {
+                performSearch(currentSearchTerm);
+            }
+        }
+    }
+
+
+    
+    function goToNextMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const nextIndex = (currentMatchIndex + 1) % matchCountTotal;
+        scrollToMatch(nextIndex);
+    }
+
+
+    
+    function goToPrevMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const prevIndex = (currentMatchIndex - 1 + matchCountTotal) % matchCountTotal;
+        scrollToMatch(prevIndex);
+    }
+
+
+    
+    searchInput.addEventListener('input', (e) => {
+        const searchText = e.target.value;
+        
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+        }
+        
+        if (searchText.trim() === '') {
+            resetSearch();
+            return;
+        }
+        
+        searchTimeout = setTimeout(() => {
+            performSearch(searchText);
+        }, SEARCH_DELAY);
+    });
+
+
+    
+    prevMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToPrevMatch();
+    });
+    
+    nextMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToNextMatch();
+    });
+
+
+    
+    searchInput.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'Enter' && e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+        
+        if ((e.key === 'ArrowDown') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'ArrowUp' && !e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+    });
+
+
+    
+    function openInNewTab(url, docType, title) {
+        const action = getDocumentAction(docType);
+        
+        
+        switch(action) {
+            case 'mammoth':
+                
+                const newWindow = window.open('', '_blank');
+                if (newWindow) {
+                    newWindow.document.write(`
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>${title || '文档预览'}</title>
+                            \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            <style>
+                                body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
+                                .loading { text-align: center; padding: 50px; }
+                                .error { color: #dc3545; text-align: center; padding: 50px; }
+                                .table-wrapper { overflow-x: auto; margin: 16px 0; }
+                                table { border-collapse: collapse; width: 100%; }
+                                table th, table td { border: 1px solid #ddd; padding: 8px 12px; }
+                                table th { background-color: #f8f9fa; }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="loading">
+                                <p>正在加载文档...</p>
+                            </div>
+                            \x3Cscript>
+                                // 解析文档并显示
+                                async function loadDocument() {
+                                    try {
+                                        const response = await fetch('${url}');
+                                        if (!response.ok) throw new Error('加载失败');
+                                        
+                                        const arrayBuffer = await response.arrayBuffer();
+                                        const result = await mammoth.convertToHtml({ arrayBuffer });
+                                        
+                                        // 处理表格
+                                        const tempDiv = document.createElement('div');
+                                        tempDiv.innerHTML = result.value;
+                                        
+                                        const tables = tempDiv.querySelectorAll('table');
+                                        tables.forEach(table => {
+                                            const wrapper = document.createElement('div');
+                                            wrapper.className = 'table-wrapper';
+                                            table.parentNode.insertBefore(wrapper, table);
+                                            wrapper.appendChild(table);
+                                        });
+                                        
+                                        document.body.innerHTML = tempDiv.innerHTML;
+                                    } catch (err) {
+                                        document.body.innerHTML = \`
+                                            <div class="error">
+                                                <p>文档加载失败</p>
+                                                <p>\${err.message}</p>
+                                                <p><a href="${url}" download>下载文档</a></p>
+                                            </div>
+                                        \`;
+                                    }
+                                }
+                                
+                                loadDocument();
+                            \x3C/script>
+                        </body>
+                        </html>
+                    `);
+                    newWindow.document.close();
+                }
+                break;
+                
+            case 'officeView':
+            case 'officeViewmodal':
+                
+                const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeViewerUrl, '_blank');
+                break;
+                
+            case 'officeEmbed':
+            case 'officeEmbednewTab':
+                
+                const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeEmbedUrl, '_blank');
+                break;
+                
+            case 'modal':
+                
+                window.open(url, '_blank');
+                break;
+                
+            case 'download':
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = title;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                break;
+                
+            case 'newTab':
+            default:
+                
+                window.open(url, '_blank');
+                break;
+        }
+    }
+
+
+    
+    openNewTabBtn.addEventListener('click', () => {
+        if (currentDocUrl && currentDocType) {
+            openInNewTab(currentDocUrl, currentDocType, modalTitle.textContent);
+        }
+    });
+
+
+    
+    function getDocumentAction(docType) {
+        
+        if (documentConfig[docType] && documentConfig[docType].action) {
+            return documentConfig[docType].action;
+        }
+        return documentConfig.defaultAction;
+    }
+
+
+    
+    function handleOfficeView(url) {
+        const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeViewerUrl, '_blank');
+    }
+
+
+    
+    function handleOfficeViewModal(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-view-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbed(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-embed-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbedNewTab(url) {
+        const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeEmbedUrl, '_blank');
+    }
+
+
+    
+    function handlePdfPreview(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.className = 'pdf-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    async function handleMammothParse(url, title, docType) {
+        if (!MAMMOTH_SUPPORTED_TYPES.includes(docType)) {
+            console.warn(`不支持对${docType}类型使用mammoth解析`);
+            return false;
+        }
+        
+        try {
+            openModal();
+            previewContainer.innerHTML = '<div style="text-align: center; padding: 20px;"><i class="fa fa-spinner fa-spin"></i> 正在解析文档...</div>';
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`请求失败: ${response.status}`);
+            }
+            
+            const arrayBuffer = await response.arrayBuffer();
+            let result;
+            
+            
+            switch(docType) {
+                case 'docx':
+                    result = await mammoth.convertToHtml({ arrayBuffer });
+                    break;
+                case 'xlsx':
+                    
+                    result = await parseXlsx(arrayBuffer);
+                    break;
+                case 'pptx':
+                    
+                    result = await parsePptx(arrayBuffer);
+                    break;
+                default:
+                    throw new Error(`不支持的文档类型: ${docType}`);
+            }
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = result.value;
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            currentDocContent = tempDiv.innerHTML;
+            previewContainer.innerHTML = currentDocContent;
+            resetSearch();
+            return true;
+            
+        } catch (err) {
+            previewContainer.innerHTML = `<div style="text-align: center; padding: 20px; color: #dc3545;">
+                解析失败，请<a href="${url}" class="btn btn-primary">下载文档</a>查看
+                <p class="error-message">错误: ${err.message}</p>
+            </div>`;
+            console.error('解析错误：', err);
+            return false;
+        }
+    }
+
+
+    
+    async function parseXlsx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="xlsx-content"><p>Excel文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的Excel数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    async function parsePptx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="pptx-content"><p>PowerPoint文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的PowerPoint数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    document.querySelectorAll('.document-link').forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const docUrl = link.href;
+            const docTitle = link.textContent.trim();
+            const docType = link.getAttribute('data-type');
+            const action = getDocumentAction(docType);
+            
+            
+            currentDocUrl = docUrl;
+            currentDocType = docType;
+            currentAction = action;
+            modalTitle.textContent = docTitle;
+            downloadLink.href = docUrl;
+			
+			
+			let fileName = docTitle;
+			
+			const extRegex = new RegExp(`\\.${docType}$`, 'i');
+			if (!extRegex.test(fileName)) {
+				
+				fileName += `.${docType}`;
+			}
+			
+			downloadLink.download = fileName;
+            
+            
+            switch(action) {
+                case 'newTab':
+                    
+                    window.open(docUrl, '_blank');
+                    break;
+                    
+                case 'mammoth':
+                    
+                    await handleMammothParse(docUrl, docTitle, docType);
+                    break;
+                    
+                case 'officeView':
+                    
+                    handleOfficeView(docUrl);
+                    break;
+                    
+                case 'officeViewmodal':
+                    
+                    handleOfficeViewModal(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbed':
+                    
+                    handleOfficeEmbed(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbednewTab':
+                    
+                    handleOfficeEmbedNewTab(docUrl);
+                    break;
+                    
+                case 'download':
+                    
+                    link.click();
+                    break;
+                    
+                case 'modal':
+                default:
+                    
+                    openModal();
+                    
+					const iframe = document.createElement('iframe');
+					iframe.src = docUrl;
+					iframe.className = 'pdf-container';
+					iframe.title = docTitle;
+					previewContainer.appendChild(iframe);
+						
+                    
+                    
+
+                    break;
+            }
+        });
+    });
+
+
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+
+    
+    updateSearchUI();
+});
+</script>
 
 
     <footer class="article-footer">

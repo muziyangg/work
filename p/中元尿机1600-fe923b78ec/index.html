@@ -15,7 +15,7 @@
 <meta name="twitter:description" content="接口说明 仪器厂商 中元尿机1600\n仪器型号 中元尿机1600\n通讯方式 单向|双向☑|主动上传\n仪器类型 临检尿机 医院名称 程序名称 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口|网口☑|监听文件|数据库|其他 连接方式：HL7协议☑|ASTM协议|监听文件|数据库|其他 仪器接口说明 连接需要回复才能连接成功 传输数据也要回复，否则会掉线 串口盒子配置 波特率： 9600 数据位：8 停止位： 1 校验位： N 仪器图片 仪器配置 数据格式 连接传输，通过MSH中QRY命令返回DSP^Q01串\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/img/title.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
-
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
     </head>
     <body class="
     article-page
@@ -815,6 +815,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <section class="article-content">
+    
+    
     
     
     <h2 id="接口说明">接口说明
@@ -1788,7 +1790,2171 @@ document.addEventListener('DOMContentLoaded', function() {
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2 id="接口说明">接口说明
+</h2><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">仪器厂商</th>
+          <th style="text-align: left">中元尿机1600<br /></th>
+          <th style="text-align: left">仪器型号</th>
+          <th style="text-align: left">中元尿机1600<br /></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">通讯方式</td>
+          <td style="text-align: left">单向|双向☑|主动上传<br /></td>
+          <td style="text-align: left">仪器类型</td>
+          <td style="text-align: left">临检尿机</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">医院名称</td>
+          <td style="text-align: left"><br /></td>
+          <td style="text-align: left">程序名称</td>
+          <td style="text-align: left"><br /></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">终端服务器地址</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">终端服务器端口号</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
+</h2><ol>
+<li>接口类型：串口|网口☑|监听文件|数据库|其他</li>
+<li>连接方式：HL7协议☑|ASTM协议|监听文件|数据库|其他</li>
+</ol>
+<h2 id="仪器接口说明">仪器接口说明
+</h2><ul>
+<li>连接需要回复才能连接成功</li>
+<li>传输数据也要回复，否则会掉线</li>
+</ul>
+<h2 id="串口盒子配置">串口盒子配置
+</h2><ul>
+<li><strong>波特率：</strong> 9600</li>
+<li><strong>数据位：8</strong></li>
+<li><strong>停止位：</strong> 1</li>
+<li><strong>校验位：</strong> N</li>
+</ul>
+<h2 id="仪器图片">仪器图片
+</h2><h2 id="仪器配置">仪器配置
+</h2><h2 id="数据格式"><strong>数据格式</strong>
+</h2><p>连接传输，通过MSH中QRY命令返回DSP^Q01串</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">record&lt;--M : 2025-05-30 15:11:03 : MSH|^~\&amp;|EXU|U1600+U2610|||20250530151028||QRY^Q01|246|P|2.3.1|U1600220700070+U2610220300029||【13】
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:03 : MSH|^~\&amp;|EXU|U1600+U2610|||20250530151028||QRY^Q01|246|P|2.3.1|U1600220700070+U2610220300029||
+</span></span><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">msgRoutine : 2025-05-30 15:11:03 : QRY
+</span></span><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">H--&gt;M : 2025-05-30 15:11:03 : 【11】MSH|^~\&amp;|EXU|U1600+U2610|||20250530151028||DSP^Q01|246|P|2.3.1|U1600220700070+U2610220300029||【13】【28】【13】
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果传输，通过MSH中ORU命令返回ORU^R01串</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">record&lt;--M : 2025-05-30 15:11:36 : MSH|^~\&amp;|EXU|U1600+U2610|||20250530151101||ORU^R01|247|P|2.3.1|U1600220700070+U2610220300029|SampleResult|【13】PID|1|26056|14|25052900722||4|207|Chemistry|Success||||||||||||||尿液||||【13】OBR|1|26056|14|25052900722|20250530090529||20250530090529|1|||||||【13】OBX|1|尿胆原(URO)|Normal|||Normal|ChemistrySample|||【13】OBX|2|胆红素(BIL)|-|||-|ChemistrySample|||【13】OBX|3|酮体(KET)|-|||-|ChemistrySample|||【13】OBX|4|白细胞(LEU)|-|||-|ChemistrySample|||【13】OBX|5|亚硝酸盐(NIT)|-|||-|ChemistrySample|||【13】OBX|6|蛋白质(PRO)|-|||-|ChemistrySample|||【13】OBX|7|隐血(BLD)|-|||-|ChemistrySample|||【13】OBX|8|微白蛋白(MALB)|10mg/L|||30mg/L|ChemistrySample|||【13】OBX|9|肌酐(CRE)|0.9mmol/L||↓|4.4-17.7mmol/L|ChemistrySample|||【13】OBX|10|葡萄糖(GLU)|-|||-|ChemistrySample|||【13】OBX|11|比重(SG)|1.026||↑|1.010-1.025|ChemistrySample|||【13】OBX|12|酸碱度(pH)|7.0|||5.5-7.0|ChemistrySample|||【13】OBX|13|抗坏血酸(VC)|0.6mmol/L||↑|0mmol/L|ChemistrySample|||【13】OBX|14|尿钙(Ca)|5.0mmol/L|||2.5-7.5mmol/L|ChemistrySample|||【13】OBX|15|微白蛋白比肌酐(A:C)|&lt;3.4mg/mmol|||&lt;3.4mg/mmol|ChemistrySample|||【13】OBX|16|蛋白质比肌酐(P:C)|&lt;0.08g/gCr||↓|0.08-0.2g/gCr|ChemistrySample|||【13】OBX|17|颜色(Color)|深黄||||ChemistrySample|||【13】OBX|18|浊度(Turb)|轻度浑浊||||ChemistrySample|||【13】
+</span></span><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : MSH|^~\&amp;|EXU|U1600+U2610|||20250530151101||ORU^R01|247|P|2.3.1|U1600220700070+U2610220300029|SampleResult|
+</span></span><span class="line"><span class="cl">8
+</span></span><span class="line"><span class="cl">msgRoutine : 2025-05-30 15:11:36 : ORU
+</span></span><span class="line"><span class="cl">9
+</span></span><span class="line"><span class="cl">H--&gt;M : 2025-05-30 15:11:36 : 【11】MSH|^~\&amp;|EXU|U1600+U2610|||20250530151101||ACK^R01|247|P|2.3.1|U1600220700070+U2610220300029|SampleResult|【13】MSA||AA||ORU^R01|10|10|SampleResult||【13】【28】【13】
+</span></span><span class="line"><span class="cl">10
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : PID|1|26056|14|25052900722||4|207|Chemistry|Success||||||||||||||尿液||||
+</span></span><span class="line"><span class="cl">11
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBR|1|26056|14|25052900722|20250530090529||20250530090529|1|||||||
+</span></span><span class="line"><span class="cl">12
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|1|尿胆原(URO)|Normal|||Normal|ChemistrySample|||
+</span></span><span class="line"><span class="cl">13
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|2|胆红素(BIL)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">14
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|3|酮体(KET)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">15
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|4|白细胞(LEU)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">16
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|5|亚硝酸盐(NIT)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">17
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|6|蛋白质(PRO)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">18
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|7|隐血(BLD)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">19
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|8|微白蛋白(MALB)|10mg/L|||30mg/L|ChemistrySample|||
+</span></span><span class="line"><span class="cl">20
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|9|肌酐(CRE)|0.9mmol/L||↓|4.4-17.7mmol/L|ChemistrySample|||
+</span></span><span class="line"><span class="cl">21
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|10|葡萄糖(GLU)|-|||-|ChemistrySample|||
+</span></span><span class="line"><span class="cl">22
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|11|比重(SG)|1.026||↑|1.010-1.025|ChemistrySample|||
+</span></span><span class="line"><span class="cl">23
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|12|酸碱度(pH)|7.0|||5.5-7.0|ChemistrySample|||
+</span></span><span class="line"><span class="cl">24
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|13|抗坏血酸(VC)|0.6mmol/L||↑|0mmol/L|ChemistrySample|||
+</span></span><span class="line"><span class="cl">25
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|14|尿钙(Ca)|5.0mmol/L|||2.5-7.5mmol/L|ChemistrySample|||
+</span></span><span class="line"><span class="cl">26
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|15|微白蛋白比肌酐(A:C)|&lt;3.4mg/mmol|||&lt;3.4mg/mmol|ChemistrySample|||
+</span></span><span class="line"><span class="cl">27
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|16|蛋白质比肌酐(P:C)|&lt;0.08g/gCr||↓|0.08-0.2g/gCr|ChemistrySample|||
+</span></span><span class="line"><span class="cl">28
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|17|颜色(Color)|深黄||||ChemistrySample|||
+</span></span><span class="line"><span class="cl">29
+</span></span><span class="line"><span class="cl">resultStr : 2025-05-30 15:11:36 : OBX|18|浊度(Turb)|轻度浑浊||||ChemistrySample|||
+</span></span><span class="line"><span class="cl">30
+</span></span><span class="line"><span class="cl">result&lt;--M : 2025-05-30 15:11:36 : 14&amp;\,尿胆原(URO)\Nra,胆红素(BIL)\-,酮体(KET)\-,白细胞(LEU)\-,亚硝酸盐(NIT)\-,蛋白质(PRO)\-,隐血(BLD)\-,微白蛋白(MALB)\10,肌酐(CRE)\0.9,葡萄糖(GLU)\-,比重(SG)\1.026,酸碱度(pH)\7.0,抗坏血酸(VC)\0.6,尿钙(Ca)\5.0,微白蛋白比肌酐(A:C)\&lt;3.4,蛋白质比肌酐(P:C)\&lt;0.08Cr,颜色(Color)\深黄,浊度(Turb)\轻度浑浊,
+</span></span><span class="line"><span class="cl">31
+</span></span><span class="line"><span class="cl">系统提示 : 2025-05-30 15:11:36 : 通道号为:微白蛋白比肌酐(A:C)的项目没有做结果通道号对照
+</span></span><span class="line"><span class="cl">32
+</span></span><span class="line"><span class="cl">系统提示 : 2025-05-30 15:11:36 : 通道号为:浊度(Turb)的项目没有做结果通道号对照
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="项目通道号"><strong>项目通道号</strong>
+</h2><h2 id="修改记录">修改记录
+</h2><table>
+  <thead>
+      <tr>
+          <th>序号</th>
+          <th>日期</th>
+          <th>操作人</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>2025-08-26 11:42:29<br /></td>
+          <td>杨浩然</td>
+          <td><br /></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="仪器接口程序">仪器接口程序
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">///仪器名称：凝血CX-9000
+</span></span><span class="line"><span class="cl">///仪器厂商：迈瑞
+</span></span><span class="line"><span class="cl">///通讯方式：TCP/IP,HL7,双向
+</span></span><span class="line"><span class="cl">///编 写 者：hz
+</span></span><span class="line"><span class="cl">///编写日期：2023-04-06
+</span></span><span class="line"><span class="cl">MIFU3600(mi) 
+</span></span><span class="line"><span class="cl">  S mi=$g(mi) i &#39;$l(mi) q
+</span></span><span class="line"><span class="cl">  Q:&#39;$D(^dbo.BTMIMachineParameterD(mi))
+</span></span><span class="line"><span class="cl">  S par4=$li(^dbo.BTMIMachineParameterD(mi),10)
+</span></span><span class="line"><span class="cl">  S par9=$li(^dbo.BTMIMachineParameterD(mi),11)
+</span></span><span class="line"><span class="cl">  S par11=$li(^dbo.BTMIMachineParameterD(mi),12) 
+</span></span><span class="line"><span class="cl">  S par10=$li(^dbo.BTMIMachineParameterD(mi),13)
+</span></span><span class="line"><span class="cl">  S:$L(par10) par10=$ASCII(par10)
+</span></span><span class="line"><span class="cl">  S:$L(par11) par11=$ASCII(par11)
+</span></span><span class="line"><span class="cl">  s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
+</span></span><span class="line"><span class="cl">  s lf=$c(10),cr=$c(13),nak=$c(21),sb=$c(11),eb=$c(28)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  i $$Start^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">  f  d Main i $$Stop^MI.MIF000(mi) q
+</span></span><span class="line"><span class="cl">  c par4
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">ErrHandler
+</span></span><span class="line"><span class="cl">    h 10
+</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;)
+</span></span><span class="line"><span class="cl">    q
+</span></span><span class="line"><span class="cl">Main
+</span></span><span class="line"><span class="cl">  SET $ZTRAP=&#34;ErrHandler&#34;,$EC=&#34;&#34;
+</span></span><span class="line"><span class="cl">  s (AllRecord,chl,res,epis,episRecord,result,resultStr,mshStr,barcode,graphData,graphType,ret,resType,date,time,QC) = &#34;&#34;
+</span></span><span class="line"><span class="cl">  s record=$$Read^MI.MIF000(mi,sb,eb) 
+</span></span><span class="line"><span class="cl">  ;s record=$$Read^MI.MIF000(mi,&#34;&#34;,&#34;&#34;) 
+</span></span><span class="line"><span class="cl">  q:&#39;$l(record)
+</span></span><span class="line"><span class="cl">  d Trace^MI.MIF000(mi,record,&#34;record&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  d Result
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">Last 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  i $l(epis),$l(result) d
+</span></span><span class="line"><span class="cl">  .d Trace^MI.MIF000(mi,epis_&#34;&amp;&#34;_result,&#34;result&lt;--M&#34;)
+</span></span><span class="line"><span class="cl">  .d Save^MI.MIF000(mi,epis,result,date,time,QC) 
+</span></span><span class="line"><span class="cl">  //s (AllRecord,chl,res,epis,episRecord,result,resultStr,mshStr,barcode,date,time,QC)=&#34;&#34;
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">Result
+</span></span><span class="line"><span class="cl">  f i=1:1:$l(record,$c(13)) d
+</span></span><span class="line"><span class="cl">  .s resultStr=$p(record,$c(13),i)
+</span></span><span class="line"><span class="cl">  .q:resultStr=&#34;&#34;
+</span></span><span class="line"><span class="cl">  .d Trace^MI.MIF000(mi,resultStr,&#34;resultStr&#34;)
+</span></span><span class="line"><span class="cl">  .s headType=$p(resultStr,&#34;|&#34;,1)
+</span></span><span class="line"><span class="cl">  .//MSH|^~\&amp;|BC-6800|Mindray|||20140910100530||ORU^R01|1|P|2.3.1||||||UNICODE
+</span></span><span class="line"><span class="cl">  .i headType=&#34;MSH&#34; d
+</span></span><span class="line"><span class="cl">  ..s mshStr=resultStr
+</span></span><span class="line"><span class="cl">  ..s msgRoutine=$p($p(resultStr,&#34;|&#34;,9),&#34;^&#34;,1)
+</span></span><span class="line"><span class="cl">  ..D Trace^MI.MIF000(mi,msgRoutine,&#34;msgRoutine&#34;)
+</span></span><span class="line"><span class="cl">  ..i msgRoutine=&#34;ORU&#34; d
+</span></span><span class="line"><span class="cl">  ...D SendACK(mi,resultStr,&#34;AA&#34;,0,&#34;Message accepted&#34;)		// 暂时屏蔽不回复
+</span></span><span class="line"><span class="cl">  ..//MSH|^~\&amp;|EXU|U3600|||20231016162331||QRY^Q01|4|P|2.3.1|U3600221200144||【13】
+</span></span><span class="line"><span class="cl">  ..i msgRoutine=&#34;QRY&#34; d
+</span></span><span class="line"><span class="cl">  ...D SendACKNew(mi,resultStr,&#34;AA&#34;,0,&#34;Message accepted&#34;)
+</span></span><span class="line"><span class="cl">  .//QRD|20210818151949|R|D|1|||RD|9230883|OTH|||T|QRF|F3999|20210818151949|20210818151949|||RCT|COR|ALL||
+</span></span><span class="line"><span class="cl">  .//QRD|20220111135302|1|||SampleID|&lt;CR&gt;
+</span></span><span class="line"><span class="cl">  .I headType=&#34;QRD&#34; d
+</span></span><span class="line"><span class="cl">  ..s barcode=$p(resultStr,&#34;|&#34;,5)
+</span></span><span class="line"><span class="cl">  ..d SendQRD(mi,resultStr,barcode)
+</span></span><span class="line"><span class="cl">  ..;d SendQRD(mi,resultStr,&#34;AA&#34;,0,&#34;Message accepted&#34;,mshStr,barcode)
+</span></span><span class="line"><span class="cl">  .//ORC|RF||SampleID1
+</span></span><span class="line"><span class="cl">  .I headType=&#34;ORC&#34; d
+</span></span><span class="line"><span class="cl">  ..s barcode=$p(resultStr,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  ..q:barcode=&#34;&#34;
+</span></span><span class="line"><span class="cl">  ..d SendDSR(mi,resultStr,&#34;AA&#34;,0,&#34;Message accepted&#34;,mshStr,barcode)
+</span></span><span class="line"><span class="cl">  .i headType=&#34;OBR&#34; d
+</span></span><span class="line"><span class="cl">  ..s epis=$p(resultStr,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  .//OBX|8|NM|6690-2^WBC^LN||2.20|10*9/L|4.00-10.00|L~A|||F
+</span></span><span class="line"><span class="cl">  .i headType=&#34;PID&#34; d
+</span></span><span class="line"><span class="cl">  ..s chl=$p(resultStr,&#34;|&#34;,11)
+</span></span><span class="line"><span class="cl">  ..s res=$p(resultStr,&#34;|&#34;,12)
+</span></span><span class="line"><span class="cl">  ..s res=$tr(res,&#34;%&#34;)
+</span></span><span class="line"><span class="cl">  ..s result=result_chl_$c(92)_res_$c(44)
+</span></span><span class="line"><span class="cl">  .i headType=&#34;OBX&#34; d
+</span></span><span class="line"><span class="cl">  ..s resType=$p(resultStr,&#34;|&#34;,3)
+</span></span><span class="line"><span class="cl">  ..s ImageType=$p(resultStr,&#34;|&#34;,8)
+</span></span><span class="line"><span class="cl">  ..;i resType=&#34;NM&#34; d
+</span></span><span class="line"><span class="cl">  ..s chl=$tr($p($p(resultStr,&#34;|&#34;,3),&#34;^&#34;,1),&#34; &#34;)
+</span></span><span class="line"><span class="cl">  ..s res=$p(resultStr,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  ..i res[&#34; &#34; s res=$p(res,&#34; &#34;)
+</span></span><span class="line"><span class="cl">  ..;i (chl=&#34;VC&#34;)||(chl=&#34;MALB&#34;) s res=+res
+</span></span><span class="line"><span class="cl">  ..i (chl=&#34;URO&#34;)&amp;&amp;(res[&#34;Normal&#34;) s res=&#34;阴性&#34;
+</span></span><span class="line"><span class="cl">  ..s res=$tr(res,&#34;mmol/L&#34;)
+</span></span><span class="line"><span class="cl">  ..s res=$tr(res,&#34;mg/L&#34;)
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ..i &#34;^UNCX^CAPH^AUCR^MAPH^COM^CID^URIC^TYRO^&#34;[(&#34;^&#34;_chl_&#34;^&#34;) d //处理结晶合并结果累加
+</span></span><span class="line"><span class="cl">  ...S ^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;JJ&#34;)=$g(^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;JJ&#34;))+res
+</span></span><span class="line"><span class="cl">  ...s res=&#34;&#34;
+</span></span><span class="line"><span class="cl">  ..i &#34;^SUCO^BACI^&#34;[(&#34;^&#34;_chl_&#34;^&#34;) d //处理细菌合并结果累加 
+</span></span><span class="line"><span class="cl">  ...S ^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;XJ&#34;)=$g(^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;XJ&#34;))+res
+</span></span><span class="line"><span class="cl">  ...s res=&#34;&#34;
+</span></span><span class="line"><span class="cl">  ..i $p(resultStr,&#34;|&#34;,2)=51  d  //处理结晶合并结果累加后清除
+</span></span><span class="line"><span class="cl">  ...s result=result_&#34;JJCount&#34;_$c(92)_+$g(^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;JJ&#34;))_$c(44)_&#34;XJCount&#34;_$c(92)_+$g(^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis,&#34;XJ&#34;))_$c(44)
+</span></span><span class="line"><span class="cl">  ...k ^Tmpsch(&#34;MI.MIFU3600&#34;,mi,epis)
+</span></span><span class="line"><span class="cl">  ..i $l(chl),$l(res) s result=result_chl_$c(92)_res_$c(44)
+</span></span><span class="line"><span class="cl">  ..i ImageType[&#34;IMG&#34; d
+</span></span><span class="line"><span class="cl">  ...//OBX|71|红细胞(RBC)|Qk1GBwAAA
+</span></span><span class="line"><span class="cl">  ...S graphData=$p(resultStr,&#34;|&#34;,4)
+</span></span><span class="line"><span class="cl">  ...q:graphData=&#34;&#34;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  ...s flag=$P($p(resultStr,&#34;|&#34;,3),&#34;^&#34;,1)
+</span></span><span class="line"><span class="cl">  ...s graphType=flag
+</span></span><span class="line"><span class="cl">  ...i flag=&#34;红细胞(RBC)&#34; s graphType=&#34;HRBC&#34; //图片名转换
+</span></span><span class="line"><span class="cl">  ...i flag=&#34;白细胞(WBC&#34; s graphType=&#34;HWBC&#34; //图片名转换
+</span></span><span class="line"><span class="cl">  ...S base64Stream=##Class(%GlobalCharacterStream).%New()
+</span></span><span class="line"><span class="cl">  ...D base64Stream.Write(graphData)
+</span></span><span class="line"><span class="cl">  ...s ftpFfolderName=&#34;ZY1600&#34;
+</span></span><span class="line"><span class="cl">  ...d Trace^MI.MIF000(mi,epis_&#34;^&#34;_graphType_&#34;^&#34;_ftpFfolderName,&#34;graph&#34;)
+</span></span><span class="line"><span class="cl">  ...;s ret=##Class(MI.Instrument).SaveBase64StreamToGraph(base64Stream,mi,epis,graphType,&#34;&#34;,&#34;&#34;,&#34;&#34;)
+</span></span><span class="line"><span class="cl">  ...//文件服务用下面的保存图片方法
+</span></span><span class="line"><span class="cl">  ...s ret=##Class(MI.Common.MIFBase).SaveBase64ToMachine(mi,epis,graphType,base64Stream,epis_graphType_&#34;.bmp&#34;,ftpFfolderName)
+</span></span><span class="line"><span class="cl">  ...i ret&#39;=1 d Trace^MI.MIF000(mi,&#34;错误&#34;_ret,&#34;ret&#34;)
+</span></span><span class="line"><span class="cl">  d Last
+</span></span><span class="line"><span class="cl">  q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SendACK(mi,mshStr,ackType=&#34;AA&#34;,errCode=0,errDesc=&#34;Message accepted&#34;) //send &#39;ack&#39; to instrument 
+</span></span><span class="line"><span class="cl">    N (mi,mshStr,ackType,errCode,errDesc)
+</span></span><span class="line"><span class="cl">    S mi=$g(mi),mshStr=$g(mshStr),ackType=$g(ackType),errCode=$g(errCode),errDesc=$g(errDesc)
+</span></span><span class="line"><span class="cl">    S ret=1,sb=$C(11),eb=$C(28),cr=$C(13)
+</span></span><span class="line"><span class="cl">    Q:(&#39;$l(mi))||(&#39;$l(mshStr)) ret
+</span></span><span class="line"><span class="cl">    //MSH|^~\&amp;|BC-6800|Mindray|||20140909162225||ORU^R01|1|P|2.3.1||||||UNICODE
+</span></span><span class="line"><span class="cl">    S mshStr=$TR(mshStr,cr,&#34;&#34;)
+</span></span><span class="line"><span class="cl">    S ret=0
+</span></span><span class="line"><span class="cl">    S msgRoutine=$P($P(mshStr,&#34;|&#34;,9),&#34;^&#34;,2)
+</span></span><span class="line"><span class="cl">    s Type=$P(mshStr,&#34;|&#34;,14)
+</span></span><span class="line"><span class="cl">    S seq=$P(mshStr,&#34;|&#34;,10)
+</span></span><span class="line"><span class="cl">    s $P(mshStr,&#34;|&#34;,9)=&#34;ACK^R01&#34;
+</span></span><span class="line"><span class="cl">    ;s msaStr=&#34;MSA|&#34;_ackType_&#34;|&#34;_seq_&#34;|&#34;_Type_&#34;||&#34;
+</span></span><span class="line"><span class="cl">    s msaStr=&#34;MSA||&#34;_ackType_&#34;||ORU^R01|10|10|SampleResult||&#34;
+</span></span><span class="line"><span class="cl">    D Trace^MI.MIF000(mi,sb_mshStr_cr_msaStr_cr_eb_cr,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">    W sb,mshStr,cr,msaStr,cr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">    Q ret 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">SendACKNew(mi,mshStr,ackType=&#34;AA&#34;,errCode=0,errDesc=&#34;Message accepted&#34;) //send &#39;ack&#39; to instrument 
+</span></span><span class="line"><span class="cl">    N (mi,mshStr,ackType,errCode,errDesc)
+</span></span><span class="line"><span class="cl">    S mi=$g(mi),mshStr=$g(mshStr),ackType=$g(ackType),errCode=$g(errCode),errDesc=$g(errDesc)
+</span></span><span class="line"><span class="cl">    S ret=1,sb=$C(11),eb=$C(28),cr=$C(13)
+</span></span><span class="line"><span class="cl">    Q:(&#39;$l(mi))||(&#39;$l(mshStr)) ret
+</span></span><span class="line"><span class="cl">    //MSH|^~\&amp;|BC-6800|Mindray|||20140909162225||ORU^R01|1|P|2.3.1||||||UNICODE
+</span></span><span class="line"><span class="cl">    S mshStr=$TR(mshStr,cr,&#34;&#34;)
+</span></span><span class="line"><span class="cl">    S ret=0
+</span></span><span class="line"><span class="cl">    S msgRoutine=$P($P(mshStr,&#34;|&#34;,9),&#34;^&#34;,2)
+</span></span><span class="line"><span class="cl">    s Type=$P(mshStr,&#34;|&#34;,14)
+</span></span><span class="line"><span class="cl">    S seq=$P(mshStr,&#34;|&#34;,10)
+</span></span><span class="line"><span class="cl">    s $P(mshStr,&#34;|&#34;,9)=&#34;DSP^Q01&#34;
+</span></span><span class="line"><span class="cl">    s msaStr=&#34;MSA|&#34;_ackType_&#34;|&#34;_seq_&#34;|&#34;_Type_&#34;||&#34;
+</span></span><span class="line"><span class="cl">    D Trace^MI.MIF000(mi,sb_mshStr_cr_eb_cr,&#34;H--&gt;M&#34;)
+</span></span><span class="line"><span class="cl">    W sb,mshStr,cr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">    Q ret 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SendQRD(mi,record,labno)
+</span></span><span class="line"><span class="cl">	N (mi,record,AckType,ErrCode,ErrDesc,mshStr,labno)
+</span></span><span class="line"><span class="cl">	s mi=$g(mi),record=$g(record),AckType=$g(AckType),ErrCode=$g(ErrCode),ErrDesc=$g(ErrDesc),mshStr=$g(mshStr),labno=$g(labno)
+</span></span><span class="line"><span class="cl">	S ret=1,sb=$C(11),eb=$C(28),cr=$C(13)
+</span></span><span class="line"><span class="cl">	Q:(&#39;$l(mi))||(&#39;$l(record))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	d ScanOne^MI.MIF000(mi,labno) ;创建上传化验项目列表
+</span></span><span class="line"><span class="cl">	S date=$tr($zd(+$h,3),&#34;-&#34;)
+</span></span><span class="line"><span class="cl">	S time=$tr($zt($p($h,&#34;,&#34;,2)),&#34;:&#34;)
+</span></span><span class="line"><span class="cl">	///无对应样本，则返回消息为
+</span></span><span class="line"><span class="cl">	s MSH=&#34;MSH|^~\&amp;|||Keyu|KUF10|&#34;_date_time_&#34;||QCK^Q02|4|P|2.3.1|||P|0||ASCII|||&#34;_cr
+</span></span><span class="line"><span class="cl">	s MSA=&#34;MSA|AA|1|Application accepted|||0|&#34;_cr
+</span></span><span class="line"><span class="cl">	s ERR=&#34;ERR|0|&#34;_cr
+</span></span><span class="line"><span class="cl">	i &#39;$D(^TMP(&#34;MIFTESTCODE&#34;,$j,mi,labno)) {
+</span></span><span class="line"><span class="cl">		s QAK=&#34;QAK|SR|NF|&#34;_cr
+</span></span><span class="line"><span class="cl">		s mshStr=MSH_MSA_ERR_QAK
+</span></span><span class="line"><span class="cl">		w sb,mshStr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">		D Trace^MI.MIF000(mi,sb_mshStr_eb_cr,&#34;H-&gt;M&#34;)
+</span></span><span class="line"><span class="cl">		q
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	//返回QCK^Q02消息作应答
+</span></span><span class="line"><span class="cl">	s QAK=&#34;QAK|SR|OK|&#34;_cr
+</span></span><span class="line"><span class="cl">	s mshStr=MSH_MSA_ERR_QAK
+</span></span><span class="line"><span class="cl">	;w sb,mshStr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">	;D Trace^MI.MIF000(mi,sb_mshStr_eb_cr,&#34;H-&gt;M&#34;)
+</span></span><span class="line"><span class="cl">	;h 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">	//返回查询应答QCK^Q02消息后,再发送医嘱数据消息DSR^Q03
+</span></span><span class="line"><span class="cl">	s MSH=&#34;MSH|^~\&amp;|||Keyu|KUF10|&#34;_date_time_&#34;||DSR^Q03|1|P|2.3.1|||P|5||ASCII|||&#34;_cr
+</span></span><span class="line"><span class="cl">	s MSA=&#34;MSA|AA|1|Application accepted|||0|&#34;_cr
+</span></span><span class="line"><span class="cl">	s ERR=&#34;ERR|0|&#34;_cr
+</span></span><span class="line"><span class="cl">	s QAK=&#34;QAK|SR|OK|&#34;_cr
+</span></span><span class="line"><span class="cl">	s QRD=&#34;QRD|&#34;_date_time_&#34;|R|D|1|||RD|&#34;_labno_&#34;|OTH|||T|&#34;_cr
+</span></span><span class="line"><span class="cl">	s QRF=&#34;QRF|KUF10|&#34;_date_time_&#34;|&#34;_date_time_&#34;|||RCT|COR|ALL||&#34;_cr
+</span></span><span class="line"><span class="cl">	s VisitNumberDR = $o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,##Class(LIS.Util.Common).IndexData(labno),&#34;&#34;))
+</span></span><span class="line"><span class="cl">	//标本信息
+</span></span><span class="line"><span class="cl">	s RPVisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+</span></span><span class="line"><span class="cl">	s RegNo=$lg(RPVisitNumberData,3)
+</span></span><span class="line"><span class="cl">	s BedNo=$lg(RPVisitNumberData,27)
+</span></span><span class="line"><span class="cl">	s SurName=$lg(RPVisitNumberData,13)
+</span></span><span class="line"><span class="cl">	s Age=$lg(RPVisitNumberData,18)
+</span></span><span class="line"><span class="cl">	s SpeciesDR=$lg(RPVisitNumberData,15),Species=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(SpeciesDR) s Species=$lg($g(^dbo.BTSpeciesD(SpeciesDR)),3)
+</span></span><span class="line"><span class="cl">	s DoctorDR=$lg(RPVisitNumberData,23),Doctor=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(DoctorDR) s Doctor=$lg($g(^dbo.BTDoctorD(DoctorDR)),3)
+</span></span><span class="line"><span class="cl">	s LocationDR=$lg(RPVisitNumberData,22),Location=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(LocationDR) s Location=$lg($g(^dbo.BTLocationD(LocationDR)),3)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	s tcx=&#34;&#34;
+</span></span><span class="line"><span class="cl">	S chl=&#34;&#34; F  S chl=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,mi,labno,chl)) Q:chl=&#34;&#34;  D
+</span></span><span class="line"><span class="cl">	.i $l(tcx) s tcx=tcx_&#34;+&#34;_chl
+</span></span><span class="line"><span class="cl">	.i &#39;$l(tcx) s tcx=chl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	i tcx=&#34;Chemistry+Morphology&#34; s tcx=&#34;ALL&#34;
+</span></span><span class="line"><span class="cl">	i tcx=&#34;MorphologyChemistry&#34; s tcx=&#34;ALL&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	//MSH|^~\&amp;|||||20220111135302||QCK^Q02||P|2.3.1||||0|||||&lt;CR&gt;
+</span></span><span class="line"><span class="cl">    //MSA||QRY^Q02||||||&lt;CR&gt;
+</span></span><span class="line"><span class="cl">    //DSP|1|SampleID|1|1234567890|张三|男|21|岁|汉族|123|456|789|20220111134350|内科|李四|门诊|医保|All|||&lt;CR&gt;&lt;EB&gt;&lt;CR&gt;
+</span></span><span class="line"><span class="cl">    s MSH=&#34;MSH|^~\&amp;|||||&#34;_date_time_&#34;||QCK^Q02||P|2.3.1||||0|||||&#34;_cr
+</span></span><span class="line"><span class="cl">	s MSA=&#34;MSA||QRY^Q02||||||&#34;_cr
+</span></span><span class="line"><span class="cl">	s DSPs=&#34;DSP|1|Barcode||&#34;_labno_&#34;|&#34;_SurName_&#34;|&#34;_Species_&#34;|&#34;_Age_&#34;|岁|汉族||&#34;_RegNo_&#34;|&#34;_BedNo_&#34;|&#34;_date_time_&#34;|&#34;_Location_&#34;|&#34;_Doctor_&#34;|||&#34;_tcx_&#34;|||&#34;_cr
+</span></span><span class="line"><span class="cl">	s mshStr=MSH_MSA_DSPs
+</span></span><span class="line"><span class="cl">	w sb,mshStr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">	D Trace^MI.MIF000(mi,cr_mshStr_eb_cr,&#34;H-&gt;M&#34;)
+</span></span><span class="line"><span class="cl">	Q 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SendDSR(mi,record, AckType=&#34;AA&#34;,ErrCode=0,ErrDesc=&#34;Message accepted&#34;,mshStr,epis)
+</span></span><span class="line"><span class="cl">	 N (mi,record,AckType,ErrCode,ErrDesc,mshStr,epis)
+</span></span><span class="line"><span class="cl">	 s mi=$g(mi),record=$g(record),AckType=$g(AckType),ErrCode=$g(ErrCode),ErrDesc=$g(ErrDesc),mshStr=$g(mshStr),epis=$g(epis)
+</span></span><span class="line"><span class="cl">	 S ret=1,sb=$C(11),eb=$C(28),cr=$C(13)
+</span></span><span class="line"><span class="cl">	 Q:(&#39;$l(mi))||(&#39;$l(mshStr)) ret
+</span></span><span class="line"><span class="cl">	 //MSH|^~\&amp;|BC-6800|Mindray|||20081120174836||ORM^O01|4|P|2.3.1||||||UNICODE
+</span></span><span class="line"><span class="cl">	 S mshStr=$TR(mshStr,cr,&#34;&#34;)
+</span></span><span class="line"><span class="cl">	 S ret=0
+</span></span><span class="line"><span class="cl">	 S seq=$P(mshStr,&#34;|&#34;,10)
+</span></span><span class="line"><span class="cl">   	 S $P(mshStr,&#34;|&#34;,9)=&#34;ORR^O02&#34;
+</span></span><span class="line"><span class="cl">   	 s isRecieve=&#34;&#34;
+</span></span><span class="line"><span class="cl">   	 s wgDR=&#34;&#34;
+</span></span><span class="line"><span class="cl">	 s isRecieve=epis 
+</span></span><span class="line"><span class="cl">	 s flag=&#34;AA&#34;
+</span></span><span class="line"><span class="cl">	 s MSACode=seq
+</span></span><span class="line"><span class="cl">	  D Trace^MI.MIF000(mi,isRecieve,&#34;isRecieve is &#34;)
+</span></span><span class="line"><span class="cl">	 i ($l(isRecieve)&lt;1)
+</span></span><span class="line"><span class="cl">	 {
+</span></span><span class="line"><span class="cl">		 ;s flag=&#34;AR&#34;
+</span></span><span class="line"><span class="cl">	 }
+</span></span><span class="line"><span class="cl">	 i $ZCVT(epis,&#34;U&#34;)=$ZCVT(&#34;Invalid&#34;,&#34;U&#34;){
+</span></span><span class="line"><span class="cl">		 ;s flag=&#34;AR&#34;
+</span></span><span class="line"><span class="cl">	 }
+</span></span><span class="line"><span class="cl">	 s MSA=&#34;MSA|&#34;_flag_&#34;|&#34;_MSACode_&#34;||||&#34;
+</span></span><span class="line"><span class="cl">	 i flag=&#34;AR&#34;{
+</span></span><span class="line"><span class="cl">		 S TMPCORDE=sb_mshStr_cr_MSA_cr_eb_cr
+</span></span><span class="line"><span class="cl">		 W sb,mshStr,cr,MSA,cr,eb,cr,*-3
+</span></span><span class="line"><span class="cl">		 D Trace^MI.MIF000(mi,TMPCORDE,&#34;H-&gt;M&#34;)
+</span></span><span class="line"><span class="cl">	 }else{
+</span></span><span class="line"><span class="cl">	 s PatInfomation=&#34;&#34;
+</span></span><span class="line"><span class="cl">	 s PatInfomation=$$GetPatInfo(epis,mi)
+</span></span><span class="line"><span class="cl">	 d Trace^MI.MIF000(mi,PatInfomation,&#34;PatInfomation is&#34;)
+</span></span><span class="line"><span class="cl">	 s (RegNo,Name,Birth,Species,PatType,LOC,BedNo,Fee,Srcdocno,PatAge)=&#34;&#34;
+</span></span><span class="line"><span class="cl">	 i $l(PatInfomation){
+</span></span><span class="line"><span class="cl">	 s RegNo=$p(PatInfomation,&#34;,&#34;,9)
+</span></span><span class="line"><span class="cl">	 s Name=$p(PatInfomation,&#34;,&#34;,10)
+</span></span><span class="line"><span class="cl">	 s Birth=$p(PatInfomation,&#34;,&#34;,29)
+</span></span><span class="line"><span class="cl">	 s Species=$p(PatInfomation,&#34;,&#34;,11)
+</span></span><span class="line"><span class="cl">	 i Species=&#34;1&#34; s Species=&#34;Male&#34;
+</span></span><span class="line"><span class="cl">	 i Species=&#34;2&#34; s Species=&#34;Fmale&#34;
+</span></span><span class="line"><span class="cl">	 s PatType=$p(PatInfomation,&#34;,&#34;,12)
+</span></span><span class="line"><span class="cl">	 s LOC=$p(PatInfomation,&#34;,&#34;,6)
+</span></span><span class="line"><span class="cl">	 s BedNo=$p(PatInfomation,&#34;,&#34;,13)
+</span></span><span class="line"><span class="cl">	 s Fee=$p(PatInfomation,&#34;,&#34;,5)
+</span></span><span class="line"><span class="cl">	 s Srcdocno=$p(PatInfomation,&#34;,&#34;,7)
+</span></span><span class="line"><span class="cl">	 s PatAge=$p(PatInfomation,&#34;,&#34;,14)
+</span></span><span class="line"><span class="cl">	 }
+</span></span><span class="line"><span class="cl">	 s PID=&#34;PID|1||&#34;_RegNo_&#34;^^^^MR||&#34;_Name_&#34;||&#34;_Birth_&#34;|&#34;_Species
+</span></span><span class="line"><span class="cl">	 s PV1=&#34;PV1|1|&#34;_PatType_&#34;|&#34;_LOC_&#34;^^&#34;_BedNo_&#34;|||||||||||||||||&#34;_Fee
+</span></span><span class="line"><span class="cl">	 s ORC=&#34;ORC|AF|&#34;_epis
+</span></span><span class="line"><span class="cl">	 s curTime=$zd($h,8)_$tr($zt($p($h,&#34;,&#34;,2)),&#34;:&#34;,&#34;&#34;)
+</span></span><span class="line"><span class="cl">	 s randomNumber=1000+$r(1000)
+</span></span><span class="line"><span class="cl">	 s OBR=&#34;OBR|1|&#34;_epis_&#34;||00001^Worksheet Response^99MRC||&#34;_curTime_&#34;||||&#34;_Srcdocno_&#34;||||||||||||||HM&#34;
+</span></span><span class="line"><span class="cl">	 s TestCodeDate=&#34;&#34;
+</span></span><span class="line"><span class="cl">	 s TestCodeDate=$$SearchTestItem(mi,epis)
+</span></span><span class="line"><span class="cl">	 d Trace^MI.MIF000(mi,TestCodeDate,&#34;TestCodeDate is&#34;)
+</span></span><span class="line"><span class="cl">	 s OBX=&#34;OBX|1|NM|30525-0^Age^LN||&#34;_PatAge_&#34;|yr|||||F&#34;_cr_
+</span></span><span class="line"><span class="cl">		   &#34;OBX|2|ST|01001^Remark^99MRC||Remark||||||F&#34;_cr_
+</span></span><span class="line"><span class="cl">		   &#34;OBX|3|NM|01008^Patient Area^99MRC||v44||||||F&#34;
+</span></span><span class="line"><span class="cl">		S TMPORDER=sb_mshStr_cr_MSA_cr_PID_cr_PV1_cr_ORC_cr_OBR_cr_OBX_cr_TestCodeDate_eb_cr
+</span></span><span class="line"><span class="cl">		w sb,mshStr,cr,MSA,cr,PID,cr,PV1,cr,ORC,cr,OBR,cr,OBX,cr,TestCodeDate,eb,cr,*-3
+</span></span><span class="line"><span class="cl">		D Trace^MI.MIF000(mi,TMPORDER,&#34;H-&gt;M&#34;)
+</span></span><span class="line"><span class="cl">	 }
+</span></span><span class="line"><span class="cl">	Q ret
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SearchTestItem(mi,epis)
+</span></span><span class="line"><span class="cl">	//OBX|5|NM|^PT/INR^99MRC^pt-inr ||||||||F
+</span></span><span class="line"><span class="cl">    S tcx=&#34;&#34;,tc=&#34;&#34;,Num=4,TcNum=0
+</span></span><span class="line"><span class="cl">	d ScanOne^MI.MIF000(mi,epis)
+</span></span><span class="line"><span class="cl">  	i $d(^TMP(&#34;MIFTESTCODE&#34;,$j,mi,epis)){
+</span></span><span class="line"><span class="cl">	   f {
+</span></span><span class="line"><span class="cl">	 	s tc=$o(^TMP(&#34;MIFTESTCODE&#34;,$j,mi,epis,tc))
+</span></span><span class="line"><span class="cl">	 	q:tc=&#34;&#34;
+</span></span><span class="line"><span class="cl">    	s tcx=tcx_&#34;OBX|&#34;_Num_&#34;|NM|&#34;_tc_&#34;||||||||F&#34;_cr
+</span></span><span class="line"><span class="cl">    	s TcNum=TcNum+1
+</span></span><span class="line"><span class="cl">    	s Num=Num+1
+</span></span><span class="line"><span class="cl">	 	 
+</span></span><span class="line"><span class="cl">  	}
+</span></span><span class="line"><span class="cl">  	}
+</span></span><span class="line"><span class="cl">    q tcx
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    //d GetPatInfo^MI.MIFTCL2000NEW(&#34;31467239&#34;,&#34;109&#34;)
+</span></span><span class="line"><span class="cl">GetPatInfo(labno,mi)
+</span></span><span class="line"><span class="cl">    s labno = $g(labno),mi=$g(mi)
+</span></span><span class="line"><span class="cl">	i $l(labno)=0 q &#34;&#34;
+</span></span><span class="line"><span class="cl">	s VisitNumberDR = $o(^dbo.RPVisitNumberI(&#34;IndexVisitNumber&#34;,&#34; &#34;_labno,&#34;&#34;))
+</span></span><span class="line"><span class="cl">	i &#39;$l(VisitNumberDR) q &#34;&#34;
+</span></span><span class="line"><span class="cl">	//标本信息
+</span></span><span class="line"><span class="cl">	s RPVisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+</span></span><span class="line"><span class="cl">	s LocationDR=$lg(RPVisitNumberData,22),Location=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(LocationDR) s Location=$lg($g(^dbo.BTLocationD(LocationDR)),3)
+</span></span><span class="line"><span class="cl">	s DoctorDR=$lg(RPVisitNumberData,23),Doctor=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(DoctorDR) s Doctor=$lg($g(^dbo.BTDoctorD(DoctorDR)),3)
+</span></span><span class="line"><span class="cl">	s ReceiveDate=$lg(RPVisitNumberData,66)
+</span></span><span class="line"><span class="cl">	s ReceiveTime=$lg(RPVisitNumberData,67)
+</span></span><span class="line"><span class="cl">	s ReceiveUserDR=$lg(RPVisitNumberData,68),ReceiveUser=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(ReceiveUserDR) s ReceiveUser=$lg($g(^dbo.SYSUserD(ReceiveUserDR)),3)
+</span></span><span class="line"><span class="cl">	s RegNo=$lg(RPVisitNumberData,3)
+</span></span><span class="line"><span class="cl">	s SurName=$lg(RPVisitNumberData,13)
+</span></span><span class="line"><span class="cl"> 	s GivenName=$lg(RPVisitNumberData,14)
+</span></span><span class="line"><span class="cl">	i SurName=GivenName s PatName=SurName
+</span></span><span class="line"><span class="cl">	e  s PatName=SurName_GivenName
+</span></span><span class="line"><span class="cl">	s SpeciesDR=$lg(RPVisitNumberData,15),Species=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(SpeciesDR) s Species=$lg($g(^dbo.BTSpeciesD(SpeciesDR)),3)
+</span></span><span class="line"><span class="cl">	s AdmTypeDR=$lg(RPVisitNumberData,4),AdmType=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(AdmTypeDR) s AdmType=$lg($g(^dbo.BTAdmissionTypeD(AdmTypeDR)),2)
+</span></span><span class="line"><span class="cl">	s BedNo=$lg(RPVisitNumberData,27)
+</span></span><span class="line"><span class="cl">	s Age=$lg(RPVisitNumberData,18)
+</span></span><span class="line"><span class="cl">	s BirthDate=$lg(RPVisitNumberData,16)
+</span></span><span class="line"><span class="cl">	s AgeUnitDR=$lg(RPVisitNumberData,19),AgeUnit=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(AgeUnitDR) s AgeUnit=$lg($g(^dbo.BTAgeUnitD(AgeUnitDR)),3)
+</span></span><span class="line"><span class="cl">	s CollectDate=$lg(RPVisitNumberData,51)
+</span></span><span class="line"><span class="cl">	s CollectTime=$lg(RPVisitNumberData,52)
+</span></span><span class="line"><span class="cl">	s Diagnose=$lg(RPVisitNumberData,28)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  	s Sampleda=$zd($p($h,&#34;,&#34;,1),3)_&#34; &#34;_$zt($p($h,&#34;,&#34;,2))
+</span></span><span class="line"><span class="cl">	s Instrument = &#34;XN&#34;
+</span></span><span class="line"><span class="cl">	i $l(mi) s Instrument=$lg(^dbo.BTMIMachineParameterD(mi),22)
+</span></span><span class="line"><span class="cl">	s Sampleno=labno   //检测号
+</span></span><span class="line"><span class="cl">	s Sampletype=&#34;&#34;
+</span></span><span class="line"><span class="cl"> 	s Feetype=&#34;&#34; ;费别
+</span></span><span class="line"><span class="cl">	s Srcdepno=Location  ;送检科室
+</span></span><span class="line"><span class="cl">  	s Srcdocno=Doctor   ;送检医生
+</span></span><span class="line"><span class="cl">  	s Userno=ReceiveUser ;检验医生(录入者)
+</span></span><span class="line"><span class="cl">	s Patno=RegNo ;登记号 &#34;&#34;
+</span></span><span class="line"><span class="cl">	s BarCode=&#34;&#34;
+</span></span><span class="line"><span class="cl">  	s Patna=PatName   ;病人姓名
+</span></span><span class="line"><span class="cl">	s Sex=1  ;性别
+</span></span><span class="line"><span class="cl">	i Species=&#34;男&#34; s Sex=&#34;F&#34;     ;1:男 ，2 女
+</span></span><span class="line"><span class="cl">	i Species =&#34;女&#34; s Sex=&#34;M&#34;
+</span></span><span class="line"><span class="cl">  	s Pattype=AdmType   ;病人类型
+</span></span><span class="line"><span class="cl">  	s Bedno = BedNo    ;床号
+</span></span><span class="line"><span class="cl">  	s Patage=Age  ;年龄
+</span></span><span class="line"><span class="cl">  	s Ageunit=&#34;&#34;   ;年龄单位
+</span></span><span class="line"><span class="cl">  	s Reqno=labno  ;申请号 = 检验号
+</span></span><span class="line"><span class="cl">	s Reqda=&#34;&#34;
+</span></span><span class="line"><span class="cl">	i $l(ReceiveDate) s Reqda=$e(ReceiveDate,1,4)_&#34;-&#34;_$e(ReceiveDate,5,6)_&#34;-&#34;_$e(ReceiveDate,7,8)_&#34; &#34;_$zt(ReceiveTime,2) ;送检日期 = 接收时间
+</span></span><span class="line"><span class="cl">	s Reportda=&#34;&#34;   ;报告日期  = 初审(保存结果)时间
+</span></span><span class="line"><span class="cl">	s Printflag=&#34;&#34;  ;打印标志
+</span></span><span class="line"><span class="cl">	s Resultflag=&#34;&#34;  ;结果标志
+</span></span><span class="line"><span class="cl">	s Errflag=&#34;&#34;  ;错误标志
+</span></span><span class="line"><span class="cl">	s Diagnose = Diagnose   ;诊断
+</span></span><span class="line"><span class="cl">	s Description=&#34;&#34;  ;备注
+</span></span><span class="line"><span class="cl">	s Reserve=&#34;&#34;  ;保留字段
+</span></span><span class="line"><span class="cl">	s Patnamn=&#34;&#34;   ;姓名拼音码
+</span></span><span class="line"><span class="cl">	i $l(CollectDate) s Getda=$e(CollectDate,1,4)_&#34;-&#34;_$e(CollectDate,5,6)_&#34;-&#34;_$e(CollectDate,7,8)_&#34; &#34;_$zt(CollectTime,2) 
+</span></span><span class="line"><span class="cl">	e  s Getda=Reqda ;接收时间/采样日期
+</span></span><span class="line"><span class="cl">	s Wardno=&#34;&#34;  ;病区
+</span></span><span class="line"><span class="cl">	s RetString=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s EpisodeNo=1
+</span></span><span class="line"><span class="cl">	s Diagnose=&#34;&#34;
+</span></span><span class="line"><span class="cl">	s RetString=Sampleda_&#34;,&#34;_Instrument_&#34;,&#34;_Sampleno_&#34;,&#34;_Sampletype_&#34;,&#34;_Feetype_&#34;,&#34;_Srcdepno_&#34;,&#34;_Srcdocno_&#34;,&#34;_Userno_&#34;,&#34;
+</span></span><span class="line"><span class="cl">	s RetString=RetString_Patno_&#34;,&#34;_Patna_&#34;,&#34;_Sex_&#34;,&#34;_Pattype_&#34;,&#34;_Bedno_&#34;,&#34;_Patage_&#34;,&#34;_Ageunit_&#34;,&#34;_Reqno_&#34;,&#34;_Reqda_&#34;,&#34;
+</span></span><span class="line"><span class="cl">	s RetString=RetString_Reportda_&#34;,&#34;_Printflag_&#34;,&#34;_Resultflag_&#34;,&#34;_Errflag_&#34;,&#34;_Diagnose_&#34;,&#34;_Description_&#34;,&#34;_Reserve_&#34;,&#34;
+</span></span><span class="line"><span class="cl">	s RetString=RetString_Patnamn_&#34;,&#34;_Getda_&#34;,&#34;_Wardno_&#34;,&#34;_BarCode_&#34;,&#34;_BirthDate_&#34;,&#34;_EpisodeNo
+</span></span><span class="line"><span class="cl">	q RetString
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    
+    
+    
+    
 </section>
+
+
+<style>
+   
+  .document-link {
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+    padding: 0 2px;
+  }
+  
+   
+  .docx-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .doc-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .pdf-link::after { content: "📄"; font-size: 0.8em; margin-left: 4px; }
+  .xls-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .xlsx-link::after { content: "📊"; font-size: 0.8em; margin-left: 4px; }
+  .ppt-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+  .pptx-link::after { content: "📽️"; font-size: 0.8em; margin-left: 4px; }
+   
+  .other-link::after { content: "📎"; font-size: 0.8em; margin-left: 4px; }
+
+
+   
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-container {
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-overlay.active .modal-container {
+    transform: translateY(0);
+  }
+  
+  .modal-header {
+    padding: 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin: 0 16px;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .search-input.loading {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='16 12 12 8 8 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 32px;
+  }
+  
+  .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nav-button {
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    pointer-events: auto !important;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background: #e0e0e0;
+  }
+  
+  .nav-button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+  
+   
+  .nav-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    color: #333;  
+    transition: color 0.2s;
+  }
+  
+  .nav-button:hover:not(:disabled) .icon {
+    color: #000;  
+  }
+  
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  
+  .search-results.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .modal-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  
+  .modal-footer {
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background: #5a6268;
+  }
+  
+  .btn-close {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .btn-close:hover {
+    background: #5a6268;
+  }
+  
+  .highlight {
+    background-color: #fff3cd;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  
+  .highlight.active {
+    background-color: #ffeeba;
+    outline: 2px solid #ffc107;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { outline-color: #ffc107; }
+    50% { outline-color: #ffecb5; }
+    100% { outline-color: #ffc107; }
+  }
+
+
+   
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background-color: white;
+  }
+  
+  table th, 
+  table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    word-wrap: break-word;
+    vertical-align: top;
+  }
+  
+  table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  table tr:hover {
+    background-color: #f1f3f5;
+  }
+  
+   
+  table .highlight {
+    display: inline;
+    margin: 0 -2px;
+    padding: 0 2px;
+  }
+  
+   
+  table [id^="search-match-"] {
+    position: relative;
+  }
+  
+   
+  .pdf-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-embed-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  .office-view-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+   
+  @media (max-width: 768px) {
+    .table-wrapper {
+      margin: 12px 0;
+      border-radius: 2px;
+    }
+    
+    table th, 
+    table td {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+    
+     
+    .nav-button .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+
+</style>
+
+
+<div class="modal-overlay" id="document-modal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">文档预览</h3>
+      <div class="modal-actions">
+        
+        <div class="search-container" id="search-container">
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文档内容...">
+          <div class="search-results" id="search-results">
+            <span id="match-count">未搜索</span>
+            <div class="search-controls">
+              <button class="nav-button" id="prev-match" title="上一个匹配项 (Shift+Enter)">
+                
+                <img src="/icons/up.svg" alt="上一个匹配项" class="icon" />
+              </button>
+              <button class="nav-button" id="next-match" title="下一个匹配项 (Enter)">
+                
+                <img src="/icons/down.svg" alt="下一个匹配项" class="icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-close" id="close-modal">关闭</button>
+      </div>
+    </div>
+    <div class="modal-body" id="document-preview">
+      
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="open-new-tab">新标签页打开</button>
+      <a href="" class="btn btn-primary" id="download-link" download>下载文档</a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const documentConfig = {
+        defaultAction: "map[action:modal]",
+        docx: { action: "mammoth" },
+        doc: { action: "officeViewmodal" },
+        pdf: { action: "modal" },
+        xls: { action: "officeView" },
+        xlsx: { action: "officeViewmodal" },
+        ppt: { action: "officeEmbed" },
+        pptx: { action: "officeEmbed" }
+    };
+
+
+    
+    const modal = document.getElementById('document-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const previewContainer = document.querySelector('#document-modal #document-preview');
+    const closeModalBtn = document.getElementById('close-modal');
+    const downloadLink = document.getElementById('download-link');
+    const openNewTabBtn = document.getElementById('open-new-tab');
+    const searchInput = document.getElementById('search-input');
+    const searchContainer = document.getElementById('search-container');
+    const searchResults = document.getElementById('search-results');
+    const matchCount = document.getElementById('match-count');
+    const prevMatchBtn = document.getElementById('prev-match');
+    const nextMatchBtn = document.getElementById('next-match');
+    
+    
+    let currentDocContent = null;
+    let currentDocType = null;
+    let currentDocUrl = null;
+    let currentSearchTerm = '';
+    let matchCountTotal = 0;
+    let currentMatchIndex = -1;
+    let isSearching = false;
+    let searchTimeout = null;
+    let currentAction = null; 
+    const SEARCH_DELAY = 300;
+    const MATCH_ID_PREFIX = 'search-match-';
+    const MAMMOTH_SUPPORTED_TYPES = ['docx', 'xlsx', 'pptx']; 
+    
+    
+    if (!modal || !previewContainer || !searchResults || !prevMatchBtn || !nextMatchBtn) {
+        console.error('关键元素未找到，请检查HTML结构');
+        return;
+    }
+
+
+    
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        previewContainer.innerHTML = '';
+        updateSearchUI();
+    }
+
+
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        resetSearch();
+        previewContainer.innerHTML = '';
+        currentDocContent = null;
+        currentDocType = null;
+        currentDocUrl = null;
+        currentAction = null;
+    }
+
+
+    
+    function resetSearch() {
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+            searchTimeout = null;
+        }
+        
+        searchInput.classList.remove('loading');
+        searchInput.value = '';
+        currentSearchTerm = '';
+        matchCountTotal = 0;
+        currentMatchIndex = -1;
+        
+        
+        if (previewContainer) {
+            const highlights = previewContainer.querySelectorAll('.highlight');
+            highlights.forEach(el => {
+                const textNode = document.createTextNode(el.textContent);
+                el.parentNode.replaceChild(textNode, el);
+            });
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function updateSearchUI() {
+        
+        const showSearch = currentAction === 'mammoth' && 
+                          MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);
+                          
+        searchContainer.style.display = showSearch ? 'block' : 'none';
+        
+        
+        if (currentSearchTerm === '' && matchCountTotal === 0) {
+            searchResults.classList.remove('visible');
+        } else {
+            searchResults.classList.add('visible');
+        }
+        
+        
+        if (currentSearchTerm === '') {
+            matchCount.textContent = '未搜索';
+        } else if (matchCountTotal === 0) {
+            matchCount.textContent = '未找到匹配项';
+        } else {
+            matchCount.textContent = `找到 ${matchCountTotal} 个匹配项 (${currentMatchIndex + 1}/${matchCountTotal})`;
+        }
+        
+        
+        const hasMatches = matchCountTotal > 0;
+        prevMatchBtn.disabled = !hasMatches;
+        nextMatchBtn.disabled = !hasMatches;
+    }
+
+
+    
+    async function performSearch(text) {
+        
+        if (isSearching || currentAction !== 'mammoth' || 
+            !MAMMOTH_SUPPORTED_TYPES.includes(currentDocType)) {
+            return;
+        }
+        
+        if (!text || text.trim() === '' || !currentDocContent) {
+            resetSearch();
+            return;
+        }
+        
+        isSearching = true;
+        searchInput.classList.add('loading');
+        currentSearchTerm = text.trim();
+        updateSearchUI();
+        
+        try {
+            await new Promise(resolve => {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(resolve, { timeout: 1000 });
+                } else {
+                    setTimeout(resolve, 0);
+                }
+            });
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = currentDocContent;
+            
+            
+            const term = currentSearchTerm.toLowerCase();
+            const newMatchCount = findAndMarkMatches(tempDiv, term);
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            
+            matchCountTotal = newMatchCount;
+            currentMatchIndex = newMatchCount > 0 ? 0 : -1;
+            
+            
+            previewContainer.innerHTML = tempDiv.innerHTML;
+            
+            
+            if (matchCountTotal > 0) {
+                scrollToMatch(0);
+            }
+            
+        } catch (error) {
+            console.error('搜索出错:', error);
+            matchCount.textContent = '搜索出错';
+        } finally {
+            isSearching = false;
+            searchInput.classList.remove('loading');
+            updateSearchUI();
+        }
+    }
+
+
+    
+    function findAndMarkMatches(element, term) {
+        if (!term) return 0;
+        
+        let matchNumber = 0;
+        
+        function processNode(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                
+                if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'IMG', 'VIDEO', 'AUDIO'].includes(node.tagName)) {
+                    return;
+                }
+                
+                
+                const children = Array.from(node.childNodes);
+                children.forEach(processNode);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                const lowerText = text.toLowerCase();
+                let index = 0;
+                const termLength = term.length;
+                
+                while ((index = lowerText.indexOf(term, index)) !== -1) {
+                    
+                    const parent = node.parentNode;
+                    if (!parent) {
+                        index += termLength;
+                        continue;
+                    }
+                    
+                    const currentNode = node;
+                    const beforeNode = currentNode.splitText(index);
+                    const matchNode = beforeNode.splitText(termLength);
+                    
+                    
+                    const highlight = document.createElement('span');
+                    highlight.className = 'highlight';
+                    highlight.id = `${MATCH_ID_PREFIX}${matchNumber}`;
+                    highlight.textContent = beforeNode.textContent;
+                    
+                    parent.replaceChild(highlight, beforeNode);
+                    matchNumber++;
+                    
+                    
+                    index += termLength;
+                    node = matchNode;
+                }
+            }
+        }
+        
+        processNode(element);
+        return matchNumber;
+    }
+
+
+    
+    function scrollToMatch(index) {
+        
+        if (matchCountTotal === 0 || index < 0 || index >= matchCountTotal) {
+            console.warn('无效的匹配项索引:', index);
+            return;
+        }
+        
+        
+        document.querySelectorAll('.highlight.active').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        
+        const matchId = `${MATCH_ID_PREFIX}${index}`;
+        const matchElement = document.getElementById(matchId);
+        
+        if (!matchElement) {
+            console.warn(`匹配项ID ${matchId} 未找到在DOM中`);
+            restoreMatches();
+            return;
+        }
+        
+        
+        currentMatchIndex = index;
+        matchElement.classList.add('active');
+        
+        
+        matchElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'center'
+        });
+        
+        
+        const tableWrapper = matchElement.closest('.table-wrapper');
+        if (tableWrapper) {
+            const tableRect = matchElement.getBoundingClientRect();
+            const wrapperRect = tableWrapper.getBoundingClientRect();
+            
+            
+            if (tableRect.left < wrapperRect.left || tableRect.right > wrapperRect.right) {
+                
+                tableWrapper.scrollLeft += (tableRect.left - wrapperRect.left) - (wrapperRect.width / 4);
+            }
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
+    function restoreMatches() {
+        console.log('尝试恢复匹配项索引');
+        
+        const matches = document.querySelectorAll(`[id^="${MATCH_ID_PREFIX}"]`);
+        matchCountTotal = matches.length;
+        
+        if (matchCountTotal > 0) {
+            currentMatchIndex = 0;
+            updateSearchUI();
+            scrollToMatch(0);
+        } else {
+            if (currentSearchTerm) {
+                performSearch(currentSearchTerm);
+            }
+        }
+    }
+
+
+    
+    function goToNextMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const nextIndex = (currentMatchIndex + 1) % matchCountTotal;
+        scrollToMatch(nextIndex);
+    }
+
+
+    
+    function goToPrevMatch() {
+        if (matchCountTotal === 0) {
+            return;
+        }
+        
+        const prevIndex = (currentMatchIndex - 1 + matchCountTotal) % matchCountTotal;
+        scrollToMatch(prevIndex);
+    }
+
+
+    
+    searchInput.addEventListener('input', (e) => {
+        const searchText = e.target.value;
+        
+        if (searchTimeout) {
+            clearTimeout(searchTimeout);
+        }
+        
+        if (searchText.trim() === '') {
+            resetSearch();
+            return;
+        }
+        
+        searchTimeout = setTimeout(() => {
+            performSearch(searchText);
+        }, SEARCH_DELAY);
+    });
+
+
+    
+    prevMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToPrevMatch();
+    });
+    
+    nextMatchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToNextMatch();
+    });
+
+
+    
+    searchInput.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'Enter' && e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+        
+        if ((e.key === 'ArrowDown') && !e.shiftKey) {
+            e.preventDefault();
+            goToNextMatch();
+        }
+        
+        if (e.key === 'ArrowUp' && !e.shiftKey) {
+            e.preventDefault();
+            goToPrevMatch();
+        }
+    });
+
+
+    
+    function openInNewTab(url, docType, title) {
+        const action = getDocumentAction(docType);
+        
+        
+        switch(action) {
+            case 'mammoth':
+                
+                const newWindow = window.open('', '_blank');
+                if (newWindow) {
+                    newWindow.document.write(`
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>${title || '文档预览'}</title>
+                            \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            <style>
+                                body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
+                                .loading { text-align: center; padding: 50px; }
+                                .error { color: #dc3545; text-align: center; padding: 50px; }
+                                .table-wrapper { overflow-x: auto; margin: 16px 0; }
+                                table { border-collapse: collapse; width: 100%; }
+                                table th, table td { border: 1px solid #ddd; padding: 8px 12px; }
+                                table th { background-color: #f8f9fa; }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="loading">
+                                <p>正在加载文档...</p>
+                            </div>
+                            \x3Cscript>
+                                // 解析文档并显示
+                                async function loadDocument() {
+                                    try {
+                                        const response = await fetch('${url}');
+                                        if (!response.ok) throw new Error('加载失败');
+                                        
+                                        const arrayBuffer = await response.arrayBuffer();
+                                        const result = await mammoth.convertToHtml({ arrayBuffer });
+                                        
+                                        // 处理表格
+                                        const tempDiv = document.createElement('div');
+                                        tempDiv.innerHTML = result.value;
+                                        
+                                        const tables = tempDiv.querySelectorAll('table');
+                                        tables.forEach(table => {
+                                            const wrapper = document.createElement('div');
+                                            wrapper.className = 'table-wrapper';
+                                            table.parentNode.insertBefore(wrapper, table);
+                                            wrapper.appendChild(table);
+                                        });
+                                        
+                                        document.body.innerHTML = tempDiv.innerHTML;
+                                    } catch (err) {
+                                        document.body.innerHTML = \`
+                                            <div class="error">
+                                                <p>文档加载失败</p>
+                                                <p>\${err.message}</p>
+                                                <p><a href="${url}" download>下载文档</a></p>
+                                            </div>
+                                        \`;
+                                    }
+                                }
+                                
+                                loadDocument();
+                            \x3C/script>
+                        </body>
+                        </html>
+                    `);
+                    newWindow.document.close();
+                }
+                break;
+                
+            case 'officeView':
+            case 'officeViewmodal':
+                
+                const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeViewerUrl, '_blank');
+                break;
+                
+            case 'officeEmbed':
+            case 'officeEmbednewTab':
+                
+                const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+                window.open(officeEmbedUrl, '_blank');
+                break;
+                
+            case 'modal':
+                
+                window.open(url, '_blank');
+                break;
+                
+            case 'download':
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = title;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                break;
+                
+            case 'newTab':
+            default:
+                
+                window.open(url, '_blank');
+                break;
+        }
+    }
+
+
+    
+    openNewTabBtn.addEventListener('click', () => {
+        if (currentDocUrl && currentDocType) {
+            openInNewTab(currentDocUrl, currentDocType, modalTitle.textContent);
+        }
+    });
+
+
+    
+    function getDocumentAction(docType) {
+        
+        if (documentConfig[docType] && documentConfig[docType].action) {
+            return documentConfig[docType].action;
+        }
+        return documentConfig.defaultAction;
+    }
+
+
+    
+    function handleOfficeView(url) {
+        const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeViewerUrl, '_blank');
+    }
+
+
+    
+    function handleOfficeViewModal(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-view-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbed(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        iframe.className = 'office-embed-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    function handleOfficeEmbedNewTab(url) {
+        const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+        window.open(officeEmbedUrl, '_blank');
+    }
+
+
+    
+    function handlePdfPreview(url, title) {
+        openModal();
+        modalTitle.textContent = title;
+        
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = url;
+        iframe.className = 'pdf-container';
+        iframe.title = title;
+        
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(iframe);
+    }
+
+
+    
+    async function handleMammothParse(url, title, docType) {
+        if (!MAMMOTH_SUPPORTED_TYPES.includes(docType)) {
+            console.warn(`不支持对${docType}类型使用mammoth解析`);
+            return false;
+        }
+        
+        try {
+            openModal();
+            previewContainer.innerHTML = '<div style="text-align: center; padding: 20px;"><i class="fa fa-spinner fa-spin"></i> 正在解析文档...</div>';
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`请求失败: ${response.status}`);
+            }
+            
+            const arrayBuffer = await response.arrayBuffer();
+            let result;
+            
+            
+            switch(docType) {
+                case 'docx':
+                    result = await mammoth.convertToHtml({ arrayBuffer });
+                    break;
+                case 'xlsx':
+                    
+                    result = await parseXlsx(arrayBuffer);
+                    break;
+                case 'pptx':
+                    
+                    result = await parsePptx(arrayBuffer);
+                    break;
+                default:
+                    throw new Error(`不支持的文档类型: ${docType}`);
+            }
+            
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = result.value;
+            
+            
+            const tables = tempDiv.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.parentNode.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+            
+            currentDocContent = tempDiv.innerHTML;
+            previewContainer.innerHTML = currentDocContent;
+            resetSearch();
+            return true;
+            
+        } catch (err) {
+            previewContainer.innerHTML = `<div style="text-align: center; padding: 20px; color: #dc3545;">
+                解析失败，请<a href="${url}" class="btn btn-primary">下载文档</a>查看
+                <p class="error-message">错误: ${err.message}</p>
+            </div>`;
+            console.error('解析错误：', err);
+            return false;
+        }
+    }
+
+
+    
+    async function parseXlsx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="xlsx-content"><p>Excel文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的Excel数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    async function parsePptx(arrayBuffer) {
+        
+        
+        return {
+            value: `<div class="pptx-content"><p>PowerPoint文档内容预览（简化版）</p>
+                    <p>使用mammoth.js解析的PowerPoint数据将显示在这里</p></div>`
+        };
+    }
+
+
+    
+    document.querySelectorAll('.document-link').forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const docUrl = link.href;
+            const docTitle = link.textContent.trim();
+            const docType = link.getAttribute('data-type');
+            const action = getDocumentAction(docType);
+            
+            
+            currentDocUrl = docUrl;
+            currentDocType = docType;
+            currentAction = action;
+            modalTitle.textContent = docTitle;
+            downloadLink.href = docUrl;
+			
+			
+			let fileName = docTitle;
+			
+			const extRegex = new RegExp(`\\.${docType}$`, 'i');
+			if (!extRegex.test(fileName)) {
+				
+				fileName += `.${docType}`;
+			}
+			
+			downloadLink.download = fileName;
+            
+            
+            switch(action) {
+                case 'newTab':
+                    
+                    window.open(docUrl, '_blank');
+                    break;
+                    
+                case 'mammoth':
+                    
+                    await handleMammothParse(docUrl, docTitle, docType);
+                    break;
+                    
+                case 'officeView':
+                    
+                    handleOfficeView(docUrl);
+                    break;
+                    
+                case 'officeViewmodal':
+                    
+                    handleOfficeViewModal(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbed':
+                    
+                    handleOfficeEmbed(docUrl, docTitle);
+                    break;
+                    
+                case 'officeEmbednewTab':
+                    
+                    handleOfficeEmbedNewTab(docUrl);
+                    break;
+                    
+                case 'download':
+                    
+                    link.click();
+                    break;
+                    
+                case 'modal':
+                default:
+                    
+                    openModal();
+                    
+					const iframe = document.createElement('iframe');
+					iframe.src = docUrl;
+					iframe.className = 'pdf-container';
+					iframe.title = docTitle;
+					previewContainer.appendChild(iframe);
+						
+                    
+                    
+
+                    break;
+            }
+        });
+    });
+
+
+    
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+
+    
+    updateSearchUI();
+});
+</script>
 
 
     <footer class="article-footer">
