@@ -16,6 +16,20 @@
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/1-20250101225649-ie39g4u.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.3.1/dist/pptx-parser.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+
+<script src="/js/optimized-parsing.js"></script>
+
+
+<script>
+    
+    window.WORKER_PATH = '/js/parser.worker.js';
+</script>
+    
     </head>
     <body class="
     article-page
@@ -822,6 +836,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <h2 id="接口说明">接口说明
 </h2><div class="table-wrapper"><table>
   <thead>
@@ -963,571 +1000,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </tr>
   </tbody>
 </table></div>
-<h2 id="仪器接口程序">仪器接口程序
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
-</span><span class="lnt">129
-</span><span class="lnt">130
-</span><span class="lnt">131
-</span><span class="lnt">132
-</span><span class="lnt">133
-</span><span class="lnt">134
-</span><span class="lnt">135
-</span><span class="lnt">136
-</span><span class="lnt">137
-</span><span class="lnt">138
-</span><span class="lnt">139
-</span><span class="lnt">140
-</span><span class="lnt">141
-</span><span class="lnt">142
-</span><span class="lnt">143
-</span><span class="lnt">144
-</span><span class="lnt">145
-</span><span class="lnt">146
-</span><span class="lnt">147
-</span><span class="lnt">148
-</span><span class="lnt">149
-</span><span class="lnt">150
-</span><span class="lnt">151
-</span><span class="lnt">152
-</span><span class="lnt">153
-</span><span class="lnt">154
-</span><span class="lnt">155
-</span><span class="lnt">156
-</span><span class="lnt">157
-</span><span class="lnt">158
-</span><span class="lnt">159
-</span><span class="lnt">160
-</span><span class="lnt">161
-</span><span class="lnt">162
-</span><span class="lnt">163
-</span><span class="lnt">164
-</span><span class="lnt">165
-</span><span class="lnt">166
-</span><span class="lnt">167
-</span><span class="lnt">168
-</span><span class="lnt">169
-</span><span class="lnt">170
-</span><span class="lnt">171
-</span><span class="lnt">172
-</span><span class="lnt">173
-</span><span class="lnt">174
-</span><span class="lnt">175
-</span><span class="lnt">176
-</span><span class="lnt">177
-</span><span class="lnt">178
-</span><span class="lnt">179
-</span><span class="lnt">180
-</span><span class="lnt">181
-</span><span class="lnt">182
-</span><span class="lnt">183
-</span><span class="lnt">184
-</span><span class="lnt">185
-</span><span class="lnt">186
-</span><span class="lnt">187
-</span><span class="lnt">188
-</span><span class="lnt">189
-</span><span class="lnt">190
-</span><span class="lnt">191
-</span><span class="lnt">192
-</span><span class="lnt">193
-</span><span class="lnt">194
-</span><span class="lnt">195
-</span><span class="lnt">196
-</span><span class="lnt">197
-</span><span class="lnt">198
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">///</span> <span class="err">名称</span><span class="p">:</span> <span class="n">MI</span><span class="o">.</span><span class="n">MIFAU680</span>
-</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">描述</span><span class="p">:</span> <span class="n">AU</span> <span class="mi">680</span><span class="err">仪器接口</span>
-</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">通讯方式：双向</span>
-</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">编写者</span><span class="p">:</span><span class="n">liuzf</span>
-</span></span><span class="line"><span class="cl"><span class="o">///</span> <span class="err">编写日期</span><span class="p">:</span> <span class="mi">20150827</span>
-</span></span><span class="line"><span class="cl"><span class="o">///</span> 
-</span></span><span class="line"><span class="cl"><span class="n">MIFAU680</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">mi</span><span class="o">=$</span><span class="n">g</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="s1">&#39;$l(mi) q</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACHDATA1</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span><span class="o">=</span><span class="n">mi</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ItemDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">12</span><span class="p">)</span> <span class="o">//</span><span class="err">项目分隔符</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ResultDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">13</span><span class="p">)</span> <span class="o">//</span><span class="err">结果分隔符</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">AntDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">14</span><span class="p">)</span> <span class="o">//</span><span class="err">抗生素分隔符</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">SenDeli</span><span class="o">=$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">15</span><span class="p">)</span> <span class="o">//</span><span class="err">药敏结果分隔符</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">Port</span><span class="o">=</span><span class="s2">&#34;|TCP|&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">li</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">17</span><span class="p">)</span>  <span class="o">//</span><span class="err">端口号</span>
-</span></span><span class="line"><span class="cl">  <span class="o">//</span><span class="err">控制字符</span>
-</span></span><span class="line"><span class="cl">  <span class="n">SET</span> <span class="o">$</span><span class="n">ZTRAP</span><span class="o">=</span><span class="s2">&#34;ErrHandler&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">stx</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">etx</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">ack</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span><span class="n">nak</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span><span class="n">etb</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">23</span><span class="p">),</span><span class="n">end</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACHDATA1</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">=</span><span class="n">mi</span>
-</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="o">$$</span><span class="n">Start</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="n">q</span>
-</span></span><span class="line"><span class="cl">  <span class="n">f</span>  <span class="n">d</span> <span class="n">Main</span> <span class="n">i</span> <span class="o">$$</span><span class="n">Stop</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="n">q</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="o">^</span><span class="n">TMPMACH10</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="o">=$</span><span class="n">h</span>
-</span></span><span class="line"><span class="cl">  <span class="n">c</span> <span class="n">Port</span>
-</span></span><span class="line"><span class="cl">  <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">Main</span> 
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">record</span><span class="o">=$$</span><span class="n">Read</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">stx</span><span class="p">,</span><span class="n">etb_</span><span class="s2">&#34;,&#34;</span><span class="n">_etx</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="s1">&#39;$l(record)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">record</span><span class="p">,</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">d</span> <span class="n">ACK</span>                                    
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="err">上传项目</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span> <span class="mi">00002803</span> <span class="mi">0169</span>    <span class="mi">1003007</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span> <span class="mi">00000201</span> <span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010001815</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">D</span> <span class="mi">00000107</span> <span class="n">E207</span>           <span class="n">E0970137</span><span class="o">.</span><span class="mi">1</span><span class="n">r</span> <span class="mf">098002.39</span><span class="n">r</span> <span class="mf">0990105.3</span><span class="n">r</span> <span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span> <span class="mi">003001</span> <span class="mi">0173</span>             <span class="mi">1002947</span>    <span class="n">E001002003004015</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">000201</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010001815</span><span class="err">□□□□</span><span class="n">E027</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">001101</span><span class="err">□</span><span class="mi">0001</span><span class="err">□□□□□□□□□□</span><span class="mi">1000000028</span><span class="err">□□□□</span><span class="n">E097098</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">000801</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010009152</span><span class="err">□□□□</span><span class="n">E0270</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span><span class="err">□</span><span class="mi">001101</span><span class="err">□</span><span class="mi">0001</span><span class="err">□□□□□□□□□□</span><span class="mi">1000000028</span><span class="err">□□□□</span><span class="n">E097098</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">D</span><span class="err">□</span><span class="mi">000508</span><span class="err">□</span><span class="mi">0048</span><span class="err">□□□□□□□□□□□□</span><span class="n">A0139941</span><span class="err">□□□□</span><span class="n">E018009</span><span class="o">.</span><span class="mi">56</span><span class="n">r</span><span class="err">□</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">R</span><span class="err">□</span><span class="mi">00000801</span><span class="err">□</span><span class="mi">0059</span><span class="err">□□□□□□□□□□</span><span class="n">A010009152</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">S</span> <span class="mi">0000105</span> <span class="mi">0007</span>    <span class="n">A0060359</span>    <span class="n">E002010013014015016045049054058092097098099</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">texttype</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;RH&#34;</span> <span class="n">d</span>  <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">39</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">41</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">39</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">RackNo</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">Pos</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">d</span> <span class="n">ReRequest</span>
-</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;R &#34;</span> <span class="n">d</span>  <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">39</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">Pos</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">41</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">RackNo</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">Pos</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.///</span><span class="err">标本核收</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">s</span> <span class="n">retVal</span><span class="o">=$$</span><span class="n">ReceiveLabno</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">RackNo</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="p">;</span><span class="n">i</span> <span class="n">retVal</span><span class="s1">&#39;=1 Quit</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">d</span> <span class="n">SendTestItem</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="err">采集结果</span> 
-</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;D &#34;</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;d &#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DQ&#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DH&#34;</span><span class="p">)</span><span class="o">!</span><span class="p">(</span><span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;dH&#34;</span><span class="p">)</span> <span class="n">d</span>  <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">block</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">temstr</span><span class="o">=</span><span class="n">record</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">f</span> <span class="n">temi</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">temstr</span><span class="p">,</span><span class="n">etb</span><span class="p">)</span> <span class="n">d</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">record</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="n">temstr</span><span class="p">,</span><span class="n">etb</span><span class="p">,</span><span class="n">temi</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">s</span> <span class="n">record</span><span class="o">=$</span><span class="n">p</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="s1">&#39;$l(record) q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..///</span><span class="n">D</span> <span class="mi">00000101</span> <span class="n">E003</span>                        <span class="n">E15</span>    <span class="mf">288.5</span>  
-</span></span><span class="line"><span class="cl"> <span class="o">..///</span><span class="n">D</span> <span class="mi">00003007</span> <span class="mi">0153</span>    <span class="mi">1003005</span>    <span class="n">E0010007</span><span class="o">.</span><span class="mi">1</span><span class="n">r</span> <span class="mf">0020016.8</span><span class="n">r</span> <span class="mf">0030135.1</span><span class="n">r</span> <span class="mf">0040017.6</span><span class="n">r</span> <span class="mf">015006.21</span><span class="n">r</span> <span class="s2">&#34; </span>
-</span></span><span class="line"><span class="cl"> <span class="o">..//</span> <span class="n">D</span><span class="err">□</span><span class="mi">00</span><span class="err">□□□□</span><span class="mi">02</span><span class="err">□</span><span class="n">P002</span><span class="err">□□□□□□□□□□</span><span class="n">E030007032</span><span class="err">□□□□</span><span class="n">E0600053</span><span class="o">.</span><span class="mi">4</span><span class="n">r</span><span class="err">□</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..//</span> <span class="n">D</span><span class="err">□</span><span class="mi">00000608</span><span class="err">□</span><span class="mi">0063</span><span class="err">□□□□□□□□□□</span><span class="n">A010017861</span><span class="err">□□□□</span><span class="n">E019002</span><span class="o">.</span><span class="mi">17</span><span class="n">r</span><span class="err">□</span><span class="mf">020004.29</span><span class="n">r</span><span class="err">□</span><span class="mf">022001.15</span><span class="n">r</span><span class="err">□</span><span class="mf">023001.97</span><span class="n">r</span><span class="err">□</span><span class="mf">024001.40</span><span class="n">r</span><span class="err">□</span><span class="mf">025000.95</span><span class="n">r</span><span class="err">□</span><span class="mf">0320068.4</span><span class="n">r</span><span class="err">□</span><span class="mf">033405.67</span><span class="n">r</span><span class="err">□</span><span class="mf">043001.01</span><span class="n">r</span><span class="err">□</span><span class="mf">044002.05</span><span class="n">r</span><span class="err">□</span><span class="mf">045002.36</span><span class="n">r</span><span class="err">□</span><span class="mf">092001.18</span><span class="n">r</span><span class="err">□</span><span class="mf">095001.17</span><span class="n">r</span><span class="err">□</span><span class="mi">097000135</span><span class="n">r</span><span class="err">□</span><span class="mf">0980006.9</span><span class="n">r</span><span class="err">□</span><span class="mi">099000103</span><span class="n">r</span><span class="err">□</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">res</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">surname</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">I</span> <span class="s1">&#39;$L(epis) D</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">S</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..//</span><span class="err">流水号转条码号</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">,</span><span class="n">epis</span><span class="s1">&#39;[&#34;E&#34;  d</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">WorkGroupMachienDR</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">BTMIMachineParameterD</span><span class="p">(</span><span class="n">mi</span><span class="p">),</span><span class="mi">6</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">i</span> <span class="s1">&#39;$d(^dbo.RPVisitNumberReportI(&#34;IndexEpisodeNo&#34;,$zd(+$h,8),WorkGroupMachienDR,&#34; &#34;_epis)) q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">ReportDR</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberReportI</span><span class="p">(</span><span class="s2">&#34;IndexEpisodeNo&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">zd</span><span class="p">(</span><span class="o">+$</span><span class="n">h</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="n">WorkGroupMachienDR</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="n">_epis</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">VisitNumberDR</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberReportD</span><span class="p">(</span><span class="n">ReportDR</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">lg</span><span class="p">(</span><span class="o">^</span><span class="n">dbo</span><span class="o">.</span><span class="n">RPVisitNumberD</span><span class="p">(</span><span class="n">VisitNumberDR</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">i</span> <span class="n">texttype</span><span class="o">=</span><span class="s2">&#34;DQ&#34;</span> <span class="n">d</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">27</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;Q&#34;</span><span class="n">_epis</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">45</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=</span><span class="s2">&#34;QC&#34;</span><span class="n">_QC</span><span class="p">,</span><span class="n">epis</span><span class="o">=</span><span class="n">QC</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">QC</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">_epis</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="p">;</span><span class="n">s</span> <span class="n">res</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">record</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">record</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">f</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="n">s</span> <span class="n">rec</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">13</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="n">rec</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">code</span><span class="o">=$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">resx</span><span class="o">=+$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">),</span><span class="n">flag</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">S</span><span class="p">:</span><span class="n">resx</span><span class="err">?</span><span class="mi">1</span><span class="s2">&#34;.&#34;</span><span class="o">.</span><span class="n">N</span> <span class="n">resx</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="n">_resx</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">resx</span><span class="o">=$</span><span class="n">tr</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="s2">&#34;GM&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">i</span> <span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;-.&#34;</span> <span class="n">s</span> <span class="n">resx</span><span class="o">=</span><span class="s2">&#34;-0.&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">e</span><span class="p">(</span><span class="n">resx</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">resx</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> <span class="o">...</span><span class="n">s</span> <span class="n">result</span><span class="o">=</span><span class="n">result_code_ResultDeli_resx_ItemDeli</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">i</span> <span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">epis</span><span class="p">),</span><span class="o">$</span><span class="n">l</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="n">d</span> <span class="o">//</span><span class="n">block</span><span class="o">=</span><span class="s2">&#34;E&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">d</span> <span class="n">Save</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">..</span><span class="n">s</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">surname</span><span class="p">,</span><span class="n">result</span><span class="p">,</span><span class="n">date</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">QC</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">LOAD</span> <span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="n">k</span> <span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">))</span> <span class="n">k</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">d</span> <span class="n">loadlist</span><span class="o">^</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">sx</span><span class="p">,</span><span class="n">line</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">sx</span><span class="o">=^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL1&#34;</span><span class="p">,</span><span class="n">sx</span><span class="p">)</span> <span class="n">q</span><span class="p">:</span><span class="n">sx</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span> 
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">send</span><span class="o">=^</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">data</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_send_data</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="n">line</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">line</span><span class="p">)</span><span class="o">=</span><span class="n">data</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>   
-</span></span><span class="line"><span class="cl"> <span class="p">;</span> <span class="n">send</span> <span class="s1">&#39;ack&#39;</span> <span class="n">to</span> <span class="n">instrument</span>
-</span></span><span class="line"><span class="cl"><span class="n">ACK</span>  
-</span></span><span class="line"><span class="cl">  <span class="n">h</span> <span class="mf">0.5</span>
-</span></span><span class="line"><span class="cl">  <span class="n">s</span> <span class="n">ack</span><span class="o">=$</span><span class="n">c</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">w</span> <span class="n">ack</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">q</span>  
-</span></span><span class="line"><span class="cl"> <span class="p">;</span> <span class="n">send</span> <span class="n">string</span> <span class="n">to</span> <span class="n">instrument</span>
-</span></span><span class="line"><span class="cl"><span class="n">SAVE</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span> <span class="p">;</span> <span class="n">Create</span> <span class="n">LoadList</span> <span class="n">Records</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="n">samno</span><span class="p">,</span><span class="nb">str</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">epis</span><span class="o">=^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;EPISODE&#34;</span><span class="p">),</span><span class="n">epis</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="o">$</span><span class="n">p</span><span class="p">(</span><span class="n">epis</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="mi">20</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">samno</span><span class="o">=+^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;SAMPLE&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">dumy</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">blockno</span><span class="o">=</span><span class="s2">&#34;E&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">sex</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">age</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">month</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">pat</span><span class="o">=$</span><span class="n">j</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">patinfo</span><span class="o">=</span><span class="n">sex_age_month_pat</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">test</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">z</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIF000&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="s2">&#34;TEST&#34;</span><span class="p">,</span><span class="n">z</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">z</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">s</span> <span class="n">test</span><span class="o">=</span><span class="n">test_z</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="n">epis_dummy_blockno_patinfo_test</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFCL900&#34;</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL&#34;</span><span class="p">,</span><span class="n">samno</span><span class="p">)</span><span class="o">=</span><span class="nb">str</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>   
-</span></span><span class="line"><span class="cl"><span class="n">SEND</span> <span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="nb">str</span><span class="p">)</span><span class="o">=</span><span class="s2">&#34;&#34;</span> <span class="n">f</span>  <span class="n">s</span> <span class="n">x</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">x</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">s</span> <span class="nb">str</span><span class="o">=^</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">;;</span><span class="n">f</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">d</span> <span class="n">q</span><span class="p">:</span><span class="n">ok</span>
-</span></span><span class="line"><span class="cl"> <span class="o">.</span><span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE00&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">k</span> <span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="o">$</span><span class="n">zn</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="s2">&#34;LL1&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">d</span> <span class="n">SendTestItem</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIFAU680</span>
-</span></span><span class="line"><span class="cl"><span class="n">SendTestItem</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;$$SearchTestItem^MI.MIFAU680(&#34;</span><span class="n">A010017297</span><span class="s2">&#34;)&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=$$</span><span class="n">SearchTestItem</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;002010013014015016045049054058092097098099&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S &#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E008005009&#34;</span>  <span class="o">//</span><span class="n">ItemChannel</span>
-</span></span><span class="line"><span class="cl"> <span class="o">//</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;S 001101 0002          1000000030    E005008009&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">;</span><span class="n">r</span> <span class="o">*</span><span class="n">a</span><span class="p">:</span><span class="mi">5</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">s</span><span class="p">(</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">ack</span><span class="p">:</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">nak</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">epis</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ReRequest</span> 
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="n">ItemChannel</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SH&#34;</span><span class="n">_Pos_</span><span class="s2">&#34;   &#34;</span><span class="n">_</span><span class="s2">&#34; E&#34;</span><span class="n">_ItemChannel</span>
-</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">s</span> <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;SE&#34;</span>
-</span></span><span class="line"><span class="cl"> <span class="n">w</span> <span class="n">stx_str_etx</span><span class="p">,</span><span class="o">*-</span><span class="mi">3</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="nb">str</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">r</span> <span class="o">*</span><span class="n">a</span><span class="p">:</span><span class="mi">5</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">s</span><span class="p">(</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">ack</span><span class="p">:</span><span class="s2">&#34;ACK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">nak</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">stx</span><span class="p">:</span><span class="s2">&#34;NAK&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span><span class="s2">&#34;H&lt;--M&#34;</span><span class="p">)</span> <span class="n">i</span> <span class="o">$</span><span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">=</span><span class="n">stx</span> <span class="n">w</span> <span class="n">etx</span> <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">etx</span><span class="p">,</span><span class="s2">&#34;H--&gt;M&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="n">q</span>   
-</span></span><span class="line"><span class="cl"><span class="n">SearchTestItem</span><span class="p">(</span><span class="n">epis</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">tcx</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">d</span> <span class="n">ScanOne</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">i</span> <span class="o">$</span><span class="n">d</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFTESTCODE&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">))</span> <span class="n">f</span> <span class="n">N</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span> <span class="n">s</span> <span class="n">tc</span><span class="o">=$</span><span class="n">o</span><span class="p">(</span><span class="o">^</span><span class="n">TMP</span><span class="p">(</span><span class="s2">&#34;MIFTESTCODE&#34;</span><span class="p">,</span><span class="o">$</span><span class="n">j</span><span class="p">,</span><span class="n">mi</span><span class="p">,</span><span class="n">epis</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span> <span class="n">q</span><span class="p">:</span><span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span>  <span class="n">d</span>
-</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">=</span><span class="mi">2</span> <span class="n">D</span>
-</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="n">_tc</span>
-</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">=</span><span class="mi">3</span> <span class="n">D</span>
-</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="n">tc</span>
-</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">4</span> <span class="n">D</span>
-</span></span><span class="line"><span class="cl">    <span class="o">..</span><span class="n">S</span> <span class="n">tc</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">tc</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">s</span> <span class="n">tcx</span><span class="o">=</span><span class="n">tcx_tc</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span> <span class="n">tcx</span>
-</span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl"><span class="n">ErrHandler</span>
-</span></span><span class="line"><span class="cl">  <span class="n">d</span> <span class="n">Trace</span><span class="o">^</span><span class="n">MI</span><span class="o">.</span><span class="n">MIF000</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="o">$</span><span class="n">TR</span><span class="p">(</span><span class="o">$</span><span class="n">ZERROR</span><span class="p">,</span><span class="s2">&#34;^&#34;</span><span class="p">,</span><span class="s2">&#34;--&#34;</span><span class="p">)</span><span class="n">_</span><span class="s2">&#34;.错误代码:&#34;</span><span class="n">_</span><span class="o">$</span><span class="n">ECODE</span><span class="p">,</span><span class="s2">&#34;Runtime Error&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">h</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Q</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl"><span class="n">GetTestItem</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">mi</span><span class="o">=$</span><span class="n">G</span><span class="p">(</span><span class="n">mi</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">S</span> <span class="n">tc</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="n">tcs</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">F</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">tc</span><span class="o">=$</span><span class="n">O</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Q</span><span class="p">:</span><span class="s1">&#39;$L(tc)</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">data</span><span class="o">=$</span><span class="n">G</span><span class="p">(</span><span class="o">^</span><span class="n">TMIF</span><span class="p">(</span><span class="n">mi</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">tc</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">flag</span><span class="o">=$</span><span class="n">P</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">,3)</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Continue</span><span class="p">:</span><span class="n">flag</span><span class="s1">&#39;=&#34;Y&#34;</span>
-</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">chl</span><span class="o">=$</span><span class="n">P</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">,1)</span>
-</span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">     <span class="n">I</span> <span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">chl</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">       <span class="n">S</span> <span class="n">chl</span><span class="o">=$</span><span class="n">E</span><span class="p">(</span><span class="n">chl</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">$</span><span class="n">L</span><span class="p">(</span><span class="n">chl</span><span class="p">))</span> 
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl">     <span class="n">S</span> <span class="n">tcs</span><span class="o">=</span><span class="n">tcs_chl</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Q</span> <span class="n">tcs</span>  
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <h2 id="接口说明">接口说明
-</h2><table>
-  <thead>
-      <tr>
-          <th style="text-align: left">仪器厂商</th>
-          <th style="text-align: left">贝克曼AU680<br /></th>
-          <th style="text-align: left">仪器型号</th>
-          <th style="text-align: left">贝克曼AU680<br /></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">通讯方式</td>
-          <td style="text-align: left">双向<br /></td>
-          <td style="text-align: left">仪器类型</td>
-          <td style="text-align: left">生化<br /></td>
-      </tr>
-      <tr>
-          <td style="text-align: left">医院名称</td>
-          <td style="text-align: left"><br /></td>
-          <td style="text-align: left">程序名称</td>
-          <td style="text-align: left">MI.MIFAU680<br /></td>
-      </tr>
-      <tr>
-          <td style="text-align: left">终端服务器地址</td>
-          <td style="text-align: left"></td>
-          <td style="text-align: left">终端服务器端口号</td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
-</h2><ol>
-<li>接口类型：串口</li>
-<li>连接方式：ASTM协议</li>
-</ol>
-<h2 id="仪器接口说明">仪器接口说明
-</h2><ul>
-<li>仪器配置对于接口影响较大，因此要根据实际的配置情况对应接口，本接口按照以下配置进行测试</li>
-<li>贝克曼AU680对于条码号长度敏感，不同长度的条码号对于仪器的接口有影响，本接口测试为10位条码</li>
-<li>通道号为3位061类似通道号，通道号在仪器上配置，非固定通道号，经测试与格式配置中在线测试编号数字有关系</li>
-</ul>
-<h2 id="串口盒子配置">串口盒子配置
-</h2><ul>
-<li><strong>波特率：</strong> 9600</li>
-<li><strong>数据位：7</strong></li>
-<li><strong>停止位：</strong> 1</li>
-<li><strong>校验位：</strong> N</li>
-</ul>
-<h2 id="数据格式"><strong>数据格式</strong>
-</h2><h2 id="仪器配置图片">仪器配置图片
-</h2><p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/1-20250101225649-ie39g4u.jpg"
-	width="1280"
-	height="960"
-	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/1-20250101225649-ie39g4u_hu_d32dbc57960f2db.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/1-20250101225649-ie39g4u_hu_b2786703f53f1730.jpg 1024w"
-	loading="lazy"
-	
-		alt="1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/2-20250101225649-9eaadf4.jpg"
-	width="1280"
-	height="960"
-	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/2-20250101225649-9eaadf4_hu_af414b272b6262c9.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/2-20250101225649-9eaadf4_hu_adeac834a63e8e5f.jpg 1024w"
-	loading="lazy"
-	
-		alt="2"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/3-20250101225649-5tgyzzj.jpg"
-	width="1280"
-	height="960"
-	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/3-20250101225649-5tgyzzj_hu_8a4bae30e808bf82.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/3-20250101225649-5tgyzzj_hu_e3a8fd662d322a05.jpg 1024w"
-	loading="lazy"
-	
-		alt="3"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/4-20250101225649-nblfe2w.jpg"
-	width="1280"
-	height="960"
-	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/4-20250101225649-nblfe2w_hu_b5d7e8c3ac5d78c0.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/4-20250101225649-nblfe2w_hu_81c162d6624042aa.jpg 1024w"
-	loading="lazy"
-	
-		alt="4"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<p><img src="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/5-20250101225649-6g07x9y.jpg"
-	width="1280"
-	height="960"
-	srcset="/p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/5-20250101225649-6g07x9y_hu_1ae5b94d440a8271.jpg 480w, /p/%E8%B4%9D%E5%85%8B%E6%9B%BCau680-7970076567/assets/5-20250101225649-6g07x9y_hu_96f09b841720366c.jpg 1024w"
-	loading="lazy"
-	
-		alt="5"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<h2 id="项目通道号"><strong>项目通道号</strong>
-</h2><h2 id="修改记录">修改记录
-</h2><table>
-  <thead>
-      <tr>
-          <th>序号</th>
-          <th>日期</th>
-          <th>操作人</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td>2025-01-25 18:34:14<br /></td>
-          <td>杨浩然</td>
-          <td><br /></td>
-      </tr>
-  </tbody>
-</table>
 <h2 id="仪器接口程序">仪器接口程序
 </h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2169,13 +1641,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   .highlight {
-    background-color: #fff3cd;
+    background-color: #fff3cd !important;
     padding: 0 2px;
     border-radius: 2px;
   }
   
   .highlight.active {
-    background-color: #ffeeba;
+    background-color: #ffeeba !important;
     outline: 2px solid #ffc107;
     animation: pulse 1.5s infinite;
   }
@@ -2243,7 +1715,69 @@ document.addEventListener('DOMContentLoaded', function() {
   .pdf-container {
     width: 100%;
     height: 100%;
-    border: none;
+    position: relative;
+  }
+  
+  .pdf-viewer {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .pdf-toolbar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pdf-page {
+    display: inline-block;
+    margin: 10px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pdf-page canvas {
+    display: block;
+  }
+  
+  .pdf-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .page-number {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .pdf-zoom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pdf-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .pdf-error {
+    color: #dc3545;
+    padding: 20px;
+    text-align: center;
   }
   
    
@@ -2258,6 +1792,26 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 100%;
     height: 100%;
     border: none;
+  }
+  
+   
+  .text-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .text-layer span {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
   }
   
    
@@ -2278,9 +1832,57 @@ document.addEventListener('DOMContentLoaded', function() {
       width: 14px;
       height: 14px;
     }
+    
+    .pdf-toolbar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 5px;
+      gap: 5px;
+    }
+    
+    .pdf-navigation, .pdf-zoom {
+      flex: 1;
+      justify-content: center;
+    }
   }
 
+   
+  .xlsx-content, .pptx-content {
+      line-height: 1.6;
+  }
 
+  .worksheet-container {
+      margin-bottom: 20px;
+  }
+
+  .slide {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+  }
+
+  .slide-text {
+      margin: 8px 0;
+      padding: 4px 0;
+  }
+
+  .slide-text.level-0 { font-size: 1.2em; font-weight: bold; }
+  .slide-text.level-1 { font-size: 1.1em; font-weight: 600; }
+  .slide-text.level-2 { font-size: 1em; }
+
+  .error-message {
+      color: #dc3545;
+      padding: 10px;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+      background-color: #f8d7da;
+  }
+
+  .no-content {
+      color: #6c757d;
+      font-style: italic;
+  }
 </style>
 
 
@@ -2295,11 +1897,11 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="search-results" id="search-results">
             <span id="match-count">未搜索</span>
             <div class="search-controls">
-              <button class="nav-button" id="prev-match" title="上一个匹配项 (Shift+Enter)">
+              <button class="nav-button" id="prev-match-popup" title="上一个匹配项 (Shift+Enter)">
                 
                 <img src="/icons/up.svg" alt="上一个匹配项" class="icon" />
               </button>
-              <button class="nav-button" id="next-match" title="下一个匹配项 (Enter)">
+              <button class="nav-button" id="next-match-popup" title="下一个匹配项 (Enter)">
                 
                 <img src="/icons/down.svg" alt="下一个匹配项" class="icon" />
               </button>
@@ -2320,16 +1922,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 <script>
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const documentConfig = {
-        defaultAction: "map[action:modal]",
+        defaultAction: "map[action:modal search:false]",
         docx: { action: "mammoth" },
         doc: { action: "officeViewmodal" },
         pdf: { action: "modal" },
-        xls: { action: "officeView" },
-        xlsx: { action: "officeViewmodal" },
+        xls: { action: "officeViewmodal" },
+        xlsx: { action: "mammoth" },
         ppt: { action: "officeEmbed" },
         pptx: { action: "officeEmbed" }
     };
@@ -2346,8 +1955,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchContainer = document.getElementById('search-container');
     const searchResults = document.getElementById('search-results');
     const matchCount = document.getElementById('match-count');
-    const prevMatchBtn = document.getElementById('prev-match');
-    const nextMatchBtn = document.getElementById('next-match');
+    const prevMatchBtn = document.getElementById('prev-match-popup');
+    const nextMatchBtn = document.getElementById('next-match-popup');
     
     
     let currentDocContent = null;
@@ -2362,6 +1971,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const SEARCH_DELAY = 300;
     const MATCH_ID_PREFIX = 'search-match-';
     const MAMMOTH_SUPPORTED_TYPES = ['docx', 'xlsx', 'pptx']; 
+    
+    
+    let pdfDoc = null;
+    let currentPage = 1;
+    let zoom = 1.0;
+    let pdfSearchResults = [];
+    let pdfCurrentSearchIndex = -1;
     
     
     if (!modal || !previewContainer || !searchResults || !prevMatchBtn || !nextMatchBtn) {
@@ -2389,6 +2005,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentDocType = null;
         currentDocUrl = null;
         currentAction = null;
+        
+        
+        pdfDoc = null;
+        currentPage = 1;
+        zoom = 1.0;
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
     }
 
 
@@ -2414,6 +2037,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
+        
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
+        
         updateSearchUI();
     }
 
@@ -2421,9 +2048,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function updateSearchUI() {
         
-        const showSearch = currentAction === 'mammoth' && 
-                          MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);
-                          
+        
+        
+        
+		const showSearch = currentAction === 'mammoth' && MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);		
         searchContainer.style.display = showSearch ? 'block' : 'none';
         
         
@@ -2451,6 +2079,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     async function performSearch(text) {
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            return performPdfSearch(text);
+        }
+        
         
         if (isSearching || currentAction !== 'mammoth' || 
             !MAMMOTH_SUPPORTED_TYPES.includes(currentDocType)) {
@@ -2509,6 +2142,77 @@ document.addEventListener('DOMContentLoaded', () => {
             
         } catch (error) {
             console.error('搜索出错:', error);
+            matchCount.textContent = '搜索出错';
+        } finally {
+            isSearching = false;
+            searchInput.classList.remove('loading');
+            updateSearchUI();
+        }
+    }
+
+
+    
+    async function performPdfSearch(text) {
+        if (isSearching || !pdfDoc || !text || text.trim() === '') {
+            resetSearch();
+            return;
+        }
+        
+        isSearching = true;
+        searchInput.classList.add('loading');
+        currentSearchTerm = text.trim();
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
+        matchCountTotal = 0;
+        
+        try {
+            
+            const pages = previewContainer.querySelectorAll('.pdf-page');
+            pages.forEach(page => {
+                const highlightLayer = page.querySelector('.text-layer');
+                if (highlightLayer) {
+                    const highlights = highlightLayer.querySelectorAll('.highlight');
+                    highlights.forEach(highlight => {
+                        highlight.classList.remove('highlight', 'active');
+                    });
+                }
+            });
+            
+            
+            const numPages = pdfDoc.numPages;
+            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+                const page = await pdfDoc.getPage(pageNum);
+                const content = await page.getTextContent();
+                
+                
+                const searchTerm = currentSearchTerm.toLowerCase();
+                content.items.forEach((item, index) => {
+                    if (typeof item.str === 'string' && item.str.toLowerCase().includes(searchTerm)) {
+                        
+                        pdfSearchResults.push({
+                            pageNum,
+                            itemIndex: index,
+                            text: item.str,
+                            transform: item.transform,
+                            width: item.width,
+                            height: item.height
+                        });
+                    }
+                });
+            }
+            
+            
+            matchCountTotal = pdfSearchResults.length;
+            pdfCurrentSearchIndex = matchCountTotal > 0 ? 0 : -1;
+            currentMatchIndex = pdfCurrentSearchIndex;
+            
+            
+            if (matchCountTotal > 0) {
+                await scrollToPdfMatch(0);
+            }
+            
+        } catch (error) {
+            console.error('PDF搜索出错:', error);
             matchCount.textContent = '搜索出错';
         } finally {
             isSearching = false;
@@ -2625,6 +2329,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
+    async function scrollToPdfMatch(index) {
+        if (pdfSearchResults.length === 0 || index < 0 || index >= pdfSearchResults.length) {
+            return;
+        }
+        
+        const match = pdfSearchResults[index];
+        pdfCurrentSearchIndex = index;
+        currentMatchIndex = index;
+        
+        
+        const pages = previewContainer.querySelectorAll('.pdf-page');
+        pages.forEach(page => {
+            const highlightLayer = page.querySelector('.text-layer');
+            if (highlightLayer) {
+                const highlights = highlightLayer.querySelectorAll('.highlight');
+                highlights.forEach(highlight => {
+                    highlight.classList.remove('highlight', 'active');
+                });
+            }
+        });
+        
+        
+        await renderPage(match.pageNum);
+        
+        
+        const currentPageEl = previewContainer.querySelector(`.pdf-page[data-page="${match.pageNum}"]`);
+        if (currentPageEl) {
+            const textLayer = currentPageEl.querySelector('.text-layer');
+            if (textLayer) {
+                
+                const textElements = textLayer.querySelectorAll('.text');
+                
+                
+                if (textElements[match.itemIndex]) {
+                    textElements[match.itemIndex].classList.add('highlight', 'active');
+                    
+                    
+                    textElements[match.itemIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
     function restoreMatches() {
         console.log('尝试恢复匹配项索引');
         
@@ -2649,6 +2403,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            const nextIndex = (pdfCurrentSearchIndex + 1) % matchCountTotal;
+            scrollToPdfMatch(nextIndex);
+            return;
+        }
+        
         const nextIndex = (currentMatchIndex + 1) % matchCountTotal;
         scrollToMatch(nextIndex);
     }
@@ -2657,6 +2418,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function goToPrevMatch() {
         if (matchCountTotal === 0) {
+            return;
+        }
+        
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            const prevIndex = (pdfCurrentSearchIndex - 1 + matchCountTotal) % matchCountTotal;
+            scrollToPdfMatch(prevIndex);
             return;
         }
         
@@ -2732,12 +2500,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const newWindow = window.open('', '_blank');
                 if (newWindow) {
+                    
+                    let additionalLibraries = '';
+                    if (docType === 'xlsx') {
+                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js">\x3C/script>';
+                    } else if (docType === 'pptx') {
+                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js">\x3C/script>';
+                    } else if (docType === 'pdf') {
+                        additionalLibraries = '\x3Cscript src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js">\x3C/script>';
+                    }
+                    
                     newWindow.document.write(`
                         <!DOCTYPE html>
                         <html>
                         <head>
                             <title>${title || '文档预览'}</title>
                             \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            ${additionalLibraries}
                             <style>
                                 body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
                                 .loading { text-align: center; padding: 50px; }
@@ -2746,6 +2525,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 table { border-collapse: collapse; width: 100%; }
                                 table th, table td { border: 1px solid #ddd; padding: 8px 12px; }
                                 table th { background-color: #f8f9fa; }
+                                /* Excel和PowerPoint预览样式 */
+                                .xlsx-content, .pptx-content { line-height: 1.6; }
+                                .worksheet-container { margin-bottom: 20px; }
+                                .slide { margin-bottom: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 4px; }
+                                .slide-text { margin: 8px 0; padding: 4px 0; }
+                                .slide-text.level-0 { font-size: 1.2em; font-weight: bold; }
+                                .slide-text.level-1 { font-size: 1.1em; font-weight: 600; }
+                                .slide-text.level-2 { font-size: 1em; }
                             </style>
                         </head>
                         <body>
@@ -2753,6 +2540,107 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p>正在加载文档...</p>
                             </div>
                             \x3Cscript>
+                                // 辅助函数：转义HTML特殊字符
+                                function escapeHtml(unsafe) {
+                                    if (!unsafe) return '';
+                                    return unsafe
+                                        .replace(/&/g, "&amp;")
+                                        .replace(/</g, "&lt;")
+                                        .replace(/>/g, "&gt;")
+                                        .replace(/"/g, "&quot;")
+                                        .replace(/'/g, "&#039;");
+                                }
+                                
+                                // 解析XLSX文件
+                                async function parseXlsx(arrayBuffer) {
+                                    try {
+                                        // 使用xlsx库解析Excel文件
+                                        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+                                        
+                                        let htmlContent = '<div class="xlsx-content">';
+                                        htmlContent += \`<h3>Excel文档: \${workbook.SheetNames.length} 个工作表</h3>\`;
+                                        
+                                        // 遍历所有工作表
+                                        workbook.SheetNames.forEach((sheetName, index) => {
+                                            // 将工作表转换为HTML
+                                            const worksheet = workbook.Sheets[sheetName];
+                                            const html = XLSX.utils.sheet_to_html(worksheet);
+                                            
+                                            // 添加工作表标题和内容
+                                            htmlContent += \`
+                                                <div class="worksheet-container">
+                                                    <h4>工作表 \${index + 1}: \${sheetName}</h4>
+                                                    <div class="table-wrapper">\${html}</div>
+                                                </div>
+                                                <hr>
+                                            \`;
+                                        });
+                                        
+                                        htmlContent += '</div>';
+                                        
+                                        return { value: htmlContent };
+                                    } catch (error) {
+                                        console.error('XLSX解析错误:', error);
+                                        return { 
+                                            value: \`<div class="error-message">
+                                                <p>无法解析Excel文件</p>
+                                                <p>错误: \${error.message}</p>
+                                            </div>\` 
+                                        };
+                                    }
+                                }
+                                
+                                // 解析PPTX文件
+                                async function parsePptx(arrayBuffer) {
+                                    try {
+                                        // 将ArrayBuffer转换为Uint8Array
+                                        const uint8Array = new Uint8Array(arrayBuffer);
+                                        
+                                        // 使用pptx-parser解析PowerPoint文件
+                                        const presentation = await PptxParser.parse(uint8Array);
+                                        
+                                        let htmlContent = '<div class="pptx-content">';
+                                        htmlContent += \`<h3>PowerPoint文档: \${presentation.slides.length} 张幻灯片</h3>\`;
+                                        
+                                        // 遍历所有幻灯片
+                                        presentation.slides.forEach((slide, index) => {
+                                            htmlContent += \`<div class="slide slide-\${index + 1}">\`;
+                                            htmlContent += \`<h4>幻灯片 \${index + 1}</h4>\`;
+                                            
+                                            // 处理幻灯片内容
+                                            if (slide.text && slide.text.length > 0) {
+                                                htmlContent += '<div class="slide-content">';
+                                                
+                                                // 处理文本内容
+                                                slide.text.forEach(text => {
+                                                    // 根据文本级别使用适当的标题或段落标签
+                                                    const tag = text.level === 0 ? 'h5' : 
+                                                               text.level === 1 ? 'h6' : 'p';
+                                                    htmlContent += \`<\${tag} class="slide-text level-\${text.level}">\${escapeHtml(text.content)}</\${tag}>\`;
+                                                });
+                                                
+                                                htmlContent += '</div>';
+                                            } else {
+                                                htmlContent += '<p class="no-content">此幻灯片没有可提取的文本内容</p>';
+                                            }
+                                            
+                                            htmlContent += '</div><hr>';
+                                        });
+                                        
+                                        htmlContent += '</div>';
+                                        
+                                        return { value: htmlContent };
+                                    } catch (error) {
+                                        console.error('PPTX解析错误:', error);
+                                        return { 
+                                            value: \`<div class="error-message">
+                                                <p>无法解析PowerPoint文件</p>
+                                                <p>错误: \${error.message}</p>
+                                            </div>\` 
+                                        };
+                                    }
+                                }
+                                
                                 // 解析文档并显示
                                 async function loadDocument() {
                                     try {
@@ -2760,18 +2648,73 @@ document.addEventListener('DOMContentLoaded', () => {
                                         if (!response.ok) throw new Error('加载失败');
                                         
                                         const arrayBuffer = await response.arrayBuffer();
-                                        const result = await mammoth.convertToHtml({ arrayBuffer });
+                                        let result;
                                         
-                                        // 处理表格
+                                        // 根据文档类型使用不同的解析方式
+                                        switch('${docType}') {
+                                            case 'docx':
+                                                result = await mammoth.convertToHtml({ arrayBuffer });
+                                                break;
+                                            case 'xlsx':
+                                                // 对于Excel文件，使用xlsx库解析
+                                                result = await parseXlsx(arrayBuffer);
+                                                break;
+                                            case 'pptx':
+                                                // 对于PowerPoint文件，使用pptx-parser解析
+                                                result = await parsePptx(arrayBuffer);
+                                                break;
+                                            case 'pdf':
+                                                // 对于PDF文件，使用pdf.js
+                                                if (typeof pdfjsLib !== 'undefined') {
+                                                    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+                                                    const pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                                                    let htmlContent = '<div class="pdf-container">';
+                                                    htmlContent += \`<h3>PDF文档: \${pdfDoc.numPages} 页</h3>\`;
+                                                    htmlContent += '<div class="pdf-viewer">';
+                                                    
+                                                    for (let i = 1; i <= pdfDoc.numPages; i++) {
+                                                        const page = await pdfDoc.getPage(i);
+                                                        const viewport = page.getViewport({ scale: 1.0 });
+                                                        htmlContent += \`<div class="pdf-page" style="width: \${viewport.width}px; height: \${viewport.height}px;">\`;
+                                                        htmlContent += \`<canvas id="page-\${i}" width="\${viewport.width}" height="\${viewport.height}"></canvas>\`;
+                                                        htmlContent += '</div>';
+                                                    }
+                                                    
+                                                    htmlContent += '</div></div>';
+                                                    
+                                                    document.body.innerHTML = htmlContent;
+                                                    
+                                                    // 渲染PDF页面
+                                                    for (let i = 1; i <= pdfDoc.numPages; i++) {
+                                                        const page = await pdfDoc.getPage(i);
+                                                        const viewport = page.getViewport({ scale: 1.0 });
+                                                        const canvas = document.getElementById(\`page-\${i}\`);
+                                                        const context = canvas.getContext('2d');
+                                                        await page.render({ canvasContext: context, viewport }).promise;
+                                                    }
+                                                    
+                                                    return;
+                                                } else {
+                                                    throw new Error('PDF.js库未加载');
+                                                }
+                                                break;
+                                            default:
+                                                throw new Error(\`不支持的文档类型: \${'${docType}'}\`);
+                                        }
+                                        
+                                        // 处理表格，添加响应式包装器
                                         const tempDiv = document.createElement('div');
                                         tempDiv.innerHTML = result.value;
                                         
+                                        // 为所有表格添加包装容器
                                         const tables = tempDiv.querySelectorAll('table');
                                         tables.forEach(table => {
-                                            const wrapper = document.createElement('div');
-                                            wrapper.className = 'table-wrapper';
-                                            table.parentNode.insertBefore(wrapper, table);
-                                            wrapper.appendChild(table);
+                                            if (!table.parentNode.classList.contains('table-wrapper')) {
+                                                const wrapper = document.createElement('div');
+                                                wrapper.className = 'table-wrapper';
+                                                table.parentNode.insertBefore(wrapper, table);
+                                                wrapper.appendChild(table);
+                                            }
                                         });
                                         
                                         document.body.innerHTML = tempDiv.innerHTML;
@@ -2780,7 +2723,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <div class="error">
                                                 <p>文档加载失败</p>
                                                 <p>\${err.message}</p>
-                                                <p><a href="${url}" download>下载文档</a></p>
+                                                <p><a href="${url}" download class="btn btn-primary">下载文档</a></p>
                                             </div>
                                         \`;
                                     }
@@ -2898,18 +2841,224 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-    function handlePdfPreview(url, title) {
+    async function handlePdfPreview(url, title) {
         openModal();
         modalTitle.textContent = title;
         
         
-        const iframe = document.createElement('iframe');
-        iframe.src = url;
-        iframe.className = 'pdf-container';
-        iframe.title = title;
+        previewContainer.innerHTML = `
+            <div class="pdf-container">
+                <div class="pdf-toolbar">
+                    <div class="pdf-navigation">
+                        <button class="btn" id="prev-page">上一页</button>
+                        <span id="page-num">1</span> / <span id="page-count">加载中...</span>
+                        <button class="btn" id="next-page">下一页</button>
+                    </div>
+                    <div class="pdf-zoom">
+                        <button class="btn" id="zoom-out">缩小</button>
+                        <span id="zoom-level">100%</span>
+                        <button class="btn" id="zoom-in">放大</button>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <div class="pdf-loading">
+                        <p>正在加载PDF文档...</p>
+                    </div>
+                </div>
+            </div>
+        `;
         
-        previewContainer.innerHTML = '';
-        previewContainer.appendChild(iframe);
+        try {
+            
+            const pdfViewer = previewContainer.querySelector('.pdf-viewer');
+            const loadingIndicator = previewContainer.querySelector('.pdf-loading');
+            
+            
+            const response = await fetch(url);
+            const data = await response.arrayBuffer();
+            
+            
+            pdfDoc = await pdfjsLib.getDocument({ data }).promise;
+            
+            
+            document.getElementById('page-count').textContent = pdfDoc.numPages;
+            
+            
+            await renderPage(1);
+            
+            
+            loadingIndicator.style.display = 'none';
+            
+            
+            document.getElementById('prev-page').addEventListener('click', () => {
+                if (currentPage <= 1) return;
+                renderPage(currentPage - 1);
+            });
+            
+            document.getElementById('next-page').addEventListener('click', () => {
+                if (currentPage >= pdfDoc.numPages) return;
+                renderPage(currentPage + 1);
+            });
+            
+            document.getElementById('zoom-in').addEventListener('click', () => {
+                zoom += 0.1;
+                renderPage(currentPage);
+                document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+            });
+            
+            document.getElementById('zoom-out').addEventListener('click', () => {
+                if (zoom <= 0.5) return;
+                zoom -= 0.1;
+                renderPage(currentPage);
+                document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+            });
+            
+            
+            previewContainer.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    if (currentPage > 1) renderPage(currentPage - 1);
+                } else if (e.key === 'ArrowRight') {
+                    if (currentPage < pdfDoc.numPages) renderPage(currentPage + 1);
+                } else if (e.key === '+') {
+                    zoom += 0.1;
+                    renderPage(currentPage);
+                    document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+                } else if (e.key === '-') {
+                    if (zoom > 0.5) {
+                        zoom -= 0.1;
+                        renderPage(currentPage);
+                        document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+                    }
+                }
+            });
+            
+        } catch (error) {
+            console.error('PDF加载错误:', error);
+            previewContainer.innerHTML = `
+                <div class="pdf-error">
+                    <p>无法加载PDF文档</p>
+                    <p>错误: ${error.message}</p>
+                    <p><a href="${url}" class="btn btn-primary" download>下载PDF</a></p>
+                </div>
+            `;
+        }
+    }
+
+
+    
+    async function renderPage(num) {
+        if (!pdfDoc) return;
+        
+        currentPage = num;
+        document.getElementById('page-num').textContent = num;
+        
+        const pdfViewer = previewContainer.querySelector('.pdf-viewer');
+        const page = await pdfDoc.getPage(num);
+        
+        
+        pdfViewer.innerHTML = '';
+        
+        
+        const pageContainer = document.createElement('div');
+        pageContainer.className = 'pdf-page';
+        pageContainer.dataset.page = num;
+        pdfViewer.appendChild(pageContainer);
+        
+        
+        const viewport = page.getViewport({ scale: zoom });
+        
+        
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        pageContainer.appendChild(canvas);
+        
+        
+        const textLayerDiv = document.createElement('div');
+        textLayerDiv.className = 'text-layer';
+        textLayerDiv.style.width = `${viewport.width}px`;
+        textLayerDiv.style.height = `${viewport.height}px`;
+        textLayerDiv.style.transform = `scale(${zoom})`;
+        textLayerDiv.style.transformOrigin = '0 0';
+        pageContainer.appendChild(textLayerDiv);
+        
+        
+        const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+        };
+        
+        const renderTask = page.render(renderContext);
+        await renderTask.promise;
+        
+        
+        const textContent = await page.getTextContent();
+        renderTextLayer(textContent, textLayerDiv, viewport);
+        
+        
+        pageContainer.style.width = `${viewport.width}px`;
+        pageContainer.style.height = `${viewport.height}px`;
+        
+        
+        if (pdfSearchResults.length > 0) {
+            const currentMatch = pdfSearchResults.find(match => match.pageNum === num);
+            if (currentMatch) {
+                const textElements = textLayerDiv.querySelectorAll('.text');
+                if (textElements[currentMatch.itemIndex]) {
+                    textElements[currentMatch.itemIndex].classList.add('highlight');
+                    if (pdfCurrentSearchIndex === pdfSearchResults.indexOf(currentMatch)) {
+                        textElements[currentMatch.itemIndex].classList.add('active');
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    function renderTextLayer(textContent, textLayerDiv, viewport) {
+        
+        textLayerDiv.innerHTML = '';
+        
+        const textItems = textContent.items;
+        const scale = viewport.scale;
+        
+        
+        const sortedItems = [...textItems].sort((a, b) => {
+            
+            if (Math.abs(a.transform[5] - b.transform[5]) > 1) {
+                return a.transform[5] - b.transform[5];
+            }
+            
+            return a.transform[4] - b.transform[4];
+        });
+        
+        sortedItems.forEach((item, index) => {
+            const span = document.createElement('span');
+            span.className = 'text';
+            span.textContent = item.str;
+            span.dataset.index = index;
+            
+            
+            const x = item.transform[4] / scale;
+            const y = item.transform[5] / scale;
+            
+            
+            Object.assign(span.style, {
+                left: `${x}px`,
+                top: `${y}px`,
+                fontSize: `${item.height / scale}px`,
+                height: `${item.height / scale}px`,
+                width: `${item.width / scale}px`,
+                transform: `scale(${1/scale})`,
+                transformOrigin: '0 0',
+                position: 'absolute',
+                whiteSpace: 'pre'
+            });
+            
+            textLayerDiv.appendChild(span);
+        });
     }
 
 
@@ -2981,25 +3130,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-    async function parseXlsx(arrayBuffer) {
-        
-        
-        return {
-            value: `<div class="xlsx-content"><p>Excel文档内容预览（简化版）</p>
-                    <p>使用mammoth.js解析的Excel数据将显示在这里</p></div>`
-        };
-    }
+	async function parseXlsx(arrayBuffer) {
+		try {
+			
+			const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+			
+			let htmlContent = '<div class="xlsx-content">';
+			htmlContent += `<h3>Excel文档: ${workbook.SheetNames.length} 个工作表</h3>`;
+			
+			
+			workbook.SheetNames.forEach((sheetName, index) => {
+				
+				const worksheet = workbook.Sheets[sheetName];
+				const html = XLSX.utils.sheet_to_html(worksheet);
+				
+				
+				htmlContent += `
+					<div class="worksheet-container">
+						<h4>工作表 ${index + 1}: ${sheetName}</h4>
+						<div class="table-wrapper">${html}</div>
+					</div>
+					<hr>
+				`;
+			});
+			
+			htmlContent += '</div>';
+			
+			return { value: htmlContent };
+		} catch (error) {
+			console.error('XLSX解析错误:', error);
+			return { 
+				value: `<div class="error-message">
+					<p>无法解析Excel文件</p>
+					<p>错误: ${error.message}</p>
+				</div>` 
+			};
+		}
+	}
 
+	
+	async function parsePptx(arrayBuffer) {
+		try {
+			
+			const uint8Array = new Uint8Array(arrayBuffer);
+			
+			
+			const presentation = await PptxParser.parse(uint8Array);
+			
+			let htmlContent = '<div class="pptx-content">';
+			htmlContent += `<h3>PowerPoint文档: ${presentation.slides.length} 张幻灯片</h3>`;
+			
+			
+			presentation.slides.forEach((slide, index) => {
+				htmlContent += `<div class="slide slide-${index + 1}">`;
+				htmlContent += `<h4>幻灯片 ${index + 1}</h4>`;
+				
+				
+				if (slide.text && slide.text.length > 0) {
+					htmlContent += '<div class="slide-content">';
+					
+					
+					slide.text.forEach(text => {
+						
+						const tag = text.level === 0 ? 'h5' : 
+								   text.level === 1 ? 'h6' : 'p';
+						htmlContent += `<${tag} class="slide-text level-${text.level}">${escapeHtml(text.content)}</${tag}>`;
+					});
+					
+					htmlContent += '</div>';
+				} else {
+					htmlContent += '<p class="no-content">此幻灯片没有可提取的文本内容</p>';
+				}
+				
+				htmlContent += '</div><hr>';
+			});
+			
+			htmlContent += '</div>';
+			
+			return { value: htmlContent };
+		} catch (error) {
+			console.error('PPTX解析错误:', error);
+			return { 
+				value: `<div class="error-message">
+					<p>无法解析PowerPoint文件</p>
+					<p>错误: ${error.message}</p>
+				</div>` 
+			};
+		}
+	}
 
-    
-    async function parsePptx(arrayBuffer) {
-        
-        
-        return {
-            value: `<div class="pptx-content"><p>PowerPoint文档内容预览（简化版）</p>
-                    <p>使用mammoth.js解析的PowerPoint数据将显示在这里</p></div>`
-        };
-    }
+	
+	function escapeHtml(unsafe) {
+		if (!unsafe) return '';
+		return unsafe
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;")
+			.replace(/'/g, "&#039;");
+	}
 
 
     
@@ -3069,17 +3298,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'modal':
                 default:
                     
-                    openModal();
-                    
-					const iframe = document.createElement('iframe');
-					iframe.src = docUrl;
-					iframe.className = 'pdf-container';
-					iframe.title = docTitle;
-					previewContainer.appendChild(iframe);
-						
-                    
-                    
-
+                    if (docType === 'pdf') {
+                        await handlePdfPreview(docUrl, docTitle);
+                    } else {
+                        
+                        openModal();
+                        
+                        const iframe = document.createElement('iframe');
+                        iframe.src = docUrl;
+                        iframe.className = 'pdf-container';
+                        iframe.title = docTitle;
+                        previewContainer.appendChild(iframe);
+                    }
                     break;
             }
         });

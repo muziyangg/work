@@ -16,6 +16,20 @@
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185214-cv1gaec.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 <script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.3.1/dist/pptx-parser.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+
+<script src="/js/optimized-parsing.js"></script>
+
+
+<script>
+    
+    window.WORKER_PATH = '/js/parser.worker.js';
+</script>
+    
     </head>
     <body class="
     article-page
@@ -828,6 +842,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <h2 id="接口说明">接口说明
 </h2><div class="table-wrapper"><table>
   <thead>
@@ -898,447 +935,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </tr>
   </tbody>
 </table></div>
-<h2 id="仪器接口程序">仪器接口程序
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
-</span><span class="lnt">68
-</span><span class="lnt">69
-</span><span class="lnt">70
-</span><span class="lnt">71
-</span><span class="lnt">72
-</span><span class="lnt">73
-</span><span class="lnt">74
-</span><span class="lnt">75
-</span><span class="lnt">76
-</span><span class="lnt">77
-</span><span class="lnt">78
-</span><span class="lnt">79
-</span><span class="lnt">80
-</span><span class="lnt">81
-</span><span class="lnt">82
-</span><span class="lnt">83
-</span><span class="lnt">84
-</span><span class="lnt">85
-</span><span class="lnt">86
-</span><span class="lnt">87
-</span><span class="lnt">88
-</span><span class="lnt">89
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">MIFFUS3000HL7(mi)
-</span></span><span class="line"><span class="cl">	s mi=$g(mi) 
-</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,104)=$H
-</span></span><span class="line"><span class="cl">	i &#39;$l(mi) q
-</span></span><span class="line"><span class="cl">	s ItemDeli=$li(^dbo.BTMIMachineParameterD(mi),12) //项目分隔符
-</span></span><span class="line"><span class="cl">	s ResultDeli=$li(^dbo.BTMIMachineParameterD(mi),13) //结果分隔符
-</span></span><span class="line"><span class="cl">	s AntDeli=$li(^dbo.BTMIMachineParameterD(mi),14) //抗生素分隔符
-</span></span><span class="line"><span class="cl">	s SenDeli=$li(^dbo.BTMIMachineParameterD(mi),15) //药敏结果分隔符
-</span></span><span class="line"><span class="cl">	s Port=&#34;|TCP|&#34;_$li(^dbo.BTMIMachineParameterD(mi),10)  //端口号
-</span></span><span class="line"><span class="cl">	//控制字符
-</span></span><span class="line"><span class="cl">  	s stx=$c(2),etx=$c(3),ack=$c(6),enq=$c(5),eot=$c(4),etb=$c(23)
-</span></span><span class="line"><span class="cl"> 	s lf=$c(10),cr=$c(13),nak=$c(21),(AllRecord,result,epis)=&#34;&#34;,kk=1
-</span></span><span class="line"><span class="cl"> 	s SB=$C(11),EB=$C(28),CR=$c(13)
-</span></span><span class="line"><span class="cl"> 	s MSH=&#34;MSH|^~\&amp;|LIS||FUS100||20090424130516||ACK|ACK0000001|P|2.3&#34;
-</span></span><span class="line"><span class="cl">	S ^TMPMACH10(mi,102)=$H
-</span></span><span class="line"><span class="cl">	i $$Start^MI.MIF000(mi) q
-</span></span><span class="line"><span class="cl">	f  d Main i $$Stop^MI.MIF000(mi) q
-</span></span><span class="line"><span class="cl">  	c Port
-</span></span><span class="line"><span class="cl">  	q
-</span></span><span class="line"><span class="cl">  	
-</span></span><span class="line"><span class="cl">ErrHandler
-</span></span><span class="line"><span class="cl">    h 10
-</span></span><span class="line"><span class="cl">    s iError=+$g(iError)+1
-</span></span><span class="line"><span class="cl">    i iError&gt;100 s ret=$$Stop^MI.MIF000(mi)  q
-</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,$tr($ZERROR,&#34;^&#34;,&#34;--&#34;)_&#34;.错误代码:&#34;_$ECODE,&#34;Runtime Error&#34;)
-</span></span><span class="line"><span class="cl">    q
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">Main   
-</span></span><span class="line"><span class="cl">	SET $ZTRAP=&#34;ErrHandler&#34; S iERR=0
-</span></span><span class="line"><span class="cl">	s record=$$Read^MI.MIF000(mi,&#34;&#34;,&#34;&#34;,&#34;&#34;,&#34;&#34;,2) i &#39;$l(record) q
-</span></span><span class="line"><span class="cl">	;s record=$tr(record,&#34;*&#34;,&#34; &#34;)
-</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;)
-</span></span><span class="line"><span class="cl">	s (sample,epis,surname,result,date,time,QC)=&#34;&#34;
-</span></span><span class="line"><span class="cl">	//R0123□□□□□□□□□□□□□0101010005v
-</span></span><span class="line"><span class="cl">	s Deli=$c(13,10)
-</span></span><span class="line"><span class="cl">	f reci=1:1:$l(record,&#34;]&#34;){
-</span></span><span class="line"><span class="cl">		s recordi=$p(record,&#34;]&#34;,reci)
-</span></span><span class="line"><span class="cl">		d Trace^MI.MIF000(mi,recordi,&#34;recordi&#34;)
-</span></span><span class="line"><span class="cl">		s type=$e($p(recordi,&#34;[&#34;,1),*-1,*)
-</span></span><span class="line"><span class="cl">		i type=&#34;NZ&#34;{
-</span></span><span class="line"><span class="cl">			s NZ=$p(recordi,&#34;[&#34;,2)
-</span></span><span class="line"><span class="cl">			f i=1:1:$l(NZ,Deli) d
-</span></span><span class="line"><span class="cl">			.s rec=$p(NZ,Deli,i)
-</span></span><span class="line"><span class="cl">			.i i=2 s epis=rec
-</span></span><span class="line"><span class="cl">			.s code=$tr($tr($e(rec,1,4),&#34; &#34;),&#34;*&#34;)
-</span></span><span class="line"><span class="cl">			.i ((code=&#34;URO&#34;)||(code=&#34;pH&#34;)||(code=&#34;SG&#34;)) d
-</span></span><span class="line"><span class="cl">			..s res=$tr($e(rec,10,*),&#34; &#34;)
-</span></span><span class="line"><span class="cl">			.e  d
-</span></span><span class="line"><span class="cl">			..s res=$tr($e(rec,5,9),&#34; &#34;)
-</span></span><span class="line"><span class="cl">			.i $l(code),$l(res) s result=result_code_$c(92)_res_$c(44)
-</span></span><span class="line"><span class="cl">			i $l(epis) s epis=+epis
-</span></span><span class="line"><span class="cl">			i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
-</span></span><span class="line"><span class="cl">		}
-</span></span><span class="line"><span class="cl">		i type=&#34;CZ&#34;{
-</span></span><span class="line"><span class="cl">			s CZ=$p(recordi,&#34;[&#34;,2)
-</span></span><span class="line"><span class="cl">			s (sample,epis,surname,result,date,time,QC)=&#34;&#34;
-</span></span><span class="line"><span class="cl">			f i=1:1:$l(CZ,Deli) d
-</span></span><span class="line"><span class="cl">			.s rec=$p(CZ,Deli,i)
-</span></span><span class="line"><span class="cl">			.i i=3 s epis=rec
-</span></span><span class="line"><span class="cl">			.s code=$tr($p(rec,&#34; &#34;,1),&#34;*&#34;)
-</span></span><span class="line"><span class="cl">			.s res=$p(rec,&#34; &#34;,2)
-</span></span><span class="line"><span class="cl">			.i $l(code),$l(res) s result=result_code_$c(92)_res_$c(44)
-</span></span><span class="line"><span class="cl">			i $l(epis) s epis=+epis
-</span></span><span class="line"><span class="cl">			i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
-</span></span><span class="line"><span class="cl">		}
-</span></span><span class="line"><span class="cl">	}
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	/*
-</span></span><span class="line"><span class="cl">	f i=1:1:$l(record,$c(13,10)) d
-</span></span><span class="line"><span class="cl">	.s rec=$p(record,$c(13,10),i)
-</span></span><span class="line"><span class="cl">	.d Trace^MI.MIF000(mi,rec,&#34;rec&#34;)
-</span></span><span class="line"><span class="cl">	.i i=2 s epis=$tr(rec,&#34; &#34;)
-</span></span><span class="line"><span class="cl">	.s code=$tr($e(rec,1,4),&#34; &#34;)
-</span></span><span class="line"><span class="cl">	.s codeflag=1
-</span></span><span class="line"><span class="cl">	.i ((code=&#34;URO&#34;)||(code=&#34;pH&#34;)||(code=&#34;SG&#34;)) d
-</span></span><span class="line"><span class="cl">	..s res=$tr($e(rec,10,*),&#34; &#34;)
-</span></span><span class="line"><span class="cl">	..s codeflag=2
-</span></span><span class="line"><span class="cl">	.i codeflag=1 d
-</span></span><span class="line"><span class="cl">	..s res=$tr($e(rec,5,10),&#34; &#34;)
-</span></span><span class="line"><span class="cl">	.s result=result_code_$c(92)_res_$c(44)
-</span></span><span class="line"><span class="cl">	d Trace^MI.MIF000(mi,epis_&#34;$$&#34;_result,&#34;Result&#34;)
-</span></span><span class="line"><span class="cl">	i $l(result),$L(epis) Do Save^MI.MIF000(mi,epis,result,date,time,QC)
-</span></span><span class="line"><span class="cl">	*/
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	q
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">       
-</span></span><span class="line"><span class="cl"> 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="附录">附录
-</h2><h3 id="监听接口">监听接口
-</h3><blockquote>
-<p>未写 记录双向上传数据库，尿常规 1 ，全套 2，尿沉渣 3</p>
-<p>上传SampleTest</p></blockquote>
-<p><img src="/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185214-cv1gaec.png"
-	width="678"
-	height="70"
-	srcset="/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185214-cv1gaec_hu_4372cf1c68e48ea1.png 480w, /p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185214-cv1gaec_hu_f4308fb27e524e00.png 1024w"
-	loading="lazy"
-	
-		alt="image"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="968"
-		data-flex-basis="2324px"
-	
-></p>
-<blockquote>
-<p>4位id，条码号，日期，格式为20250818，套餐，读取（不用管）</p></blockquote>
-<p><img src="/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185806-2ok5mge.png"
-	width="677"
-	height="329"
-	srcset="/p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185806-2ok5mge_hu_ef9f53a512c8d865.png 480w, /p/%E6%B7%B1%E5%9C%B3%E7%BE%8E%E6%A1%A5%E6%B5%81%E6%B0%B4%E7%BA%BFmejer-1600-700-fc57e82203/assets/image-20250822185806-2ok5mge_hu_dad1682c27c237a6.png 1024w"
-	loading="lazy"
-	
-		alt="image"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="205"
-		data-flex-basis="493px"
-	
-></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[{&#34;MachID&#34;:&#34;#RowID&#34;,&#34;Type&#34;:&#34;DataBase&#34;,&#34;UpTime&#34;:&#34;2000&#34;,&#34;Address&#34;:&#34;DSN=MejerResult&#34;,&#34;UpCDF&#34;:&#34;&#34;,&#34;UpREF&#34;:&#34;&#34;,&#34;DealProcess&#34;:&#34;MI.MIFMejer&#34;,&#34;Para&#34;:&#34;SELECT * FROM UrineResult WHERE acqudate=Cstr(format(DATE(),&#39;yyyymmdd&#39;))#sampleid#&#34;}]
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Class MI.MIFMejer Extends %RegisteredObject
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/// 分隔符:~
-</span></span><span class="line"><span class="cl">/// mi:仪器主键
-</span></span><span class="line"><span class="cl">/// record:一个数据行合并提交用#enter#分割多行数据
-</span></span><span class="line"><span class="cl">/// epis:流水号，前处理提取出了的画
-</span></span><span class="line"><span class="cl">/// fileNameOrColName:读文件的是文件全名，数据库的是数据库查询的列名用~分割
-</span></span><span class="line"><span class="cl">/// d ##class(MI.MIFMejer).fileMTHD(8,&#34;1~2023122000177~-0Cells/uL~20231220~60023~E:\Timage\20231219\2023121900177~0~□NIT□□-□□□□□□□□□□□□□□□~□URO□□□□□□Normal□□□□□□~□PRO□□-□□□0□□□□□□g/L□□~□pH□□□□□□□6.0□□□□□□□□□~□BLD□□-□□□0□Cells/uL□□~□SG□□□□□□&gt;1.030□□□□□□□~□BIL□□-□□□0□□□umol/L□□~□Vc□□□□□□□2.8□mmol/L□□~□KET□□-□□□0□□□mmol/L□□~□GLU□□-□□□0□□□mmol/L□□~浅黄~清澈~□MCA□□□□□□0□□□□□□g/L□□~*Ca□□□□□□&lt;1.0□mmol/L□□~*CRE□□□□□&lt;1.0□mmol/L□□~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0000000000000000000000000000000000000000~0~0~&#34;)
-</span></span><span class="line"><span class="cl">ClassMethod fileMTHD(mi, record As %String(MAXLEN=99999999), epis, fileNameOrColName, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, Sessions, Output RowCount As %String) As %String
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">	s mi=$g(mi)
-</span></span><span class="line"><span class="cl">    i &#39;$d(^dbo.BTMIMachineParameterD(mi)) q
-</span></span><span class="line"><span class="cl">    s (sample,epis,result,date,time,QC)=&#34;&#34;
-</span></span><span class="line"><span class="cl">    i &#39;$l(record) q
-</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,record,&#34;H&lt;--M&#34;)
-</span></span><span class="line"><span class="cl">	s Deli=&#34;~&#34; //结果分隔符
-</span></span><span class="line"><span class="cl">	s RDdli=&#34;,&#34; //通道号分隔符
-</span></span><span class="line"><span class="cl">	s ItemDeli=$c(92) //项目分隔符92
-</span></span><span class="line"><span class="cl">	s ResultDeli=$c(44) //结果分隔符44
-</span></span><span class="line"><span class="cl">	//获取流水号
-</span></span><span class="line"><span class="cl">    s epis=$p(record,Deli,1)
-</span></span><span class="line"><span class="cl">	//获取通道号
-</span></span><span class="line"><span class="cl">	//w $L(codedata,&#34;,&#34;)
-</span></span><span class="line"><span class="cl">    s codedata=&#34;WBC, NIT, URO, PRO, pH, BLD, SG, BIL, Vc, KET, GLU, Color, Turbidity, MCa, Ca, CRE, redCell, whiteCell, whiteCellgroup, squa, nonSqua, otherSqua, cylinder, hyalineCast, granularCast, crystal, urateCrystal, otherCrystal, speram, baterium, yeast, mucus, fatBall, trichmo, unknownObject, allsmallcells, resultchange, unredcell, transed&#34;
-</span></span><span class="line"><span class="cl">	//获取结果
-</span></span><span class="line"><span class="cl">    s resdata=$P(record,Deli,7,*)
-</span></span><span class="line"><span class="cl">    s result=&#34;&#34;
-</span></span><span class="line"><span class="cl">    for i=1:1:$l(codedata,RDdli) d
-</span></span><span class="line"><span class="cl">    .s code=$tr($P(codedata,RDdli,i),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    .s res=$P(resdata,Deli,i)
-</span></span><span class="line"><span class="cl">    .s res=$$conversion(code,res)
-</span></span><span class="line"><span class="cl">    .b ;101
-</span></span><span class="line"><span class="cl">    .s result=result_code_ItemDeli_res_ResultDeli
-</span></span><span class="line"><span class="cl">    d Trace^MI.MIF000(mi,epis_&#34;$$&#34;_result,&#34;Result&#34;)
-</span></span><span class="line"><span class="cl">    i $l(epis),$l(result) d ##Class(MI.Common.MIFBase).Save(mi, epis, result, date, time, QC)
-</span></span><span class="line"><span class="cl">    q &#34;&#34;
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">conversion(code,res)
-</span></span><span class="line"><span class="cl">	i code[&#34;pH&#34; s res=$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;SG&#34; s res=$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;NIT&#34; s res=$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    i code[&#34;Vc&#34; s res=$tr($e(res,10,14),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)    // res=$tr($e(res,1,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    ;i code[&#34;WBC&#34; s res=$tr($e(res,1,4),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;PRO&#34; s res=$tr($e(res,5,9),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;BLD&#34; s res=$tr($e(res,5,9),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;BIL&#34; s res=$tr($e(res,5,9),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;KET&#34; s res=$tr($e(res,5,9),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;GLU&#34; s res=$tr($e(res,5,9),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;URO&#34; s res=$tr($e(res,5,$l(res)),&#34; &#34;) ;_&#34;  &#34;_$tr($e(res,5,$l(res)),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;MCA&#34; s res=$tr($e(res,10,14),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;Ca&#34; s res=$tr($e(res,10,14),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    i code[&#34;CRE&#34; s res=$tr($e(res,10,14),&#34; &#34;)
-</span></span><span class="line"><span class="cl">    q res
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <h2 id="接口说明">接口说明
-</h2><table>
-  <thead>
-      <tr>
-          <th style="text-align: left">仪器厂商</th>
-          <th style="text-align: left">深圳美桥MeJer-1600<br /></th>
-          <th style="text-align: left">仪器型号</th>
-          <th style="text-align: left">深圳美桥MeJer-1600<br /></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">通讯方式</td>
-          <td style="text-align: left">单向☑|双向|主动上传<br /></td>
-          <td style="text-align: left">仪器类型</td>
-          <td style="text-align: left">尿常规尿沉渣流水线</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">医院名称</td>
-          <td style="text-align: left"><br /></td>
-          <td style="text-align: left">程序名称</td>
-          <td style="text-align: left"><br /></td>
-      </tr>
-      <tr>
-          <td style="text-align: left">终端服务器地址</td>
-          <td style="text-align: left"></td>
-          <td style="text-align: left">终端服务器端口号</td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="仪器上接口标示和接口类型"><strong>仪器上接口标示和接口类型</strong>
-</h2><ol>
-<li>接口类型：串口☑|网口|监听文件|数据库|其他</li>
-<li>连接方式：HL7协议|ASTM协议|监听文件|数据库|其他☑</li>
-</ol>
-<h2 id="仪器接口说明">仪器接口说明
-</h2><ul>
-<li>附带双向说明，未写</li>
-</ul>
-<h2 id="串口盒子配置">串口盒子配置
-</h2><ul>
-<li><strong>波特率：</strong> 9600</li>
-<li><strong>数据位：8</strong></li>
-<li><strong>停止位：</strong> 1</li>
-<li><strong>校验位：</strong> N</li>
-</ul>
-<h2 id="仪器图片">仪器图片
-</h2><h2 id="仪器配置">仪器配置
-</h2><h2 id="数据格式"><strong>数据格式</strong>
-</h2><h2 id="项目通道号"><strong>项目通道号</strong>
-</h2><h2 id="修改记录">修改记录
-</h2><table>
-  <thead>
-      <tr>
-          <th>序号</th>
-          <th>日期</th>
-          <th>操作人</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td>2025-08-21 19:02:44<br /></td>
-          <td>杨浩然</td>
-          <td><br /></td>
-      </tr>
-  </tbody>
-</table>
 <h2 id="仪器接口程序">仪器接口程序
 </h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1927,13 +1523,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   .highlight {
-    background-color: #fff3cd;
+    background-color: #fff3cd !important;
     padding: 0 2px;
     border-radius: 2px;
   }
   
   .highlight.active {
-    background-color: #ffeeba;
+    background-color: #ffeeba !important;
     outline: 2px solid #ffc107;
     animation: pulse 1.5s infinite;
   }
@@ -2001,7 +1597,69 @@ document.addEventListener('DOMContentLoaded', function() {
   .pdf-container {
     width: 100%;
     height: 100%;
-    border: none;
+    position: relative;
+  }
+  
+  .pdf-viewer {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .pdf-toolbar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pdf-page {
+    display: inline-block;
+    margin: 10px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pdf-page canvas {
+    display: block;
+  }
+  
+  .pdf-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .page-number {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .pdf-zoom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pdf-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .pdf-error {
+    color: #dc3545;
+    padding: 20px;
+    text-align: center;
   }
   
    
@@ -2016,6 +1674,26 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 100%;
     height: 100%;
     border: none;
+  }
+  
+   
+  .text-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .text-layer span {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
   }
   
    
@@ -2036,9 +1714,57 @@ document.addEventListener('DOMContentLoaded', function() {
       width: 14px;
       height: 14px;
     }
+    
+    .pdf-toolbar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 5px;
+      gap: 5px;
+    }
+    
+    .pdf-navigation, .pdf-zoom {
+      flex: 1;
+      justify-content: center;
+    }
   }
 
+   
+  .xlsx-content, .pptx-content {
+      line-height: 1.6;
+  }
 
+  .worksheet-container {
+      margin-bottom: 20px;
+  }
+
+  .slide {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+  }
+
+  .slide-text {
+      margin: 8px 0;
+      padding: 4px 0;
+  }
+
+  .slide-text.level-0 { font-size: 1.2em; font-weight: bold; }
+  .slide-text.level-1 { font-size: 1.1em; font-weight: 600; }
+  .slide-text.level-2 { font-size: 1em; }
+
+  .error-message {
+      color: #dc3545;
+      padding: 10px;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+      background-color: #f8d7da;
+  }
+
+  .no-content {
+      color: #6c757d;
+      font-style: italic;
+  }
 </style>
 
 
@@ -2053,11 +1779,11 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="search-results" id="search-results">
             <span id="match-count">未搜索</span>
             <div class="search-controls">
-              <button class="nav-button" id="prev-match" title="上一个匹配项 (Shift+Enter)">
+              <button class="nav-button" id="prev-match-popup" title="上一个匹配项 (Shift+Enter)">
                 
                 <img src="/icons/up.svg" alt="上一个匹配项" class="icon" />
               </button>
-              <button class="nav-button" id="next-match" title="下一个匹配项 (Enter)">
+              <button class="nav-button" id="next-match-popup" title="下一个匹配项 (Enter)">
                 
                 <img src="/icons/down.svg" alt="下一个匹配项" class="icon" />
               </button>
@@ -2078,16 +1804,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 <script>
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const documentConfig = {
-        defaultAction: "map[action:modal]",
+        defaultAction: "map[action:modal search:false]",
         docx: { action: "mammoth" },
         doc: { action: "officeViewmodal" },
         pdf: { action: "modal" },
-        xls: { action: "officeView" },
-        xlsx: { action: "officeViewmodal" },
+        xls: { action: "officeViewmodal" },
+        xlsx: { action: "mammoth" },
         ppt: { action: "officeEmbed" },
         pptx: { action: "officeEmbed" }
     };
@@ -2104,8 +1837,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchContainer = document.getElementById('search-container');
     const searchResults = document.getElementById('search-results');
     const matchCount = document.getElementById('match-count');
-    const prevMatchBtn = document.getElementById('prev-match');
-    const nextMatchBtn = document.getElementById('next-match');
+    const prevMatchBtn = document.getElementById('prev-match-popup');
+    const nextMatchBtn = document.getElementById('next-match-popup');
     
     
     let currentDocContent = null;
@@ -2120,6 +1853,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const SEARCH_DELAY = 300;
     const MATCH_ID_PREFIX = 'search-match-';
     const MAMMOTH_SUPPORTED_TYPES = ['docx', 'xlsx', 'pptx']; 
+    
+    
+    let pdfDoc = null;
+    let currentPage = 1;
+    let zoom = 1.0;
+    let pdfSearchResults = [];
+    let pdfCurrentSearchIndex = -1;
     
     
     if (!modal || !previewContainer || !searchResults || !prevMatchBtn || !nextMatchBtn) {
@@ -2147,6 +1887,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentDocType = null;
         currentDocUrl = null;
         currentAction = null;
+        
+        
+        pdfDoc = null;
+        currentPage = 1;
+        zoom = 1.0;
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
     }
 
 
@@ -2172,6 +1919,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
+        
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
+        
         updateSearchUI();
     }
 
@@ -2179,9 +1930,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function updateSearchUI() {
         
-        const showSearch = currentAction === 'mammoth' && 
-                          MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);
-                          
+        
+        
+        
+		const showSearch = currentAction === 'mammoth' && MAMMOTH_SUPPORTED_TYPES.includes(currentDocType);		
         searchContainer.style.display = showSearch ? 'block' : 'none';
         
         
@@ -2209,6 +1961,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     async function performSearch(text) {
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            return performPdfSearch(text);
+        }
+        
         
         if (isSearching || currentAction !== 'mammoth' || 
             !MAMMOTH_SUPPORTED_TYPES.includes(currentDocType)) {
@@ -2267,6 +2024,77 @@ document.addEventListener('DOMContentLoaded', () => {
             
         } catch (error) {
             console.error('搜索出错:', error);
+            matchCount.textContent = '搜索出错';
+        } finally {
+            isSearching = false;
+            searchInput.classList.remove('loading');
+            updateSearchUI();
+        }
+    }
+
+
+    
+    async function performPdfSearch(text) {
+        if (isSearching || !pdfDoc || !text || text.trim() === '') {
+            resetSearch();
+            return;
+        }
+        
+        isSearching = true;
+        searchInput.classList.add('loading');
+        currentSearchTerm = text.trim();
+        pdfSearchResults = [];
+        pdfCurrentSearchIndex = -1;
+        matchCountTotal = 0;
+        
+        try {
+            
+            const pages = previewContainer.querySelectorAll('.pdf-page');
+            pages.forEach(page => {
+                const highlightLayer = page.querySelector('.text-layer');
+                if (highlightLayer) {
+                    const highlights = highlightLayer.querySelectorAll('.highlight');
+                    highlights.forEach(highlight => {
+                        highlight.classList.remove('highlight', 'active');
+                    });
+                }
+            });
+            
+            
+            const numPages = pdfDoc.numPages;
+            for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+                const page = await pdfDoc.getPage(pageNum);
+                const content = await page.getTextContent();
+                
+                
+                const searchTerm = currentSearchTerm.toLowerCase();
+                content.items.forEach((item, index) => {
+                    if (typeof item.str === 'string' && item.str.toLowerCase().includes(searchTerm)) {
+                        
+                        pdfSearchResults.push({
+                            pageNum,
+                            itemIndex: index,
+                            text: item.str,
+                            transform: item.transform,
+                            width: item.width,
+                            height: item.height
+                        });
+                    }
+                });
+            }
+            
+            
+            matchCountTotal = pdfSearchResults.length;
+            pdfCurrentSearchIndex = matchCountTotal > 0 ? 0 : -1;
+            currentMatchIndex = pdfCurrentSearchIndex;
+            
+            
+            if (matchCountTotal > 0) {
+                await scrollToPdfMatch(0);
+            }
+            
+        } catch (error) {
+            console.error('PDF搜索出错:', error);
             matchCount.textContent = '搜索出错';
         } finally {
             isSearching = false;
@@ -2383,6 +2211,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
+    async function scrollToPdfMatch(index) {
+        if (pdfSearchResults.length === 0 || index < 0 || index >= pdfSearchResults.length) {
+            return;
+        }
+        
+        const match = pdfSearchResults[index];
+        pdfCurrentSearchIndex = index;
+        currentMatchIndex = index;
+        
+        
+        const pages = previewContainer.querySelectorAll('.pdf-page');
+        pages.forEach(page => {
+            const highlightLayer = page.querySelector('.text-layer');
+            if (highlightLayer) {
+                const highlights = highlightLayer.querySelectorAll('.highlight');
+                highlights.forEach(highlight => {
+                    highlight.classList.remove('highlight', 'active');
+                });
+            }
+        });
+        
+        
+        await renderPage(match.pageNum);
+        
+        
+        const currentPageEl = previewContainer.querySelector(`.pdf-page[data-page="${match.pageNum}"]`);
+        if (currentPageEl) {
+            const textLayer = currentPageEl.querySelector('.text-layer');
+            if (textLayer) {
+                
+                const textElements = textLayer.querySelectorAll('.text');
+                
+                
+                if (textElements[match.itemIndex]) {
+                    textElements[match.itemIndex].classList.add('highlight', 'active');
+                    
+                    
+                    textElements[match.itemIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }
+        }
+        
+        updateSearchUI();
+    }
+
+
+    
     function restoreMatches() {
         console.log('尝试恢复匹配项索引');
         
@@ -2407,6 +2285,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            const nextIndex = (pdfCurrentSearchIndex + 1) % matchCountTotal;
+            scrollToPdfMatch(nextIndex);
+            return;
+        }
+        
         const nextIndex = (currentMatchIndex + 1) % matchCountTotal;
         scrollToMatch(nextIndex);
     }
@@ -2415,6 +2300,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function goToPrevMatch() {
         if (matchCountTotal === 0) {
+            return;
+        }
+        
+        
+        if (currentDocType === 'pdf' && pdfDoc) {
+            const prevIndex = (pdfCurrentSearchIndex - 1 + matchCountTotal) % matchCountTotal;
+            scrollToPdfMatch(prevIndex);
             return;
         }
         
@@ -2490,12 +2382,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const newWindow = window.open('', '_blank');
                 if (newWindow) {
+                    
+                    let additionalLibraries = '';
+                    if (docType === 'xlsx') {
+                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js">\x3C/script>';
+                    } else if (docType === 'pptx') {
+                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js">\x3C/script>';
+                    } else if (docType === 'pdf') {
+                        additionalLibraries = '\x3Cscript src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js">\x3C/script>';
+                    }
+                    
                     newWindow.document.write(`
                         <!DOCTYPE html>
                         <html>
                         <head>
                             <title>${title || '文档预览'}</title>
                             \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            ${additionalLibraries}
                             <style>
                                 body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
                                 .loading { text-align: center; padding: 50px; }
@@ -2504,6 +2407,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 table { border-collapse: collapse; width: 100%; }
                                 table th, table td { border: 1px solid #ddd; padding: 8px 12px; }
                                 table th { background-color: #f8f9fa; }
+                                /* Excel和PowerPoint预览样式 */
+                                .xlsx-content, .pptx-content { line-height: 1.6; }
+                                .worksheet-container { margin-bottom: 20px; }
+                                .slide { margin-bottom: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 4px; }
+                                .slide-text { margin: 8px 0; padding: 4px 0; }
+                                .slide-text.level-0 { font-size: 1.2em; font-weight: bold; }
+                                .slide-text.level-1 { font-size: 1.1em; font-weight: 600; }
+                                .slide-text.level-2 { font-size: 1em; }
                             </style>
                         </head>
                         <body>
@@ -2511,6 +2422,107 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p>正在加载文档...</p>
                             </div>
                             \x3Cscript>
+                                // 辅助函数：转义HTML特殊字符
+                                function escapeHtml(unsafe) {
+                                    if (!unsafe) return '';
+                                    return unsafe
+                                        .replace(/&/g, "&amp;")
+                                        .replace(/</g, "&lt;")
+                                        .replace(/>/g, "&gt;")
+                                        .replace(/"/g, "&quot;")
+                                        .replace(/'/g, "&#039;");
+                                }
+                                
+                                // 解析XLSX文件
+                                async function parseXlsx(arrayBuffer) {
+                                    try {
+                                        // 使用xlsx库解析Excel文件
+                                        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+                                        
+                                        let htmlContent = '<div class="xlsx-content">';
+                                        htmlContent += \`<h3>Excel文档: \${workbook.SheetNames.length} 个工作表</h3>\`;
+                                        
+                                        // 遍历所有工作表
+                                        workbook.SheetNames.forEach((sheetName, index) => {
+                                            // 将工作表转换为HTML
+                                            const worksheet = workbook.Sheets[sheetName];
+                                            const html = XLSX.utils.sheet_to_html(worksheet);
+                                            
+                                            // 添加工作表标题和内容
+                                            htmlContent += \`
+                                                <div class="worksheet-container">
+                                                    <h4>工作表 \${index + 1}: \${sheetName}</h4>
+                                                    <div class="table-wrapper">\${html}</div>
+                                                </div>
+                                                <hr>
+                                            \`;
+                                        });
+                                        
+                                        htmlContent += '</div>';
+                                        
+                                        return { value: htmlContent };
+                                    } catch (error) {
+                                        console.error('XLSX解析错误:', error);
+                                        return { 
+                                            value: \`<div class="error-message">
+                                                <p>无法解析Excel文件</p>
+                                                <p>错误: \${error.message}</p>
+                                            </div>\` 
+                                        };
+                                    }
+                                }
+                                
+                                // 解析PPTX文件
+                                async function parsePptx(arrayBuffer) {
+                                    try {
+                                        // 将ArrayBuffer转换为Uint8Array
+                                        const uint8Array = new Uint8Array(arrayBuffer);
+                                        
+                                        // 使用pptx-parser解析PowerPoint文件
+                                        const presentation = await PptxParser.parse(uint8Array);
+                                        
+                                        let htmlContent = '<div class="pptx-content">';
+                                        htmlContent += \`<h3>PowerPoint文档: \${presentation.slides.length} 张幻灯片</h3>\`;
+                                        
+                                        // 遍历所有幻灯片
+                                        presentation.slides.forEach((slide, index) => {
+                                            htmlContent += \`<div class="slide slide-\${index + 1}">\`;
+                                            htmlContent += \`<h4>幻灯片 \${index + 1}</h4>\`;
+                                            
+                                            // 处理幻灯片内容
+                                            if (slide.text && slide.text.length > 0) {
+                                                htmlContent += '<div class="slide-content">';
+                                                
+                                                // 处理文本内容
+                                                slide.text.forEach(text => {
+                                                    // 根据文本级别使用适当的标题或段落标签
+                                                    const tag = text.level === 0 ? 'h5' : 
+                                                               text.level === 1 ? 'h6' : 'p';
+                                                    htmlContent += \`<\${tag} class="slide-text level-\${text.level}">\${escapeHtml(text.content)}</\${tag}>\`;
+                                                });
+                                                
+                                                htmlContent += '</div>';
+                                            } else {
+                                                htmlContent += '<p class="no-content">此幻灯片没有可提取的文本内容</p>';
+                                            }
+                                            
+                                            htmlContent += '</div><hr>';
+                                        });
+                                        
+                                        htmlContent += '</div>';
+                                        
+                                        return { value: htmlContent };
+                                    } catch (error) {
+                                        console.error('PPTX解析错误:', error);
+                                        return { 
+                                            value: \`<div class="error-message">
+                                                <p>无法解析PowerPoint文件</p>
+                                                <p>错误: \${error.message}</p>
+                                            </div>\` 
+                                        };
+                                    }
+                                }
+                                
                                 // 解析文档并显示
                                 async function loadDocument() {
                                     try {
@@ -2518,18 +2530,73 @@ document.addEventListener('DOMContentLoaded', () => {
                                         if (!response.ok) throw new Error('加载失败');
                                         
                                         const arrayBuffer = await response.arrayBuffer();
-                                        const result = await mammoth.convertToHtml({ arrayBuffer });
+                                        let result;
                                         
-                                        // 处理表格
+                                        // 根据文档类型使用不同的解析方式
+                                        switch('${docType}') {
+                                            case 'docx':
+                                                result = await mammoth.convertToHtml({ arrayBuffer });
+                                                break;
+                                            case 'xlsx':
+                                                // 对于Excel文件，使用xlsx库解析
+                                                result = await parseXlsx(arrayBuffer);
+                                                break;
+                                            case 'pptx':
+                                                // 对于PowerPoint文件，使用pptx-parser解析
+                                                result = await parsePptx(arrayBuffer);
+                                                break;
+                                            case 'pdf':
+                                                // 对于PDF文件，使用pdf.js
+                                                if (typeof pdfjsLib !== 'undefined') {
+                                                    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+                                                    const pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                                                    let htmlContent = '<div class="pdf-container">';
+                                                    htmlContent += \`<h3>PDF文档: \${pdfDoc.numPages} 页</h3>\`;
+                                                    htmlContent += '<div class="pdf-viewer">';
+                                                    
+                                                    for (let i = 1; i <= pdfDoc.numPages; i++) {
+                                                        const page = await pdfDoc.getPage(i);
+                                                        const viewport = page.getViewport({ scale: 1.0 });
+                                                        htmlContent += \`<div class="pdf-page" style="width: \${viewport.width}px; height: \${viewport.height}px;">\`;
+                                                        htmlContent += \`<canvas id="page-\${i}" width="\${viewport.width}" height="\${viewport.height}"></canvas>\`;
+                                                        htmlContent += '</div>';
+                                                    }
+                                                    
+                                                    htmlContent += '</div></div>';
+                                                    
+                                                    document.body.innerHTML = htmlContent;
+                                                    
+                                                    // 渲染PDF页面
+                                                    for (let i = 1; i <= pdfDoc.numPages; i++) {
+                                                        const page = await pdfDoc.getPage(i);
+                                                        const viewport = page.getViewport({ scale: 1.0 });
+                                                        const canvas = document.getElementById(\`page-\${i}\`);
+                                                        const context = canvas.getContext('2d');
+                                                        await page.render({ canvasContext: context, viewport }).promise;
+                                                    }
+                                                    
+                                                    return;
+                                                } else {
+                                                    throw new Error('PDF.js库未加载');
+                                                }
+                                                break;
+                                            default:
+                                                throw new Error(\`不支持的文档类型: \${'${docType}'}\`);
+                                        }
+                                        
+                                        // 处理表格，添加响应式包装器
                                         const tempDiv = document.createElement('div');
                                         tempDiv.innerHTML = result.value;
                                         
+                                        // 为所有表格添加包装容器
                                         const tables = tempDiv.querySelectorAll('table');
                                         tables.forEach(table => {
-                                            const wrapper = document.createElement('div');
-                                            wrapper.className = 'table-wrapper';
-                                            table.parentNode.insertBefore(wrapper, table);
-                                            wrapper.appendChild(table);
+                                            if (!table.parentNode.classList.contains('table-wrapper')) {
+                                                const wrapper = document.createElement('div');
+                                                wrapper.className = 'table-wrapper';
+                                                table.parentNode.insertBefore(wrapper, table);
+                                                wrapper.appendChild(table);
+                                            }
                                         });
                                         
                                         document.body.innerHTML = tempDiv.innerHTML;
@@ -2538,7 +2605,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <div class="error">
                                                 <p>文档加载失败</p>
                                                 <p>\${err.message}</p>
-                                                <p><a href="${url}" download>下载文档</a></p>
+                                                <p><a href="${url}" download class="btn btn-primary">下载文档</a></p>
                                             </div>
                                         \`;
                                     }
@@ -2656,18 +2723,224 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-    function handlePdfPreview(url, title) {
+    async function handlePdfPreview(url, title) {
         openModal();
         modalTitle.textContent = title;
         
         
-        const iframe = document.createElement('iframe');
-        iframe.src = url;
-        iframe.className = 'pdf-container';
-        iframe.title = title;
+        previewContainer.innerHTML = `
+            <div class="pdf-container">
+                <div class="pdf-toolbar">
+                    <div class="pdf-navigation">
+                        <button class="btn" id="prev-page">上一页</button>
+                        <span id="page-num">1</span> / <span id="page-count">加载中...</span>
+                        <button class="btn" id="next-page">下一页</button>
+                    </div>
+                    <div class="pdf-zoom">
+                        <button class="btn" id="zoom-out">缩小</button>
+                        <span id="zoom-level">100%</span>
+                        <button class="btn" id="zoom-in">放大</button>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <div class="pdf-loading">
+                        <p>正在加载PDF文档...</p>
+                    </div>
+                </div>
+            </div>
+        `;
         
-        previewContainer.innerHTML = '';
-        previewContainer.appendChild(iframe);
+        try {
+            
+            const pdfViewer = previewContainer.querySelector('.pdf-viewer');
+            const loadingIndicator = previewContainer.querySelector('.pdf-loading');
+            
+            
+            const response = await fetch(url);
+            const data = await response.arrayBuffer();
+            
+            
+            pdfDoc = await pdfjsLib.getDocument({ data }).promise;
+            
+            
+            document.getElementById('page-count').textContent = pdfDoc.numPages;
+            
+            
+            await renderPage(1);
+            
+            
+            loadingIndicator.style.display = 'none';
+            
+            
+            document.getElementById('prev-page').addEventListener('click', () => {
+                if (currentPage <= 1) return;
+                renderPage(currentPage - 1);
+            });
+            
+            document.getElementById('next-page').addEventListener('click', () => {
+                if (currentPage >= pdfDoc.numPages) return;
+                renderPage(currentPage + 1);
+            });
+            
+            document.getElementById('zoom-in').addEventListener('click', () => {
+                zoom += 0.1;
+                renderPage(currentPage);
+                document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+            });
+            
+            document.getElementById('zoom-out').addEventListener('click', () => {
+                if (zoom <= 0.5) return;
+                zoom -= 0.1;
+                renderPage(currentPage);
+                document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+            });
+            
+            
+            previewContainer.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    if (currentPage > 1) renderPage(currentPage - 1);
+                } else if (e.key === 'ArrowRight') {
+                    if (currentPage < pdfDoc.numPages) renderPage(currentPage + 1);
+                } else if (e.key === '+') {
+                    zoom += 0.1;
+                    renderPage(currentPage);
+                    document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+                } else if (e.key === '-') {
+                    if (zoom > 0.5) {
+                        zoom -= 0.1;
+                        renderPage(currentPage);
+                        document.getElementById('zoom-level').textContent = `${Math.round(zoom * 100)}%`;
+                    }
+                }
+            });
+            
+        } catch (error) {
+            console.error('PDF加载错误:', error);
+            previewContainer.innerHTML = `
+                <div class="pdf-error">
+                    <p>无法加载PDF文档</p>
+                    <p>错误: ${error.message}</p>
+                    <p><a href="${url}" class="btn btn-primary" download>下载PDF</a></p>
+                </div>
+            `;
+        }
+    }
+
+
+    
+    async function renderPage(num) {
+        if (!pdfDoc) return;
+        
+        currentPage = num;
+        document.getElementById('page-num').textContent = num;
+        
+        const pdfViewer = previewContainer.querySelector('.pdf-viewer');
+        const page = await pdfDoc.getPage(num);
+        
+        
+        pdfViewer.innerHTML = '';
+        
+        
+        const pageContainer = document.createElement('div');
+        pageContainer.className = 'pdf-page';
+        pageContainer.dataset.page = num;
+        pdfViewer.appendChild(pageContainer);
+        
+        
+        const viewport = page.getViewport({ scale: zoom });
+        
+        
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        pageContainer.appendChild(canvas);
+        
+        
+        const textLayerDiv = document.createElement('div');
+        textLayerDiv.className = 'text-layer';
+        textLayerDiv.style.width = `${viewport.width}px`;
+        textLayerDiv.style.height = `${viewport.height}px`;
+        textLayerDiv.style.transform = `scale(${zoom})`;
+        textLayerDiv.style.transformOrigin = '0 0';
+        pageContainer.appendChild(textLayerDiv);
+        
+        
+        const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+        };
+        
+        const renderTask = page.render(renderContext);
+        await renderTask.promise;
+        
+        
+        const textContent = await page.getTextContent();
+        renderTextLayer(textContent, textLayerDiv, viewport);
+        
+        
+        pageContainer.style.width = `${viewport.width}px`;
+        pageContainer.style.height = `${viewport.height}px`;
+        
+        
+        if (pdfSearchResults.length > 0) {
+            const currentMatch = pdfSearchResults.find(match => match.pageNum === num);
+            if (currentMatch) {
+                const textElements = textLayerDiv.querySelectorAll('.text');
+                if (textElements[currentMatch.itemIndex]) {
+                    textElements[currentMatch.itemIndex].classList.add('highlight');
+                    if (pdfCurrentSearchIndex === pdfSearchResults.indexOf(currentMatch)) {
+                        textElements[currentMatch.itemIndex].classList.add('active');
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    function renderTextLayer(textContent, textLayerDiv, viewport) {
+        
+        textLayerDiv.innerHTML = '';
+        
+        const textItems = textContent.items;
+        const scale = viewport.scale;
+        
+        
+        const sortedItems = [...textItems].sort((a, b) => {
+            
+            if (Math.abs(a.transform[5] - b.transform[5]) > 1) {
+                return a.transform[5] - b.transform[5];
+            }
+            
+            return a.transform[4] - b.transform[4];
+        });
+        
+        sortedItems.forEach((item, index) => {
+            const span = document.createElement('span');
+            span.className = 'text';
+            span.textContent = item.str;
+            span.dataset.index = index;
+            
+            
+            const x = item.transform[4] / scale;
+            const y = item.transform[5] / scale;
+            
+            
+            Object.assign(span.style, {
+                left: `${x}px`,
+                top: `${y}px`,
+                fontSize: `${item.height / scale}px`,
+                height: `${item.height / scale}px`,
+                width: `${item.width / scale}px`,
+                transform: `scale(${1/scale})`,
+                transformOrigin: '0 0',
+                position: 'absolute',
+                whiteSpace: 'pre'
+            });
+            
+            textLayerDiv.appendChild(span);
+        });
     }
 
 
@@ -2739,25 +3012,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-    async function parseXlsx(arrayBuffer) {
-        
-        
-        return {
-            value: `<div class="xlsx-content"><p>Excel文档内容预览（简化版）</p>
-                    <p>使用mammoth.js解析的Excel数据将显示在这里</p></div>`
-        };
-    }
+	async function parseXlsx(arrayBuffer) {
+		try {
+			
+			const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+			
+			let htmlContent = '<div class="xlsx-content">';
+			htmlContent += `<h3>Excel文档: ${workbook.SheetNames.length} 个工作表</h3>`;
+			
+			
+			workbook.SheetNames.forEach((sheetName, index) => {
+				
+				const worksheet = workbook.Sheets[sheetName];
+				const html = XLSX.utils.sheet_to_html(worksheet);
+				
+				
+				htmlContent += `
+					<div class="worksheet-container">
+						<h4>工作表 ${index + 1}: ${sheetName}</h4>
+						<div class="table-wrapper">${html}</div>
+					</div>
+					<hr>
+				`;
+			});
+			
+			htmlContent += '</div>';
+			
+			return { value: htmlContent };
+		} catch (error) {
+			console.error('XLSX解析错误:', error);
+			return { 
+				value: `<div class="error-message">
+					<p>无法解析Excel文件</p>
+					<p>错误: ${error.message}</p>
+				</div>` 
+			};
+		}
+	}
 
+	
+	async function parsePptx(arrayBuffer) {
+		try {
+			
+			const uint8Array = new Uint8Array(arrayBuffer);
+			
+			
+			const presentation = await PptxParser.parse(uint8Array);
+			
+			let htmlContent = '<div class="pptx-content">';
+			htmlContent += `<h3>PowerPoint文档: ${presentation.slides.length} 张幻灯片</h3>`;
+			
+			
+			presentation.slides.forEach((slide, index) => {
+				htmlContent += `<div class="slide slide-${index + 1}">`;
+				htmlContent += `<h4>幻灯片 ${index + 1}</h4>`;
+				
+				
+				if (slide.text && slide.text.length > 0) {
+					htmlContent += '<div class="slide-content">';
+					
+					
+					slide.text.forEach(text => {
+						
+						const tag = text.level === 0 ? 'h5' : 
+								   text.level === 1 ? 'h6' : 'p';
+						htmlContent += `<${tag} class="slide-text level-${text.level}">${escapeHtml(text.content)}</${tag}>`;
+					});
+					
+					htmlContent += '</div>';
+				} else {
+					htmlContent += '<p class="no-content">此幻灯片没有可提取的文本内容</p>';
+				}
+				
+				htmlContent += '</div><hr>';
+			});
+			
+			htmlContent += '</div>';
+			
+			return { value: htmlContent };
+		} catch (error) {
+			console.error('PPTX解析错误:', error);
+			return { 
+				value: `<div class="error-message">
+					<p>无法解析PowerPoint文件</p>
+					<p>错误: ${error.message}</p>
+				</div>` 
+			};
+		}
+	}
 
-    
-    async function parsePptx(arrayBuffer) {
-        
-        
-        return {
-            value: `<div class="pptx-content"><p>PowerPoint文档内容预览（简化版）</p>
-                    <p>使用mammoth.js解析的PowerPoint数据将显示在这里</p></div>`
-        };
-    }
+	
+	function escapeHtml(unsafe) {
+		if (!unsafe) return '';
+		return unsafe
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;")
+			.replace(/'/g, "&#039;");
+	}
 
 
     
@@ -2827,17 +3180,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'modal':
                 default:
                     
-                    openModal();
-                    
-					const iframe = document.createElement('iframe');
-					iframe.src = docUrl;
-					iframe.className = 'pdf-container';
-					iframe.title = docTitle;
-					previewContainer.appendChild(iframe);
-						
-                    
-                    
-
+                    if (docType === 'pdf') {
+                        await handlePdfPreview(docUrl, docTitle);
+                    } else {
+                        
+                        openModal();
+                        
+                        const iframe = document.createElement('iframe');
+                        iframe.src = docUrl;
+                        iframe.className = 'pdf-container';
+                        iframe.title = docTitle;
+                        previewContainer.appendChild(iframe);
+                    }
                     break;
             }
         });
