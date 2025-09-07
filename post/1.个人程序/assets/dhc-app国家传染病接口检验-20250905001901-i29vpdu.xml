@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2016.2.3 (Build 903_10_20040U)" ts="2025-07-29 08:35:10">
+<Class name="DHCMed.EPDService.IO.LISInterface">
+<Super>%RegisteredObject</Super>
+<TimeChanged>67415,30899.036938</TimeChanged>
+<TimeCreated>67260,40162.304181</TimeCreated>
+
+<UDLText name="T">
+<Content><![CDATA[
+/*
+	说明：	1.修改参数，调用 w ##class(DHCMed.EPDService.IO.LISInterface).Send("26") 看平台是否有日志
+			2.方案一(推荐)：部署定时任务，设置多久运行一次就入参为多少分钟，没有入参默认为120分钟(2小时)
+			  (新增等待时间，第三方要求先推送完报告信息等待一会在推送结果信息，否则预警可能失效，推荐入参30分钟。只针对方案一，方案二无法优化。)
+			   d ##class(DHCMed.EPDService.IO.LISInterface).Do(30)
+			  方案二：实时调用，将主方法放到检验消息任务审核后推送
+			   win服务器版本lis，【dhc-app】web.DHCLisRealTimeInterface		linux服务器版本lis，【dhc-lisdata】LISAPP.TASK.LisRealTimeInterface
+			   try{s ret=##class(DHCMed.EPDService.IO.LISInterface).Send(VisitNumberReportDR)}catch{}
+			3.默认调用平台方法为 web.DHCENS.BLL.GJCRBSB.Method.CRBService,维护平台对应代码就可以，如果为其他方法核实修改
+			4.互认对照三种，不对照也能正常上传，可以先上传后对照。
+			5.新增补传方法 DoDate，可入参开始时间和结束时间补传时间段内所有已审核的报告
+*/
+]]></Content>
+</UDLText>
+
+<Parameter name="SQJGCode">
+<Description>
+申请机构代码</Description>
+<Default>SQJGCode</Default>
+</Parameter>
+
+<Parameter name="SQJGName">
+<Description>
+申请机构名称</Description>
+<Default>SQJGName</Default>
+</Parameter>
+
+<Parameter name="Report">
+<Description>
+平台检验报告代码</Description>
+<Default>MES0020</Default>
+</Parameter>
+
+<Parameter name="Result">
+<Description>
+平台检验报告项目代码</Description>
+<Default>MES0021</Default>
+</Parameter>
+
+<Parameter name="IsInput">
+<Description>
+非对照数据是否上传(1:不上传,0:上传)(科室互认 SQKS,标本类型互认 SP,检测项目互认 TC)</Description>
+<Default>0</Default>
+</Parameter>
+
+<Parameter name="IsCheck">
+<Description>
+是否查看平台返回数据(平台方法后断点，zw查看，ReturnJson为检验拼装json串，retStr为平台返回消息)</Description>
+<Default>1</Default>
+</Parameter>
+
+<Method name="Send">
+<Description>
+Creator：      yanghaoran
+CreatDate：    2024-12-24
+UpDate:		   2025-04-22
+Description：  国家传染病智能监测预警前置软件接口部署：检验报告 emr_ex_lab
+			   国家传染病智能监测预警前置软件接口部署：检验报告项目 emr_ex_lab_item
+Table：        
+Input：        报告RowID
+Output：       
+Return：
+w ##class(DHCMed.EPDService.IO.LISInterface).Send("33829")</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>ReportDR</FormalSpec>
+<ReturnType>%String</ReturnType>
+<Implementation><![CDATA[
+	i '$l(ReportDR) q ""
+	s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22)
+	q:Status'["3" ""
+	s VisitNumberDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),2)
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	s HospitalDR=$lg(VisitNumberData,21)		//限制条件
+	s RegNo=$lg(VisitNumberData,3)
+	
+	d ..SendReportInfo(ReportDR)
+	d ..SendResultInfo(ReportDR)
+	q ""
+]]></Implementation>
+</Method>
+
+<Method name="SendReportInfo">
+<Description>
+国家传染病智能监测预警前置软件接口部署：检验报告 emr_ex_lab
+w ##class(DHCMed.EPDService.IO.LISInterface).SendReportInfo(26)</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>ReportDR:%String</FormalSpec>
+<ReturnType>%Stream.GlobalCharacter</ReturnType>
+<Implementation><![CDATA[
+	i '$l(ReportDR) q ""
+	s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22)
+	q:Status'["3" ""
+	s VisitNumberDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),2)
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	s HospitalDR=$lg(VisitNumberData,21)		//限制条件
+	s RegNo=$lg(VisitNumberData,3)
+	
+	s InputObj={} ;##class(DHCDoc.Util.ArrayData).%New()	##class(%DynamicObject).%New()
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	;就诊号
+	s AdmNo=$lg(VisitNumberData,5)
+	;登记号
+	s RegNo=$lg(VisitNumberData,3)
+	s:$l(RegNo) patId=$o(^["dhc-app"]PAPERi("PAPMI_PatNo",RegNo,""))
+	s patId=RegNo			// ！！！根据项目实际情况，如果主表用patid作为患者唯一主键则屏蔽该行,登记号则放开！！！
+	;检验信息在院内的唯一识别标识
+	s InputObj."id"=ReportDR
+	;机构内患者基本信息唯一标识
+	s InputObj."patient_id"=$g(patId)
+	;诊断活动类型代码  诊断活动类型名称
+	s AdmissionTypeDR=$lg(VisitNumberData,4),AdmissionTypeCode="",AdmissionTypeName=""
+	i $l(AdmissionTypeDR) d
+	.s AdmissionTypeCode=$lg($g(^dbo.BTAdmissionTypeD(AdmissionTypeDR)),2)		;就诊类型
+	s InputObj."activity_type_code"=$case(AdmissionTypeCode,"O":"1","E":"2","I":"6",:"1")
+	s InputObj."activity_type_name"=$case(AdmissionTypeCode,"O":"门诊","E":"急诊","I":"住院",:"门诊")
+	;就诊流水号
+	s InputObj."serial_number"=AdmNo
+	;就诊者姓名
+	s InputObj."patient_name"=$lg(VisitNumberData,13)
+	;身份证件类别代码  身份证件类别名称  身份证件号
+	s IDNumber=$lg(VisitNumberData,11)
+	i '$l(IDNumber),$l(AdmNo) d
+	.s patientid=$p($g(^["dhc-app"]PAADM(AdmNo)),"^",1)
+	.i $l(patientid) s IDNumber=$P($g(^["dhc-app"]PAPER(patientid,"PER",2)),"^",1)	//如果检验表里没有身份证号，尝试从his获取身份证号
+	i $l(IDNumber) d
+	.s InputObj."id_card_type_code"="01"
+	.s InputObj."id_card_type_name"="居民身份证"
+	.s InputObj."id_card"=IDNumber
+	e  d
+	.s BirthDate=$lg(VisitNumberData,16)
+	.s InputObj."id_card_type_code"="99"
+	.s InputObj."id_card_type_name"="其他法定有效证件"
+	.s InputObj."id_card"=BirthDate
+	;病区名称 
+	s WardDR=$lg(VisitNumberData,26)
+	s InputObj."ward_name"=$s($l(WardDR):$lg($g(^dbo.BTWardD(WardDR)),3),1:"")
+	;病房号
+	s InputObj."ward_no"=WardDR
+	;病床号
+	s InputObj."bed_no"=$lg(VisitNumberData,27)
+	;电子申请单编号
+	s InputObj."application_form_no"=ReportDR
+	s LocationDR = $lg(VisitNumberData,22)
+	s LocationCode=$s($l(LocationDR):$lg($g(^dbo.BTLocationD(LocationDR)),2),1:"")
+	s LocationName=$s($l(LocationDR):$lg($g(^dbo.BTLocationD(LocationDR)),3),1:"")
+	s LocationData=..GetData("SQKS",LocationCode)
+	i '$l(LocationData),..#IsInput q ""
+	i $l(LocationData) d
+	.s LocationCode=$p(LocationData,"^",1)
+	.s LocationName=$p(LocationData,"^",2)		//***HR***//
+	;检验申请科室代码
+	s InputObj."apply_dept_code"=LocationCode
+	;检验申请科室名称
+	s InputObj."apply_dept_name"=LocationName
+	s HospitalDR=$lg(VisitNumberData,21)
+	;检验申请机构代码 名称
+	s InputObj."apply_org_code"=..#SQJGCode
+	s InputObj."apply_org_name"=..#SQJGName
+	;检验申请医师
+	s DoctorDR=$lg(VisitNumberData,23)
+	s InputObj."apply_physician_id"=$s($l(DoctorDR):$lg($g(^dbo.BTDoctorD(DoctorDR)),2),1:"")
+	;标本类别代码
+	s SpecimenDR=$lg(VisitNumberData,56)
+	s SpecimenCode=$s($l(SpecimenDR):$lg($g(^dbo.BTSpecimenD(SpecimenDR)),2),1:"")
+	s SpecimenName=$s($l(SpecimenDR):$lg($g(^dbo.BTSpecimenD(SpecimenDR)),3),1:"")
+	s SpecimenData=..GetData("SP",SpecimenCode)
+	i '$l(SpecimenCode),..#IsInput q ""
+	i $l(SpecimenData) d
+	.s SpecimenCode=$p(SpecimenData,"^",1)
+	.s SpecimenName=$p(SpecimenData,"^",2)		//***HR***//
+	s InputObj."specimen_category_code"=SpecimenCode
+	s InputObj."specimen_category_name"=SpecimenName
+	;检验标本号
+	s InputObj."specimen_no"=$lg(VisitNumberData,2)
+	;标本采样日期时间
+	s CollectDate=$lg(VisitNumberData,51)
+    s CollectTime=$lg(VisitNumberData,52)
+    s InputObj."specimen_sampling_date"=$s(($l(CollectDate)&&$l(CollectTime)):$zd($zdh(CollectDate,8),3)_" "_$zt(CollectTime),1:"")
+    ;接收标本日期时间
+    s ReceiveDate=$lg(VisitNumberData,66)
+	s ReceiveTime=$lg(VisitNumberData,67)
+	s InputObj."specimen_receiving_date"=$s(($l(ReceiveDate)&&$l(ReceiveTime)):$zd($zdh(ReceiveDate,8),3)_" "_$zt(ReceiveTime),1:"")
+	;检验医师
+	s AcceptUserDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),11)
+	s InputObj."examination_physician_id"=$s($l(AcceptUserDR):$lg($g(^dbo.SYSUserD(AcceptUserDR)),2),1:"")
+	;检验日期
+	s:ReceiveDate'="" InputObj."examination_date"=$zd($zdh(ReceiveDate,8),3)
+	;检验报告单编号
+	s InputObj."examination_report_no"=ReportDR
+	;检验报告结果-客观所见
+	s InputObj."examination_objective_desc"=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),40)
+	;检验报告结果-主观提示
+	s InputObj."examination_subjective_desc"=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),41)
+	;检验报告备注
+	s InputObj."examination_notes"=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),40)
+	;检验报告日期
+	s ReportDate=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),19)
+	s ReportTime=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),20)
+	s InputObj."examination_report _date"=$s(($l(ReportDate)&&$l(ReportTime)):$zd($zdh(ReportDate,8),3),1:"")
+	;报告医师
+	s AuthUserDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),21)
+	s InputObj."examination_report _id"=$s($l(AuthUserDR):$lg($g(^dbo.SYSUserD(AuthUserDR)),2),1:"")
+	;科室代码  科室名称
+	s InputObj."dept_code"="A30"
+	s InputObj."dept_name"="医学检验科"
+	;医疗机构代码  医疗机构名称  操作人
+	s InputObj."org_code"=..#SQJGCode
+	s InputObj."org_name"=..#SQJGName
+	s InputObj."operator_id"=""
+	;操作时间
+	s InputObj."operation_time"=$zd(+$h,3)_" "_$zt($p($h,",",2),1)
+	s ReturnJson=InputObj.%ToJSON()
+	s stream=##class(%Stream.GlobalCharacter).%New()
+ 	d stream.Write(ReturnJson)
+	//*************************平台方法****************************//
+	try{s retStr=##Class(web.DHCENS.BLL.GJCRBSB.Method.CRBService).CRBService(..#Report,stream).Read()}catch{s retStr=$ze}
+	i ..#IsCheck b ;Report retStr
+	Q ""
+]]></Implementation>
+</Method>
+
+<Method name="SendResultInfo">
+<Description>
+国家传染病智能监测预警前置软件接口部署：检验报告项目 emr_ex_lab_item
+w ##class(DHCMed.EPDService.IO.LISInterface).SendResultInfo(361)</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>ReportDR:%String</FormalSpec>
+<ReturnType>%Stream.GlobalCharacter</ReturnType>
+<Implementation><![CDATA[
+	i '$l(ReportDR) q ""
+	s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22)
+	q:Status'["3" ""
+	s VisitNumberDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),2)
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	s HospitalDR=$lg(VisitNumberData,21)		//限制条件
+	s RegNo=$lg(VisitNumberData,3)
+	
+	s fTestSetDR="" f  s fTestSetDR=$o(^dbo.RPVisitNumberReportResultI("IndexTestSet",ReportDR,fTestSetDR)) q:fTestSetDR=""  d
+	.s fTestCodeDR="" f  s fTestCodeDR=$o(^dbo.RPVisitNumberReportResultI("IndexTestSet",ReportDR,fTestSetDR,fTestCodeDR)) q:fTestCodeDR=""  d
+	..s ResultDR=$o(^dbo.RPVisitNumberReportResultI("IndexTestSet",ReportDR,fTestSetDR,fTestCodeDR,"")) 
+	..d ResultInfo
+	q ""
+	
+ResultInfo
+	s InputObj={} ;##class(DHCDoc.Util.ArrayData).%New()
+	q:ResultDR="" ""
+	q:'$d(^dbo.RPVisitNumberReportResultD(ResultDR)) ""
+	s ResultData=$g(^dbo.RPVisitNumberReportResultD(ResultDR))
+	s AdmNo=$lg($g(^dbo.RPVisitNumberReportResultD(ResultDR)),23)
+	;检查信息在院内的唯一识别标识
+	s InputObj."id"=ResultDR
+	;检验报告ID
+	s InputObj."ex_lab_id"=$lg(ResultData,2)
+	s TestCodeDR=$lg(ResultData,3)
+	;院内检验项目代码，院内检验项目名称
+	s TestCodeCode=$s($l(TestCodeDR):$lg(^dbo.BTTestCodeD(TestCodeDR),2),1:"")
+	s TestCodeName=$s($l(TestCodeDR):$lg(^dbo.BTTestCodeD(TestCodeDR),3),1:"")
+	s TestCodeCodeBak=TestCodeCode
+	s TestCodeData=..GetData("TC",TestCodeCode)
+	i '$l(TestCodeData),..#IsInput q ""
+	i $l(TestCodeData) d
+	.s TestCodeCode=$p(TestCodeData,"^",1)
+	.s TestCodeName=$p(TestCodeData,"^",2)		//***HR***//
+	s InputObj."item_code"=TestCodeCode
+	s InputObj."item_name"=TestCodeName
+	s ResCode=$lg(ResultData,4)
+	s Result=$lg(ResultData,5)
+	s Ranges=$lg(ResultData,12)
+	s ResultFormat=$lg(^dbo.BTTestCodeD(TestCodeDR),9)
+	s (MinRanges,MaxRanges)=""
+	s (NumberResult,StringResultCode,StringResult)=""
+	i ResultFormat="N" d
+	.s RangesBak=Ranges		
+	.i RangesBak["-" d		// 获取最小值和最大值
+	..s MinRanges=$p(RangesBak,"-",1)
+	..s MaxRanges=$p(RangesBak,"-",2)
+	.i RangesBak["<" d
+	..s RangesBak=$tr(RangesBak,"=")
+	..s MinRanges=$p(RangesBak,"<",1)
+	..s MaxRanges=$p(RangesBak,"<",2) 
+	.i RangesBak[">" d
+	..s RangesBak=$tr(RangesBak,"=")
+	..s MinRanges=$p(RangesBak,">",2)
+	..s MaxRanges=$p(RangesBak,">",1) 
+	.s NumberResult=Result
+	e  d
+	.s StringResultCode=ResCode
+	.s StringResult=Result
+	;院内检验定性结果代码
+	s InputObj."source_examination_result_code"=StringResultCode
+	;院内检验定性结果名称
+	s InputObj."source_examination_result_name"=StringResult
+	s ABFlag=$lg(ResultData,9)
+	s examinationResultData=..examinationResult(StringResult,TestCodeCodeBak,ABFlag)
+	s (examinationStringResultCode,examinationStringResultName)=""
+	i $l(examinationResultData) d
+	.s examinationStringResultCode=$p(examinationResultData,"^",1)
+	.s examinationStringResultName=$p(examinationResultData,"^",2)
+	;标化检验定性结果代码
+	s InputObj."examination_result_code"=$g(examinationStringResultCode)
+	;标化检验定性结果名称
+	s InputObj."examination_result_name"=$g(examinationStringResultName)
+	;检验定量结果
+	s InputObj."examination_quantification"=NumberResult
+	;检验定量结果计量单位
+	s InputObj."examination_quantification_unit"=$lg(ResultData,11)
+	;检验定量结果参考区间-下限
+	s InputObj."examination_quantification_lower"=MinRanges
+	;检验定量结果参考区间-上限
+	s InputObj."examination_quantification_upper"=MaxRanges
+	s ABFlag=$lg(ResultData,9)
+	;检验定量结果超出或低于参考值
+	s InputObj."examination_quantification_ri"=$case(ResultFormat,"N":$case(ABFlag,"H":"2","PH":"2","L":"1","PL":"1","A":"2","PA":"2",:"0"),:"")	//定量转定性结果，异常认为偏高
+	;医疗机构代码  医疗机构名称  操作人
+	s InputObj."operator_id"=""
+	;操作时间
+	s InputObj."operation_time"=$zd(+$h,3)_" "_$zt($p($h,",",2),1)
+	s ReturnJson=InputObj.%ToJSON()
+	s stream=##class(%Stream.GlobalCharacter).%New()
+ 	d stream.Write(ReturnJson)
+	//*************************平台方法****************************//
+	try{s retStr=##Class(web.DHCENS.BLL.GJCRBSB.Method.CRBService).CRBService(..#Result,stream).Read()}catch{s retStr=$ze}
+	i ..#IsCheck b ;Result retStr
+	Q ""
+]]></Implementation>
+</Method>
+
+<Method name="Do">
+<Description>
+Time:时间(分钟)
+d ##class(DHCMed.EPDService.IO.LISInterface).Do(30)</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>Time</FormalSpec>
+<Implementation><![CDATA[
+	s Time=$g(Time)
+	i '$l(Time) s Time=120
+	s STime=+Time*60+60
+	s SttDT=..GetMinutesAgoTime($zdt($h,8),STime)
+	s EndDT=$zdt($h,8)
+	s SttDate=$p(SttDT," ",1)
+	s SttTime=$zth($p(SttDT," ",2))
+	s EndDate=$p(EndDT," ",1)
+	s EndTime=$zth($p(EndDT," ",2))
+	
+	s WorkGroupMachineDR="" f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR)) q:WorkGroupMachineDR=""  d
+	.s AuthDate=SttDate-1 f  s AuthDate=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate)) q:((AuthDate="")||(AuthDate>EndDate))  d
+	..s ReportDR="" f  s ReportDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate,ReportDR)) q:ReportDR=""  d
+	...s AuthTime=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),20)
+	...i AuthTime<SttTime q
+	...i AuthTime>EndTime q
+	...i '$l($$IsReportOutPut(ReportDR)) q
+	...i $d(^TMP($zn,$j,$i,ReportDR,1)) q
+	...d ..SendReportInfo(ReportDR)
+	...s ^TMP($zn,$j,$i,ReportDR,1)=""
+	
+	//*************************延时等待****************************//
+	h 30		// 等待30秒
+	
+	s WorkGroupMachineDR="" f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR)) q:WorkGroupMachineDR=""  d
+	.s AuthDate=SttDate-1 f  s AuthDate=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate)) q:((AuthDate="")||(AuthDate>EndDate))  d
+	..s ReportDR="" f  s ReportDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate,ReportDR)) q:ReportDR=""  d
+	...s AuthTime=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),20)
+	...i AuthTime<SttTime q
+	...i AuthTime>EndTime q
+	...i '$l($$IsReportOutPut(ReportDR)) q
+	...i $d(^TMP($zn,$j,$i,ReportDR,2)) q
+	...d ..SendResultInfo(ReportDR)
+	...s ^TMP($zn,$j,$i,ReportDR,2)=""
+	q
+	
+IsReportOutPut(ReportDR)
+	i '$l(ReportDR) q ""
+	s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22)
+	q:Status'["3" ""
+	s VisitNumberDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),2)
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	s HospitalDR=$lg(VisitNumberData,21)		//限制条件
+	s RegNo=$lg(VisitNumberData,3)
+	q "1"
+]]></Implementation>
+</Method>
+
+<Method name="DoDate">
+<Description>
+补传数据，如果为空默认传当前时间往前120分钟
+j ##class(DHCMed.EPDService.IO.LISInterface).DoDate("20250529 00:00:00","20250529 23:59:59")</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>SttDT,EndDT</FormalSpec>
+<Implementation><![CDATA[
+	s SttDT=$g(SttDT),EndDT=$g(EndDT)
+	s Time=$g(Time)
+	i '$l(Time) s Time=120
+	s STime=+Time*60+60
+	i '$l(SttDT) s SttDT=..GetMinutesAgoTime($zdt($h,8),STime)
+	i '$l(EndDT) s EndDT=$zdt($h,8)
+	s SttDate=$p(SttDT," ",1)
+	s SttTime=$zth($p(SttDT," ",2))
+	s EndDate=$p(EndDT," ",1)
+	s EndTime=$zth($p(EndDT," ",2))
+	
+	s WorkGroupMachineDR="" f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR)) q:WorkGroupMachineDR=""  d
+	.s AuthDate=SttDate-1 f  s AuthDate=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate)) q:((AuthDate="")||(AuthDate>EndDate))  d
+	..s ReportDR="" f  s ReportDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate,ReportDR)) q:ReportDR=""  d
+	...s AuthTime=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),20)
+	...i AuthTime<SttTime q
+	...i AuthTime>EndTime q
+	...i '$l($$IsReportOutPut(ReportDR)) q
+	...;i $d(^TMP($zn,$j,$i,ReportDR,1)) q
+	...d ..SendReportInfo(ReportDR)
+	...s ^TMP($zn,$j,$i,ReportDR,1)=""
+	
+	//*************************延时等待****************************//
+	
+	s WorkGroupMachineDR="" f  s WorkGroupMachineDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR)) q:WorkGroupMachineDR=""  d
+	.s AuthDate=SttDate-1 f  s AuthDate=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate)) q:((AuthDate="")||(AuthDate>EndDate))  d
+	..s ReportDR="" f  s ReportDR=$o(^dbo.RPVisitNumberReportI("IndexAuthDate",WorkGroupMachineDR,AuthDate,ReportDR)) q:ReportDR=""  d
+	...s AuthTime=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),20)
+	...i AuthTime<SttTime q
+	...i AuthTime>EndTime q
+	...i '$l($$IsReportOutPut(ReportDR)) q
+	...;i $d(^TMP($zn,$j,$i,ReportDR,2)) q
+	...d ..SendResultInfo(ReportDR)
+	...s ^TMP($zn,$j,$i,ReportDR,2)=""
+	q
+	
+IsReportOutPut(ReportDR)
+	i '$l(ReportDR) q ""
+	s Status=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),22)
+	q:Status'["3" ""
+	s VisitNumberDR=$lg($g(^dbo.RPVisitNumberReportD(ReportDR)),2)
+	s VisitNumberData=$g(^dbo.RPVisitNumberD(VisitNumberDR))
+	s HospitalDR=$lg(VisitNumberData,21)		//限制条件
+	s RegNo=$lg(VisitNumberData,3)
+	q "1"
+]]></Implementation>
+</Method>
+
+<Method name="GetMinutesAgoTime">
+<Description>
+w ##class(DHCMed.EPDService.IO.LISInterface).GetMinutesAgoTime("20241125 10:04:00",7200)</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>DateTime,timeDiff</FormalSpec>
+<Implementation><![CDATA[
+	try{
+	s Date=$zdh($p(DateTime," ",1),8)
+	s Time=$zth($p(DateTime," ",2))}catch{s (Date,Time)=""}
+	i '$l(Date) q ""
+	s DateSince=$fn(timeDiff/86400,"",0)
+	s TimeSince=(timeDiff#86400)
+	i Time>=TimeSince d
+	.s Date=$zd(Date-DateSince,8)
+	.s Time=$zt(Time-TimeSince)
+	e  d
+	.s Date=$zd(Date-DateSince-1,8)
+	.s Time=$zt(86400+Time-TimeSince)
+	q Date_" "_Time
+]]></Implementation>
+</Method>
+
+<Method name="GetData">
+<Description>
+=============================获取互认数据=============================///
+获取互认数据
+dbo.CFBTHISData
+Input:互认系统代码，医院代码，数据类型，代码
+Outpue:对照代码，对照名称，对照主键
+w ##class(DHCMed.EPDService.IO.LISInterface).GetData("SP","SP015","","")</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>fDataType,fCode,HospitalCode,SYSCode</FormalSpec>
+<Implementation><![CDATA[
+	s SYSCode=$g(SYSCode)
+	i '$l(SYSCode) s SYSCode="GJCRB"
+	s HospitalCode=$g(HospitalCode)
+	i '$l(HospitalCode) s HospitalCode=..#SQJGCode
+	s fDataType=$g(fDataType),fCode=$g(fCode)
+	s ret=""
+	i '$l(fCode) q ret
+	i '$l(fDataType) q ret
+	i '$d(^dbo.CFBTHISDataI("IndexMaster",fDataType,fCode,SYSCode,HospitalCode)) q ret
+	s HISDataCode=$o(^dbo.CFBTHISDataI("IndexMaster",fDataType,fCode,SYSCode,HospitalCode,""))
+	s HISDataDR=$o(^dbo.CFBTHISDataI("IndexMaster",fDataType,fCode,SYSCode,HospitalCode,HISDataCode,""))
+	s HISDataData=$g(^dbo.CFBTHISDataD(HISDataDR))
+	s HISDataCode=$lg(HISDataData,6)
+	s HISDataName=$lg(HISDataData,8)
+	s HISDataID=$lg(HISDataData,7)
+	s ret=HISDataCode_"^"_HISDataName_"^"_HISDataID
+	q ret
+]]></Implementation>
+</Method>
+
+<Method name="examinationResult">
+<Description><![CDATA[
+标化定性结果转换
+结果，检测项目代码，异常提示
+w ##class(DHCMed.EPDService.IO.LISInterface).examinationResult("<5.000E+01")
+w ##class(DHCMed.EPDService.IO.LISInterface).examinationResult("1:8","D0273")]]></Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>Result,TestCode,ABFlag</FormalSpec>
+<Implementation><![CDATA[
+	s ret=""
+	s TestCode=$g(TestCode),ABFlag=$g(ABFlag)
+	d Special
+	i $l(ret) q ret
+	d All
+	q ret
+Special
+	// 根据项目code特殊判断结果的，根据具体逻辑进行判断标化定性结果。
+	// 以下注释为示例，根据项目具体情况修改。
+	/*
+	i (TestCode="EH0002")||((TestCode="AD01"))||((TestCode="AD02")) s ret="01^阳性"
+	i TestCode="D0273" d
+	.i Result="阴性" s ret="02^阴性"
+	.e  s ret="01^阳性"
+	i TestCode="E0024" d
+	.i Result="淋球菌生长" s ret="01^阳性"
+	.i Result="无淋球菌生长" s ret="02^阴性"
+	*/
+	q
+All
+	i ((Result["阳性")||((Result["+")&&(Result'["E"))) s ret="01^阳性"
+	i ((Result="阴性")||(Result="-")) s ret="02^阴性"
+	i Result["++" s ret="04^强阳性"
+	i ((Result="弱阳性")||(Result="+-")) s ret="05^弱阳性"
+	i Result="检出" s ret="06^检出"
+	i ((Result="未检出")||(Result="未查出")) s ret="07^未检出"
+	q
+]]></Implementation>
+</Method>
+</Class>
+</Export>
