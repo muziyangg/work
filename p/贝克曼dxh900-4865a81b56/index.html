@@ -15,11 +15,13 @@
 <meta name="twitter:description" content="接口说明 仪器厂商 贝克曼DXH900\n仪器型号 贝克曼DXH900\n通讯方式 双向 仪器类型 临检血常规 医院名称 程序名称 MI.MIFDXH900 终端服务器地址 终端服务器端口号 仪器上接口标示和接口类型 接口类型：串口 连接方式：ASTM协议 仪器接口说明 该仪器可与iReaderH CRP组成血常规流水线，本接口为没有前处理程序，直接对接仪器，因此认为单独的仪器连接。 仪器为特有方式存图，并且波特率只能115200,才能正常传图，因此要合理修改波特率 传图的格式为图片字符串从后往前8192个字符 仪器报警信息存在C字段的第四位，通过转换之后入参。报警信息通过转换将数据存入^LISPolice(&ldquo;DXH900&rdquo;)中，进行报警信息的转换。随后调用公共方法存入报警信息。详细参考报警信息处理。 仪器质控为固定编号，质控标识在O字段第12位，如果有质控标识，则获取质控标识流水号+仪器型号 仪器不能识别汉字，使用GetCNCODE方法将汉字转换为拼音 仪器报警信息\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E8%B4%9D%E5%85%8B%E6%9B%BCdxh900-4865a81b56/assets/5e9b583f046fee17af1cfb11439dc5e7-20250903182830-0wb2m0c.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
-<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.3.1/dist/pptx-parser.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+
+
+<script src="/js/mammoth.browser.min.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<script src="/js/pdf.min.js"></script>
 
 
 <script src="/js/optimized-parsing.js"></script>

@@ -15,11 +15,13 @@
 <meta name="twitter:description" content=" 方法存放在MI.Special目录中，后期整合公共方法都会放进Common类中，私有方法放单独类或者公共Common中\n公共方法 通过通道号获取检测项目 Code2TCDR 1 2 3 4 5 6 7 8 9 10 11 12 ClassMethod Code2TCDR(mi, code) { s mi=$g(mi),code=$g(code) s ret=&#34;&#34; i &#39;$l(mi) q ret i &#39;$l(code) q ret i $d(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code)) d .s BTMIMachineTestCodeDR=$o(^dbo.BTMIMachineTestCodeI(&#34;IndexResultChannel&#34;,mi,code,&#34;&#34;)) .s TestCodeDR=$lg($g(^dbo.BTMIMachineTestCodeD(BTMIMachineTestCodeDR)),3) .s ret=TestCodeDR q ret } 保存架子号 SaveRackNo 20250329 ！！！额外调用保存标本操作日志接口（SaveRecord），dbo.BTOperatorType 新增101（架子号更新）数据\n20250330 如果架子号相同时不增加标本操作日志\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://work.717170.xyz/p/%E4%BB%AA%E5%99%A8%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95-648d4901f4/assets/image-20250813195117-i4t8mzw.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
-<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.3.1/dist/pptx-parser.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+
+
+<script src="/js/mammoth.browser.min.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<script src="/js/pdf.min.js"></script>
 
 
 <script src="/js/optimized-parsing.js"></script>
