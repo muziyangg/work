@@ -1862,10 +1862,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+<script src="/js/mammoth.browser.min.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<script src="/js/pdf.min.js"></script>
 <script>
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
@@ -2443,19 +2443,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     let additionalLibraries = '';
                     if (docType === 'xlsx') {
-                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js">\x3C/script>';
+                        additionalLibraries = '\x3Cscript src="/js/xlsx.full.min.js">\x3C/script>';
                     } else if (docType === 'pptx') {
-                        additionalLibraries = '\x3Cscript src="https://cdn.jsdelivr.net/npm/pptx-parser@0.1.6/dist/pptx-parser.min.js">\x3C/script>';
+                        
                     } else if (docType === 'pdf') {
-                        additionalLibraries = '\x3Cscript src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js">\x3C/script>';
+                        additionalLibraries = '\x3Cscript src="/js/pdf.min.js">\x3C/script>';
                     }
+					
                     
                     newWindow.document.write(`
                         <!DOCTYPE html>
                         <html>
                         <head>
                             <title>${title || '文档预览'}</title>
-                            \x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>
+                            \x3C!--\x3Cscript src="https://cdn.jsdelivr.net/npm/mammoth@1.4.17/mammoth.browser.min.js">\x3C/script>-->
+							\x3Cscript src="/js/mammoth.browser.min.js">\x3C/script>
                             ${additionalLibraries}
                             <style>
                                 body { margin: 0; padding: 20px; max-width: 1000px; margin: 0 auto; }
